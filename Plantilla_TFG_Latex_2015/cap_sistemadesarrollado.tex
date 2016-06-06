@@ -1,0 +1,470 @@
+\chapter{Análisis, diseño y desarrollo}
+\label{chap:sistemadesarrollado}
+En este capítulo se explicará cómo se ha enfocado el desarrollo del proyecto.
+
+La primera parte trata del análisis del problema. Se explican las diferentes partes en las que he dividido el trabajo para su posterior implementación.
+También se presenta de forma muy general qué requisitos básicos debe cumplir cada parte.
+
+La sección de diseño explica las herramientas que se han utilizado para implementar cada parte y cómo funcionan.
+
+Por último se explica de forma más detallada cómo se ha desarrollado cada parte del problema, qué dificultades han ido apareciendo y cómo se han solucionado. También explica cómo se ha realizado la integración para conseguir el proyecto final.
+
+\lsection{Análisis}
+El objetivo de este trabajo es conseguir un robot con una cámara que transmita video a tiempo real. Este video le llegará a unas gafas de realidad virtual. El robot se conrolará con el movimiento de cabeza del usuario.
+
+DIBUJO CHULI DE TODO JUNTO
+
+El proyecto por lo tanto se divide en 3 problemas:
+\begin{enumerate}
+	\item Construcción del robot
+	\item Streaming
+	\item Control del robot
+\end{enumerate}
+
+Vamos a desarrollar cada uno de ellos, identificando qué funcionalidades básicas debe cumplir.
+
+\subsection{Construcción del Robot}
+	
+		El robot debe ser un dispositivo fácil de controlar , que a su vez actúe como una extensión de los ojos del usuario, dándole a éste la sensación de inmersión en un espacio real o virtual.
+		
+		
+		Por tanto los requisitos que debe cumplir el robot son los siguientes:
+		\begin{itemize}
+			\item Permitir grabar video y transmitirlo a tiempo real.
+			\item Ser capaz de desplazarse en todas las direcciones
+			\item Tener la capacidad de recibir comandos de control a través de una red inalámbica
+			\item Ser capaz de que la cámara apunte en la misma dirección que la cabeza del usuario
+		\end{itemize}
+	
+DIBUJO AMPLIADO ROBOT
+		
+	\subsection{Streaming}
+
+		Se quiere conseguir la máxima sensación de inmersión para la persona que controla el robot.
+		
+		Para ello uno de los requisitos principales es que la transmisión de video sea  a tiempo real, con la mínima latencia posible.
+		
+		Por otra parte el usuario verá el video con  las Oculus Rift, por lo que la imagen debe estar desdoblada (formato SBS, que se eplicará en la sección de desarrollo).
+
+		La transmisión debe ser inalámbrica ya que queremos que el robot tenga total libretad de movimiento, siendo éste independiente del ordenador.
+		
+		Dado que la placa que utilizamos en el el robot es la Raspberry Pi 3 tenemos dos opciones para la transmisión inalámbrica: Bluetooth o red Wifi.
+		
+	\subsection{Control del Robot}
+	
+		Como hemos dicho anteriormente, el robot pretende ser una extensión de los ojos de usuario, por lo que es lógico que se controle con el movimiento de cabeza de la persona que esté recibiendo el video.
+		
+		Dentro del control del robot vamos a diferenciar entre control del movimiento del robot y control de la dirección de la cámara:
+		
+		\begin{itemize}
+			\item Movimiento del robot $\rightarrow$ Debemos diseñar un sistema intuitivo para mover el robot en todas las direcciones con movimientos de la cabeza.
+			\item Movimiento de la cámara $\rightarrow$ la cámara debe estar apuntando siempre en la misma dirección que la cabeza.
+			
+			Si el usuario mueve la cabeza hacia la derecha o hacia la izquierda, el robot se moverá en esa dirección, por lo que no hay que preocuparse por la cámara.
+			
+			Para controlar los movimientos verticales vamos a incorporar un servo unido a la cámara, de forma que ésta se mueva en función de la posición de la Oculus. 
+		\end{itemize}
+		
+		
+		
+
+
+\lsection{Diseño}
+
+	Tras analizar las diferentes funcionalidades del trabajo vamos a ver cómo está diseñado cada componente.
+	
+	Los principales dispositivos que componen el proyecto son 
+	\begin{itemize}
+		\item Robot
+		\item Router
+		\item Oculus Rift
+	\end{itemize}
+	
+	También se tratará el \textbf{diseño de conexiones} entre los 3 componentes.
+
+	\subsection{Diseño del robot}
+	
+	El robot que se utiliza en este proyecto está basado en un diseño anterior hecho por (Nombre del alumno que diseñó en robot)
+	
+	Consta de:
+	\begin{itemize}
+		\item Una placa base $\rightarrow$ Raspberry Pi 3
+		\item Dos ruedas conectadas con dos servos que permiten al robot desplazarse.
+		\item Una cámara Logitech, conectada a la placa por USB
+		\item Un servo conectado a la cámara 
+	\end{itemize}
+	
+	
+	FOTO ROBOT
+	
+	\subsubsection{Raspberry Pi 3 model B}
+	
+	La Raspberry Pi 3 model B es un ordenador de placa reducida que lleva un sistema operativo Linux.
+	
+	Su procesador es un ARM Cortex A53 de cuatro núcleos a 1.2GHz de 64 bits.
+	
+	Tiene 1 GB de memoria RAM , 4 puerto USB, 40 pins GPIO, puerto HDMI , Ethernet y entrada para MicroSD.
+	
+	Además tiene Wifi 802.11n integrado y bluetooth 4.1.
+	
+	
+	\begin{figure}[h]
+		\centerline{
+			\mbox{\includegraphics[width=3.00in]{images/raspi3.jpg}}
+		}
+		\caption{Raspberry Pi 3 model B}
+		
+	\end{figure}
+
+\subsubsection{Servo motores}
+Para el movimiento del robot y de la cámara utilizamos servo motores
+
+
+Un servo motor es un motor eléctrico que se puede controlar su velocidad y su posición (dentro del rango de posición permitido).
+
+Los servos constan de:
+\begin{itemize}
+	\item Un motor de corriente continua
+	\item Una caja reductora
+	\item Un circuito de control
+\end{itemize}
+
+El sistema que utilizamos para controlar la velocidad y la posición de los servos es la modulación por anchura de pulso (PWM).
+
+\paragraph{PWM}
+
+Este sistema consiste en generar una onda cuadrada en la que se varía el tiempo que el pulso está a nivel alto, manteniendo el mismo período (normalmente), con el objetivo de modificar la posición del servo según se desee.
+
+\begin{figure}[h]
+	\centerline{
+		\mbox{\includegraphics[width=3.00in]{images/ondaServo.png}}
+	}
+	
+\end{figure}
+
+
+
+Para que un servo se mantenga en la misma posición durante un cierto tiempo, es necesario enviarle continuamente el pulso correspondiente.
+
+
+La otra función del PWM hemos diche que era el control de velocidad.
+
+Esto lo hace alimentando el motor con una señal de pulsos con la frecuencia suficiente para que el motor no note las variaciones y haga un giro constante, ya que variando el porcentaje de tiempo de la señal rectangular en alta, y en baja, variamos la potencia que le entregamos al motor, con lo que controlamos la velocidad de giro con mucha precisión.
+
+En el robot utilizamos 3 servomotores.
+Dos de ellos se utilizan para el movimiento de las ruedas y el tercero moverá la cámara permitiendo al usuario mirar hacia arriba y hacia abajo.
+
+Los tres servos están controlados por el movimiento de la cabeza del usuario, que obtenemos gracias a las Oculus Rift.
+
+\subsubsection{Cámara}
+
+La cámara utilizada es una webcam USB. El proyecto también se podría haber hecho con una RaspiCam.
+
+A continuación se muestra un esquema de la conexión entre los componentes que acabamos de explicar.
+
+
+\begin{figure}[h]
+	\centerline{
+		\mbox{\includegraphics[width=3.00in]{images/EsquemaServos.png}}
+	}
+	\caption{Esquema conexiones servos , cámara, Raspberry Pi 3}
+\end{figure}
+
+
+\subsection{Router}
+\subsection{Oculus Rift}
+
+Las Oculus Rift son unas gafas de Realidad Virtual [parrafo definiendo las Oculus]
+
+De las gafas nos interesan especialmente:
+\begin{itemize}
+	\item Detección de la orientación de las Oculus
+	\item Recepción de video
+\end{itemize}
+
+\subsubsection{Detección de la orientación}
+
+
+
+Las Oculus Rift tienen integradas un giroscopio, un acelerómetro y un magnetómetro que manda constantemente información al ordenador, de forma que éste sabe en todo momento la orientación de las gafas.
+
+La técnoca para interpretar la señal de estos sensores se llama \textbf{fusión de sensores}
+
+A continuación se explica en qué consiste esta técnica.
+
+\paragraph{Fusión de Sensores }
+
+Como ya hemos mencionado, en las Oculus tenemos un giroscopio, un acelerómetro y un magnetómetro.
+
+Los dos primeros dan información acerca de la orientación respecto a los ejes X y Z, mientras que el magnetómetro mide la orientación respect al eje Y.
+
+Vamos a ver cómo funciona cada uno.
+
+El \textbf{giroscopio} de las Oculus mide el cambio de orientación de la cabeza a una velocidad de 1KHz.
+
+Una forma simplificada de calcular la orientación actual es:
+
+$$\text{Orientación actual } = \text{ Orientación anterior } + \text{ Diferencia horaria } \cdot \text{ Velocidad observada (giroscopio).}$$
+
+El problema está en que la cabeza puede rotar alrededor de tres ejes.
+
+\begin{figure}[h]
+	\centerline{
+		\mbox{\includegraphics[width=3.00in]{images/headtracking.png}}
+	}
+	\caption{Ejes de giro}
+\end{figure}
+
+Vamos a suponer que solo rotase alrededor del eje Y y que el sensor captase una velocidad angular $w$ por segundo.
+
+Si tuviéramos 1000 sensores la fórmula de la orientación sería:
+
+$$\text{Orientación actual } = \text{ Orientación anterior } + 0,001 \cdot w$$
+
+Pero en el caso de las Oculus, al estar midiendo un objeto que se mueve en 3 ejes, el giroscopio da la velocidad angular respecto de los tres ejes, devolviendo un vector 3D ($w_1,w_2,w_3$)
+
+Al basar nuestro cálculo en el cálculo anterior, el error irá creciendo con el tiempo.
+
+Vamos a llamar \textit{tilt error} al error en la medición de los ángulos sobre los ejes XZ. El error sobre el eje Y se llamará \textit{yaw error}.
+
+El \textit{tilt error} se corresponde con nuestra sensación de lo que "está arriba", percepción que se basa en la gravedad.
+
+La gravedad se expresa con un vector de aceleración , por lo que utilizamos un \textbf{acelerómetro} para medirla.
+
+Nos encontramos con el inconveniente de que el acelerómetro no solo mide la gravedad. Para asegurarnos de que el momento en el que tomamos los datos de referencia solo estamos midiendo la gravedad, esperamos a que se den 2 condiciones:
+\begin{enumerate}
+	\item El acelerómetro nos devuelve una medida cercana a 9,8
+	\item El giroscopio nos devuelve una velocidad angular muy lenta (es decir, no estamos girando).
+\end{enumerate}
+
+En este momento sabemos que nos encontramos en una posición vertical y podemos corregir el error.
+
+\textbf{Cómo corregimos el error:}
+Supongamos que se dan las dos condiciones previas, y la posición que nuestro cálculo de orientación nos devuelve un vector $\vec{a}$, tal y como vemos en el dibujo.
+
+Tenemos el ángulo $\theta$ entre el eje Y y el vector $\vec{a}$ pero ¿cómo calculamos el eje de rotación para rotar $\vec{a}$ y corregir el error?
+
+Dicho vector debe ser perpendicular a $\vec{a}$ y al eje Y, y apoyarse en el plano XZ.
+
+Para encontrar el vector basta con hacer la proyección de $\vec{a}$ en el plano XZ, obteniendo así ($a_x, 0 , a_z$). Haciendo un vector perpendicular a éste obtenemos ($-a_z, 0 , a_x$). Y ya tenemos el eje de rotación que necesitabamos para corregir el error.
+
+\begin{figure}[h]
+	\centerline{
+		\mbox{\includegraphics[width=3.00in]{images/ejestracking.png}}
+	}
+	\caption{Corrección del tilt error}
+\end{figure}
+
+
+\newpage
+\textbf{Error sobre el eje Y (yaw error)}
+
+Este error se basa en nuestra percepción de dónde está el norte.
+
+Para esto utilizamos el magnetómetro. COMPLETAR
+
+\subsection{Diseño de conexiones}
+
+La arquitectura del proyecto es muy sencilla, como podemos observar en la siguiente imagen:
+
+\begin{figure}[h]
+	\centerline{
+		\mbox{\includegraphics[width=3.00in]{images/EsquemaConexiones.png}}
+	}
+	\caption{Esquema conexiones}
+\end{figure}
+
+
+Como podemos ver en el esquema, las Oculus Rift están conectadas al ordenador, el ordenador y la Raspberry se mandan información a través de un router que crea una red local.
+
+La raspberry recibe en streaming de la cámara y lo va mandando a una IP disponible dentro de la red local, la (192.168.1.35). A su vez el ordenador accede a esa IP, recoge el streaming utiliza VLC para dividir la imagen (SBS) y reproducir el video y con la herramienta Virtual Desktop podemos ver el video desde las Oculus.
+
+Por otra parte las Oculus tienen integrado un giroscopio , un acelerómetro y un magnetómetro.
+
+Combinando la información de estos sensores a través de un proceso conocido como fusión de sensores se determina la orientación de la cabeza del usuario en el mundo real , y se sincroniza con la perspectiva virtual del usuario en tiempo real. 
+
+Se ha implementado un programa en phyton que recoge esa información y la traduce en comandos sencillos para mandarselos a la Raspberry. Para obtener esa información hacemos uso de la librería de las Oculus (ovr).
+
+La Raspberry lee los comandos del ordenador y mueve los servos según lo recibido, de esta forma controlamos el movimiento del robot y de a cámara.
+
+\newpage
+\lsection{Desarrollo e implementación}
+En esta sección se explicará cómo hemos desarrollado las distintas funcionalidades del proyecto.
+Para ello vamos a diferenciar entre:
+
+\begin{itemize}
+	\item Construcción del Robot
+	\item Streaming 
+	\item Control del Robot
+\end{itemize}
+
+Para conseguir \textbf{transmitir a las Oculus el video en tiempo real} es necesario que:
+\begin{enumerate}
+	\item La Raspberry recoja el video de la cámara y lo transmita al ordenador.
+	
+	\item El ordenador recoja el video, lo transforme a formato SBS y lo envíe a las Oculus Rift. 
+	
+\end{enumerate}
+
+		
+
+
+
+Para el \textbf{control del robot} se deberán implementar las siguientes tareas:
+
+\begin{enumerate}
+	\item Leer la señal de los sensores de las Oculus Rift (giroscopio, acelerómetro y magnetómetro) para saber la orientación de la cabeza del usuario.
+	
+	\item Transmitir la información obtenida al robot.
+	
+	\item Traducir dicha información en comandos para mover los servo motores.
+\end{enumerate} 
+
+\subsection{Streaming}
+\subsubsection{Raspberry Pi3}
+El primer elemento en el streaming de video es la Raspberry Pi, que tiene conectada por usb una cámara.
+
+Para recoger el video y mandarlo en tiempo real utilizamos la librería mjpeg-streamer, disponible en github.
+
+Mjpeg-streamer es una aplicación en linea de comandos que permite crear un servidor, para retransmitir imágenes JPG sobre una red basada en IP, desde la cámara hasta un navegador convencional.
+
+Soporta la compresión por hardware (GPU, Unidad de Procesamiento Gráfico) de la cámara, en nuestro caso H.264 Advanced Video Coding (AVC) Standard, que es el compreso de la Webcam Logitech.
+
+Esto permite reducir drásticamente el uso de la CPU de este servidor, haciendo está aplicación un servicio ligero.
+
+El puerto que emplea es el 8080
+
+\begin{figure}[h!]
+	\centerline{
+		\mbox{\includegraphics[width=3.00in]{images/UsoCPUMjpeg.png}}
+	}
+	\caption{Uso de CPU del programa Mjpeg-Streamer por el que se hae el streaming de video}
+\end{figure}
+
+
+\newpage
+\subsubsection{Ordenador}
+El ordenador accede a la IP donde mjpeg-streamer está retransmitiendo el video y lo recoge a través del reproductor de video VLC.
+
+Este reproductor divide el video en dos pantallas exactamente iguales para poder verlo desde las Oculus en modo SBS (Side by Side).
+
+El ordenador tiene instalado un programa, Virtual Desktop.
+
+Virtual Desktop es una aplicación desarrollada por Oculus Rift y  HTC Vive para utilizar las Oculus Rift en Windows.
+
+Permite ver el escritorio desde las Oculus, pudiendo configurar efectos como ver las imagénes SBS o cambiar el entorno en el que te encuentras (el espacio, una sala de cine...)
+
+
+\begin{figure}[h]
+	\centerline{
+		\mbox{\includegraphics[width=3.00in]{images/VirtualDesktop.jpg}}
+	}
+	\caption{Virtual Desktop}
+\end{figure}
+
+También te permite ver videos descargados en el ordenador y reproducir videos 360.
+
+Nosotros utilizamos la funcionalidad de ver la pantalla del ordenador desde las Oculus con SBS, para visualizar el video que se está reproduciendo en VLC a tiempo real.
+
+
+IMAGEN DEL VIDEO SBS DE VLC
+
+
+
+
+\subsection{Control del Robot}
+
+
+\subsubsection{Librería OVR}
+Para recoger desde el ordenador la información que mandan las Oculus utilizamos la librería de Oculus (ovr), escrita en phyton.
+
+La función \textit{ovr.getTrackingState} nos devuelve una estructura (\textit{TrackingState}), que contiene el campo:
+
+	 \textbf{Pose Statef} HeadPose 
+	\begin{itemize}
+		\item \textbf{Posef} ThePose $\begin{cases}
+			 \textbf{Quatf} \text{ Orientation}\\
+			 \textbf{Vector3f}\text{ Position} 
+		\end{cases}$
+		
+
+	\end{itemize}
+
+Para obtener la orientación de la cabeza se lee el valor de \textit{HeadPose.ThePose.Orientation.x/y} y se lo manda a la raspberry a través de sockets.
+
+La información obtenida sobre la orientación respecto al eje $x$ servirá para mover los servos que hay en las ruedas del robot, mientras que la información de $y$ servirá para mover la cámara.
+
+
+El ordenador crea un servidor y abre dos sockets distintos, uno para la información de $x$ y otro para la de $y$.
+  
+
+De esta forma manejamos los dos movimientos de forma independiente.
+
+A continuación se muestra una gráfica que compara el movimiento (en grados) de las Oculus y de un servo motor respecto al tiempo , medido en microsegundos.
+
+Vemos que la latencia entre la medición en las Oculus y la recepción en la Raspberry es muy pequeña.
+
+\begin{figure}[h!]
+	\centerline{
+		\mbox{\includegraphics[width=3.00in]{images/TiemposRecepcion(us).png}}
+	}
+	\caption{Virtual Desktop}
+\end{figure}
+
+\newpage
+\subsubsection{Raspberry Pi3}
+La Raspberry tiene a su vez dos programas (uno para las ruedas y otro para la cámara) que están escuchando continuamente lo que manda el ordenador y en cuanto recibe el comando lo manda a los servos.
+
+\paragraph{Movimiento de los servo motores}
+
+Como ya se indicó en la sección (seccion de los servos,PWM, etc..) el movimiento de los servos se controla con una señal PWM (Pulse With Modulation).
+
+Por ello utilizamos la librería RPi.GPIO, que ofrece funciones para PWM.
+
+Hay dos parámetros principales para determinar el pulso que se envía al motor:
+\begin{itemize}
+	\item \textbf{Frecuencia} : veces por segundo que se genera el pulso.
+	\item \textbf{Duty cycle} : es el porcentaje de tiempo que el pulso está arriba. (recordemos que la señal es una señal cuadrada)
+\end{itemize}
+
+
+Veamos un ejemplo para clarificar esto:
+
+\paragraph{PWM- Frecuencia:50Hz , DutyCycle $50\%$}
+	
+		
+	
+	 Si fijamos una frecuencia de 50Hz estaremos mandando una señal de 50 pulsos por segundo, es decir, un pulso cada $0.02$ segundos.
+	
+	Al poner un DutyCycle al $50\%$ estamos estableciendo que durante esos $0.02$ segundos el pulso estará $0.01$ segundos en posición "High" y el resto del tiempo en posición "Low".
+	
+	
+	\paragraph {PWM- Frecuencia:50Hz , DutyCycle $80\%$}
+		
+	Si fijamos una frecuencia de 50Hz, como la del ejercicio anterior pero por el contrario ponemos un DutyCycle del $80\%$ tendremos:
+	\begin{itemize}
+		\item 1 pulso cada $0.02$ segundos
+		\item El pulso estará en posición "high" el $80\%$ del tiempo ($0.016$ segundos) y en posición "low" los otros $0.004$ segundos restantes.
+	\end{itemize}
+
+
+
+La Raspberry Pi recibe a través de los sockets el ángulo de orientación de la cabeza sobre el eje y o x.
+
+Para transformar este ángulo el pulso(PWM) correspondiente debemos tener en cuenta que un servo requiere una señal PWM con un periodo de 20 ms y un ancho de pulso entre $0.9$ y $2.1$ ms.
+
+Ya que el servo tiene un rango de ángulos de 0 a 180 grados, es fácil ver que el ancho de pulso de $0.9$ ms se corresponde con 0º y $2.1$ ms con 180º
+
+
+
+
+
+
+
+\lsection{Segmentación}
+
+\lsection{Normalización}
+
+\lsection{Codificación}
+
+\lsection{Matching}
