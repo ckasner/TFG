@@ -1,0 +1,789 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.14)  19 SEP 2016 16:54
+entering extended mode
+**./PLANTILLA_TFG.tex
+(PLANTILLA_TFG.tex
+LaTeX2e <2015/10/01> patch level 2
+Babel <3.9n> and hyphenation patterns for 74 languages loaded.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\book.cls"
+Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\bk11.clo"
+File: bk11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count88
+\Gm@cntv=\count89
+\c@Gm@tempcnt=\count90
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
+\Gm@dimlist=\toks15
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.def"
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks16
+\ex@=\dimen111
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen112
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count91
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count92
+\leftroot@=\count93
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count94
+\DOTSCASE@=\count95
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen113
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count96
+\c@MaxMatrixCols=\count97
+\dotsspace@=\muskip10
+\c@parentequation=\count98
+\dspbrk@lvl=\count99
+\tag@help=\toks17
+\row@=\count100
+\column@=\count101
+\maxfields@=\count102
+\andhelp@=\toks18
+\eqnshift@=\dimen114
+\alignsep@=\dimen115
+\tagshift@=\dimen116
+\tagwidth@=\dimen117
+\totwidth@=\dimen118
+\lineht@=\dimen119
+\@envbody=\toks19
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+("C:\Users\Cristian Fernandez\AppData\Local\Programs\MiKTeX 2.9\tex\latex\natbi
+b\natbib.sty"
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip46
+\bibsep=\skip47
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count103
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2016/01/08 3.9n The Babel package
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\babel-english\english.ldf"
+Language: english 2012/08/20 v3.3p English support from the babel system
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2016/01/08 3.9n Babel common definitions
+\babel@savecnt=\count104
+\U@D=\dimen120
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\babel-spanish\spanish.ldf"
+Language: spanish.ldf 2014/04/24 v5.0n Spanish support from the babel system
+\es@quottoks=\toks21
+\es@quotdepth=\count105
+Package babel Info: Making " an active character on input line 516.
+Package babel Info: Making . an active character on input line 617.
+Package babel Info: Making < an active character on input line 662.
+Package babel Info: Making > an active character on input line 662.
+))
+LaTeX Info: Redefining \. on input line 11.
+LaTeX Info: Redefining \% on input line 11.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 94.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count106
+))
+\Gin@req@height=\dimen121
+\Gin@req@width=\dimen122
+)
+("C:\Users\Cristian Fernandez\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psfra
+g\psfrag.sty"
+Package: psfrag 1998/04/11 v3.04 PSfrag (MCG)
+\pfg@pcount=\count107
+\pfg@scount=\count108
+\pfg@temp=\write3
+)
+("C:\Users\Cristian Fernandez\AppData\Local\Programs\MiKTeX 2.9\tex\latex\quotc
+hap\quotchap.sty"
+Package: quotchap 2012/10/20 v1.1 Decorative Chapter Headings with Quotes
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\color.sty"
+Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 142.
+)
+\@quotebox=\box28
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\epsfig.sty"
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+\epsfxsize=\dimen123
+\epsfysize=\dimen124
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xy.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xy.tex" Bootstrap'ing:
+catcodes, docmode,
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xyrecat.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xyidioms.tex")
+
+ Xy-pic version 3.8.9 <2013/10/06>
+ Copyright (c) 1991-2013 by Kristoffer H. Rose <krisrose@tug.org> and others
+ Xy-pic is free software: see the User's Guide for details.
+
+Loading kernel: messages; fonts; allocations: state,
+\X@c=\dimen125
+\Y@c=\dimen126
+\U@c=\dimen127
+\D@c=\dimen128
+\L@c=\dimen129
+\R@c=\dimen130
+\Edge@c=\toks22
+\X@p=\dimen131
+\Y@p=\dimen132
+\U@p=\dimen133
+\D@p=\dimen134
+\L@p=\dimen135
+\R@p=\dimen136
+\Edge@p=\toks23
+\X@origin=\dimen137
+\Y@origin=\dimen138
+\X@xbase=\dimen139
+\Y@xbase=\dimen140
+\X@ybase=\dimen141
+\Y@ybase=\dimen142
+\X@min=\dimen143
+\Y@min=\dimen144
+\X@max=\dimen145
+\Y@max=\dimen146
+\lastobjectbox@=\box29
+\zerodotbox@=\box30
+\almostz@=\dimen147
+ direction,
+\d@X=\dimen148
+\d@Y=\dimen149
+\K@=\count109
+\KK@=\count110
+\Direction=\count111
+\K@dXdY=\dimen150
+\K@dYdX=\dimen151
+\xyread@=\read1
+\xywrite@=\write4
+\csp@=\count112
+\quotPTK@=\dimen152
+
+utility macros; pictures: \xy, positions,
+\swaptoks@@=\toks24
+\connectobjectbox@@=\box31
+ objects,
+\styletoks@=\toks25
+ decorations;
+kernel objects: directionals, circles, text; options; algorithms: directions,
+edges, connections;  Xy-pic loaded)
+Package: xy 2013/10/06 Xy-pic version 3.8.9
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xyall.tex"
+ Xy-pic option: All features v.3.8
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xycurve.tex"
+ Xy-pic option: Curve and Spline extension v.3.12 curve,
+\crv@cnt@=\count113
+\crvpts@=\toks26
+\splinebox@=\box32
+\splineval@=\dimen153
+\splinedepth@=\dimen154
+\splinetol@=\dimen155
+\splinelength@=\dimen156
+ circles,
+\L@=\dimen157
+ loaded)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xyframe.tex"
+ Xy-pic option: Frame and Bracket extension v.3.14 loaded)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xycmtip.tex"
+ Xy-pic option: Computer Modern tip extension v.3.7
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xytips.tex"
+ Xy-pic option: More Tips extension v.3.11 loaded) loaded)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xyline.tex"
+ Xy-pic option: Line styles extension v.3.10
+\xylinethick@=\dimen158
+ loaded)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xyrotate.tex"
+ Xy-pic option: Rotate and Scale extension v.3.8 loaded)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xycolor.tex"
+ Xy-pic option: Colour extension v.3.11 loaded)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xymatrix.tex"
+ Xy-pic option: Matrix feature v.3.14
+\Row=\count114
+\Col=\count115
+\queue@=\toks27
+\queue@@=\toks28
+\qcount@=\count116
+\qcount@@=\count117
+\matrixsize@=\count118
+ loaded)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xyarrow.tex"
+ Xy-pic option: Arrow and Path feature v.3.9 path, \ar, loaded)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xygraph.tex"
+ Xy-pic option: Graph feature v.3.11 loaded) loaded)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xypdf.tex"
+ Xy-pic option: PDF driver v.1.7 Xy-pic pdf driver: `color' extension support
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xypdf-co.tex" loaded)
+Xy-pic pdf driver: `curve' extension support
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xypdf-cu.tex" loaded)
+Xy-pic pdf driver: `frame' extension support
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xypdf-fr.tex" loaded)
+Xy-pic pdf driver: `line' extension support
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xypdf-li.tex" loaded)
+Xy-pic pdf driver: `rotate' extension support
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xypic\xypdf-ro.tex" loaded)
+loaded)) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\makeidx.sty"
+Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(multicolpar.sty
+\columnsleft=\count119
+\totalcolumns=\count120
+\separation=\dimen159
+) (multicol.sty
+Style option: `multicol' v1.4m <92/09/04> (FMi)
+English documentation          <92/09/04> (FMi)
+\mult@box=\box33
+\multicol@leftmargin=\dimen160
+\c@unbalance=\count121
+\c@collectmore=\count122
+\c@tracingmulticols=\count123
+\col@number=\count124
+\doublecol@number=\count125
+\multicoltolerance=\count126
+\multicolpretolerance=\count127
+\full@width=\dimen161
+\page@free=\dimen162
+\premulticols=\dimen163
+\postmulticols=\dimen164
+\multicolsep=\skip48
+\multicolbaselineskip=\skip49
+\partial@page=\box34
+\last@line=\box35
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
+\bigstrutjot=\dimen165
+)
+("C:\Users\Cristian Fernandez\AppData\Local\Programs\MiKTeX 2.9\tex\latex\url\u
+rl.sty"
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+("C:\Users\Cristian Fernandez\AppData\Local\Programs\MiKTeX 2.9\tex\latex\marvo
+sym\marvosym.sty"
+Package: marvosym 2011/07/20 v2.2 Martin Vogel's Symbols font definitions
+)
+("C:\Users\Cristian Fernandez\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fancy
+box\fancybox.sty"
+Package: fancybox 2010/05/15 1.4
+
+Style option: `fancybox' v1.4 <2010/05/15> (tvz)
+\@fancybox=\box36
+\shadowsize=\dimen166
+\@Sbox=\box37
+\do@VerbBox=\toks29
+\the@fancyput=\toks30
+\this@fancyput=\toks31
+\EndVerbatimTokens=\toks32
+\Verbatim@Outfile=\write5
+\Verbatim@Infile=\read2
+)
+("C:\Users\Cristian Fernandez\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fancy
+hdr\fancyhdr.sty"
+\fancy@headwidth=\skip50
+\f@ncyO@elh=\skip51
+\f@ncyO@erh=\skip52
+\f@ncyO@olh=\skip53
+\f@ncyO@orh=\skip54
+\f@ncyO@elf=\skip55
+\f@ncyO@erf=\skip56
+\f@ncyO@olf=\skip57
+\f@ncyO@orf=\skip58
+)
+\salto=\skip59
+\resalto=\skip60
+ (PLANTILLA_TFG.aux
+LaTeX Info: Redefining \. on input line 6.
+LaTeX Info: Redefining \% on input line 6.
+LaTeX Info: Redefining \. on input line 10.
+LaTeX Info: Redefining \% on input line 10.
+)
+\openout1 = `PLANTILLA_TFG.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(72.26999pt, 452.9679pt, 72.26999pt)
+* v-part:(T,H,B)=(43.36243pt, 700.27777pt, 101.40665pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=452.9679pt
+* \textheight=700.27777pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-60.78136pt
+* \headheight=12.0pt
+* \headsep=19.8738pt
+* \topskip=11.0pt
+* \footskip=27.46295pt
+* \marginparwidth=106.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Info: Redefining \. on input line 83.
+LaTeX Info: Redefining \% on input line 83.
+
+("C:\Users\Cristian Fernandez\AppData\Local\Programs\MiKTeX 2.9\tex\context\bas
+e\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count128
+\scratchdimen=\dimen167
+\scratchbox=\box38
+\nofMPsegments=\count129
+\nofMParguments=\count130
+\everyMPshowfont=\toks33
+\MPscratchCnt=\count131
+\MPscratchDim=\dimen168
+\MPnumerator=\count132
+\makeMPintoPDFobject=\count133
+\everyMPtoPDFconversion=\toks34
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 83.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 83.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Package xypdf Info: Line width: 0.43799pt on input line 83.
+ (portada.tex
+<images/logo_eps.png, id=1, 515.9275pt x 450.68375pt>
+File: images/logo_eps.png Graphic file (type png)
+
+<use images/logo_eps.png>
+Package pdftex.def Info: images/logo_eps.png used on input line 18.
+(pdftex.def)             Requested size: 112.10844pt x 97.92664pt.
+
+<images/logo_uam.jpg, id=3, 462.22687pt x 284.56313pt>
+File: images/logo_uam.jpg Graphic file (type jpg)
+
+<use images/logo_uam.jpg>
+Package pdftex.def Info: images/logo_uam.jpg used on input line 21.
+(pdftex.def)             Requested size: 112.10844pt x 69.01732pt.
+ [1
+Non-PDF special ignored!
+
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./images/logo_eps.png> <.
+/images/logo_uam.jpg>]) [2
+
+] (primera_pag.tex
+LaTeX Font Info:    Try loading font information for T1+pbk on input line 1.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1pbk.fd"
+File: t1pbk.fd 2001/06/04 font definitions for T1/pbk.
+)
+LaTeX Font Info:    Font shape `T1/pbk/b/n' in size <20.74> not available
+(Font)              Font shape `T1/pbk/db/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `T1/pbk/b/n' in size <100> not available
+(Font)              Font shape `T1/pbk/db/n' tried instead on input line 1.
+ [1
+
+])
+(resumen.tex [2
+
+] [3]) (agradecimientos.tex
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[4]) [5
+
+] [6
+
+] (PLANTILLA_TFG.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+LaTeX Info: Redefining \. on input line 2.
+LaTeX Info: Redefining \% on input line 2.
+ [7])
+\tf@toc=\write6
+\openout6 = `PLANTILLA_TFG.toc'.
+
+LaTeX Info: Redefining \. on input line 99.
+LaTeX Info: Redefining \% on input line 99.
+ [8] (PLANTILLA_TFG.lof
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+LaTeX Info: Redefining \. on input line 2.
+LaTeX Info: Redefining \% on input line 2.
+)
+\tf@lof=\write7
+\openout7 = `PLANTILLA_TFG.lof'.
+
+ [9
+
+] [10
+
+]
+(PLANTILLA_TFG.lot
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+LaTeX Info: Redefining \. on input line 2.
+LaTeX Info: Redefining \% on input line 2.
+)
+\tf@lot=\write8
+\openout8 = `PLANTILLA_TFG.lot'.
+
+ [11] [12
+
+] (cap_intro.tex
+Cap\'{\i }tulo 1.
+[1
+
+]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 61.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 61.
+LaTeX Info: Redefining \. on input line 75.
+LaTeX Info: Redefining \% on input line 75.
+ [2]
+<images/objetivos.png, id=72, 571.38469pt x 272.51813pt>
+File: images/objetivos.png Graphic file (type png)
+
+<use images/objetivos.png>
+Package pdftex.def Info: images/objetivos.png used on input line 83.
+(pdftex.def)             Requested size: 505.89pt x 241.2804pt.
+LaTeX Info: Redefining \. on input line 86.
+LaTeX Info: Redefining \% on input line 86.
+ [3 <./images/objetivos.png>]
+LaTeX Info: Redefining \. on input line 91.
+LaTeX Info: Redefining \% on input line 91.
+ [4])
+(cap_estadodelarte.tex
+Cap\'{\i }tulo 2.
+[5
+
+]
+LaTeX Info: Redefining \. on input line 42.
+LaTeX Info: Redefining \% on input line 42.
+ [6]) (cap_sistemadesarrollado.tex
+Cap\'{\i }tulo 3.
+[7
+
+]
+LaTeX Info: Redefining \. on input line 80.
+LaTeX Info: Redefining \% on input line 80.
+ [8] <images/raspi3.jpg, id=93, 697.9217pt x 516.21428pt>
+File: images/raspi3.jpg Graphic file (type jpg)
+
+<use images/raspi3.jpg>
+Package pdftex.def Info: images/raspi3.jpg used on input line 114.
+(pdftex.def)             Requested size: 216.81pt x 160.36346pt.
+LaTeX Info: Redefining \. on input line 125.
+LaTeX Info: Redefining \% on input line 125.
+ [9 <./images/raspi3.jpg>]
+<images/ondaServo.png, id=97, 366.36874pt x 127.47626pt>
+File: images/ondaServo.png Graphic file (type png)
+
+<use images/ondaServo.png>
+Package pdftex.def Info: images/ondaServo.png used on input line 141.
+(pdftex.def)             Requested size: 216.81pt x 75.43791pt.
+
+<images/EsquemaServos.png, id=98, 691.383pt x 588.599pt>
+File: images/EsquemaServos.png Graphic file (type png)
+
+<use images/EsquemaServos.png>
+Package pdftex.def Info: images/EsquemaServos.png used on input line 169.
+(pdftex.def)             Requested size: 216.81pt x 184.5744pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Info: Redefining \. on input line 179.
+LaTeX Info: Redefining \% on input line 179.
+[10 <./images/ondaServo.png>]
+Overfull \hbox (23.83868pt too wide) detected at line 207
+[] \OT1/cmr/m/n/10.95 = [] + [] \OMS/cmsy/m/n/10.95  []
+ []
+
+<images/headtracking.png, id=103, 277.035pt x 349.305pt>
+File: images/headtracking.png Graphic file (type png)
+
+<use images/headtracking.png>
+Package pdftex.def Info: images/headtracking.png used on input line 214.
+(pdftex.def)             Requested size: 216.81pt x 273.36821pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Info: Redefining \. on input line 219.
+LaTeX Info: Redefining \% on input line 219.
+[11 <./images/EsquemaServos.png>]
+LaTeX Info: Redefining \. on input line 244.
+LaTeX Info: Redefining \% on input line 244.
+ [12 <./images/headtracking.png>]
+<images/ejestracking.png, id=116, 305.14pt x 324.21124pt>
+File: images/ejestracking.png Graphic file (type png)
+
+<use images/ejestracking.png>
+Package pdftex.def Info: images/ejestracking.png used on input line 254.
+(pdftex.def)             Requested size: 216.81pt x 230.36967pt.
+LaTeX Info: Redefining \. on input line 259.
+LaTeX Info: Redefining \% on input line 259.
+ [13 <./images/ejestracking.png>]
+<images/EsquemaConexiones.png, id=122, 521.95pt x 425.59pt>
+File: images/EsquemaConexiones.png Graphic file (type png)
+
+<use images/EsquemaConexiones.png>
+Package pdftex.def Info: images/EsquemaConexiones.png used on input line 273.
+(pdftex.def)             Requested size: 216.81pt x 176.78539pt.
+LaTeX Info: Redefining \. on input line 290.
+LaTeX Info: Redefining \% on input line 290.
+ [14 <./images/EsquemaConexiones.png>]
+<images/UsoCPUMjpeg.png, id=127, 512.66531pt x 371.13657pt>
+File: images/UsoCPUMjpeg.png Graphic file (type png)
+
+<use images/UsoCPUMjpeg.png>
+Package pdftex.def Info: images/UsoCPUMjpeg.png used on input line 340.
+(pdftex.def)             Requested size: 216.81pt x 156.95793pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Info: Redefining \. on input line 345.
+LaTeX Info: Redefining \% on input line 345.
+[15] <images/VirtualDesktop.jpg, id=131, 1445.4pt x 813.0375pt>
+File: images/VirtualDesktop.jpg Graphic file (type jpg)
+
+<use images/VirtualDesktop.jpg>
+Package pdftex.def Info: images/VirtualDesktop.jpg used on input line 361.
+(pdftex.def)             Requested size: 216.81pt x 121.95036pt.
+LaTeX Info: Redefining \. on input line 382.
+LaTeX Info: Redefining \% on input line 382.
+ [16 <./images/UsoCPUMjpeg.png> <./images/VirtualDesktop.jpg>]
+<images/TiemposRecepcion(us).png, id=135, 1335.99126pt x 673.51625pt>
+File: images/TiemposRecepcion(us).png Graphic file (type png)
+
+<use images/TiemposRecepcion(us).png>
+Package pdftex.def Info: images/TiemposRecepcion(us).png used on input line 410
+.
+(pdftex.def)             Requested size: 216.81pt x 109.29607pt.
+LaTeX Info: Redefining \. on input line 414.
+LaTeX Info: Redefining \% on input line 414.
+ [17 <./images/TiemposRecepcion(us).png>]) (cap_experimentos.tex
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [18]
+Cap\'{\i }tulo 4.
+) (cap_conclusiones.tex [19
+
+]
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [20
+
+]
+Cap\'{\i }tulo 5.
+[21]) (glosario.tex [22
+
+] [23]) (PLANTILLA_TFG.bbl [24
+
+]) (anexo_manualuso.tex
+[25]
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [26
+
+]
+Ap\'{e}ndice A.
+[27]) (anexo_manualprogramador.tex [28
+
+]
+Ap\'{e}ndice B.
+[29]) (PLANTILLA_TFG.aux
+LaTeX Info: Redefining \. on input line 6.
+LaTeX Info: Redefining \% on input line 6.
+LaTeX Info: Redefining \. on input line 10.
+LaTeX Info: Redefining \% on input line 10.
+) ) 
+Here is how much of TeX's memory you used:
+ 7746 strings out of 493357
+ 97751 string characters out of 3136821
+ 217061 words of memory out of 3000000
+ 11011 multiletter control sequences out of 15000+200000
+ 26995 words of font info for 64 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 31i,12n,47p,3226b,470s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Cristina Kasner\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen
+\ec\dpi600\ecrm0800.pk> <C:\Users\Cristina Kasner\AppData\Local\MiKTeX\2.9\font
+s\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk>{C:/Program Files (x86)/MiKTeX 2.9/f
+onts/enc/dvips/fontname/8r.enc} <C:\Users\Cristina Kasner\AppData\Local\MiKTeX\
+2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1095.pk> <C:\Users\Cristina Kasner\A
+ppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk> <C:\Use
+rs\Cristina Kasner\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
+ecti1095.pk> <C:\Users\Cristina Kasner\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
+\jknappen\ec\dpi600\ecrm1095.pk> <C:\Users\Cristina Kasner\AppData\Local\MiKTeX
+\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\Cristina Kasner\
+AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm2074.pk> <C:\Us
+ers\Cristina Kasner\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
+\eccc1095.pk> <C:\Users\Cristina Kasner\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
+r\jknappen\ec\dpi600\ecrm1440.pk> <C:\Users\Cristina Kasner\AppData\Local\MiKTe
+X\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk> <C:\Users\Cristina Kasner
+\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc2488.pk> <C:\U
+sers\Cristina Kasner\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
+0\ecrm2488.pk> <C:\Users\Cristina Kasner\AppData\Local\MiKTeX\2.9\fonts\pk\ljfo
+ur\jknappen\ec\dpi600\eccc1200.pk> <C:\Users\Cristina Kasner\AppData\Local\MiKT
+eX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1728.pk><C:/Program Files (x86)/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files (x86)/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
+type1/urw/bookman/ubkd8a.pfb>
+Output written on PLANTILLA_TFG.pdf (43 pages, 2592187 bytes).
+PDF statistics:
+ 672 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+

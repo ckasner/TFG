@@ -1,0 +1,91 @@
+\chapter{Introducción} 
+\label{chap:intro}
+
+\vspace{-0.2cm}
+
+\lsection{Motivación del proyecto}
+La motivación de este proyecto es explorar las posibilidades que nos ofrece combinar la robótica con la realidad virtual.
+
+El campo de la robótica lleva muchos años en desarrollo y mejora exponencialmente a lo largo del tiempo. Está inmerso en nuestro día a día y no paramos de sorprendernos con nuevos avances como las impresoras 3D o los drones.
+
+La realidad virtual  lleva mucho tiempo estudiandose .En 1968 Ivan Sutherlan creó el primer casco de realidad virtual.A pesar de ello, hasta hace bien poco, para la gran mayoría de gente era solo ciencia ficción.
+
+Ahora nos encontramos en un momento en el que ya podemos empezar a disfrutar de la realidad virtual. Tenemos las CardBoard , las Oculus Rift... a nuestro alcance.
+El uso más generalizado que se está dando a estas herramientas es en el mundo de los videojuegos.
+
+Este trabajo pretende aplicar estas dos tecnologías para hacer más fácil el día a día de las personas, en concreto nos hemos centrado en las personas con discapacidad motora.
+
+Hemos construido un robot que lleva incorporada una cámara y que se comunica con las Oculus rift.
+
+El usuario puede controlar el movimiento del robot y de la cámara solo con el movimiento de la cabeza, aunque no sería difícil adaptar este control para personas que les sea más fácil controlarlo a través de mandos.
+
+El robot transmite a las Oculus en tiempo real un video del entorno. De esta forma el robot actúa como extensión de los ojos del usuario.
+
+¿Porqué utilizar las Oculus Rift?  Al ser las Oculus gafas de realidad virtual,si consiguiéramos una correcta conexión entre las gafas y el robot, se nos abrirían muchísimas posibilidades, como modificar el entorno según las necesidades del usuario , meter realidad aumentada para controlar una casa domotizada, etc.
+
+De esta forma daríamos al usuario más independencia y le abrimos un mundo al que hasta ahora, tenía difícil acceso.
+
+
+Ejemplo de referencia a la bibliografía~\cite{article:Ejemplo}.
+
+
+\lsection{Objetivos y enfoque}
+En esta sección se presentarán los objetivos que se pretenden alcanzar en este proyecto y cómo vamos a enfocar el trabajo para conseguirlos.
+
+\subsection{Objetivos}
+
+El objetivo final consiste en ser capaces de mover una cámara , controlando el movimiento con la cabeza y recibir en las Oculus Rift a tiempo real todo lo que vea la cámara.
+
+Para ello definiremos pequeños objetivos que debemos ir implementando para conseguir la meta final.
+
+\subsubsection{Streaming}
+Como se ha explicado anteriormente, debemos ser capaces de ver en las Oculus Rift a tiempo real todo lo que ve la cámara.
+
+Dado que la comunicación con las Oculus Rift debe ser a través del PC al que estén conectadas , el streaming deberá \textbf{transmitirse desde la cámara hasta el PC}.
+
+Una buena candidata para la transmisión inalámbrica de vídeo a tiempo real al ordenador es a través de una \textbf{red local}.
+
+Por lo tanto uno de los primeros objetivos es crear una red local a través de la cual se puedan conectar  la cámara y el PC. Además se deberá implementar un software que capture todo lo que vea la cámara y transmita el vídeo a tiempo real por la red local. Por último se necesita un software que recoja el video en el PC.
+
+\subsubsection{Movimiento de la cámara}
+Otro de los objetivos básicos es que el usuario sea capaz de controlar la dirección y posición de la cámara con el movimiento de la cabeza.
+
+Con este objetivo de van a definir dos fases del movimiento:
+\begin{itemize}
+	\item \textbf{Fase de exploración:}
+	
+		Durante la exploración la cámara no se mueve de sitio, tan solo explora el entorno.
+		
+		Los movimientos que se deberán implementar para esta fase serán:
+		\begin{itemize}
+			\item Movimiento vertical : El usuario podrá mirar hacia arriba y hacia abajo.
+			\item Movimiento horizontal : La cámara deberá ser capaz de rotar sobre si misma permitiendo al usuario mirar hacia ambos lados.
+		\end{itemize}
+	\item \textbf{Fase de transporte:}
+	
+	El usuario podrá llevar la cámara a cualquier punto de la habitación moviendo la cabeza.
+	
+\end{itemize}
+
+Para este objetivo , el diseño tendrá un papel esencial ya que el control del robot debe ser sencillo e intuitivo. Se intentará crear un sistema de control con la cabeza que no sea complicado para el usuario.
+
+\subsubsection{Visualización del entorno}
+El último de los objetivos que es necesario desarrollar para el proyecto es conseguir visualizar el entorno en el que se encuentra la cámara en las Oculus Rift.
+
+Para ello necesitaremos un software que , en tiempo real, recoja el vídeo del PC y lo reproduzca en las gafas. 
+
+
+A continuación se añade un esquema a modo de resumen de los objetivos ya explicados.
+
+\begin{figure}[h!]
+	\centerline{
+		\mbox{\includegraphics[width=7.00in]{images/objetivos.png}}
+	}
+	\caption{Resumen de los objetivos del proyecto}
+\end{figure}
+\newpage
+\lsection{Metodología y plan de trabajo}
+
+
+
+\newpage \thispagestyle{empty} % Página vacía 

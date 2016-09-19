@@ -1,0 +1,59 @@
+\select@language {spanish}
+\select@language {spanish}
+\contentsline {chapter}{Índice de Figuras}{\es@scroman {ix}}
+\contentsline {chapter}{Índice de Tablas}{\es@scroman {x}}
+\contentsline {chapter}{\numberline {1}Introducción}{1}
+\contentsline {section}{\numberline {1.1}Motivación del proyecto}{1}
+\contentsline {section}{\numberline {1.2}Objetivos y enfoque}{2}
+\contentsline {subsection}{\numberline {1.2.1}Objetivos}{2}
+\contentsline {subsubsection}{Streaming}{2}
+\contentsline {subsubsection}{Movimiento de la cámara}{2}
+\contentsline {subsubsection}{Visualización del entorno}{3}
+\contentsline {section}{\numberline {1.3}Metodología y plan de trabajo}{4}
+\contentsline {chapter}{\numberline {2}Realidad Virtual y robótica. Estado del arte}{5}
+\contentsline {section}{\numberline {2.1}Introducción}{5}
+\contentsline {section}{\numberline {2.2}Realidad virtual y salud}{5}
+\contentsline {section}{\numberline {2.3}Robótica y realidad virtual.}{5}
+\contentsline {section}{\numberline {2.4}BCIs, EEG y realidad virtual}{6}
+\contentsline {chapter}{\numberline {3}Análisis, diseño y desarrollo}{7}
+\contentsline {section}{\numberline {3.1}Análisis}{7}
+\contentsline {subsection}{\numberline {3.1.1}Construcción del Robot}{7}
+\contentsline {subsection}{\numberline {3.1.2}Streaming}{8}
+\contentsline {subsection}{\numberline {3.1.3}Control del Robot}{8}
+\contentsline {section}{\numberline {3.2}Diseño}{8}
+\contentsline {subsection}{\numberline {3.2.1}Diseño del robot}{9}
+\contentsline {subsubsection}{Raspberry Pi 3 model B}{9}
+\contentsline {subsubsection}{Servo motores}{10}
+\contentsline {paragraph}{PWM}{10}
+\contentsline {subsubsection}{Cámara}{10}
+\contentsline {subsection}{\numberline {3.2.2}Router}{11}
+\contentsline {subsection}{\numberline {3.2.3}Oculus Rift}{11}
+\contentsline {subsubsection}{Detección de la orientación}{11}
+\contentsline {paragraph}{Fusión de Sensores }{11}
+\contentsline {subsection}{\numberline {3.2.4}Diseño de conexiones}{14}
+\contentsline {section}{\numberline {3.3}Desarrollo e implementación}{15}
+\contentsline {subsection}{\numberline {3.3.1}Streaming}{15}
+\contentsline {subsubsection}{Raspberry Pi3}{15}
+\contentsline {subsubsection}{Ordenador}{16}
+\contentsline {subsection}{\numberline {3.3.2}Control del Robot}{16}
+\contentsline {subsubsection}{Librería OVR}{16}
+\contentsline {subsubsection}{Raspberry Pi3}{18}
+\contentsline {paragraph}{Movimiento de los servo motores}{18}
+\contentsline {paragraph}{PWM- Frecuencia:50Hz , DutyCycle $50\%$}{18}
+\contentsline {paragraph}{PWM- Frecuencia:50Hz , DutyCycle $80\%$}{18}
+\contentsline {section}{\numberline {3.4}Segmentación}{18}
+\contentsline {section}{\numberline {3.5}Normalización}{18}
+\contentsline {section}{\numberline {3.6}Codificación}{18}
+\contentsline {section}{\numberline {3.7}Matching}{18}
+\contentsline {chapter}{\numberline {4}Experimentos Realizados y Resultados}{19}
+\contentsline {section}{\numberline {4.1}Bases de datos y protocolo}{19}
+\contentsline {section}{\numberline {4.2}Sistemas de referencia}{19}
+\contentsline {section}{\numberline {4.3}Escenarios de pruebas}{19}
+\contentsline {section}{\numberline {4.4}Experimentos del sistema completo}{19}
+\contentsline {chapter}{\numberline {5}Conclusiones y trabajo futuro}{21}
+\contentsline {section}{\numberline {5.1}Conclusiones}{21}
+\contentsline {section}{\numberline {5.2}Trabajo futuro}{21}
+\contentsline {chapter}{Glosario de acrónimos}{23}
+\contentsline {chapter}{Bibliografía}{24}
+\contentsline {chapter}{\numberline {A}Manual de utilización}{27}
+\contentsline {chapter}{\numberline {B}Manual del programador}{29}

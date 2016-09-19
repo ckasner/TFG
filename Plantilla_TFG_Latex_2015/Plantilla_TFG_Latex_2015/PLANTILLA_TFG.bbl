@@ -1,0 +1,8 @@
+\begin{thebibliography}{1}
+
+\bibitem{article:Ejemplo}
+Autor Apellidos.
+\newblock Titulo del artículo.
+\newblock {\em Revista de publicación}, pages 65--73, 2008.
+
+\end{thebibliography}
