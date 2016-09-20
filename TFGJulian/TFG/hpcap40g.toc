@@ -15,58 +15,61 @@
 \contentsline {chapter}{\chapternumberline {1}Introducci\IeC {\'o}n}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Motivaci\IeC {\'o}n del proyecto}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Objetivos}{2}{section.1.2}
-\contentsline {section}{\numberline {1.3}Estructura del documento}{3}{section.1.3}
+\contentsline {subsection}{\numberline {1.2.1}Streaming}{2}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Movimiento de la c\IeC {\'a}mara}{2}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.2.3}Visualizaci\IeC {\'o}n del entorno}{3}{subsection.1.2.3}
+\contentsline {section}{\numberline {1.3}Estructura del documento}{4}{section.1.3}
 \contentsline {chapter}{\chapternumberline {2}Estado del arte}{5}{chapter.2}
 \contentsline {section}{\numberline {2.1}Introducci\IeC {\'o}n}{5}{section.2.1}
-\contentsline {section}{\numberline {2.2}Realidad virtual y salud}{6}{section.2.2}
+\contentsline {section}{\numberline {2.2}Realidad virtual y salud}{5}{section.2.2}
 \contentsline {section}{\numberline {2.3}Rob\IeC {\'o}tica y realidad virtual.}{6}{section.2.3}
 \contentsline {chapter}{\chapternumberline {3}An\IeC {\'a}lisis, dise\IeC {\~n}o y desarrollo}{7}{chapter.3}
 \contentsline {section}{\numberline {3.1}An\IeC {\'a}lisis}{7}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Requisitos Funcionales}{8}{subsection.3.1.1}
-\contentsline {subsubsection}{Construcci\IeC {\'o}n del Robot}{8}{section*.10}
-\contentsline {subsubsection}{Streaming}{8}{section*.11}
-\contentsline {subsubsection}{Control del Robot}{9}{section*.12}
+\contentsline {subsubsection}{Construcci\IeC {\'o}n del Robot}{8}{section*.11}
+\contentsline {subsubsection}{Streaming}{8}{section*.12}
+\contentsline {subsubsection}{Control del Robot}{9}{section*.13}
 \contentsline {subsection}{\numberline {3.1.2}Requisitos no funcionales}{9}{subsection.3.1.2}
 \contentsline {section}{\numberline {3.2}Dise\IeC {\~n}o}{10}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Dise\IeC {\~n}o del robot}{10}{subsection.3.2.1}
-\contentsline {subsubsection}{Raspberry Pi 3 model B}{10}{section*.13}
-\contentsline {subsubsection}{Servo motores}{10}{section*.15}
-\contentsline {paragraph}{PWM}{11}{section*.16}
-\contentsline {subsubsection}{C\IeC {\'a}mara}{12}{section*.18}
+\contentsline {subsubsection}{Raspberry Pi 3 model B}{10}{section*.14}
+\contentsline {subsubsection}{Servo motores}{10}{section*.16}
+\contentsline {paragraph}{PWM}{11}{section*.17}
+\contentsline {subsubsection}{C\IeC {\'a}mara}{12}{section*.19}
 \contentsline {subsection}{\numberline {3.2.2}Router}{12}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Oculus Rift}{13}{subsection.3.2.3}
-\contentsline {subsubsection}{Detecci\IeC {\'o}n de la orientaci\IeC {\'o}n}{13}{section*.22}
-\contentsline {paragraph}{Fusi\IeC {\'o}n de Sensores }{14}{section*.23}
+\contentsline {subsubsection}{Detecci\IeC {\'o}n de la orientaci\IeC {\'o}n}{13}{section*.23}
+\contentsline {paragraph}{Fusi\IeC {\'o}n de Sensores }{14}{section*.24}
 \contentsline {subsection}{\numberline {3.2.4}Dise\IeC {\~n}o de conexiones}{16}{subsection.3.2.4}
 \contentsline {section}{\numberline {3.3}Desarrollo e implementaci\IeC {\'o}n}{18}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Construcci\IeC {\'o}n del Robot}{18}{subsection.3.3.1}
-\contentsline {subsubsection}{Soporte de la c\IeC {\'a}mara}{18}{section*.27}
+\contentsline {subsubsection}{Soporte de la c\IeC {\'a}mara}{18}{section*.28}
 \contentsline {subsection}{\numberline {3.3.2}Streaming}{20}{subsection.3.3.2}
-\contentsline {subsubsection}{Raspberry Pi3}{20}{section*.30}
-\contentsline {subsubsection}{Ordenador}{21}{section*.34}
+\contentsline {subsubsection}{Raspberry Pi3}{20}{section*.31}
+\contentsline {subsubsection}{Ordenador}{21}{section*.35}
 \contentsline {subsection}{\numberline {3.3.3}Control del Robot}{22}{subsection.3.3.3}
-\contentsline {paragraph}{Recogida y procesamiento de la informaci\IeC {\'o}n que mandan las Oculus al ordenador}{23}{section*.36}
-\contentsline {subparagraph}{Librer\IeC {\'\i }a OVR}{23}{section*.37}
-\contentsline {subparagraph}{Procesamiento de HeadPose.ThePose.Orientation}{23}{section*.38}
-\contentsline {paragraph}{Env\IeC {\'\i }o de la informaci\IeC {\'o}n procesada a la Raspberry Pi 3}{24}{section*.40}
-\contentsline {subparagraph}{Recepci\IeC {\'o}n de los datos en el robot}{24}{section*.41}
-\contentsline {paragraph}{Movimiento de los servo motores}{25}{section*.42}
-\contentsline {subparagraph}{PWM- Frecuencia:50Hz , DutyCycle $50\%$}{25}{section*.43}
-\contentsline {subparagraph}{PWM- Frecuencia:50Hz , DutyCycle $80\%$}{25}{section*.44}
-\contentsline {subsubsection}{Control de los motores de las ruedas del robot}{26}{section*.45}
-\contentsline {subsubsection}{Control del motor de la c\IeC {\'a}mara del robot}{26}{section*.46}
-\contentsline {paragraph}{Control del Robot por parte del usuario}{26}{section*.47}
-\contentsline {subsubsection}{Instruccines de mando}{27}{section*.48}
+\contentsline {paragraph}{Recogida y procesamiento de la informaci\IeC {\'o}n que mandan las Oculus al ordenador}{23}{section*.37}
+\contentsline {subparagraph}{Librer\IeC {\'\i }a OVR}{23}{section*.38}
+\contentsline {subparagraph}{Procesamiento de HeadPose.ThePose.Orientation}{23}{section*.39}
+\contentsline {paragraph}{Env\IeC {\'\i }o de la informaci\IeC {\'o}n procesada a la Raspberry Pi 3}{24}{section*.41}
+\contentsline {subparagraph}{Recepci\IeC {\'o}n de los datos en el robot}{24}{section*.42}
+\contentsline {paragraph}{Movimiento de los servo motores}{25}{section*.43}
+\contentsline {subparagraph}{PWM- Frecuencia:50Hz , DutyCycle $50\%$}{25}{section*.44}
+\contentsline {subparagraph}{PWM- Frecuencia:50Hz , DutyCycle $80\%$}{25}{section*.45}
+\contentsline {subsubsection}{Control de los motores de las ruedas del robot}{26}{section*.46}
+\contentsline {subsubsection}{Control del motor de la c\IeC {\'a}mara del robot}{26}{section*.47}
+\contentsline {paragraph}{Control del Robot por parte del usuario}{26}{section*.48}
+\contentsline {subsubsection}{Instrucciones de mando}{27}{section*.49}
 \contentsline {chapter}{\chapternumberline {4}Pruebas y Resultados}{29}{chapter.4}
 \contentsline {section}{\numberline {4.1}Latencia de recepci\IeC {\'o}n de comandos}{29}{section.4.1}
 \contentsline {section}{\numberline {4.2}Feedback de los usuarios}{30}{section.4.2}
-\contentsline {paragraph}{Cambios realizados en la fase de calibraci\IeC {\'o}n}{31}{section*.52}
-\contentsline {paragraph}{Valoraci\IeC {\'o}n de los usuarios}{31}{section*.53}
-\contentsline {paragraph}{Comentarios tras las pruebas}{32}{section*.54}
+\contentsline {paragraph}{Cambios realizados en la fase de calibraci\IeC {\'o}n}{31}{section*.53}
+\contentsline {paragraph}{Valoraci\IeC {\'o}n de los usuarios}{31}{section*.54}
+\contentsline {paragraph}{Comentarios tras las pruebas}{32}{section*.55}
 \contentsline {chapter}{\chapternumberline {5}Conclusiones y trabajo futuro}{33}{chapter.5}
 \contentsline {section}{\numberline {5.1}Conclusiones}{33}{section.5.1}
-\contentsline {paragraph}{Puntos positivos y a mejorar}{33}{section*.55}
+\contentsline {paragraph}{Puntos positivos y a mejorar}{33}{section*.56}
 \contentsline {subsection}{\numberline {5.1.1}Tecnolog\IeC {\'\i }as aprendidas}{34}{subsection.5.1.1}
 \contentsline {section}{\numberline {5.2}Trabajo futuro}{34}{section.5.2}
  \vspace {10pt} \cftbeforechapterskip \extratocentriesskip \relax 
-\contentsline {chapter}{Bibliograf\'{\i }a}{35}{section*.57}
+\contentsline {chapter}{Bibliograf\'{\i }a}{35}{section*.58}

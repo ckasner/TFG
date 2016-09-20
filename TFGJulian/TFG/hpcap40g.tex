@@ -175,52 +175,79 @@ A pesar de esto el proyecto se ha terminado con éxito, dejando abierta una lín
 
 
 \section{Motivación del proyecto}
-La motivación de este proyecto es explorar las posibilidades que nos ofrece combinar la robótica con la realidad virtual.
 
-El campo de la robótica lleva muchos años en desarrollo y mejora exponencialmente a lo largo del tiempo. Está inmerso en nuestro día a día y no paramos de sorprendernos con nuevos avances como las impresoras 3D o los drones.
+La motivación de este proyecto es explorar las posibilidades que nos ofrece combinar la robótica con la realidad virtual con el objetivo de incrementar la autonomía e independencia de personas con discapacidad motora.
 
-La realidad virtual es algo que, aunque lleva mucho tiempo estudiandose (En 1968 Ivan Sutherlan creó el primer casco de realidad virtual), hasta hace bien poco, para la gran mayoría de gente era solo ciencia ficción.
+El campo de la \textbf{robótica} lleva muchos años en desarrollo y mejora exponencialmente a lo largo del tiempo. Está inmerso en nuestro día a día y no paramos de sorprendernos con nuevos avances como las impresoras 3D o los drones.
 
-Ahora nos encontramos en un momento en el que ya podemos empezar a disrutar de la realidad virtual. Tenemos las CardBoard , las Oculus Rift... a nuestro alcance.
+La \textbf{realidad virtual}  lleva mucho tiempo estudiándose .En 1968 Ivan Sutherlan creó el primer casco de realidad virtual.A pesar de ello, hasta hace bien poco, para la gran mayoría de gente era solo ciencia ficción.
+
+Ahora nos encontramos en un momento en el que ya podemos empezar a disfrutar de la realidad virtual. Tenemos las CardBoard , las Oculus Rift, etc, a nuestro alcance.
 El uso más generalizado que se está dando a estas herramientas es en el mundo de los videojuegos.
 
-Este trabajo pretende aplicar estas dos tecnologías para hacer más fácil el día a día de las personas, en concreto nos hemos centrado en las personas con discapacidad motora.
+La idea principal del trabajo es construir un robot que actúe como extensión de los ojos del usuario y que éste pueda controlar de forma sencilla e intuitiva.
 
-Hemos construido un robot que lleva incorporada una cámara y que se comunica con las oculus rift.
+Para que el usuario pueda ver todo lo que vea el robot se utilizarán las Oculus Rift, unas potentes gafas de realidad virtual que son capaces de crear una sensación de inmersión total en cualquier entorno.
 
-El usuario puede controlar el movimiento del robto y de la cámara solo con el movimiento de la cabeza, aunque no sería difícil adaptar este control para personas que les sea más fácil controlarlo a través de mandos.
+El usuario puede controlar el movimiento del robot y de la cámara solo con el movimiento de la cabeza, aunque no sería difícil adaptar este control para personas que les sea más fácil controlarlo a través de mandos.
 
-El robot transmite a las oculus en tiempo real un video del entorno. Al ser las oculus gafas de realidad virtual, esto nos permite modificar el entorno según las necesidades del usuario . P.ej: podríamos controlar una casa domotizada.
+El robot transmite a las Oculus en tiempo real un video del entorno. De esta forma el robot actúa como extensión de los ojos del usuario.
 
-De esta forma damos al usuario más independencia y le abrimos un mundo al que hasta ahora, tenía difícil acceso.
+¿Porqué utilizar las Oculus Rift?  Al ser las Oculus gafas de realidad virtual,si consiguiéramos una correcta conexión entre las gafas y el robot, se nos abrirían muchísimas posibilidades, como modificar el entorno según las necesidades del usuario , integrar realidad aumentada para controlar una casa domotizada, etc.
+
+De esta forma daríamos al usuario más independencia y le abrimos un mundo al que hasta ahora, tenía difícil acceso.
 
 
 \section{Objetivos}
-El objetivo de este proyecto es investigar las oportunidades que nos ofrece juntar la robótica y la realidad virtual para facilitar la vida de personas con discapacidad motora.
+El objetivo final consiste en ser capaces de mover una cámara , controlando el movimiento con la cabeza y recibir en las Oculus Rift a tiempo real todo lo que vea la cámara.
 
-Para ello se quiere construir un robot que se pueda controlar a través de la Oculus Rift, las gafas de realidad virtual, tan solo con el movimiento de cabeza del usuario.
+Para ello definiremos pequeños objetivos que debemos ir implementando para conseguir la meta final.
 
-El robot por su parte transmitirá a tiempo real un vídeo del entorno, que el usuario verá en las Oculus Rift.
+\subsection{Streaming}
+Como se ha explicado anteriormente, debemos ser capaces de ver en las Oculus Rift a tiempo real todo lo que ve la cámara.
 
-Con este propósito hemos dividido el trabajo en pequeños objetivos:
+Dado que la comunicación con las Oculus Rift debe ser a través del PC al que estén conectadas , el streaming deberá \textbf{transmitirse desde la cámara hasta el PC}.
 
+Una buena candidata para la transmisión inalámbrica de vídeo a tiempo real al ordenador es a través de una \textbf{red local}.
+
+Por lo tanto uno de los primeros objetivos es crear una red local a través de la cual se puedan conectar  la cámara y el PC. Además se deberá implementar un software que capture todo lo que vea la cámara y transmita el vídeo a tiempo real por la red local. Por último se necesita un software que recoja el video en el PC.
+
+\subsection{Movimiento de la cámara}
+Otro de los objetivos básicos es que el usuario sea capaz de controlar la dirección y posición de la cámara con el movimiento de la cabeza.
+
+Con este objetivo de van a definir dos fases del movimiento:
 \begin{itemize}
-	\item Construir un robot con una cámara integrada y con capacidad de movimiento en todas las direcciones.
+	\item \textbf{Fase de exploración:}
 	
-	\item Conseguir streaming a tiempo real desde el robot hasta las Oculus Rift, con la mínima latencia posible.
+	Durante la exploración la cámara no se mueve de sitio, tan solo explora el entorno.
 	
-	\item Aplicar al video el formato SBS (Side By Side) para poder verlo correctamente desde las Oculus Rift y asi dar al usuario mayor sensación de inmersión.
-	
-	\item Sincronizar el movimiento del robot con el movimiento de las Oculus Rift. Para ello debemos:
-	
+	Los movimientos que se deberán implementar para esta fase serán:
 	\begin{itemize}
-		\item Capturar la señal de los sensores de posición de las Oculus Rift (giroscopio, magnetómetro, acelerómetro)
-		
-		\item Enviar con la mínima latencia posible la información de posición y orientación de las Oculus Rift al robot.
-		
-		\item Traducir la información de posición y orientación de las Oculus a comandos para enviarlos a los motores del robot.
+		\item Movimiento vertical : El usuario podrá mirar hacia arriba y hacia abajo.
+		\item Movimiento horizontal : La cámara deberá ser capaz de rotar sobre si misma permitiendo al usuario mirar hacia ambos lados.
 	\end{itemize}
+	\item \textbf{Fase de transporte:}
+	
+	El usuario podrá llevar la cámara a cualquier punto de la habitación moviendo la cabeza.
+	
 \end{itemize}
+
+Para este objetivo , el diseño tendrá un papel esencial ya que el control del robot debe ser sencillo e intuitivo. Se intentará crear un sistema de control con la cabeza que no sea complicado para el usuario.
+
+\subsection{Visualización del entorno}
+El último de los objetivos que es necesario desarrollar para el proyecto es conseguir visualizar el entorno en el que se encuentra la cámara en las Oculus Rift.
+
+Para ello necesitaremos un software que , en tiempo real, recoja el vídeo del PC y lo reproduzca en las gafas. 
+
+
+A continuación se añade un esquema a modo de resumen de los objetivos ya explicados.
+
+\begin{figure}[h!]
+	\centerline{
+		\mbox{\includegraphics[width=7.00in]{images/objetivos.png}}
+	}
+	\caption{Resumen de los objetivos del proyecto}
+\end{figure}
 
 \newpage
 \section{Estructura del documento}
@@ -241,35 +268,29 @@ Para finalizar expondremos brevemente las conclusiones y el trabajo futuro que s
 \chapter{Estado del arte}
 
 \section{Introducción}
-La realidad virtual es un concepto que empezó siendo ciencia ficción y poco a poco está ganando terreno en la vida cotidiana, ya sea en el mundo de los videojuegos, la medicina o la aviación, entre otros campos.
+La realidad virtua empezó siendo ciencia ficción y poco a poco está ganando terreno en la vida cotidiana, en el mundo de los videojuegos, la medicina o la aviación, entre otros campos.
 
 Uno de los  acontecimientos con los que empezó la realidad virtual es la creación de “The Sword of Damocles” , un casco de realidad virtual (HMD- head-mounted display)  creado por Ivan Sutherland en 1968. 
-Ivan Sutherland considera la realidad virtual como una herramienta para familiarizarnos con una realidad que, hasta ahora no estaba a nuestro alcance.
 
 Al mismo tiempo Thomas A. Furness III empezó a introducir herramientas de realidad virtual en entrenamientos de vuelo, de forma que estos fueran mucho más seguros para los pilotos. Hoy en día se sigue utilizando y mejorando esta tecnología ya que, no solo es más segura, sino que además es más barata.
 
-Desde entonces , y con el desarrollo exponencia que ha vivido la tecnología las últimas décadas, la realidad virtual ha ido haciéndose un hueco en la industria tecnológica.
-La cara más visible de la realidad virtual es el uso que se le da en los videojuegos. ¿cómo se consigue la sensación de inmersión que dan las gafas de realidad virtual?
+Desde entonces , y con el desarrollo exponencial que ha vivido la tecnología las últimas décadas, la realidad virtual ha ido haciéndose un hueco en la industria tecnológica.
 
-Hay dos puntos clave para conseguirlo:
-\begin{enumerate}
-	\item Visión 3D
-	\item Visión 360º
-\end{enumerate}
+La cara más visible de la realidad virtual es el uso que se le da en los videojuegos pero no es su única aplicación.
 
-La técnica utilizada para la visión 3D fue descubierta cerca de 1840, cocnsiste en separar la imagen en dos, una para el ojo derecho y otra para el izquierdo, dando a cada imagen una inclinación distinta, para simular como ven nuestros ojos y así hacer que el cerebro lo interprete tal y como interpreta el mundo real que vemos.
+A continuación se presentarán diferentes proyectos donde se utiliza la realidad virtual en el campo de la salud, sobretodo aplicada a rehabilitaciones. Esto es muy interesante para este trabajo ya que muestra cómo usuarios con alguna dificultad motora responde bien a entornos virtuales.
 
+También se hablará de cómo se están integrando actualmente  las dos tecnologías que utilizaremos en este trabajo: la robótica y la realidad virtual.
 
-Otro sector muy interesante donde se aplican técnicas de Realidad Virtual es en el campo de la salud, hacia el que está enfocado este trabajo.
 
 \section{Realidad virtual y salud}
 \label{sec:VR y salud}
 
-El uso de realidad virtual está siendo muy útil en medicina, ya que permite estudiar comportamientos en diferentes situaciones de forma bastante realista.
+El uso de realidad virtual está siendo muy útil en medicina, ya que permite crear diferentes entornos y estudiar cómo responde y  es capaz de interactuar el paciente en distintas situaciones de forma bastante realista.
 
-Un ejemplo de esto es la evaluación del deterioro cognitivo en personas que sufren esclerosis múltiple. Para dicha evaluación se requiere una gran cantidad de datos sobre la velocidad de procesamiento de la información, atención, etc...Esto se conseguía haciendo múltiples test que no siempre eran fieles a la realidad.
+Un ejemplo de esto es la evaluación del deterioro cognitivo en personas que sufren esclerosis múltiple. Para dicha evaluación se requiere una gran cantidad de datos sobre la velocidad de procesamiento de la información, atención, etc.Esto se conseguía haciendo múltiples test que no siempre eran fieles a la realidad.
 
-Ahora se pueden crear entornos virtuales y estudiar el comportamiento de los usuarios en diversas situaciones de forma que el estudio es más realista y eficiente. [ref]
+Ahora con la Realidad Virtual se consiguen crear entornos en los que el usuario tiene tal sensación de inmersión, que su comportamiento es muy similar al que tendría en el entorno real. Esto permite hacer un estudio mucho más amplio y realista de los estímulos del paciente y obtener resultados más completos.\cite{LamargueHamel201594}
 
 
 También se está estudiando el uso de programas de rehabilitación para que los pacientes no necesiten trasladarse hasta el hospital.
@@ -294,17 +315,20 @@ Otra aplicación es el control remoto de robots, tanto con software que crea una
 
 \chapter{Análisis, diseño y desarrollo}
 \label{chap:sistemadesarrollado}
-En este capítulo se explicará cómo se ha enfocado el desarrollo del proyecto.
+Este capítulo explica las fases que se han llevado a cabo para desarrollar el proyecto.
 
-La primera parte trata del análisis del problema. Se explican las diferentes partes en las que he dividido el trabajo para su posterior implementación.
-También se presenta de forma muy general qué requisitos básicos debe cumplir cada parte.
+La primera fase es la de análisis. Se estudia el objetivo y los requisitos que debe cumplir. De esta forma el trabajo queda dividido en pequeñas tareas y facilita su implementación.
 
 La sección de diseño explica las herramientas que se han utilizado para implementar cada parte y cómo funcionan.
 
 Por último se explica de forma más detallada cómo se ha desarrollado cada parte del problema, qué dificultades han ido apareciendo y cómo se han solucionado. También explica cómo se ha realizado la integración para conseguir el proyecto final.
 
 \section{Análisis}
-El objetivo de este trabajo es conseguir un robot con una cámara que transmita video a tiempo real. Este video le llegará a unas gafas de realidad virtual. El robot se conrolará con el movimiento de cabeza del usuario.
+En el capítulo de \textit{Objetivos} se explica que la meta final del proyecto es conseguir que el usuario pueda controlar una cámara con el movimiento de cabeza y ver todo lo que la cámara vea.
+
+La forma más eficiente de hacer que la cámara sea móvil es construir un robot con ruedas que lleve la cámara integrada. 
+
+De esta forma cuando el usuario mueva la cabeza, se le enviarán las instrucciones necesarias al robot para que se mueva. A su vez el robot le estará mandando video a tiempo real al usuario, que lo verá a través de las Oculus Rift.
 
 DIBUJO CHULI DE TODO JUNTO
 
@@ -320,7 +344,6 @@ Vamos a desarrollar cada uno de ellos, identificando qué funcionalidades básic
 \subsection{Requisitos Funcionales}
 
 \subsubsection{Construcción del Robot}
-
 
 
 El robot debe ser un dispositivo fácil de controlar , que a su vez actúe como una extensión de los ojos del usuario, dándole a éste la sensación de inmersión en un espacio real o virtual.
@@ -787,7 +810,7 @@ Para ello especificamos en VLC que el medio de reproducción será una ubicació
 
 Posteriormente dividimos el video en dos pantallas exactamente iguales para poder verlo desde las Oculus en modo SBS (Side by Side).
 
-\begin{figure}[width= .80\textwidth]
+\begin{figure}[h]
 	\centering
 	\subfigure[Medio de reproducción-Ubicación de red]{\includegraphics[width=60mm]{images/confVLC.png}}
 	\subfigure[División de imágenes]{\includegraphics[width=60mm]{images/confSBS.png}}\\
@@ -1011,7 +1034,7 @@ Para transformar este ángulo el pulso(PWM) correspondiente debemos tener en cue
 
 Ya que el servo tiene un rango de ángulos de 0 a 180 grados, es fácil ver que el ancho de pulso de $0.9$ ms se corresponde con 0º y $2.1$ ms con 180º
 
-Asi podemos convertir los ángulos en pulsos PWM y mover la cámarahacia la dirección deseada.
+Asi podemos convertir los ángulos en pulsos PWM y mover la cámara hacia la dirección deseada.
 
 \paragraph{Control del Robot por parte del usuario}
 
@@ -1019,7 +1042,7 @@ El las anteriores secciones se ha explicado el funcionamiento interno del contro
 
 En este nuevo apartado se presenta cómo debe utilizar el usuario este producto, qué rango dde movimiento tiene y cómo puede hacer avanzar el robot.
 
-\subsubsection{Instruccines de mando}
+\subsubsection{Instrucciones de mando}
 
 Como se especifica al inicio de este trabajo, el robot estará controlado exclusivamente por el movimiento de cabeza del usuario.
 
@@ -1034,7 +1057,7 @@ Diferenciamos dos estados de movimiento del robot:
 Finalmente se ha implementado de la siguiente forma:
 
 
-\begin{figure}[width= .80\textwidth]
+\begin{figure}[h]
 	\centering
 	\subfigure[Rotación sobre sí mismo]{\includegraphics[width=60mm]{images/Robotrota.png}}
 	\subfigure[La cámara gira respecto del eje X]{\includegraphics[width=60mm]{images/Robotexp.png}}\\
@@ -1220,7 +1243,7 @@ Creo que en un futuro no muy lejano, las casas serán casas domotizadas, que igu
 \cleardoublepage
 
 \nocite{*}
-\bibliography{}{}
+\bibliography{hpcap40g}{}
 
 \cleardoublepage
 \printindex
