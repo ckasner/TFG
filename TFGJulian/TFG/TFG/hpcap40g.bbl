@@ -1,5 +1,11 @@
 \begin{thebibliography}{1}
 
+\bibitem{kocian1977visually}
+D.~Kocian, A.~M. R. L. W.-P.~A. OHIO., and A.~F. A. M. R.~L. (U.S.).
+\newblock {\em A Visually-Coupled Airborne Systems Simulator (VCASS): An
+  Approach to Visual Simulation}.
+\newblock Aerospace Medical Research Laboratories, 1977.
+
 \bibitem{LamargueHamel201594}
 D.~Lamargue-Hamel, M.~Deloire, A.~Saubusse, A.~Ruet, J.~Taillard, P.~Philip,
   and B.~Brochet.
@@ -7,5 +13,12 @@ D.~Lamargue-Hamel, M.~Deloire, A.~Saubusse, A.~Ruet, J.~Taillard, P.~Philip,
   multiple sclerosis.
 \newblock {\em Journal of the Neurological Sciences}, 359(1–2):94 -- 99,
   2015.
+
+\bibitem{Sutherland}
+I.~E. Sutherland.
+\newblock A head-mounted three dimensional display.
+\newblock In {\em Proceedings of the December 9-11, 1968, Fall Joint Computer
+  Conference, Part I}, AFIPS '68 (Fall, part I), pages 757--764, New York, NY,
+  USA, 1968. ACM.
 
 \end{thebibliography}
