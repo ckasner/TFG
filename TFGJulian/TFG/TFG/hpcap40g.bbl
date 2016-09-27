@@ -1,5 +1,11 @@
 \begin{thebibliography}{1}
 
+\bibitem{JCLP:JCLP10244}
+H.~G. Hoffman, D.~R. Patterson, J.~Magula, G.~J. Carrougher, K.~Zeltzer,
+  S.~Dagadakis, and S.~R. Sharar.
+\newblock Water-friendly virtual reality pain control during wound care.
+\newblock {\em Journal of Clinical Psychology}, 60(2):189--195, 2004.
+
 \bibitem{kocian1977visually}
 D.~Kocian, A.~M. R. L. W.-P.~A. OHIO., and A.~F. A. M. R.~L. (U.S.).
 \newblock {\em A Visually-Coupled Airborne Systems Simulator (VCASS): An
@@ -13,6 +19,14 @@ D.~Lamargue-Hamel, M.~Deloire, A.~Saubusse, A.~Ruet, J.~Taillard, P.~Philip,
   multiple sclerosis.
 \newblock {\em Journal of the Neurological Sciences}, 359(1–2):94 -- 99,
   2015.
+
+\bibitem{Llorens2015418}
+R.~Lloréns, E.~Noé, C.~Colomer, and M.~Alcañiz.
+\newblock Effectiveness, usability, and cost-benefit of a virtual
+  reality–based telerehabilitation program for balance recovery after stroke:
+  A randomized controlled trial.
+\newblock {\em Archives of Physical Medicine and Rehabilitation}, 96(3):418 --
+  425.e2, 2015.
 
 \bibitem{Sutherland}
 I.~E. Sutherland.
