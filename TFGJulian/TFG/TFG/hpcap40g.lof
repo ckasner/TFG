@@ -8,29 +8,32 @@
 \addvspace {10pt}
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Sword of Damocles. Imagen obtenida de \textit {A head-mounted three dimensional display} \cite {Sutherland}\relax }}{8}{figure.caption.11}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Rehabilitaci\IeC {\'o}n usando herramientas de realidad virtual. Imagen obtenida de \textit {Water-Friendly Virtual Reality Pain Control During Wound Care} \cite {JCLP:JCLP10244}\relax }}{10}{figure.caption.12}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Da Vinci Surgical System\relax }}{11}{figure.caption.13}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{11}{figure.caption.13}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{11}{figure.caption.13}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Raspberry Pi 3 model B\relax }}{17}{figure.caption.17}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Esquema conexiones servos , c\IeC {\'a}mara, Raspberry Pi 3\relax }}{18}{figure.caption.22}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Tabla DHCP del router con las parejas MAC-IP fijas\relax }}{19}{figure.caption.23}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Archivo de configuraci\IeC {\'o}n de red Raspberry Pi 3\relax }}{19}{figure.caption.24}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Ejes de giro\relax }}{20}{figure.caption.27}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Correcci\IeC {\'o}n del tilt error\relax }}{22}{figure.caption.28}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Esquema conexiones\relax }}{23}{figure.caption.29}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Dise\IeC {\~n}o 3D de la pinza de agarre en Blender\relax }}{25}{figure.caption.31}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Imagen de la configuraci\IeC {\'o}n del Cura para enviar la Pieza de agarre a la impresora 3D\relax }}{25}{figure.caption.32}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Uso de CPU del programa Mjpeg-Streamer por el que se hae el streaming de video\relax }}{26}{figure.caption.34}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Ejecuci\IeC {\'o}n del comando para iniciar el streaming\relax }}{27}{figure.caption.35}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces P\IeC {\'a}gina html donde se recibe el streaming a tiempo real desde la Raspberry \relax }}{27}{figure.caption.36}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Configuraci\IeC {\'o}n y resultado de la reproducci\IeC {\'o}n de video en VLC\relax }}{28}{figure.caption.38}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Medio de reproducci\IeC {\'o}n-Ubicaci\IeC {\'o}n de red}}}{28}{figure.caption.38}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Divisi\IeC {\'o}n de im\IeC {\'a}genes}}}{28}{figure.caption.38}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Reproducci\IeC {\'o}n SBS}}}{28}{figure.caption.38}
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Posici\IeC {\'o}n de as Oculus respecto al eje X una vez procesados los datos de \texttt {HeadPose.ThePose.Orientation}\relax }}{30}{figure.caption.42}
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Posibles movimientos del robot seg\IeC {\'u}n el movimiento de las Oculus Rift\relax }}{33}{figure.caption.52}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Rotaci\IeC {\'o}n sobre s\IeC {\'\i } mismo}}}{33}{figure.caption.52}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {La c\IeC {\'a}mara gira respecto del eje X}}}{33}{figure.caption.52}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Movimiento hacia delante si el ususario baja la cabeza}}}{33}{figure.caption.52}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Raspberry Pi 3 model B\relax }}{17}{figure.caption.18}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Esquema conexiones servos , c\IeC {\'a}mara, Raspberry Pi 3\relax }}{18}{figure.caption.23}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Tabla DHCP del router con las parejas MAC-IP fijas\relax }}{19}{figure.caption.24}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Archivo de configuraci\IeC {\'o}n de red Raspberry Pi 3\relax }}{19}{figure.caption.25}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Ejes de giro\relax }}{20}{figure.caption.28}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Correcci\IeC {\'o}n del tilt error\relax }}{22}{figure.caption.29}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Esquema conexiones\relax }}{23}{figure.caption.30}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Dise\IeC {\~n}o 3D de la pinza de agarre en Blender\relax }}{25}{figure.caption.32}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Imagen de la configuraci\IeC {\'o}n del Cura para enviar la Pieza de agarre a la impresora 3D\relax }}{25}{figure.caption.33}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Uso de CPU del programa Mjpeg-Streamer por el que se hae el streaming de video\relax }}{26}{figure.caption.35}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Ejecuci\IeC {\'o}n del comando para iniciar el streaming\relax }}{27}{figure.caption.36}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces P\IeC {\'a}gina html donde se recibe el streaming a tiempo real desde la Raspberry \relax }}{27}{figure.caption.37}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Configuraci\IeC {\'o}n y resultado de la reproducci\IeC {\'o}n de video en VLC\relax }}{28}{figure.caption.39}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Medio de reproducci\IeC {\'o}n-Ubicaci\IeC {\'o}n de red}}}{28}{figure.caption.39}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Divisi\IeC {\'o}n de im\IeC {\'a}genes}}}{28}{figure.caption.39}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Reproducci\IeC {\'o}n SBS}}}{28}{figure.caption.39}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Posici\IeC {\'o}n de as Oculus respecto al eje X una vez procesados los datos de \texttt {HeadPose.ThePose.Orientation}\relax }}{30}{figure.caption.43}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Posibles movimientos del robot seg\IeC {\'u}n el movimiento de las Oculus Rift\relax }}{33}{figure.caption.53}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Rotaci\IeC {\'o}n sobre s\IeC {\'\i } mismo}}}{33}{figure.caption.53}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {La c\IeC {\'a}mara gira respecto del eje X}}}{33}{figure.caption.53}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Movimiento hacia delante si el ususario baja la cabeza}}}{33}{figure.caption.53}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Diferencia de tiempos entre env\IeC {\'\i }o y recepci\IeC {\'o}n de comandos a 7,50 metros\relax }}{36}{figure.caption.53}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Diferencia de tiempos entre env\IeC {\'\i }o y recepci\IeC {\'o}n de comandos a 7,50 metros\relax }}{36}{figure.caption.54}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Diferencia de tiempos entre env\IeC {\'\i }o y recepci\IeC {\'o}n de comandos a 7,50 metros\relax }}{36}{figure.caption.54}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Diferencia de tiempos entre env\IeC {\'\i }o y recepci\IeC {\'o}n de comandos a 7,50 metros\relax }}{36}{figure.caption.55}
 \addvspace {10pt}

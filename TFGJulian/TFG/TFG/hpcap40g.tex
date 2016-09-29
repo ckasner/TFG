@@ -338,13 +338,13 @@ También se hablará de cómo se están integrando actualmente  las dos tecnolog
 La realidad virtual ofrece grandes posibilidades en el campo de la medicina. Permite crear diferentes entornos y estudiar cómo responde el paciente a distintos estímulos o  cómo interactúa con diferentes entornos de forma bastante realista.
 
 Podemos encontrar un ejemplo de esto en un proyecto que se realizó para evaluar el deterioro cognitivo en personas que sufren esclerosis múltiple. Para que dicha evaluación sea precisa ,se requiere de una gran cantidad de datos sobre la velocidad de procesamiento de la información, atención, etc. Esto se conseguía haciendo múltiples test que no siempre eran fieles a la realidad.
-Ahora con la Realidad Virtual se consiguen crear entornos en los que el usuario tiene tal sensación de inmersión, que su comportamiento es muy similar al que tendría en el entorno real. Esto permite hacer un estudio mucho más amplio y realista de los estímulos del paciente y obtener resultados más completos.\cite{LamargueHamel201594}
+Ahora con la Realidad Virtual se consiguen crear entornos en los que el usuario tiene tal sensación de inmersión, que su \textbf{comportamiento es muy similar al que tendría en el entorno real}. Esto permite hacer un estudio mucho más amplio y realista de los estímulos del paciente y obtener resultados más completos.\cite{LamargueHamel201594}
 
 
 Otra aplicación interesante es el uso de realidad virtual en programas de rehabilitación.
 
 Uno de los estudios se hizo a personas con hemiparesia, es decir, pacientes que han perdido parcial o totalmente la capacidad motora de las extremidades de uno de los lados de su cuerpo. El proyecto consistía en un software que mostraba por pantalla el movimiento de los pies  del usuario y le mandaba ejercicios para mejorar su locomoción. 
-Los resultados de este estudio mostraron que la herramienta de realidad virtual era efectiva para la rehabilitación de las capacidades motoras de los pacientes y además es especialmente útil para aquellos que tienen dificultades para trasladarse hasta el hospital.\cite{Llorens2015418}
+Los resultados de este estudio mostraron que la herramienta de realidad virtual era \textbf{efectiva para la rehabilitación de las capacidades motoras} de los pacientes y además es especialmente útil para aquellos que tienen dificultades para trasladarse hasta el hospital.\cite{Llorens2015418}
 
 Los dos proyectos que se han presentado en este capítulo son ejemplos de cómo la realidad virtual ha contribuido a mejorar técnicas que ya se usaban anteriormente.
 
@@ -364,23 +364,46 @@ Se le proporcionó al paciente un casco de realidad virtual y se creó un entorn
 \end{figure}
 
 Los resultados fueron muy positivos. El usuario puntuó la sensación de dolor en un 7 sobre 10 cuando no usaba realidad virtual y en un 2 sobre 10 utilizando realidad virtual.\cite{JCLP:JCLP10244}
-Este experimento supone una prueba de la increíble capacidad de inmersión que nos proporciona la realidad virtual, aspecto muy importante para nuestro trabajo.
 
-
-
-
+Estos experimentos suponen una prueba de la increíble \textbf{capacidad de inmersión} que nos proporciona la realidad virtual, aspecto muy importante para nuestro trabajo.
 
 
 \section{Robótica y realidad virtual.} 
 \label{sec:robotica y VR}
-La unión de robótica y realidad virtual es algo que se lleva haciendo desde hace bastante tiempo.
 
-En el campo de la salud una de las aplicaciones son entrenamientos de cirug´ia. La realidad virtual permite crear un entorno semejante al quir´ofano. El estudiante hace uso de herramientas que simulan los utensilios quir´urgicos y puede hacer una "operaci´on virtual" sin riesgo para ning´un paciente y sin necesidad de gastar recursos o un equipo quir´urgico de apoyo . [ref]
+A continuación se presentan algunos proyectos de robótica que utilizan técnicas de realidad virtual. Es interesante ver, en los resultados de estos trabajos, cómo ambas tecnologías se complementan de forma muy beneficiosa.
+
+Puesto que al final de este trabajo lo que se quiere conseguir es controlar un robot a través de una interfaz que utiliza realidad virtual, es interesante estudiar cómo ha resultado esto en proyectos parecidos.
+
+En 1997 , el IMG(Intelligent Mechanisms Group ) de la NASA y el instituto de robótica de la  CMU( Carnegie Mellon University) desarrollaron las \textbf{interfaces de control} necesarias para teledirigir a Nomad, un robot diseñado para la exploración de planetas.\cite{Nguyen2001}
+
+Hasta el momento este control era altamente complicado, ya que requería del uso de muchos comandos poco intuitivos. Para mejorar y facilitar esto, crearon dos interfaces:\textit{ Virtual Dahsboard Interface} y \textit{Telepresence Interface}.
+
+\textit{Virtual Dashboard interface} consiste en un panel de control donde el operador podía ver de forma simple el estado actual de Nomad y controlarlo de forma intuitiva.
+
+\textit{Telepresence Interface} es una interfaz que hace uso de la cámara panorámica de Nomad. A través de dicha interfaz el usuario podía ver las imágenes capturadas por Nomad e incluso podía girar el punto de vista o ampliar la imagen para conocer mejor el entorno.
+
+Estas imágenes se reproducían en una pantalla ancha, parecida a un parabrisas de un coche, frente al operador, para dar más sensación de telepresencia.
+
+Uno de los inconvenientes de este trabajo fue el delay a la hora de recibir las imágenes (5 segundos), que hacía más difícil el control.
+A pesar de esto \textbf{los resultados fueron positivos}, concluyendo que los operadores manejaban mejor el robot haciendo uso de la Telepresence Interface que sin ella.
+
+
+Otra de las aplicaciones de la combinación de robótica con realidad virtual es la mejora en \textbf{intervenciones quirúrgicas}.
+\begin{figure}[h]
+	\centering
+	\subfigure[]{\includegraphics[width=51mm]{images/Laproscopic_Surgery_Robot.jpg}}
+	\subfigure[]{\includegraphics[width=65mm]{images/cirujano.jpg}}\\
+	\caption{Da Vinci Surgical System} \label{daVinci}
+\end{figure}
+
+
+Un ejemplo de esto es \textbf{Da Vinci Surgical System}, un sistema en el cual el cirujano controla, a través de unos mandos, las herramientas necesarias para operar al paciente. Además tiene una pantalla 3D en la que se ve a tiempo real la zona que está siendo intervenida.
+Este sistema hace posible que el cirujano realice \textbf{movimientos mucho más precisos}, además de facilitarle una postura más cómoda durante la operación. \cite{Hubens2003}
 
 En educación hay varios programas de realidad virtual que hacen el aprendizaje más sencillo y completo a los estudiantes. Un ejemplo de esto es la visualización de brazos robóticos para diseñar correctamente el movimiento.
 Es relativamente complejo traducir cada movimiento de las articulaciones del brazo robótico en la posición finla de éste. Si estas pruebas se hicieran directamente sobre el robot, sería muy sencillo romperlo. Con los programas de realidad virtual se simulan todos los movimientos sin peligro de malgastar recursos. [ref]
 
-Otra aplicación es el control remoto de robots, tanto con software que crea una interfaz virtual para que el usuario obtenga de forma clara toda la información del robot (batería, almacenamiento de datos, posición...) [ref NASA xD], como interfaces BCIs.
 
 
 \chapter{Análisis, diseño y desarrollo}
