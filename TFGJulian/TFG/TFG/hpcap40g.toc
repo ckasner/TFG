@@ -53,22 +53,20 @@
 \contentsline {paragraph}{Env\IeC {\'\i }o de la informaci\IeC {\'o}n procesada a la Raspberry Pi 3}{33}{section*.37}
 \contentsline {subparagraph}{Recepci\IeC {\'o}n de los datos en el robot}{33}{section*.38}
 \contentsline {paragraph}{Movimiento de los servo motores}{33}{section*.39}
-\contentsline {subparagraph}{PWM- Frecuencia:50Hz , DutyCycle $50\%$}{34}{section*.40}
-\contentsline {subparagraph}{PWM- Frecuencia:50Hz , DutyCycle $80\%$}{34}{section*.41}
-\contentsline {subsubsection}{\textbf {Control de los motores de las ruedas del robot}}{34}{section*.42}
-\contentsline {subsubsection}{\textbf {Control del motor de la c\IeC {\'a}mara del robot}}{35}{section*.43}
-\contentsline {paragraph}{Control del Robot por parte del usuario}{35}{section*.44}
-\contentsline {subsubsection}{\textbf {Instrucciones de mando}}{35}{section*.45}
-\contentsline {chapter}{\chapternumberline {6}Pruebas y Resultados}{37}{chapter.6}
-\contentsline {section}{\numberline {6.1}Latencia de recepci\IeC {\'o}n de comandos}{37}{section.6.1}
-\contentsline {section}{\numberline {6.2}Feedback de los usuarios}{38}{section.6.2}
-\contentsline {paragraph}{Cambios realizados en la fase de calibraci\IeC {\'o}n}{39}{section*.49}
-\contentsline {paragraph}{Valoraci\IeC {\'o}n de los usuarios}{39}{section*.50}
-\contentsline {paragraph}{Comentarios tras las pruebas}{40}{section*.51}
-\contentsline {chapter}{\chapternumberline {7}Conclusiones y trabajo futuro}{41}{chapter.7}
-\contentsline {section}{\numberline {7.1}Conclusiones}{41}{section.7.1}
-\contentsline {paragraph}{Puntos positivos y a mejorar}{41}{section*.52}
-\contentsline {subsection}{\numberline {7.1.1}Tecnolog\IeC {\'\i }as aprendidas}{42}{subsection.7.1.1}
-\contentsline {section}{\numberline {7.2}Trabajo futuro}{42}{section.7.2}
+\contentsline {subsubsection}{\textbf {Control de los motores de las ruedas del robot}}{35}{section*.41}
+\contentsline {subsubsection}{\textbf {Control del motor de la c\IeC {\'a}mara del robot}}{35}{section*.42}
+\contentsline {paragraph}{Control del Robot por parte del usuario}{35}{section*.43}
+\contentsline {subsubsection}{\textbf {Instrucciones de mando}}{36}{section*.44}
+\contentsline {chapter}{\chapternumberline {6}Pruebas y Resultados}{39}{chapter.6}
+\contentsline {section}{\numberline {6.1}Latencia de recepci\IeC {\'o}n de comandos}{39}{section.6.1}
+\contentsline {section}{\numberline {6.2}Feedback de los usuarios}{40}{section.6.2}
+\contentsline {paragraph}{Cambios realizados en la fase de calibraci\IeC {\'o}n}{41}{section*.48}
+\contentsline {paragraph}{Valoraci\IeC {\'o}n de los usuarios}{41}{section*.49}
+\contentsline {paragraph}{Comentarios tras las pruebas}{42}{section*.50}
+\contentsline {chapter}{\chapternumberline {7}Conclusiones y trabajo futuro}{43}{chapter.7}
+\contentsline {section}{\numberline {7.1}Conclusiones}{43}{section.7.1}
+\contentsline {paragraph}{Puntos positivos y a mejorar}{43}{section*.51}
+\contentsline {subsection}{\numberline {7.1.1}Tecnolog\IeC {\'\i }as aprendidas}{44}{subsection.7.1.1}
+\contentsline {section}{\numberline {7.2}Trabajo futuro}{44}{section.7.2}
  \vspace {10pt} \cftbeforechapterskip \extratocentriesskip \relax 
-\contentsline {chapter}{Bibliograf\'{\i }a}{43}{section*.54}
+\contentsline {chapter}{Bibliograf\'{\i }a}{45}{section*.53}

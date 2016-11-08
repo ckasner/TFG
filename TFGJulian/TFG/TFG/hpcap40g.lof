@@ -31,11 +31,12 @@
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Divisi\IeC {\'o}n de im\IeC {\'a}genes}}}{29}{figure.caption.32}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Reproducci\IeC {\'o}n SBS}}}{29}{figure.caption.32}
 \contentsline {figure}{\numberline {5.7}{\ignorespaces Posici\IeC {\'o}n de as Oculus respecto al eje X una vez procesados los datos de \texttt {HeadPose.ThePose.Orientation}\relax }}{32}{figure.caption.36}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Posibles movimientos del robot seg\IeC {\'u}n el movimiento de las Oculus Rift\relax }}{36}{figure.caption.46}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Rotaci\IeC {\'o}n sobre s\IeC {\'\i } mismo}}}{36}{figure.caption.46}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {La c\IeC {\'a}mara gira respecto del eje X}}}{36}{figure.caption.46}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Movimiento hacia delante si el ususario baja la cabeza}}}{36}{figure.caption.46}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Relaci\IeC {\'o}n entre el PW y la posici\IeC {\'o}n de los servo motores\relax }}{34}{figure.caption.40}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Posibles movimientos del robot seg\IeC {\'u}n el movimiento de las Oculus Rift\relax }}{36}{figure.caption.45}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Rotaci\IeC {\'o}n sobre s\IeC {\'\i } mismo}}}{36}{figure.caption.45}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {La c\IeC {\'a}mara gira respecto del eje X}}}{36}{figure.caption.45}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Movimiento hacia delante si el ususario baja la cabeza}}}{36}{figure.caption.45}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Diferencia de tiempos entre env\IeC {\'\i }o y recepci\IeC {\'o}n de comandos a 7,50 metros\relax }}{38}{figure.caption.47}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Diferencia de tiempos entre env\IeC {\'\i }o y recepci\IeC {\'o}n de comandos a 7,50 metros\relax }}{38}{figure.caption.48}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Diferencia de tiempos entre env\IeC {\'\i }o y recepci\IeC {\'o}n de comandos a 7,50 metros\relax }}{40}{figure.caption.46}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Diferencia de tiempos entre env\IeC {\'\i }o y recepci\IeC {\'o}n de comandos a 7,50 metros\relax }}{40}{figure.caption.47}
 \addvspace {10pt}

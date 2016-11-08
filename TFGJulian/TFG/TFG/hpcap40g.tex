@@ -622,9 +622,9 @@ Este sistema consiste en generar una onda cuadrada en la que se varía el tiempo
 Para que un servo se mantenga en la misma posición durante un cierto tiempo, es necesario enviarle continuamente el pulso correspondiente.
 
 
-La otra función del PWM hemos diche que era el control de velocidad.
+La otra función del PWM es el control de velocidad.
 
-Esto lo hace alimentando el motor con una señal de pulsos con la frecuencia suficiente para que el motor no note las variaciones y haga un giro constante, ya que variando el porcentaje de tiempo de la señal rectangular en alta, y en baja, variamos la potencia que le entregamos al motor, con lo que controlamos la velocidad de giro con mucha precisión.
+Esto lo hace alimentando el motor con una señal de pulsos con la frecuencia suficiente para que el motor no note las variaciones y haga un giro constante, ya que variando el porcentaje de tiempo de la señal rectangular en alta, y en baja, variamos la potencia que le entregamos al motor, con lo que podemos controlar la velocidad de giro.
 
 En el robot utilizamos 3 servomotores.
 Dos de ellos se utilizan para el movimiento de las ruedas y el tercero moverá la cámara permitiendo al usuario mirar hacia arriba y hacia abajo.
@@ -1062,36 +1062,52 @@ Una vez que tiene los datos los transforma en comandos válidos para los servomo
 \paragraph{Movimiento de los servo motores}
 
 
-
-Como ya se indicó en la sección (seccion de los servos,PWM, etc..) el movimiento de los servos se controla con una señal PWM (Pulse With Modulation).
+Como ya se indicó en la sección (seccion de los servos,PWM, etc..) el movimiento de los servos se controla con una señal PWM (Pulse Width Modulation).
 
 Por ello utilizamos la librería RPi.GPIO, que ofrece funciones para PWM.
 
 Hay dos parámetros principales para determinar el pulso que se envía al motor:
 \begin{itemize}
 	\item \textbf{Frecuencia} : veces por segundo que se genera el pulso.
-	\item \textbf{Duty cycle} : es el porcentaje de tiempo que el pulso está arriba. (recordemos que la señal es una señal cuadrada)
+	\item \textbf{Duty cycle} : indica el porcentaje de tiempo que dura la señal cuadrar en relación con el periodo.
+	$$DutyCycle = \frac{PW}{T}\cdot 100$$
+	Donde $PW$ indica el ancho de pulso (pulse width) y $T$ es el periodo.
+	
 \end{itemize}
 
+Para controlar los servo motores del robot se fija una frecuencia de 50 Hz, es decir, $T = \frac{1}{50} = 20 ms$.
+En las especificaciones de los servos se indica que el rango de $PW$ es $0.5 \text{ ms } \sim 2.5\text{ ms }$ y con esto ya podemos calcular el Duty Cycle adecuado para cada acción.
 
-Veamos un ejemplo para clarificar esto:
+En la siguiente imagen se muestra cómo varía la posición de los motores según el pulso que se le envíe.
 
-\subparagraph{PWM- Frecuencia:50Hz , DutyCycle $50\%$}
+\begin{figure}[h!]
+	\centerline{
+		\mbox{\includegraphics[width=.80\textwidth]{images/PWMServos.png}}
+	}
+	\caption{Relación entre el PW y la posición de los servo motores}
+\end{figure}
+%Por lo tanto, si mandamos un pulso cercano a $0.5$ ms, el servo girará a gran velocidad hacia la izquierda, mientras que si el pulso es cercano a $2.5$ ms girará hacia la derecha. A medida que el pulso se va acercando a $1.5$, el motor perderá velocidad. 
 
+Recordemos que estos valores son orientativos, pudiendo variar ligeramente según el servo motor.
 
-
-Si fijamos una frecuencia de 50Hz estaremos mandando una señal de 50 pulsos por segundo, es decir, un pulso cada $0.02$ segundos.
-
-Al poner un DutyCycle al $50\%$ estamos estableciendo que durante esos $0.02$ segundos el pulso estará $0.01$ segundos en posición "High" y el resto del tiempo en posición "Low".
-
-
-\subparagraph {PWM- Frecuencia:50Hz , DutyCycle $80\%$}
-
-Si fijamos una frecuencia de 50Hz, como la del ejercicio anterior pero por el contrario ponemos un DutyCycle del $80\%$ tendremos:
-\begin{itemize}
-	\item 1 pulso cada $0.02$ segundos
-	\item El pulso estará en posición "high" el $80\%$ del tiempo ($0.016$ segundos) y en posición "low" los otros $0.004$ segundos restantes.
-\end{itemize}
+%Veamos un ejemplo para clarificar esto:
+%
+%\subparagraph{PWM- Frecuencia:50Hz , DutyCycle $50\%$}
+%
+%
+%
+%Si fijamos una frecuencia de 50Hz estaremos mandando una señal de 50 pulsos por segundo, es decir, un pulso cada $0.02$ segundos.
+%
+%Al poner un DutyCycle al $50\%$ estamos estableciendo que durante esos $0.02$ segundos el pulso estará $0.01$ segundos en posición "High" y el resto del tiempo en posición "Low".
+%
+%
+%\subparagraph {PWM- Frecuencia:50Hz , DutyCycle $80\%$}
+%
+%Si fijamos una frecuencia de 50Hz, como la del ejercicio anterior pero por el contrario ponemos un DutyCycle del $80\%$ tendremos:
+%\begin{itemize}
+%	\item 1 pulso cada $0.02$ segundos
+%	\item El pulso estará en posición "high" el $80\%$ del tiempo ($0.016$ segundos) y en posición "low" los otros $0.004$ segundos restantes.
+%\end{itemize}
 
 
 
@@ -1106,7 +1122,7 @@ Esto es porque los servos de las ruedas son de rotación continua, a diferencia 
 
 Los motores que mueven las ruedas del robot son dos servo motores que están modificados para tener rotación continua. El funcionamiento de los servo motores de rotación continua ya se ha explicado en la sección de análisis.
 
-Recordamos muy brevemente que en los servo motores de rotación continua, la pulsación que le mandas al motor no indica la posición en la que debe colocarse si no la velocidad a la que debe rotar.
+Recordamos muy brevemente que en los servo motores de rotación continua, la pulsación que le mandas al motor no indica la posición en la que debe colocarse si no la dirección y velocidad a la que debe rotar.
 
 Para controlar nuestro robot se ha fijado una velocidad constante de giro en base a pruebas experimentales de la velocidad de movimiento de cabeza medio en una persona.
 
