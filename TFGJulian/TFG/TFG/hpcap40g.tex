@@ -821,7 +821,7 @@ Para el \textbf{control del robot} se deberán implementar las siguientes tareas
 	
 	\item Traducir dicha información en comandos para mover los servo motores.
 \end{enumerate} 
-\subsection{Construcción del Robot}
+\section{Construcción del Robot}
 Como se ha dicho en la sección de diseño, el robot está construido basándose en el diseño de un robot de un trabajo anterior.
 
 Para este proyecto se han añadido alguno componentes:
@@ -831,7 +831,7 @@ Para este proyecto se han añadido alguno componentes:
 	\item Batería portátil
 \end{itemize}
 
-\subsubsection{\textbf{Soporte de la cámara}}
+\subsection{Soporte de la cámara}
 
 Para integrar la cámara en el robot han sido necesarias dos piezas:
 
@@ -864,8 +864,8 @@ Una vez diseñadas las piezas se ha utilizado Cura, un programa que genera archi
 \end{figure}
  
 \newpage
-\subsection{Streaming}
-\subsubsection{\textbf{Raspberry Pi3}}
+\section{Streaming}
+\subsection{Raspberry Pi3}
 El primer elemento en el streaming de video es la Raspberry Pi, que tiene conectada por usb una cámara.
 
 Para recoger el video y mandarlo en tiempo real utilizamos la librería mjpeg-streamer, disponible en github.
@@ -909,7 +909,7 @@ En este momento la Raspberry empezará a coger el video de la cámara y transmit
 
 
 \newpage
-\subsubsection{\textbf{Ordenador}}
+\subsection{Ordenador}
 El ordenador accede a la IP donde mjpeg-streamer está retransmitiendo el video y lo recoge a través del reproductor de video VLC.
 
 Para ello especificamos en VLC que el medio de reproducción será una ubicación de red.
@@ -946,7 +946,7 @@ Nosotros utilizamos la funcionalidad de ver la pantalla del ordenador desde las 
 
 \newpage
 
-\subsection{Control del Robot}
+\section{Control del Robot}
 El control del robot es el control del movimiento de los tres servos que lo componen. 
 
 Este movimiento se basará en el movimiento de las Oculus, que llevará puestas el usuario.
@@ -959,10 +959,10 @@ Por lo tanto el control del robot se divide en tres acciones:
 	
 	\item Movimiento de los servo motores
 \end{itemize}
-\paragraph{Recogida y procesamiento de la información que mandan las Oculus al ordenador}
+\subsection{Recogida y procesamiento de la información que mandan las Oculus al ordenador}
 
 
-\subparagraph{Librería OVR}
+\paragraph{Librería OVR}
 Para recoger desde el ordenador la información que mandan las Oculus utilizamos la librería de Oculus (ovr), escrita en phyton.
 
 La función \textit{ovr.getTrackingState} nos devuelve una estructura (\textit{TrackingState}), que contiene el campo:
@@ -988,7 +988,7 @@ El ordenador crea un servidor y abre dos sockets distintos, uno para la informac
 De esta forma manejamos los dos movimientos de forma independiente.
 
 
-\subparagraph{Procesamiento de HeadPose.ThePose.Orientation}
+\paragraph{Procesamiento de HeadPose.ThePose.Orientation}
 
 Como se ha dicho en el apartado anterior, la información proveniente de las Oculus nos llega a través de la estructura \texttt{HeadPose}, donde podemos leer el campo \texttt{Orientation} que nos manda la orientación actual de las Oculus Rift en forma de cuaternión.
 
@@ -1059,7 +1059,7 @@ Y se ponen a escuchar (\texttt{msg=s.recv(1024)})hasta que les llegan los datos.
 Una vez que tiene los datos los transforma en comandos válidos para los servomotores,tal y como se explia en el siguiente apartado, les manda la instrucción y vuelve a escuchar.
 
 
-\paragraph{Movimiento de los servo motores}
+\subsection{Movimiento de los servo motores}
 
 
 Como ya se indicó en la sección (seccion de los servos,PWM, etc..) el movimiento de los servos se controla con una señal PWM (Pulse Width Modulation).
@@ -1085,6 +1085,7 @@ En la siguiente imagen se muestra cómo varía la posición de los motores segú
 		\mbox{\includegraphics[width=.80\textwidth]{images/PWMServos.png}}
 	}
 	\caption{Relación entre el PW y la posición de los servo motores}
+	\label{figPWM}
 \end{figure}
 %Por lo tanto, si mandamos un pulso cercano a $0.5$ ms, el servo girará a gran velocidad hacia la izquierda, mientras que si el pulso es cercano a $2.5$ ms girará hacia la derecha. A medida que el pulso se va acercando a $1.5$, el motor perderá velocidad. 
 
@@ -1111,7 +1112,7 @@ Recordemos que estos valores son orientativos, pudiendo variar ligeramente segú
 
 
 
-La Raspberry Pi recibe a través de los sockets el ángulo de orientación de la cabeza sobre el eje y o x.
+La Raspberry Pi recibe a través de los sockets información sobre la orientación de la cabeza sobre el eje y o x.
 
 
 Esta información se procesa de forma distinta según si queremos mover el servo de la cámara o las ruedas del robot.
@@ -1120,27 +1121,31 @@ Esto es porque los servos de las ruedas son de rotación continua, a diferencia 
 
 \subsubsection{\textbf{Control de los motores de las ruedas del robot}}
 
-Los motores que mueven las ruedas del robot son dos servo motores que están modificados para tener rotación continua. El funcionamiento de los servo motores de rotación continua ya se ha explicado en la sección de análisis.
+Los motores que mueven las ruedas del robot son dos servo motores de rotación continua. El funcionamiento de los servo motores de rotación continua ya se ha explicado en la sección de análisis.
 
 Recordamos muy brevemente que en los servo motores de rotación continua, la pulsación que le mandas al motor no indica la posición en la que debe colocarse si no la dirección y velocidad a la que debe rotar.
 
-Para controlar nuestro robot se ha fijado una velocidad constante de giro en base a pruebas experimentales de la velocidad de movimiento de cabeza medio en una persona.
+Por lo tanto si se envía un pulso cercano a $1.5$ ms, el motor girará muy despacio. Por el contrario, si el pulso es cercano a $0.5$ o $2.5$ ms, el motor se moverá a mayor velocidad.
 
-Por lo tanto , si queremos rotar nuestro robot hasta una posición concreta la variable no es la velocidad si no el tiempo durante el que rotan los motores.
+Para controlar nuestro robot se ha fijado una velocidad constante de giro en base a pruebas experimentales que se explicarán en la sección de Pruebas y resultados.
 
-Para calcular dicho tiempo se midió experimentalmente cuanto tardaba el robot en girar 90º. El resultado fueron 0.5 segundos por lo que 
-$$90 / 0.5 = 0,005555556 \text{ segundos en girar un grado}$$
+De esta forma para rotar nuestro robot hasta una posición concreta la variable no es la velocidad si no el tiempo durante el que rotan los motores.
 
-De esta forma, cuando el robot recibe una posición en grados desde el ordenador ejecuta las siguientes instrucciones:
+Para girar el robot hacia la derecha el usuario enviará la señal de "rotar hacia la derecha" y el robot empezará a rotar en esa dirección hasta recibir la señal de "parar".
 
-
-$\begin{cases}
-\text{Grados recibidos del ordenador = g}\\
-dif = |posActual-g|\rightarrow\text{ Se calcula el número de grados que tiene que moverse}\\
-\text{Rotar motores derecho e izquerdo}\\
-time.sleep((dif*0.005555) \rightarrow \text{ Rotamos el tiempo necesario alcanzar la posición}\\
-\text{Parar motores derecho e izquerdo}
-\end{cases}$
+%Para calcular dicho tiempo se midió experimentalmente cuanto tardaba el robot en girar 90º. El resultado fueron 0.5 segundos por lo que 
+%$$90 / 0.5 = 0,005555556 \text{ segundos en girar un grado}$$
+%
+%De esta forma, cuando el robot recibe una posición en grados desde el ordenador ejecuta las siguientes instrucciones:
+%
+%
+%$\begin{cases}
+%\text{Grados recibidos del ordenador = g}\\
+%dif = |posActual-g|\rightarrow\text{ Se calcula el número de grados que tiene que moverse}\\
+%\text{Rotar motores derecho e izquerdo}\\
+%time.sleep((dif*0.005555) \rightarrow \text{ Rotamos el tiempo necesario alcanzar la posición}\\
+%\text{Parar motores derecho e izquerdo}
+%\end{cases}$
 
 
 
@@ -1152,9 +1157,13 @@ Este motor se mueve por pulsos, tal y como se explica en la sección de Análisi
 
 La Raspberry recibe un ángulo que indica hacia donde están orientadas las Oculus en ese momento.
 
-Para transformar este ángulo el pulso(PWM) correspondiente debemos tener en cuenta que un servo requiere una señal PWM con un periodo de 20 ms y un ancho de pulso entre $0.9$ y $2.1$ ms.
+Para transformar este ángulo el pulso(PWM) correspondiente debemos tener en cuenta el rango de pulsos del motor que se está utilizando.
 
-Ya que el servo tiene un rango de ángulos de 0 a 180 grados, es fácil ver que el ancho de pulso de $0.9$ ms se corresponde con 0º y $2.1$ ms con 180º
+Como vemos en la figura \ref{figPWM}, un pulso de $1.5$ ms equivale a la posición del motor que señala el ángulo 0, de la misma manera para que el motor esté orientado hacia el ángulo 180 deberemos mandar un pulso de $0.5$ ms.
+
+Con estos datos es sencillo encontrar una fórmula de conversión de grados a pulsos:
+
+$$$$
 
 Asi podemos convertir los ángulos en pulsos PWM y mover la cámara hacia la dirección deseada.
 
