@@ -10,6 +10,8 @@
 \usepackage{multirow}
 \usepackage{subfigure}
 \usepackage{listings}
+\usepackage{colortbl}
+
 
 
 \usepackage{tikz}
@@ -1206,33 +1208,90 @@ En el caso de que el usuario oriente la cabeza hacia abajo, con un ángulo menor
 
 A continuación se explican las pruebas y los resultados obtenidos tras desarrollar el proyecto.
 
-\section{Latencia de recepción de comandos}
+Puesto que el objetivo es crear un dispositivo sencillo de controlar por el usuario, las pruebas constarán de varias fases que se repetirán dentro de un ciclo cerrado. De esta forma el dispositivo podrá ir mejorando conforme a la demanda de los usuarios.
 
-Para probar el sistema primero hemos hecho pruebas del funcionamiento de la red local, ya que en este trabajo es esencial tener poca latencia.
-
-Para ello se ha probado el alcance de la red inalámbrica, mandando comandos a los servo motores desde el ordeador.
-
-A continuación se ven los resultados obtenidos tras mandar comandos a una distancia de 7,5 metros y mandar comando estando el robot y el ordenador en habitaciones separadas
+En la siguiente imagen se representan las diferentes fases del ciclo de pruebas.
 
 \begin{figure}[h!]
 	\centerline{
-		\mbox{\includegraphics[width=.80\textwidth]{images/Temp_750.png}}
+		\mbox{\includegraphics[width=.60\textwidth]{images/CicloPruebas.png}}
 	}
-	\caption{Diferencia de tiempos entre envío y recepción de comandos a 7,50 metros}
+	\caption{Fases del ciclo cerrado de pruebas que se han realizado para valorar la funcionalidad del dispositivo.}
 \end{figure}
 
-\begin{figure}[h!]
-	\centerline{
-		\mbox{\includegraphics[width=.80\textwidth]{images/Temp_fuera.png}}
-	}
-	\caption{Diferencia de tiempos entre envío y recepción de comandos a 7,50 metros}
-\end{figure}
+\section{Fases del ciclo cerrado}
+\begin{itemize}
+	\item \textbf{Calibración:} Ajustamos los parámetros de velocidad de los motores y sensibilidad de movimientos.
+	\item \textbf{Fase de aprendizaje:} Se explica al usuario la interfaz y se deja que la pruebe durante un par de minutos.
+	\item \textbf{Puntuación:}El usuario puntúa la interfaz y la facilidad de uso del dispositivo.
+	\item \textbf{Circuito:} Se propone al usuario un circuito que debe seguir con el robot.
+	\item \textbf{Puntuación y resultados:} Tras realizar el circuito e interaccionar con el dispositivo durante 5/10 minutos el usuario vuelve a puntuar y propone mejoras para la nueva fase de calibración.
+\end{itemize}
 
-Vemos que la latencia entre la medición en las Oculus y la recepción en la Raspberry es muy pequeña.
 
-En la gráfica que nos muestra la diferencia de tiempos a 7,5 metros vemos que de media el comando tarda en transmitirse menos de 0.5 segundos.
+\section{Desarrollo de las pruebas}
+El primer ciclo se realizó con un único usuario ya que la interfaz aún no estaba claramente definida.
 
-En las pruebas entre habitaciones separadas, vemos que la diferencia no pasa de los 0,5 segundos por lo que creemos que es una latencia asumible ya que el robot no va a grandes velocidades.
+Tras este primer ciclo se realizaron dos ciclos más hasta que se consiguieron resultados satisfactorios.
+
+A continuación se explicarán los resultados y mejoras realizadas en cada ciclo.
+
+\subsection{Resultados del primer ciclo}
+
+Como ya se ha explicado anteriormente, durante el primer ciclo de pruebas lo realizó un solo usuario ya que en base a sus valoraciones se modificó la interfaz prácticamente por completo.
+
+\textbf{Antes de las pruebas} el robot se controlaba de la siguiente forma:
+\begin{itemize}
+	\item \textbf{Giros:} El robot giraba sobre sí mismo tantos grados como girara el usuario la cabeza.
+	\item \textbf{Avanzar:} El robot avanzaba si el usuario mantenía la cabeza en posición natural, es decir, mirando hacia el frente.
+	\item \textbf{Parar:} el robot se detenía cuando el usuario giraba la cabeza, es decir, en fase de exploración.
+	\item \textbf{Movimiento de la cámara:} la cámara se movía tanto grados hacia arriba o hacia abajo como grados se moviera el usuario.
+\end{itemize}
+
+\paragraph{Valoración del usuario}
+La primera valoración no fue muy positiva. A continuación se muestran las dificultades con las que se encontró el usuario:
+
+\begin{itemize}
+	\item [ - ] Al girar el robot tal y como gira la cabeza, es muy difícil girar sobre uno mismo, y prácticamente imposible para una persona con discapacidad motora. 
+	\subitem \textbf{Solución:} el robot gira con velocidad continua hacia la derecha o izquierda según la orientación de la cabeza del usuario.
+	\item [ - ] Es poco intuitivo que la condición de parada sea mirar hacia un lado. Además es muy difícil de controlar que el robot esté avanzando por defecto.
+	\subitem \textbf{Solución:} el robot por defecto está parado y en caso que esté en movimiento basta con mirar al frente para detenerlo.
+\end{itemize}
+
+Tras realizar las modificaciones da comienzo el segundo ciclo de pruebas.
+
+\subsection{Resultados del segundo ciclo}
+
+Durante el segundo ciclo de pruebas participaron 
+
+
+%\section{Latencia de recepción de comandos}
+%
+%Para probar el sistema primero hemos hecho pruebas del funcionamiento de la red local, ya que en este trabajo es esencial tener poca latencia.
+%
+%Para ello se ha probado el alcance de la red inalámbrica, mandando comandos a los servo motores desde el ordeador.
+%
+%A continuación se ven los resultados obtenidos tras mandar comandos a una distancia de 7,5 metros y mandar comando estando el robot y el ordenador en habitaciones separadas
+%
+%\begin{figure}[h!]
+%	\centerline{
+%		\mbox{\includegraphics[width=.80\textwidth]{images/Temp_750.png}}
+%	}
+%	\caption{Diferencia de tiempos entre envío y recepción de comandos a 7,50 metros}
+%\end{figure}
+%
+%\begin{figure}[h!]
+%	\centerline{
+%		\mbox{\includegraphics[width=.80\textwidth]{images/Temp_fuera.png}}
+%	}
+%	\caption{Diferencia de tiempos entre envío y recepción de comandos a 7,50 metros}
+%\end{figure}
+%
+%Vemos que la latencia entre la medición en las Oculus y la recepción en la Raspberry es muy pequeña.
+%
+%En la gráfica que nos muestra la diferencia de tiempos a 7,5 metros vemos que de media el comando tarda en transmitirse menos de 0.5 segundos.
+%
+%En las pruebas entre habitaciones separadas, vemos que la diferencia no pasa de los 0,5 segundos por lo que creemos que es una latencia asumible ya que el robot no va a grandes velocidades.
 \newpage
 
 \section{Feedback de los usuarios}
@@ -1241,7 +1300,7 @@ Se han hecho pruebas de control a usuarios para comprobar su usabilidad.
 
 Las primeras pruebas han sido de calibración. Un usuario ha aprendido a controlar el robot y ha pedido cambios para que el manejo sea más intuitivos.
 
-Tras hacer los cambios pedidos por el primer usuario se ha pedido a distintas ersonas que hagan diversas acciones con el robot y que puntúen la facilidad de realizar dichas acciones.
+Tras hacer los cambios pedidos por el primer usuario se ha pedido a distintas personas que hagan diversas acciones con el robot y que puntúen la facilidad de realizar dichas acciones.
 
 \paragraph{Cambios realizados en la fase de calibración}
 \begin{itemize}

@@ -41,32 +41,35 @@
 \contentsline {paragraph}{Fusi\IeC {\'o}n de Sensores }{20}{section*.20}
 \contentsline {section}{\numberline {4.4}Dise\IeC {\~n}o de conexiones}{22}{section.4.4}
 \contentsline {chapter}{\chapternumberline {5}Desarrollo e implementaci\IeC {\'o}n}{25}{chapter.5}
-\contentsline {subsection}{\numberline {5.0.1}Construcci\IeC {\'o}n del Robot}{25}{subsection.5.0.1}
-\contentsline {subsubsection}{\textbf {Soporte de la c\IeC {\'a}mara}}{26}{section*.24}
-\contentsline {subsection}{\numberline {5.0.2}Streaming}{27}{subsection.5.0.2}
-\contentsline {subsubsection}{\textbf {Raspberry Pi3}}{27}{section*.27}
-\contentsline {subsubsection}{\textbf {Ordenador}}{28}{section*.31}
-\contentsline {subsection}{\numberline {5.0.3}Control del Robot}{31}{subsection.5.0.3}
-\contentsline {paragraph}{Recogida y procesamiento de la informaci\IeC {\'o}n que mandan las Oculus al ordenador}{31}{section*.33}
-\contentsline {subparagraph}{Librer\IeC {\'\i }a OVR}{31}{section*.34}
-\contentsline {subparagraph}{Procesamiento de HeadPose.ThePose.Orientation}{31}{section*.35}
-\contentsline {paragraph}{Env\IeC {\'\i }o de la informaci\IeC {\'o}n procesada a la Raspberry Pi 3}{33}{section*.37}
-\contentsline {subparagraph}{Recepci\IeC {\'o}n de los datos en el robot}{33}{section*.38}
-\contentsline {paragraph}{Movimiento de los servo motores}{33}{section*.39}
-\contentsline {subsubsection}{\textbf {Control de los motores de las ruedas del robot}}{35}{section*.41}
-\contentsline {subsubsection}{\textbf {Control del motor de la c\IeC {\'a}mara del robot}}{35}{section*.42}
-\contentsline {paragraph}{Control del Robot por parte del usuario}{35}{section*.43}
-\contentsline {subsubsection}{\textbf {Instrucciones de mando}}{36}{section*.44}
+\contentsline {section}{\numberline {5.1}Construcci\IeC {\'o}n del Robot}{25}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Soporte de la c\IeC {\'a}mara}{26}{subsection.5.1.1}
+\contentsline {section}{\numberline {5.2}Streaming}{27}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Raspberry Pi3}{27}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Ordenador}{28}{subsection.5.2.2}
+\contentsline {section}{\numberline {5.3}Control del Robot}{31}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Recogida y procesamiento de la informaci\IeC {\'o}n que mandan las Oculus al ordenador}{31}{subsection.5.3.1}
+\contentsline {paragraph}{Librer\IeC {\'\i }a OVR}{31}{section*.30}
+\contentsline {paragraph}{Procesamiento de HeadPose.ThePose.Orientation}{31}{section*.31}
+\contentsline {paragraph}{Env\IeC {\'\i }o de la informaci\IeC {\'o}n procesada a la Raspberry Pi 3}{33}{section*.33}
+\contentsline {subparagraph}{Recepci\IeC {\'o}n de los datos en el robot}{33}{section*.34}
+\contentsline {subsection}{\numberline {5.3.2}Movimiento de los servo motores}{34}{subsection.5.3.2}
+\contentsline {subsubsection}{\textbf {Control de los motores de las ruedas del robot}}{35}{section*.36}
+\contentsline {subsubsection}{\textbf {Control del motor de la c\IeC {\'a}mara del robot}}{35}{section*.37}
+\contentsline {paragraph}{Control del Robot por parte del usuario}{36}{section*.38}
+\contentsline {subsubsection}{\textbf {Instrucciones de mando}}{36}{section*.39}
 \contentsline {chapter}{\chapternumberline {6}Pruebas y Resultados}{39}{chapter.6}
-\contentsline {section}{\numberline {6.1}Latencia de recepci\IeC {\'o}n de comandos}{39}{section.6.1}
-\contentsline {section}{\numberline {6.2}Feedback de los usuarios}{40}{section.6.2}
-\contentsline {paragraph}{Cambios realizados en la fase de calibraci\IeC {\'o}n}{41}{section*.48}
-\contentsline {paragraph}{Valoraci\IeC {\'o}n de los usuarios}{41}{section*.49}
-\contentsline {paragraph}{Comentarios tras las pruebas}{42}{section*.50}
-\contentsline {chapter}{\chapternumberline {7}Conclusiones y trabajo futuro}{43}{chapter.7}
-\contentsline {section}{\numberline {7.1}Conclusiones}{43}{section.7.1}
-\contentsline {paragraph}{Puntos positivos y a mejorar}{43}{section*.51}
-\contentsline {subsection}{\numberline {7.1.1}Tecnolog\IeC {\'\i }as aprendidas}{44}{subsection.7.1.1}
-\contentsline {section}{\numberline {7.2}Trabajo futuro}{44}{section.7.2}
+\contentsline {section}{\numberline {6.1}Fases del ciclo cerrado}{40}{section.6.1}
+\contentsline {section}{\numberline {6.2}Desarrollo de las pruebas}{40}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Resultados del primer ciclo}{40}{subsection.6.2.1}
+\contentsline {paragraph}{Valoraci\IeC {\'o}n del usuario}{40}{section*.42}
+\contentsline {section}{\numberline {6.3}Feedback de los usuarios}{42}{section.6.3}
+\contentsline {paragraph}{Cambios realizados en la fase de calibraci\IeC {\'o}n}{42}{section*.43}
+\contentsline {paragraph}{Valoraci\IeC {\'o}n de los usuarios}{42}{section*.44}
+\contentsline {paragraph}{Comentarios tras las pruebas}{43}{section*.45}
+\contentsline {chapter}{\chapternumberline {7}Conclusiones y trabajo futuro}{45}{chapter.7}
+\contentsline {section}{\numberline {7.1}Conclusiones}{45}{section.7.1}
+\contentsline {paragraph}{Puntos positivos y a mejorar}{45}{section*.46}
+\contentsline {subsection}{\numberline {7.1.1}Tecnolog\IeC {\'\i }as aprendidas}{46}{subsection.7.1.1}
+\contentsline {section}{\numberline {7.2}Trabajo futuro}{46}{section.7.2}
  \vspace {10pt} \cftbeforechapterskip \extratocentriesskip \relax 
-\contentsline {chapter}{Bibliograf\'{\i }a}{45}{section*.53}
+\contentsline {chapter}{Bibliograf\'{\i }a}{47}{section*.48}
