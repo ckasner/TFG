@@ -11,6 +11,10 @@
 \usepackage{subfigure}
 \usepackage{listings}
 \usepackage{colortbl}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{xcolor}
+
 
 
 
@@ -30,6 +34,10 @@
 \definecolor{palette6}{HTML}{E6AB02}
 \definecolor{palette7}{HTML}{A6761D}
 \definecolor{palette8}{HTML}{666666}
+\definecolor{lightgray}{gray}{0.8}
+\definecolor{verde}{RGB}{0,5,1}
+
+\newcolumntype{g}{>{\columncolor{lightgray}}l}
 
 \tikzstyle{vnlin}=[rectangle, inner sep=0pt, minimum height=6pt, minimum width=0pt, draw, fill=black]
 \tikzstyle{hnlin}=[rectangle, inner sep=0pt, minimum height=0pt, minimum width=6pt, draw, fill=black]
@@ -1236,9 +1244,9 @@ Tras este primer ciclo se realizaron dos ciclos más hasta que se consiguieron r
 
 A continuación se explicarán los resultados y mejoras realizadas en cada ciclo.
 
-\subsection{Resultados del primer ciclo}
+\subsection{Primer ciclo}
 
-Como ya se ha explicado anteriormente, durante el primer ciclo de pruebas lo realizó un solo usuario ya que en base a sus valoraciones se modificó la interfaz prácticamente por completo.
+Como ya se ha explicado anteriormente, el primer ciclo de pruebas lo realizó un solo usuario ya que en base a sus valoraciones se modificó la interfaz prácticamente por completo.
 
 \textbf{Antes de las pruebas} el robot se controlaba de la siguiente forma:
 \begin{itemize}
@@ -1252,19 +1260,151 @@ Como ya se ha explicado anteriormente, durante el primer ciclo de pruebas lo rea
 La primera valoración no fue muy positiva. A continuación se muestran las dificultades con las que se encontró el usuario:
 
 \begin{itemize}
-	\item [ - ] Al girar el robot tal y como gira la cabeza, es muy difícil girar sobre uno mismo, y prácticamente imposible para una persona con discapacidad motora. 
-	\subitem \textbf{Solución:} el robot gira con velocidad continua hacia la derecha o izquierda según la orientación de la cabeza del usuario.
-	\item [ - ] Es poco intuitivo que la condición de parada sea mirar hacia un lado. Además es muy difícil de controlar que el robot esté avanzando por defecto.
-	\subitem \textbf{Solución:} el robot por defecto está parado y en caso que esté en movimiento basta con mirar al frente para detenerlo.
+	\item [ - ] Giros: El usuario puso de manifiesto la dificultad que supone dar la vuelta al robot con la interfaz diseñada para este ciclo ya que el usuario tendría que girar sobre sí mismo.
+	\subitem \textbf{Solución:} Modificar el giro de forma que el robot gire con velocidad continua hacia la derecha o izquierda según la orientación de la cabeza del usuario. 
+	\item [ - ] Condición de parada: Otra dificultad con la que se encontró el usuario fue que la forma de parar el robot(girando la cabeza) era muy poco intuitiva.  A esto se le añade la dificultad de que el robot esté avanzando por defecto.
+	\subitem \textbf{Solución:} Modificar el estado por defecto del dispositivo, en la nueva interfaz el robot está parado por defecto y en caso que esté en movimiento basta con mirar al frente para detenerlo.
 \end{itemize}
 
 Tras realizar las modificaciones da comienzo el segundo ciclo de pruebas.
 
-\subsection{Resultados del segundo ciclo}
+\subsection{Segundo ciclo}
 
-Durante el segundo ciclo de pruebas participaron 
+Durante el segundo ciclo de pruebas participaron 7 usuarios.
+La fase de aprendizaje durante este ciclo consistió en:
+
+\begin{itemize}
+	\item Girar a la derecha
+	\item Girar a la izquierda
+	\item Mirar hacia arriba
+	\item Estar 30 segundos aproximadamente girando el robot sobre sí mismo hasta tener controlado el giro.
+	\item Andar hacia delante
+	\item Parar
+	\item Estar cerca de un minuto paseando para familiarizarse con los movimientos.
+	\item Fijar un objetivo y alcanzarlo.
+\end{itemize}
+
+La siguiente tabla muestra la valoración de los usuarios tras realizar las pruebas.
+
+\begin{tabular}{|l | c | c | c | c | c | r | r |}
+	\hline
+	& U1 & U2 & U3 & U4 & U5 & U6 & U7\\
+	\hline
+	Giro derecha & 9 & 6 & 6 & 4 & 5 & 5 & 6\\
+	Giro izquierda & 7.5 & 4 & 6 & 4 & 5 & 5 & 7\\
+	Mirar hacia arriba & 9 & 10 & 9 & 10 & 9 & 9 & 9\\
+	Andar & 10 & 8 & 10 & 8 & 8 & 9 & 9\\
+	Parar & 9 & 10 & 9 & 7 & 7 & 7 & 8\\
+	Alcanzar un objetivo & 8.5 & 6 & 8 & 7 & 5 & 5 & 8\\
+	Sensación de Control & 7.5 & 6 & 9 & 4 & 5 & 4 & 7\\
+	Facilidad de aprendizaje & 9 & 8 & 10 & 10 & 9 & 8 & 10\\
+	\hline
+\end{tabular}
 
 
+\paragraph{Comentarios tras las pruebas}
+
+Analizando las puntuaciones y los comentarios de los usuarios se sacaron las siguientes conclusiones:
+
+Se debe reducir la velocidad de giro ya que es complicado controlarlo a la velocidad actual.
+La nueva interfaz de control del robot resulta mucho más intuitiva para los usuarios y su sensación de control incrementa en muy pocos minutos.
+
+\subsection{Tercer ciclo}
+
+A continuación se explicará el desarrollo del tercer y último ciclo de pruebas:
+\begin{itemize}
+	\item \textbf{Fase de calibración:} Durante esta fase se realizaron los siguientes cambios en base a la opinión de los usuarios que participaron en el segundo ciclo de pruebas:
+	\begin{itemize}
+		\item Se disminuyó la velocidad de giro de los servomotores de las ruedas del robot.
+		\item Se disminuyó la velocidad de avance del robot.
+		\item Se disminuyó la sensibilidad de detección de movimiento vertical , reduciendo las posibles posiciones que puede tomar la cámara a 4.
+		\begin{itemize}
+			\item Abajo: 30º aproximadamente respecto a la posición frontal.
+			\item Posición frontal.
+			\item Arriba: 40º aproximadamente respecto a la posición frontal.
+			\item Arriba: 90º aproximadamente respecto a la posición frontal.
+		\end{itemize}
+	\end{itemize}
+	\item \textbf{Fase de aprendizaje:} Se le explicó a cada usuario la forma de controlar el robot y se les dejó durante dos minutos moverse libremente.
+	\item \textbf{Puntuación: } A continuación se muestra la primera puntuación de los usuarios.
+	
+\begin{center}
+
+\resizebox{15cm}{!} {
+	\begin{tabular}{|g c c c c c c|}
+		\hline
+		\rowcolor{yellow!50!white}           % Heading with different color to highlight it      
+		\multicolumn{7}{|c|}{Valoración tras la fase de aprendizaje} \\ \hline
+	\rowcolor[gray]{0.8}
+		& Usuario1	&Usuario2	&Usuario3	&Usuario4	&Usuario5	&Usuario6 \\
+		Avanzar
+		 & 8 &7 &8 &9 &6 & 8\\
+	Giro derecha
+	 & 6 & 5 &6 &7 & 7& 6\\
+		Giro izquierda
+		 & 5 & 5&5 &5 &7 & 5\\
+		Telepresencia
+		 & 9 & 8 &8 & 7& 5& 6\\ 
+		 Sensación de control
+		 & 7 &4 &5 & 6&6 & 5\\
+		 		 Interfaz
+		 		 & 9 &7 & 7& 9& 6& 9\\
+		 \hline
+	\end{tabular}
+}
+\end{center}
+\newpage
+\item \textbf{Circuito:} Los usuarios realizan el mismo circuito 3 veces. En el circuito se marcan 4 puntos críticos y se cronometra el tiempo que tarda cada usuario en alcanzar dichos puntos. También se cronometra el tiempo total.
+
+A continuación se muestra un gráfico donde se muestran los promedios de tiempos entre todos los usuarios de cada intento de hacer el circuito.
+
+\begin{figure}[h!]
+	\centerline{
+		\mbox{\includegraphics[width=.95\textwidth]{images/ResultadosTiempos.png}}
+	}
+	\caption{Promedio del tiempo que tardan los usuarios en realizar el circuito.}
+\end{figure}
+\item \textbf{Puntuación:} Por último se les vuelve a pedir a los usuarios que valoren el control del robot.
+
+\begin{center}
+	
+	\resizebox{15cm}{!} {
+		\begin{tabular}{|g c c c c c c|}
+			\hline
+			\rowcolor{yellow!50!white}           % Heading with different color to highlight it      
+			\multicolumn{7}{|c|}{Valoración tras la fase de aprendizaje} \\ \hline
+			\rowcolor[gray]{0.8}
+			& Usuario1	&Usuario2	&Usuario3	&Usuario4	&Usuario5	&Usuario6 \\
+			Avanzar
+			& 8 &9 &8 &6 &6 & 8\\
+			Giro derecha
+			& 7 & 7 &7 &8 & 6& 6\\
+			Giro izquierda
+			& 7 & 7&6 &8 &6 & 5\\
+			Telepresencia
+			& 9 & 8 &9 & 7& 6& 6\\ 
+			Sensación de control
+			& 8 &7 &7 & 6&7 & 5\\
+			Interfaz
+			& 9 &8 & 7& 9& 6& 9\\
+			\hline
+		\end{tabular}
+	}
+\end{center}
+
+
+Respecto a la valoración de los usuarios es muy interesante ver cómo varía la sensación de control que tienen los usuarios cuando empiezan a utilizar el dispositivo y cuando ya han realizado 3 veces el circuito. Dicha variaciónn se ve reflejada en el siguiente gráfico.
+
+\begin{figure}[h!]
+	\centerline{
+		\mbox{\includegraphics[width=.85\textwidth]{images/SensacionControl.png}}
+	}
+	\caption{Promedio del tiempo que tardan los usuarios en realizar el circuito.}
+\end{figure}
+
+
+
+\end{itemize}
 %\section{Latencia de recepción de comandos}
 %
 %Para probar el sistema primero hemos hecho pruebas del funcionamiento de la red local, ya que en este trabajo es esencial tener poca latencia.
@@ -1292,82 +1432,11 @@ Durante el segundo ciclo de pruebas participaron
 %En la gráfica que nos muestra la diferencia de tiempos a 7,5 metros vemos que de media el comando tarda en transmitirse menos de 0.5 segundos.
 %
 %En las pruebas entre habitaciones separadas, vemos que la diferencia no pasa de los 0,5 segundos por lo que creemos que es una latencia asumible ya que el robot no va a grandes velocidades.
-\newpage
-
-\section{Feedback de los usuarios}
-
-Se han hecho pruebas de control a usuarios para comprobar su usabilidad.
-
-Las primeras pruebas han sido de calibración. Un usuario ha aprendido a controlar el robot y ha pedido cambios para que el manejo sea más intuitivos.
-
-Tras hacer los cambios pedidos por el primer usuario se ha pedido a distintas personas que hagan diversas acciones con el robot y que puntúen la facilidad de realizar dichas acciones.
-
-\paragraph{Cambios realizados en la fase de calibración}
-\begin{itemize}
-	\item \textbf{Se ha reducido la velocidad de giro de los motores de las ruedas}.
-	
-	\item \textbf{Se ha modificado la forma de girar}. En las primeras pruebas el robot giraba de forma que siempre apuntaba al mismo sitio que la cabeza del usuario.
-	
-	Esto era bastante incómodo porque para dar la vuelta el usuario debia girar sobre sí mismo.
-	
-	Además para avanzar hacia la derecha o hacia la izquierda el usuario debía estar mirando en esa dirección.
-	
-	Esto se ha modificado de forma que si la cabeza del usuario está orientada en un ángulo mayor de 110 grados (siendo 90º la posición frontal natural) el robot girará continuamente hacia la derecha hasta que el usuario vuelva a mirar al centro.
-	
-	El giro hacia la izquierda se hace de la misma forma.
-	
-	\item \textbf{Se ha modificado la forma de parar}.Cuando el usuario mira hacia abajo el robot avanza.
-	
-	En las primeras pruebas el usuario debía girar hacia la derecha o hacia la izquierda para dejar de vanazar.
-	
-	Esto se ha modificado de forma que ahora para parar el usuario deberá colocar la cabeza en la posición central natural (90º respecto al eje Y)
-\end{itemize}
-
-\paragraph{Valoración de los usuarios}
-
-Se ha pedido a los usuarios que realicen las siguientes acciones:
-
-\begin{itemize}
-	\item Girar a la derecha
-	\item Girar a la izquierda
-	\item Mirar hacia arriba
-	\item Estar 30 segundos aproximadamente girando el robot sobre sí mismo hasta tener controlado el giro.
-	\item Andar hacia delante
-	\item Parar
-	\item Estar cerca de un minuto paseando para familiarizarse con los movimientos.
-	\item Fijar un objetivo y alcanzarlo.
-\end{itemize}
-
-La siguiente tabla muestra la valoración de los usuarios tras realizar las pruebas.
-
-\begin{tabular}{|l | c | c | c | c | c | r | r |}
-	\hline
-	 & U1 & U2 & U3 & U4 & U5 & U6 & U7\\
-	\hline
-	Giro derecha & 9 & 6 & 6 & 4 & 5 & 5 & 6\\
-	Giro izquierda & 7.5 & 4 & 6 & 4 & 5 & 5 & 7\\
-	Mirar hacia arriba & 9 & 10 & 9 & 10 & 9 & 9 & 9\\
-	Andar & 10 & 8 & 10 & 8 & 8 & 9 & 9\\
-	Parar & 9 & 10 & 9 & 7 & 7 & 7 & 8\\
-	Alcanzar un objetivo & 8.5 & 6 & 8 & 7 & 5 & 5 & 8\\
-	Sensación de Control & 7.5 & 6 & 9 & 4 & 5 & 4 & 7\\
-	Facilidad de aprendizaje & 9 & 8 & 10 & 10 & 9 & 8 & 10\\
-	\hline
-\end{tabular}
 
 
-\paragraph{Comentarios tras las pruebas}
 
 
-Los comentarios más usuales tras utilizar el robot han sido:
-\begin{itemize}
-	\item El robot gira demasiado deprisa.
-	\item Sería bueno incluir un micrófono en el robot ya que marea un poco el mirar un espacio desde el robot y estar oyendo los ruidos del espacio en el que realmente estoy.
-	\item Es muy intuitivo la forma de controlar el robot.
-	\item Cuanto más lo uso más fácil me es controlarlo.
-\end{itemize}
- 
-Las coclusiones tras analizar los resultados se exonen en e siguiente capítulo.
+
 
 \chapter{Conclusiones y trabajo futuro}
 \label{chap:conclusiones}
