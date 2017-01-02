@@ -14,6 +14,7 @@
 \usepackage{graphicx}
 \usepackage{epsfig}
 \usepackage{xcolor}
+\usepackage{hyperref}
 
 
 
@@ -46,11 +47,11 @@
 \bibliographystyle{abbrv}
 
 \title[spa]{Realidad Virtual para personas que tienen discapacidad motora}
-\title[eng]{Virtual Reality for people with ...}
+\title[eng]{Virtual Reality for people with motor disabilities}
 \author{Cristina Kasner Tourné}
 \tutor{Francisco de Borja Rodriguez Ortiz}
-\date[spa]{Junio 2016}
-\date[eng]{Jun 2016}
+\date[spa]{Enero 2017}
+\date[eng]{Enero 2017}
 
 \setdegreeDouble
 
@@ -82,8 +83,8 @@ A pesar de esto el proyecto se ha terminado con éxito, dejando abierta una lín
 \begin{abstract}[eng] 
 \end{abstract}
 
-\keywords[spa]{Driver de red, Altas prestaciones, Captura de tráfico 40Gbps}
-\keywords[eng]{Network drivers, High Performance, 40 Gbps traffic capture}
+%\keywords[spa]{}
+%\keywords[eng]{}
 
 \newglossaryentry{cpd}{
 	name = {CPD},
@@ -585,15 +586,17 @@ Tiene 1 GB de memoria RAM , 4 puerto USB, 40 pins GPIO, puerto HDMI , Ethernet y
 
 Además tiene Wifi 802.11n integrado y bluetooth 4.1.
 
-Rechazar el Arduino Yun como placa para el proyecto, la Raspberry Pi 3 quedó como mejor candidata ya que cumplía todos los requisitos necesarios. A saber:
+Tras rechazar el Arduino Yun como placa para el proyecto, la Raspberry Pi 3 quedó como mejor candidata ya que cumplía todos los requisitos necesarios. A saber:
 
 \begin{itemize}
 	\item \textbf{Módulo Wifi}: Imprescindible para la transmisión.
-	\item \textbf{S.O Linux}:
+	\item \textbf{S.O Linux}: Nos permite instalar programas de manejo y transmisión de video.
+	\item \textbf{Puerto USB}: Para conectar la cámara y la fuente de alimentación.
+	\item \textbf{GPIO}: Necesario para conectar los servo motores.
 \end{itemize}
 
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centerline{
 		\mbox{\includegraphics[width=.80\textwidth]{images/raspi3.jpg}}
 	}
@@ -682,96 +685,133 @@ La Raspberry Pi 3 está configurada para conectarse automáticamente al router. 
 
 \section{Oculus Rift}
 
-Las Oculus Rift son unas gafas de Realidad Virtual [parrafo definiendo las Oculus]
+Las Oculus Rift son unas gafas de realidad virtual creadas por Palmer Luckey.
+
+La primera versión de las Oculus fue la DK1 (Develoment Kit 1), enfocada para programadores , que salió en abril de 2013. Esta versión se retiró del mercado poco antes de la presentación del segundo kit de desarrollo (DK2) en marzo de 2014.
+
+Finalmente, en 2016 salió la versión para consumidor.
+
+Para este proyecto se utilizan las Oculus Rift DK2.
+
 
 De las gafas nos interesan especialmente:
 \begin{itemize}
 	\item Detección de la orientación de las Oculus
-	\item Recepción de video
+	\item Sensación de inmersión (3D)
 \end{itemize}
 
 \subsection{Detección de la orientación}
 
 
+Las Oculus Rift son capaces de detectar la \textbf{posición y orientación de la cabeza} del usuario.
 
-Las Oculus Rift tienen integradas un giroscopio, un acelerómetro y un magnetómetro que manda constantemente información al ordenador, de forma que éste sabe en todo momento la orientación de las gafas.
+Para la \textbf{posición} , las gafas llevan un conjunto de emisores infrarrojos en su superficie. La información enviada por dichos emisores es recogida por un sensor de infrarrojos que se asemeja a una cámara.
 
-La técnoca para interpretar la señal de estos sensores se llama \textbf{fusión de sensores}
+Para nuestro trabajo la posición no es del todo relevante ya que, al estar orientado para personas con discapacidad motora,  se espera que el usuario se encuentre más o menos en la misma posición durante el uso del dispositivo.
 
-A continuación se explica en qué consiste esta técnica.
+Por el contrario, conocer la \textbf{orientación} de la cabeza es esencial en este proyecto ya que el usuario enviará comandos al robot rotando la cabeza en el sentido que convenga en cada momento.
 
-\paragraph{Fusión de Sensores }
+Cualquier objeto en un entorno tridimensional puede rotar respecto a  tres ejes: x, y , z.
 
-Como ya hemos mencionado, en las Oculus tenemos un giroscopio, un acelerómetro y un magnetómetro.
-
-Los dos primeros dan información acerca de la orientación respecto a los ejes X y Z, mientras que el magnetómetro mide la orientación respect al eje Y.
-
-Vamos a ver cómo funciona cada uno.
-
-El \textbf{giroscopio} de las Oculus mide el cambio de orientación de la cabeza a una velocidad de 1KHz.
-
-Una forma simplificada de calcular la orientación actual es:
-
-$$\text{Orientación actual } = \text{ Orientación anterior } + \text{ Diferencia horaria } \cdot \text{ Velocidad observada (giroscopio).}$$
-
-El problema está en que la cabeza puede rotar alrededor de tres ejes.
-
-\begin{figure}[h]
+\begin{figure}[H]
 	\centerline{
-		\mbox{\includegraphics[width=3.00in]{images/headtracking.png}}
+		\mbox{\includegraphics[width=5.00in]{images/headTrack.png}}
 	}
 	\caption{Ejes de giro}
 \end{figure}
 
-Vamos a suponer que solo rotase alrededor del eje Y y que el sensor captase una velocidad angular $w$ por segundo.
+Para detectar la orientación, la Oculus tienen integrados tes sensores: un giroscopio, un acelerómetro y un magnetómetro.
 
-Si tuviéramos 1000 sensores la fórmula de la orientación sería:
-
-$$\text{Orientación actual } = \text{ Orientación anterior } + 0,001 \cdot w$$
-
-Pero en el caso de las Oculus, al estar midiendo un objeto que se mueve en 3 ejes, el giroscopio da la velocidad angular respecto de los tres ejes, devolviendo un vector 3D ($w_1,w_2,w_3$)
-
-Al basar nuestro cálculo en el cálculo anterior, el error irá creciendo con el tiempo.
-
-Vamos a llamar \textit{tilt error} al error en la medición de los ángulos sobre los ejes XZ. El error sobre el eje Y se llamará \textit{yaw error}.
-
-El \textit{tilt error} se corresponde con nuestra sensación de lo que "está arriba", percepción que se basa en la gravedad.
-
-La gravedad se expresa con un vector de aceleración , por lo que utilizamos un \textbf{acelerómetro} para medirla.
-
-Nos encontramos con el inconveniente de que el acelerómetro no solo mide la gravedad. Para asegurarnos de que el momento en el que tomamos los datos de referencia solo estamos midiendo la gravedad, esperamos a que se den 2 condiciones:
-\begin{enumerate}
-	\item El acelerómetro nos devuelve una medida cercana a 9,8
-	\item El giroscopio nos devuelve una velocidad angular muy lenta (es decir, no estamos girando).
-\end{enumerate}
-
-En este momento sabemos que nos encontramos en una posición vertical y podemos corregir el error.
-
-\textbf{Cómo corregimos el error:}
-Supongamos que se dan las dos condiciones previas, y la posición que nuestro cálculo de orientación nos devuelve un vector $\vec{a}$, tal y como vemos en el dibujo.
-
-Tenemos el ángulo $\theta$ entre el eje Y y el vector $\vec{a}$ pero ¿cómo calculamos el eje de rotación para rotar $\vec{a}$ y corregir el error?
-
-Dicho vector debe ser perpendicular a $\vec{a}$ y al eje Y, y apoyarse en el plano XZ.
-
-Para encontrar el vector basta con hacer la proyección de $\vec{a}$ en el plano XZ, obteniendo así ($a_x, 0 , a_z$). Haciendo un vector perpendicular a éste obtenemos ($-a_z, 0 , a_x$). Y ya tenemos el eje de rotación que necesitábamos para corregir el error.
-
-\begin{figure}[h]
-	\centerline{
-		\mbox{\includegraphics[width=3.00in]{images/ejestracking.png}}
-	}
-	\caption{Corrección del tilt error}
-\end{figure}
+Con el giroscopio y el acelerómetro se calcula la orientación respecto a los ejes  X y Z , mientras que el magnetómetro manda información del eje Y.
 
 
-\newpage
-\textbf{Error sobre el eje Y (yaw error)}
 
-Este error se basa en nuestra percepción de dónde está el norte.
+%Las Oculus Rift tienen integradas un giroscopio, un acelerómetro y un magnetómetro que manda constantemente información al ordenador, de forma que éste sabe en todo momento la orientación de las gafas.
+%
+%La técnoca para interpretar la señal de estos sensores se llama \textbf{fusión de sensores}
+%
+%A continuación se explica en qué consiste esta técnica.
+%
+%\paragraph{Fusión de Sensores }
+%
+%Como ya hemos mencionado, en las Oculus tenemos un giroscopio, un acelerómetro y un magnetómetro.
+%
+%Los dos primeros dan información acerca de la orientación respecto a los ejes X y Z, mientras que el magnetómetro mide la orientación respect al eje Y.
+%
+%Vamos a ver cómo funciona cada uno.
+%
+%El \textbf{giroscopio} de las Oculus mide el cambio de orientación de la cabeza a una velocidad de 1KHz.
+%
+%Una forma simplificada de calcular la orientación actual es:
+%
+%$$\text{Orientación actual } = \text{ Orientación anterior } + \text{ Diferencia horaria } \cdot \text{ Velocidad observada (giroscopio).}$$
+%
+%El problema está en que la cabeza puede rotar alrededor de tres ejes.
+%
+%\begin{figure}[h]
+%	\centerline{
+%		\mbox{\includegraphics[width=3.00in]{images/headtracking.png}}
+%	}
+%	\caption{Ejes de giro}
+%\end{figure}
+%
+%Vamos a suponer que solo rotase alrededor del eje Y y que el sensor captase una velocidad angular $w$ por segundo.
+%
+%Si tuviéramos 1000 sensores la fórmula de la orientación sería:
+%
+%$$\text{Orientación actual } = \text{ Orientación anterior } + 0,001 \cdot w$$
+%
+%Pero en el caso de las Oculus, al estar midiendo un objeto que se mueve en 3 ejes, el giroscopio da la velocidad angular respecto de los tres ejes, devolviendo un vector 3D ($w_1,w_2,w_3$)
+%
+%Al basar nuestro cálculo en el cálculo anterior, el error irá creciendo con el tiempo.
+%
+%Vamos a llamar \textit{tilt error} al error en la medición de los ángulos sobre los ejes XZ. El error sobre el eje Y se llamará \textit{yaw error}.
+%
+%El \textit{tilt error} se corresponde con nuestra sensación de lo que "está arriba", percepción que se basa en la gravedad.
+%
+%La gravedad se expresa con un vector de aceleración , por lo que utilizamos un \textbf{acelerómetro} para medirla.
+%
+%Nos encontramos con el inconveniente de que el acelerómetro no solo mide la gravedad. Para asegurarnos de que el momento en el que tomamos los datos de referencia solo estamos midiendo la gravedad, esperamos a que se den 2 condiciones:
+%\begin{enumerate}
+%	\item El acelerómetro nos devuelve una medida cercana a 9,8
+%	\item El giroscopio nos devuelve una velocidad angular muy lenta (es decir, no estamos girando).
+%\end{enumerate}
+%
+%En este momento sabemos que nos encontramos en una posición vertical y podemos corregir el error.
+%
+%\textbf{Cómo corregimos el error:}
+%Supongamos que se dan las dos condiciones previas, y la posición que nuestro cálculo de orientación nos devuelve un vector $\vec{a}$, tal y como vemos en el dibujo.
+%
+%Tenemos el ángulo $\theta$ entre el eje Y y el vector $\vec{a}$ pero ¿cómo calculamos el eje de rotación para rotar $\vec{a}$ y corregir el error?
+%
+%Dicho vector debe ser perpendicular a $\vec{a}$ y al eje Y, y apoyarse en el plano XZ.
+%
+%Para encontrar el vector basta con hacer la proyección de $\vec{a}$ en el plano XZ, obteniendo así ($a_x, 0 , a_z$). Haciendo un vector perpendicular a éste obtenemos ($-a_z, 0 , a_x$). Y ya tenemos el eje de rotación que necesitábamos para corregir el error.
+%
+%\begin{figure}[h]
+%	\centerline{
+%		\mbox{\includegraphics[width=3.00in]{images/ejestracking.png}}
+%	}
+%	\caption{Corrección del tilt error}
+%\end{figure}
+%
+%
+%\newpage
+%\textbf{Error sobre el eje Y (yaw error)}
+%
+%Este error se basa en nuestra percepción de dónde está el norte.
+%
+%Para esto utilizamos el magnetómetro.
+%
+%El procesamiento de la señal del magnetómetro y la corrección del error es similar al tratamiento de la señal del giroscopio.
 
-Para esto utilizamos el magnetómetro.
+\subsection{Sensación de inmersión \_ 3D}
 
-El procesamiento de la señal del magnetómetro y la corrección del error es similar al tratamiento de la señal del giroscopio.
+Una de las características más importantes de las Oculus Rift es su capacidad de reproducir un entorno virtual de tal forma que el usuario se sienta totalmente parte de él.
+
+Esto lo hace usando un par de pantallas (una para cada ojo) que dividen la imagen en dos (Side by side - SBS). En cada pantalla hay un conjunto de lentes que modifican la imagen para crear el fenómeno de la estereopsis por el cual, a partir de dos imágenes ligeramente diferentes proyectadas en la retina de cada ojo, el cerebro es capaz de recomponer una tridimensional.
+
+
 
 \section{Diseño de conexiones}
 
@@ -853,9 +893,8 @@ Para integrar la cámara en el robot han sido necesarias dos piezas:
 
 Ambas piezas han sido impresas con la impresora 3D del Club de Robótica de la Universidad Autónoma de Madrid.
 
-Para realizar el diseño 3D de la pinza de agarre se ha utilizado el programa Blender.
+Para realizar el diseño 3D de la pinza de agarre se ha utilizado el programa de diseño 3D Blender.
 
-Para el soporte vertical se ha reciclado el diseño de un soporte de un robot construido en el Club de Robótica.
 
 \begin{figure}[h]
 	\centerline{
@@ -875,18 +914,24 @@ Una vez diseñadas las piezas se ha utilizado Cura, un programa que genera archi
  
 \newpage
 \section{Streaming}
+A continuación se explicará cómo se ha implementado la captura, transmisión y reproducción de video del entorno en tiempo real.
+
+Para esto son necesarios dos elementos:
+\begin{itemize}
+	\item Raspberry Pi3 $\rightarrow$ Se encarga de la captura y transmisión de video.
+	\item PC $\rightarrow$ Se encarga de la recepción de video y de reproducirlo en las Oculus Rift.
+\end{itemize}
 \subsection{Raspberry Pi3}
 El primer elemento en el streaming de video es la Raspberry Pi, que tiene conectada por usb una cámara.
 
-Para recoger el video y mandarlo en tiempo real utilizamos la librería mjpeg-streamer, disponible en github.
+Para recoger el video y mandarlo en tiempo real utilizamos la librería de software libre mjpeg-streamer, disponible en github. \url{https://github.com/jacksonliam/mjpg-streamer}
 
 Mjpeg-streamer es una aplicación en linea de comandos que permite crear un servidor, para retransmitir imágenes JPG sobre una red basada en IP, desde la cámara hasta un navegador convencional.
 
-Soporta la compresión por hardware (GPU, Unidad de Procesamiento Gráfico) de la cámara, en nuestro caso H.264 Advanced Video Coding (AVC) Standard, que es el compreso de la Webcam Logitech.
+Soporta la compresión por hardware (GPU) de la cámara, en nuestro caso H.264 Advanced Video Coding (AVC) Standard, que es la compresión utilizada por la Webcam Logitech.
 
 Esto permite reducir drásticamente el uso de la CPU de este servidor, haciendo está aplicación un servicio ligero.
 
-El puerto que emplea es el 8080
 
 \begin{figure}[h!]
 	\centerline{
@@ -920,7 +965,7 @@ En este momento la Raspberry empezará a coger el video de la cámara y transmit
 
 \newpage
 \subsection{Ordenador}
-El ordenador accede a la IP donde mjpeg-streamer está retransmitiendo el video y lo recoge a través del reproductor de video VLC.
+El ordenador , conectado a la red local a través del router,accede a la IP donde mjpeg-streamer está retransmitiendo el video y lo recoge a través del reproductor de video VLC.
 
 Para ello especificamos en VLC que el medio de reproducción será una ubicación de red.
 
@@ -934,9 +979,7 @@ Posteriormente dividimos el video en dos pantallas exactamente iguales para pode
 		\caption{Configuración y resultado de la reproducción de video en VLC} \label{figstream}
 \end{figure}
 
-El ordenador tiene instalado un programa, Virtual Desktop.
-
-Virtual Desktop es una aplicación desarrollada por Oculus Rift y  HTC Vive para utilizar las Oculus Rift en Windows.
+Para visualizar el video en la Oculus Rift hemos instalado en el PC el  Virtual Desktop. Virtual Desktop es una aplicación desarrollada por Oculus Rift y  HTC Vive para utilizar las Oculus Rift en Windows.
 
 Permite ver el escritorio desde las Oculus, pudiendo configurar efectos como ver las imagénes SBS o cambiar el entorno en el que te encuentras (el espacio, una sala de cine...)
 
@@ -963,7 +1006,7 @@ Este movimiento se basará en el movimiento de las Oculus, que llevará puestas 
 
 Por lo tanto el control del robot se divide en tres acciones:
 \begin{itemize}
-	\item Recogida y procesamiento de la información que mandan las Oculus al ordenador $\rightarrow$ Esto se hará mediante la utilización de la librería \texttt{ovr}.
+	\item Recogida y procesamiento de la información que mandan las Oculus al ordenador $\rightarrow$ Esto se hará mediante la utilización de la librería \texttt{OVR}.
 	
 	\item Envío de la información procesada a la Raspberry Pi 3 $\rightarrow$ Para ello el ordenador abrirá dos sockets a través de los cuales mandará los datos al robot
 	
@@ -973,7 +1016,7 @@ Por lo tanto el control del robot se divide en tres acciones:
 
 
 \paragraph{Librería OVR}
-Para recoger desde el ordenador la información que mandan las Oculus utilizamos la librería de Oculus (ovr), escrita en phyton.
+Para recoger desde el ordenador la información que mandan las Oculus utilizamos la librería de Oculus (\texttt{OVR}), escrita en phyton.
 
 La función \textit{ovr.getTrackingState} nos devuelve una estructura (\textit{TrackingState}), que contiene el campo:
 
@@ -1004,7 +1047,7 @@ Como se ha dicho en el apartado anterior, la información proveniente de las Ocu
 
 Para averiguar en qué dirección apuntan las Oculus respecto al eje X guardamos los datos relativos a la posición y la velocidad angular.
 
- Estos datos son procesados y se le aplican unos parámetros que se han obtenido mediante la realización de pruebas para obtener una correcta calibración.
+ Estos datos son procesados y se le aplican unos parámetros empíricos para obtener una correcta calibración.
 
 De este modo se ha podido realizar una conversión de los datos obtenidos por las Oculus a unidades de grados que nos facilitan el control posterior de la posición de los servomotores.
 
@@ -1064,9 +1107,9 @@ Para ello, al iniciarse cada programa, se conectan al socket correspondiente
 	s.connect((host,port))
 \end{lstlisting}
 
-Y se ponen a escuchar (\texttt{msg=s.recv(1024)})hasta que les llegan los datos.
+Y se ponen a escuchar hasta que les llegan los datos.
 
-Una vez que tiene los datos los transforma en comandos válidos para los servomotores,tal y como se explia en el siguiente apartado, les manda la instrucción y vuelve a escuchar.
+Una vez que tiene los datos los transforma en comandos válidos para los servomotores,tal y como se explica en el siguiente apartado, les manda la instrucción y vuelve a escuchar.
 
 
 \subsection{Movimiento de los servo motores}
@@ -1181,7 +1224,7 @@ Asi podemos convertir los ángulos en pulsos PWM y mover la cámara hacia la dir
 
 El las anteriores secciones se ha explicado el funcionamiento interno del control de movimientos del robot.
 
-En este nuevo apartado se presenta cómo debe utilizar el usuario este producto, qué rango dde movimiento tiene y cómo puede hacer avanzar el robot.
+En este nuevo apartado se presenta cómo debe utilizar el usuario este producto, qué rango de movimiento tiene y cómo puede hacer avanzar el robot.
 
 \subsubsection{\textbf{Instrucciones de mando}}
 
@@ -1192,7 +1235,7 @@ Para ello se debía idear una forma cómoda e intuitiva de mandar instrucciones 
 Diferenciamos dos estados de movimiento del robot:
 \begin{itemize}
 	\item Exploración$\rightarrow$ En este estado el robot no avanza, solo explora lo que tiene a su alrededor. Esto lo hace moviendo la cámara o rotando sobre sí mismo.
-	\item Transporte $\rightarrow$ El robot avanza hacia delante.
+	\item Transporte $\rightarrow$ El robot avanza hacia delante. Al poder girar sobre sí mismo en la fase de \textbf{exploración}, es suficiente con este movimiento.
 \end{itemize}
 
 Finalmente se ha implementado de la siguiente forma:
@@ -1206,11 +1249,11 @@ Finalmente se ha implementado de la siguiente forma:
 	\caption{Posibles movimientos del robot según el movimiento de las Oculus Rift} \label{movRobot}
 \end{figure}
 
-Como viene explicado en la imagen, si el usuario mira hacia los lados el robot rotará sobre sí mismo sin moverse del sitio, hacia la dirección que señalen las Oculus Rift.
+Como viene explicado en la imagen, si el usuario mira hacia los lados el robot rotará sobre sí mismo sin moverse del sitio, hacia la dirección que señalen las Oculus Rift.(\textbf{exploración})
 
-Si el usuario mueve la cabeza hacia arriba o hacia abajo sin llegar a menos de 50º, la cámara se moverá como si fuera la cabeza del usuario.
+Si el usuario mueve la cabeza hacia arriba o hacia abajo sin llegar a menos de 50º, la cámara se moverá como si fuera la cabeza del usuario.(\textbf{exploración})
 
-En el caso de que el usuario oriente la cabeza hacia abajo, con un ángulo menor de 50º respecto al eje Y, la cámara se orientará horizontalmente (90º respecto al eje Y) y el robot avanzará hasta que el usuario cambie la posición de la cabeza
+En el caso de que el usuario oriente la cabeza hacia abajo, con un ángulo menor de 50º respecto al eje Y, la cámara se orientará horizontalmente (90º respecto al eje Y) y el robot avanzará hasta que el usuario cambie la posición de la cabeza.(\textbf{transporte})
 
 \chapter{Pruebas y Resultados}
 
@@ -1286,10 +1329,14 @@ La fase de aprendizaje durante este ciclo consistió en:
 
 La siguiente tabla muestra la valoración de los usuarios tras realizar las pruebas.
 
-\begin{tabular}{|l | c | c | c | c | c | r | r |}
-	\hline
-	& U1 & U2 & U3 & U4 & U5 & U6 & U7\\
-	\hline
+\resizebox{15cm}{!} {
+\begin{tabular}{|g  c  c  c  c  c  c  c |}
+		\hline
+	\rowcolor{yellow!50!white}           % Heading with different color to highlight it      
+	\multicolumn{8}{|c|}{Valoración de los usuarios en el segundo ciclo} \\ \hline
+	\rowcolor[gray]{0.8}
+	& Usuario1 & Usuario2 & Usuario3 & Usuario4 & Usuario5 & Usuario6 & Usuario7\\
+	
 	Giro derecha & 9 & 6 & 6 & 4 & 5 & 5 & 6\\
 	Giro izquierda & 7.5 & 4 & 6 & 4 & 5 & 5 & 7\\
 	Mirar hacia arriba & 9 & 10 & 9 & 10 & 9 & 9 & 9\\
@@ -1300,7 +1347,7 @@ La siguiente tabla muestra la valoración de los usuarios tras realizar las prue
 	Facilidad de aprendizaje & 9 & 8 & 10 & 10 & 9 & 8 & 10\\
 	\hline
 \end{tabular}
-
+}
 
 \paragraph{Comentarios tras las pruebas}
 
@@ -1392,10 +1439,10 @@ A continuación se muestra un gráfico donde se muestran los promedios de tiempo
 	}
 \end{center}
 
-
+\newpage
 Respecto a la valoración de los usuarios es muy interesante ver cómo varía la sensación de control que tienen los usuarios cuando empiezan a utilizar el dispositivo y cuando ya han realizado 3 veces el circuito. Dicha variaciónn se ve reflejada en el siguiente gráfico.
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centerline{
 		\mbox{\includegraphics[width=.85\textwidth]{images/SensacionControl.png}}
 	}
