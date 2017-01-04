@@ -1,4 +1,4 @@
-\documentclass[twoside, 12pt]{epstfg}
+\documentclass[twoside, 11pt]{epstfg}
 
 \usepackage{lipsum}
 \usepackage[numbers]{natbib}
@@ -263,6 +263,29 @@ A continuación se añade un esquema a modo de resumen de los objetivos ya expli
 	\caption{Resumen de los objetivos del proyecto}
 \end{figure}
 
+
+\newpage
+\section{Desarrollo y plan de trabajo}
+
+El desarrollo de este proyecto de fin de grado se puede dividir en tres fases:
+\begin{itemize}
+	\item \textbf{Investigación y aprendizaje:} Durante esta primera fase me documenté acerca de la realidad virtual, de sus aplicaciones y de las herramientas herramientas de las que disponía para realizar el trabajo. También busqué proyectos parecidos que unieran la robótica y la realidad virtual para saber que placas funcionaban mejor con gafas de realidad virtual.
+	
+	\item \textbf{Diseño y desarrollo:} Una vez adquirida la base de conocimiento necesaria para empezar el proyecto pude empezar la fase dos, que incluye:
+	\begin{itemize}
+		\item Diseño y construcción del robot
+		\item Diseño e implementación del software
+	\end{itemize}
+
+	\item \textbf{Pruebas:} Durante la fase de pruebas un grupo de usuarios utilizó y valoró el proyecto. Además se hicieron cambios de diseño en base a la valoración de los usuarios .
+\end{itemize}
+
+\begin{figure}[H]
+	\centerline{
+		\mbox{\includegraphics[width=2.50in]{images/Plan.png}}
+	}
+	\caption{En este grafo queda resumido el plan de trabajo. Se puede ver cómo la fase de pruebas vuelve a la fase de diseño y desarrollo, ya que el proyecto va mejorando en base a lo que demandan los usuarios.}
+\end{figure}
 \newpage
 \section{Estructura del documento}
 
@@ -1204,7 +1227,7 @@ Para girar el robot hacia la derecha el usuario enviará la señal de "rotar hac
 
 \subsubsection{\textbf{Control del motor de la cámara del robot}}
 
-La cámara se mueve gracias a un servo motor cuyo rango de movimiento va de 0 a 180 grados.
+La cámara se mueve gracias a un servo motor cuyo rango de movimiento va de -90 a 90 grados.
 
 Este motor se mueve por pulsos, tal y como se explica en la sección de Análisis.
 
@@ -1212,11 +1235,12 @@ La Raspberry recibe un ángulo que indica hacia donde están orientadas las Ocul
 
 Para transformar este ángulo el pulso(PWM) correspondiente debemos tener en cuenta el rango de pulsos del motor que se está utilizando.
 
-Como vemos en la figura \ref{figPWM}, un pulso de $1.5$ ms equivale a la posición del motor que señala el ángulo 0, de la misma manera para que el motor esté orientado hacia el ángulo 180 deberemos mandar un pulso de $0.5$ ms.
+Como vemos en la figura \ref{figPWM}, un pulso de $1.5$ ms equivale a la posición del motor que señala el ángulo 0, de la misma manera para que el motor esté orientado hacia el ángulo -90 deberemos mandar un pulso de $0.5$ ms y para orientarlo en el ángulo de 90mandaríamos un pulso de $2.5$. Por lo tanto , un pulso de diferencia implica 90 grados de diferencia.
 
 Con estos datos es sencillo encontrar una fórmula de conversión de grados a pulsos:
 
-$$$$
+$$p = \frac{g}{90} + 1'5$$
+Siendo $p$ el pulso que debo mandar al servomotor para que rote hasta la posición señalada por el grado $g$.
 
 Asi podemos convertir los ángulos en pulsos PWM y mover la cámara hacia la dirección deseada.
 
@@ -1241,7 +1265,7 @@ Diferenciamos dos estados de movimiento del robot:
 Finalmente se ha implementado de la siguiente forma:
 
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
 	\subfigure[Rotación sobre sí mismo]{\includegraphics[width=60mm]{images/Robotrota.png}}
 	\subfigure[La cámara gira respecto del eje X]{\includegraphics[width=60mm]{images/Robotexp.png}}\\
@@ -1249,7 +1273,7 @@ Finalmente se ha implementado de la siguiente forma:
 	\caption{Posibles movimientos del robot según el movimiento de las Oculus Rift} \label{movRobot}
 \end{figure}
 
-Como viene explicado en la imagen, si el usuario mira hacia los lados el robot rotará sobre sí mismo sin moverse del sitio, hacia la dirección que señalen las Oculus Rift.(\textbf{exploración})
+Como viene explicado en la imagen \ref{movRobot}, si el usuario mira hacia los lados el robot rotará sobre sí mismo sin moverse del sitio, hacia la dirección que señalen las Oculus Rift.(\textbf{exploración})
 
 Si el usuario mueve la cabeza hacia arriba o hacia abajo sin llegar a menos de 50º, la cámara se moverá como si fuera la cabeza del usuario.(\textbf{exploración})
 
@@ -1381,7 +1405,7 @@ A continuación se explicará el desarrollo del tercer y último ciclo de prueba
 	\begin{tabular}{|g c c c c c c|}
 		\hline
 		\rowcolor{yellow!50!white}           % Heading with different color to highlight it      
-		\multicolumn{7}{|c|}{Valoración tras la fase de aprendizaje} \\ \hline
+		\multicolumn{7}{|c|}{Valoración tras realizar el circuito 3  veces} \\ \hline
 	\rowcolor[gray]{0.8}
 		& Usuario1	&Usuario2	&Usuario3	&Usuario4	&Usuario5	&Usuario6 \\
 		Avanzar
@@ -1400,7 +1424,7 @@ A continuación se explicará el desarrollo del tercer y último ciclo de prueba
 	\end{tabular}
 }
 \end{center}
-\newpage
+
 \item \textbf{Circuito:} Los usuarios realizan el mismo circuito 3 veces. En el circuito se marcan 4 puntos críticos y se cronometra el tiempo que tarda cada usuario en alcanzar dichos puntos. También se cronometra el tiempo total.
 
 A continuación se muestra un gráfico donde se muestran los promedios de tiempos entre todos los usuarios de cada intento de hacer el circuito.
