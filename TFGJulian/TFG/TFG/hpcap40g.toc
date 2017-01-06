@@ -5,9 +5,9 @@
 \select@language {spanish}
 \contentsline {paragraph}{\bfseries Resumen}{I}{section*.2}
 \contentsline {paragraph}{\bfseries Abstract}{III}{section*.4}
-\contentsline {chapter}{\'{I}ndice general}{IV}{section*.5}
-\contentsline {chapter}{\'{I}ndice de tablas}{VI}{section*.6}
-\contentsline {chapter}{\'{I}ndice de figuras}{VII}{section*.7}
+\contentsline {chapter}{\'{I}ndice general}{V}{section*.5}
+\contentsline {chapter}{\'{I}ndice de tablas}{VII}{section*.6}
+\contentsline {chapter}{\'{I}ndice de figuras}{VIII}{section*.7}
  \cftbeforechapterskip 10pt\relax 
  \vspace {10pt} 
 \contentsline {chapter}{\chapternumberline {1}Introducci\IeC {\'o}n}{1}{chapter.1}
