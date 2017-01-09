@@ -46,8 +46,8 @@
 
 \bibliographystyle{abbrv}
 
-\title[spa]{Realidad Virtual para personas que tienen discapacidad motora}
-\title[eng]{Virtual Reality for people with motor disabilities}
+\title[spa]{Un enfoque de robótica virtual para personas que tienen discapacidad motora}
+\title[eng]{A virtual robotic approach for people with motor disabilities}
 \author{Cristina Kasner Tourné}
 \tutor{Francisco de Borja Rodriguez Ortiz}
 \date[spa]{Enero 2017}
@@ -899,6 +899,29 @@ Se ha implementado un programa en phyton que recoge esa información y la traduc
 
 La Raspberry lee los comandos del ordenador y mueve los servos según lo recibido, de esta forma controlamos el movimiento del robot y de a cámara.
 
+
+\section{Esquema funcional}
+A continuación se presenta un esquema funcional de todo el proyecto, en el que se puede ver cómo interacciona cada componente con los demás.
+
+El esquema muestra un \textbf{ciclo retroalimentado}, ya que la información que manda el robot al usuario condiciona los comandos de movimiento que mandará el usuario al robot y viceversa.
+
+\begin{figure}[h]
+	\centerline{
+		\mbox{\includegraphics[width=1\textwidth]{images/EsquemaFuncional.png}}
+	}
+	\caption{Esquema funcional}
+\end{figure}
+
+Empezando el ciclo desde el \textbf{usuario}, vemos cómo el usuario le manda información a los sensores, esto es, cuando el usario mueve la cabeza, los sensores de las \textbf{Oculus} perciben el cambio de orientación y le mandan los datos al PC.
+
+El PC recoge los datos a través del SDK de Oculus. Estos datos son interpretados en un \textbf{software de control} utilizando la librería OVR. Una vez interpretados los datos se envían los comandos convenientes a los motores del \textbf{robot}. Estos comandos llegarán a los motores de las ruedas o al motor de la cámara, dependiendo de la nueva orientación de la cabeza del usuario.
+
+A la vez que ocurre este proceso el robot está enviando un video del entorno en tiempo real al PC. Esta transmisión se hace a través de la librería mjpeg-streamer y es recogida en el PC por el reproductor de video \textbf{VLC}.
+
+Para que el video llegue al visor de las Oculus Rift se utiliza Virtual Desktop, como ya se dijo en la sección anterior. De esta forma el usuario podrá visualizar lo que ve el robot a través de la Oculus y mover el robot hacia donde desee.
+
+
+
 \newpage
 \chapter{Desarrollo e implementación}
 
@@ -1392,7 +1415,9 @@ La fase de aprendizaje durante este ciclo consistió en:
 
 La siguiente tabla muestra la valoración de los usuarios tras realizar las pruebas.
 
+
 \resizebox{15cm}{!} {
+
 \begin{tabular}{|g  c  c  c  c  c  c  c |}
 		\hline
 	\rowcolor{yellow!50!white}           % Heading with different color to highlight it      
@@ -1410,6 +1435,7 @@ La siguiente tabla muestra la valoración de los usuarios tras realizar las prue
 	Facilidad de aprendizaje & 9 & 8 & 10 & 10 & 9 & 8 & 10\\
 	\hline
 \end{tabular}
+
 }
 
 \paragraph{Comentarios tras las pruebas}
