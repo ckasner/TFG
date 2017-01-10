@@ -512,24 +512,24 @@ Por tanto los requisitos que debe cumplir el robot son los siguientes:
 
 
 \begin{itemize}
-	\item \textbf{RF-CR1}
+	\item \textbf{RF-CR1: Grabar video y transmitirlo a tiempo real.}
 	
-	Permitir grabar video y transmitirlo a tiempo real.
-	
-	
-	\item\textbf{RF-CR2} 
-	
-	Ser capaz de desplazarse en todas las direcciones del plano.
+	 Ya que el robot va a actuar como sentido de la vista del usuario, debe enviar de forma continua imágenes a tiempo real del entorno que le rodea.
 	
 	
-	\item\textbf{RF-CR3}
+	\item\textbf{RF-CR2: Desplazarse en todas las direcciones del plano.} 
 	
-	Recibir comandos de control a través de una red inalámbica.
+	Uno de los posibles usos del trabajo es utilizar el robot como dispositivo de exploración del entorno. Para ello es necesario que el robot pueda moverse en todas las direcciones, como si del propio usuario se tratara.
 	
 	
-	\item\textbf{RF-CR4} 
+	\item\textbf{RF-CR3: Recibir comandos de control a través de una red inalámbica.}
 	
-	La cámara debe apuntar en la misma dirección que la cabeza del usuario.
+	Ya que un objetivo del proyecto es dar independecia al usuario el robot debe poder moverse por el espacio sin importar donde se encuentre el usuario. Esto se consigue diseñando un software de control que envíe los comandos de forma inalámbrica.
+	
+	
+	\item\textbf{RF-CR4: La cámara debe apuntar en la misma dirección que la cabeza del usuario.} 
+	
+	La cámara del robot hará las funciones de los ojos del usuario, por lo tanto debe tener la misma orientación respecto al cuerpo del robot que la orientación de la cabeza respecto al cuerpo del usuario.
 \end{itemize}
 
 
@@ -540,17 +540,18 @@ Se quiere conseguir la máxima sensación de inmersión para la persona que cont
 Para ello los requisitos principales que debe cumplir son:
 
 \begin{itemize}
-	\item\textbf{RF-S1}
+	\item\textbf{RF-S1: La transmisión de video debe ser  a tiempo real, con la mínima latencia posible.}
 	
-	La transmisión de video debe ser  a tiempo real, con la mínima latencia posible.
+	Si las imágenes del entorno llegan al usuario con un desfase temporal importante respecto al movimiento de la cabeza, se reducirá la sensación de inmersión y será mucho más dificil controlar el robot.
 	
-	\item\textbf{RF-S2}
+	\item\textbf{RF-S2: Imagen desdoblada}
 	
-	El usuario verá el video con  las Oculus Rift, por lo que la imagen debe estar desdoblada (formato SBS, que se eplicará en la sección de desarrollo).
+	El usuario verá el video con las Oculus Rift, por lo que la imagen debe estar desdoblada (formato SBS, que se eplicará en la sección de desarrollo).
 	
-	\item\textbf{RF-S3}
+	\item\textbf{RF-S3: Transmisión de video inalámbrica}
 	
-	La transmisión debe ser inalámbrica ya que queremos que el robot tenga total libretad de movimiento, siendo éste independiente del ordenador.
+	Al igual que en el requisito \textbf{RF-CR3}, la transmisión del streaming también debe ser inalámbrica ya que, de otro modo, se perdería la libertad dde movimiento del robot.
+
 	
 	
 \end{itemize}
@@ -566,14 +567,18 @@ Dentro del control del robot vamos a diferenciar entre control del movimiento de
 \begin{itemize}
 	\item Movimiento del robot :
 	
-	\textbf{RF-CTRL1}
+	\textbf{RF-CTRL1: El control del robot solo depende del movimiento de la cabeza del usuario}
 	
-	El robot debe moverse en todas las direcciones con movimientos de la cabeza.
+	La interfaz de control del robot constará solo de movimientos de la cabeza del usuario ya que el trabajo está orientado a personas con discapacidad motora.
 	\item  Movimiento de la cámara:
 	
-	\textbf{RF-CTRL2}
+	\textbf{RF-CTRL2: La cámara debe moverse acorde con el movimiento de la cabeza del usuario.}
 	
-	La cámara debe estar apuntando siempre en la misma dirección que la cabeza.
+	Este requisito es necesario tanto para el control del robot como para la sensación de inmersión.
+	
+	\textit{Por ejemplo:} Es importante que si el usuario hace el movimiento de mirar hacia arriba, la imagen que le llegue sea acorde con el movimiento.
+	
+	
 	
 \end{itemize}
 
@@ -744,7 +749,7 @@ La Raspberry Pi 3 está configurada para conectarse automáticamente al router. 
 	\caption{Archivo de configuración de red Raspberry Pi 3}
 \end{figure}
  
-
+\newpage
 \section{Oculus Rift}
 
 Las Oculus Rift son unas gafas de realidad virtual creadas por Palmer Luckey.
@@ -873,8 +878,35 @@ Una de las características más importantes de las Oculus Rift es su capacidad 
 
 Esto lo hace usando un par de pantallas (una para cada ojo) que dividen la imagen en dos (Side by side - SBS). En cada pantalla hay un conjunto de lentes que modifican la imagen para crear el fenómeno de la estereopsis por el cual, a partir de dos imágenes ligeramente diferentes proyectadas en la retina de cada ojo, el cerebro es capaz de recomponer una tridimensional.
 
+\subsection{OVR}
+
+Para desarrollar una aplicación integrada con las Oculus Rift utilizaremos la API OVR de python, que se encuentra en \url{https://github.com/cmbruns/pyovr}. Esta API está basada en otra API escrita en C que nos permite utilizar la librería LibOVR. Esta librería es la parte fundamental del SDK de Oculus.
+
+Todo software que utilice OVR debe tener al menos 3 fases:
+\begin{itemize}
+	\item Inicialización.
+	\item Bucle principal.
+	\item Liberación de recursos y fin de proceso. 
+\end{itemize}
+
+\subsubsection{Inicialización}
 
 
+Para inicializar la librería se utiliza la función \texttt{ovr.initialize(None)}. Esta función debe llamarse al principio de cualquier aplicación que utilice OVR.
+
+Una vez inicializada la librería es necesario llamar a \texttt{ovr.create()}, que se comunica con el sistema operativo y crea el entorno necesario para gestionar las Oculus. Esta función devuelve dos valores: session(La sesión ovr) y luid( locally unique identifier). 
+
+\subsubsection{Bucle principal}
+
+En el caso de este trabajo, el bucle principal deberá leer la orientación de las gafas y enviarla al robot.
+
+Para obtener la orientación es necesario recoger la información de los sensores de las Oculus Rift. Para ello OVR proporciona la función \texttt{ovr.getTrackingState()}, que devuelve una estructura \textit{TrackingState}. En esta estructura se encuentra el campo \textit{HeadPose}. Leyendo \textit{HeadPose.ThePose.Orientationx/y} se encuentra la orientación de la Oculus respecto a los ejes $x$ e $y$.
+
+\subsubsection{Liberación de recursos y fin de proceso.}
+
+Cuando finaliza la aplicación se deberá llamar a las funciones \texttt{ovr.destroy(session)} y \texttt{ovr.shutdown()}. Con estas funciones liberamos los recursos utilizados en la aplicación y apagamos la API.
+
+\newpage
 \section{Diseño de conexiones}
 
 La arquitectura del proyecto es muy sencilla, como podemos observar en la siguiente imagen:
@@ -895,11 +927,11 @@ Por otra parte las Oculus tienen integrado un giroscopio , un acelerómetro y un
 
 Combinando la información de estos sensores a través de un proceso conocido como fusión de sensores se determina la orientación de la cabeza del usuario en el mundo real , y se sincroniza con la perspectiva virtual del usuario en tiempo real. 
 
-Se ha implementado un programa en phyton que recoge esa información y la traduce en comandos sencillos para mandarselos a la Raspberry. Para obtener esa información hacemos uso de la librería de las Oculus (ovr).
+Se ha implementado un programa en phyton que recoge esa información y la traduce en comandos sencillos para mandarselos a la Raspberry. Para obtener esa información hacemos uso de la API de python (ovr) que se comunica con la librería de Oculus (LibOvr).
 
 La Raspberry lee los comandos del ordenador y mueve los servos según lo recibido, de esta forma controlamos el movimiento del robot y de a cámara.
 
-
+\newpage
 \section{Esquema funcional}
 A continuación se presenta un esquema funcional de todo el proyecto, en el que se puede ver cómo interacciona cada componente con los demás.
 
@@ -914,7 +946,7 @@ El esquema muestra un \textbf{ciclo retroalimentado}, ya que la información que
 
 Empezando el ciclo desde el \textbf{usuario}, vemos cómo el usuario le manda información a los sensores, esto es, cuando el usario mueve la cabeza, los sensores de las \textbf{Oculus} perciben el cambio de orientación y le mandan los datos al PC.
 
-El PC recoge los datos a través del SDK de Oculus. Estos datos son interpretados en un \textbf{software de control} utilizando la librería OVR. Una vez interpretados los datos se envían los comandos convenientes a los motores del \textbf{robot}. Estos comandos llegarán a los motores de las ruedas o al motor de la cámara, dependiendo de la nueva orientación de la cabeza del usuario.
+El PC recoge los datos a través del SDK de Oculus. Estos datos son interpretados en un \textbf{software de control} utilizando la API OVR. Una vez interpretados los datos se envían los comandos convenientes a los motores del \textbf{robot}. Estos comandos llegarán a los motores de las ruedas o al motor de la cámara, dependiendo de la nueva orientación de la cabeza del usuario.
 
 A la vez que ocurre este proceso el robot está enviando un video del entorno en tiempo real al PC. Esta transmisión se hace a través de la librería mjpeg-streamer y es recogida en el PC por el reproductor de video \textbf{VLC}.
 
@@ -1091,7 +1123,7 @@ Este movimiento se basará en el movimiento de las Oculus, que llevará puestas 
 
 Por lo tanto el control del robot se divide en tres acciones:
 \begin{itemize}
-	\item Recogida y procesamiento de la información que mandan las Oculus al ordenador $\rightarrow$ Esto se hará mediante la utilización de la librería \texttt{OVR}.
+	\item Recogida y procesamiento de la información que mandan las Oculus al ordenador $\rightarrow$ Esto se hará mediante la utilización de la API de Python \texttt{OVR}.
 	
 	\item Envío de la información procesada a la Raspberry Pi 3 $\rightarrow$ Para ello el ordenador abrirá dos sockets a través de los cuales mandará los datos al robot
 	
@@ -1100,25 +1132,13 @@ Por lo tanto el control del robot se divide en tres acciones:
 \subsection{Recogida y procesamiento de la información que mandan las Oculus al ordenador}
 
 
-\paragraph{Librería OVR}
-Para recoger desde el ordenador la información que mandan las Oculus utilizamos la librería de Oculus (\texttt{OVR}), escrita en phyton.
+Para recoger desde el ordenador la información que mandan las Oculus utilizamos la API de Oculus (\texttt{OVR}), explicada en el capítulo de Diseño.
 
-La función \textit{ovr.getTrackingState} nos devuelve una estructura (\textit{TrackingState}), que contiene el campo:
-
-\textbf{Pose Statef} HeadPose 
-\begin{itemize}
-	\item \textbf{Posef} ThePose $\begin{cases}
-	\textbf{Quatf} \text{ Orientation}\\
-	\textbf{Vector3f}\text{ Position} 
-	\end{cases}$
-	
-	
-\end{itemize}
-
-Para obtener la orientación de la cabeza se lee el valor de \textit{HeadPose.ThePose.Orientation.x/y} lo procesa para obtener los grados de orientación de la cabeza y se lo manda a la raspberry a través de sockets.
+Con las funciones proporcionadas por OVR se puede conocer la orientación de la cabeza del usuario respecto a los ejes $x$ e $y$.
 
 La información obtenida sobre la orientación respecto al eje $y$ servirá para mover los servos que hay en las ruedas del robot, mientras que la información de $x$ servirá para mover la cámara.
 
+Los datos referentes a la posición de las Oculus se convierten grados, lo que facilita el control posterior de la posición de los servomotores.
 
 El ordenador crea un servidor y abre dos sockets distintos, uno para la información de $x$ y otro para la de $y$.
 
@@ -1126,25 +1146,14 @@ El ordenador crea un servidor y abre dos sockets distintos, uno para la informac
 De esta forma manejamos los dos movimientos de forma independiente.
 
 
-\paragraph{Procesamiento de HeadPose.ThePose.Orientation}
-
-Como se ha dicho en el apartado anterior, la información proveniente de las Oculus nos llega a través de la estructura \texttt{HeadPose}, donde podemos leer el campo \texttt{Orientation} que nos manda la orientación actual de las Oculus Rift en forma de cuaternión.
-
-Para averiguar en qué dirección apuntan las Oculus respecto al eje X guardamos los datos relativos a la posición y la velocidad angular.
-
- Estos datos son procesados y se le aplican unos parámetros empíricos para obtener una correcta calibración.
-
-De este modo se ha podido realizar una conversión de los datos obtenidos por las Oculus a unidades de grados que nos facilitan el control posterior de la posición de los servomotores.
-
 \begin{figure}[h!]
 	\centerline{
 		\mbox{\includegraphics[width=.80\textwidth]{images/Oculusgrados2.png}}
 	}
-	\caption{Posición de as Oculus respecto al eje X una vez procesados los datos de \texttt{HeadPose.ThePose.Orientation}}
+	\caption{Posición de las Oculus respecto al eje X}
 \end{figure}
 \newpage
 \paragraph{Envío de la información procesada a la Raspberry Pi 3}
-
 
 
 Para el control del movimiento del robot es necesario que el ordenador le mande los datos referentes a la posición de las Oculus de forma automática, inmediatamente después de procesarlos.
@@ -1414,9 +1423,10 @@ La fase de aprendizaje durante este ciclo consistió en:
 \end{itemize}
 
 La siguiente tabla muestra la valoración de los usuarios tras realizar las pruebas.
-
-
-\resizebox{15cm}{!} {
+\begin{center}
+\begin{table}[h!]
+\small
+%\resizebox{15cm}{!} {
 
 \begin{tabular}{|g  c  c  c  c  c  c  c |}
 		\hline
@@ -1424,7 +1434,7 @@ La siguiente tabla muestra la valoración de los usuarios tras realizar las prue
 	\multicolumn{8}{|c|}{Valoración de los usuarios en el segundo ciclo} \\ \hline
 	\rowcolor[gray]{0.8}
 	& Usuario1 & Usuario2 & Usuario3 & Usuario4 & Usuario5 & Usuario6 & Usuario7\\
-	
+	 
 	Giro derecha & 9 & 6 & 6 & 4 & 5 & 5 & 6\\
 	Giro izquierda & 7.5 & 4 & 6 & 4 & 5 & 5 & 7\\
 	Mirar hacia arriba & 9 & 10 & 9 & 10 & 9 & 9 & 9\\
@@ -1435,8 +1445,10 @@ La siguiente tabla muestra la valoración de los usuarios tras realizar las prue
 	Facilidad de aprendizaje & 9 & 8 & 10 & 10 & 9 & 8 & 10\\
 	\hline
 \end{tabular}
-
-}
+\caption{Resultado de los test de usabilidad realizados por los usuarios al finalizar el segundo ciclo.}
+%}
+\end{table}
+\end{center}
 
 \paragraph{Comentarios tras las pruebas}
 
@@ -1466,11 +1478,13 @@ A continuación se explicará el desarrollo del tercer y último ciclo de prueba
 	
 \begin{center}
 
-\resizebox{15cm}{!} {
+\begin{table}[h!]
+\small	
+
 	\begin{tabular}{|g c c c c c c|}
 		\hline
 		\rowcolor{yellow!50!white}           % Heading with different color to highlight it      
-		\multicolumn{7}{|c|}{Valoración tras realizar el circuito 3  veces} \\ \hline
+		\multicolumn{7}{|c|}{Valoración de los usuarios tras la fase de aprendizaje del tercer ciclo} \\ \hline
 	\rowcolor[gray]{0.8}
 		& Usuario1	&Usuario2	&Usuario3	&Usuario4	&Usuario5	&Usuario6 \\
 		Avanzar
@@ -1487,7 +1501,8 @@ A continuación se explicará el desarrollo del tercer y último ciclo de prueba
 		 		 & 9 &7 & 7& 9& 6& 9\\
 		 \hline
 	\end{tabular}
-}
+	\caption{Resultado de los test de usabilidad realizados por los usuarios que participaron en el tercer ciclo de pruebas una vez finalizada la fase de aprendizaje}
+\end{table}
 \end{center}
 
 \item \textbf{Circuito:} Los usuarios realizan el mismo circuito 3 veces. En el circuito se marcan 4 puntos críticos y se cronometra el tiempo que tarda cada usuario en alcanzar dichos puntos. También se cronometra el tiempo total.
@@ -1503,12 +1518,13 @@ A continuación se muestra un gráfico donde se muestran los promedios de tiempo
 \item \textbf{Puntuación:} Por último se les vuelve a pedir a los usuarios que valoren el control del robot.
 
 \begin{center}
-	
-	\resizebox{15cm}{!} {
+\begin{table}[h!]
+	\small
+
 		\begin{tabular}{|g c c c c c c|}
 			\hline
 			\rowcolor{yellow!50!white}           % Heading with different color to highlight it      
-			\multicolumn{7}{|c|}{Valoración tras la fase de aprendizaje} \\ \hline
+			\multicolumn{7}{|c|}{Valoración de los usuarios tras realizar el circuito 3 veces} \\ \hline
 			\rowcolor[gray]{0.8}
 			& Usuario1	&Usuario2	&Usuario3	&Usuario4	&Usuario5	&Usuario6 \\
 			Avanzar
@@ -1525,7 +1541,9 @@ A continuación se muestra un gráfico donde se muestran los promedios de tiempo
 			& 9 &8 & 7& 9& 6& 9\\
 			\hline
 		\end{tabular}
-	}
+		
+		\caption{Resultado de los test de usabilidad realizados por los usuarios que participaron en el tercer ciclo de pruebas tras realizar el circuito}
+	\end{table}
 \end{center}
 
 \newpage
@@ -1535,7 +1553,7 @@ Respecto a la valoración de los usuarios es muy interesante ver cómo varía la
 	\centerline{
 		\mbox{\includegraphics[width=.85\textwidth]{images/SensacionControl.png}}
 	}
-	\caption{Promedio del tiempo que tardan los usuarios en realizar el circuito.}
+	\caption{Variación de la sensación de control de los usuarios antes y después de realizar el circuito.}
 \end{figure}
 
 
@@ -1614,7 +1632,7 @@ También ha sido una sorpresa descubrir la gran variedad de posibilidades a desa
 He afianzado los conocimientos de robótica que ya tenía. Todo lo que sabía de robótica lo había aprendido en el Club de Robótica de esta universidad y gracias a este trabajo he podido aplicarlos y aumentarlos.
 
 Todo el proyecto está desarrollado en python, lenguaje de programación que no he utilizado en ninguna asignatura de la carrera y que solo había visto muy por encima para proyectos sencillos.
-Durante este proyecto he aprendido a utilizar las librerías de python disponibles para las Oculus Rift y para el control de servomotores.
+Durante este proyecto he aprendido a utilizar la API de python disponible para las Oculus Rift y las librerías para el control de servomotores.
 
 La placa base del robot es una Raspberry Pi 3, que tampoco había tenido la oportunidad de utilizarla nunca. De todas formas esto no ha sido novedoso para mi porque sí había participado en algún proyecto sencillo con Raspberry.
 
