@@ -32,7 +32,7 @@
 \BOOKMARK [3][-]{section*.20}{Inicializaci\363n}{subsection.4.3.3}% 32
 \BOOKMARK [3][-]{section*.21}{Bucle\040principal}{subsection.4.3.3}% 33
 \BOOKMARK [3][-]{section*.22}{Liberaci\363n\040de\040recursos\040y\040fin\040de\040proceso.}{subsection.4.3.3}% 34
-\BOOKMARK [1][-]{section.4.4}{Dise\361o\040de\040conexiones}{chapter.4}% 35
+\BOOKMARK [1][-]{section.4.4}{Dise\361o\040de\040conexiones\040entre\040m\363dulos}{chapter.4}% 35
 \BOOKMARK [1][-]{section.4.5}{Esquema\040funcional}{chapter.4}% 36
 \BOOKMARK [0][-]{chapter.5}{Desarrollo\040e\040implementaci\363n}{}% 37
 \BOOKMARK [1][-]{section.5.1}{Construcci\363n\040del\040Robot}{chapter.5}% 38
@@ -42,7 +42,7 @@
 \BOOKMARK [2][-]{subsection.5.2.2}{Ordenador}{section.5.2}% 42
 \BOOKMARK [1][-]{section.5.3}{Control\040del\040Robot}{chapter.5}% 43
 \BOOKMARK [2][-]{subsection.5.3.1}{Recogida\040y\040procesamiento\040de\040la\040informaci\363n\040que\040mandan\040las\040Oculus\040al\040ordenador}{section.5.3}% 44
-\BOOKMARK [2][-]{subsection.5.3.2}{Movimiento\040de\040los\040servo\040motores}{section.5.3}% 45
+\BOOKMARK [2][-]{subsection.5.3.2}{Movimiento\040de\040los\040servomotores}{section.5.3}% 45
 \BOOKMARK [3][-]{section*.35}{Control\040de\040los\040motores\040de\040las\040ruedas\040del\040robot}{subsection.5.3.2}% 46
 \BOOKMARK [3][-]{section*.36}{Control\040del\040motor\040de\040la\040c\341mara\040del\040robot}{subsection.5.3.2}% 47
 \BOOKMARK [3][-]{section*.38}{Instrucciones\040de\040mando}{subsection.5.3.2}% 48

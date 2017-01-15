@@ -15,12 +15,13 @@
 \addvspace {10pt}
 \addvspace {10pt}
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Raspberry Pi 3 model B\relax }}{19}{figure.caption.13}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Esquema conexiones servos , c\IeC {\'a}mara, Raspberry Pi 3\relax }}{20}{figure.caption.16}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Tabla DHCP del router con las parejas MAC-IP fijas\relax }}{21}{figure.caption.17}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Archivo de configuraci\IeC {\'o}n de red Raspberry Pi 3\relax }}{21}{figure.caption.18}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Ejes de giro\relax }}{22}{figure.caption.19}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Esquema conexiones\relax }}{24}{figure.caption.23}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Esquema funcional\relax }}{25}{figure.caption.24}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Onda cuadrada que representa los pulsos que se env\IeC {\'\i }an a los servomotores\relax }}{20}{figure.caption.15}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Esquema conexiones servos , c\IeC {\'a}mara, Raspberry Pi 3\relax }}{21}{figure.caption.16}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Tabla DHCP del router con las parejas MAC-IP fijas\relax }}{22}{figure.caption.17}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Archivo de configuraci\IeC {\'o}n de red Raspberry Pi 3\relax }}{22}{figure.caption.18}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Ejes de giro\relax }}{23}{figure.caption.19}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Esquema conexiones\relax }}{25}{figure.caption.23}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Esquema funcional\relax }}{26}{figure.caption.24}
 \addvspace {10pt}
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Dise\IeC {\~n}o 3D de la pinza de agarre en Blender\relax }}{28}{figure.caption.25}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Imagen de la configuraci\IeC {\'o}n del Cura para enviar la Pieza de agarre a la impresora 3D\relax }}{29}{figure.caption.26}
@@ -32,7 +33,7 @@
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Divisi\IeC {\'o}n de im\IeC {\'a}genes}}}{31}{figure.caption.30}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Reproducci\IeC {\'o}n SBS}}}{31}{figure.caption.30}
 \contentsline {figure}{\numberline {5.7}{\ignorespaces Posici\IeC {\'o}n de las Oculus respecto al eje X\relax }}{32}{figure.caption.31}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Relaci\IeC {\'o}n entre el PW y la posici\IeC {\'o}n de los servo motores\relax }}{34}{figure.caption.34}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Relaci\IeC {\'o}n entre el PW y la posici\IeC {\'o}n de los servomotores\relax }}{34}{figure.caption.34}
 \contentsline {figure}{\numberline {5.9}{\ignorespaces Posibles movimientos del robot seg\IeC {\'u}n el movimiento de las Oculus Rift\relax }}{36}{figure.caption.39}
 \addvspace {10pt}
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Fases del ciclo cerrado de pruebas que se han realizado para valorar la funcionalidad del dispositivo.\relax }}{37}{figure.caption.40}

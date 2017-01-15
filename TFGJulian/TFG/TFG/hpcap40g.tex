@@ -74,7 +74,7 @@ Además hemos diseñado el proyecto de forma que la conexión entre el robot y l
 
 A lo largo del desarrollo del trabajo han surgido varias complicaciones, la gran mayoría referentes a la utilización de los sensores de las Oculus y de la librería de las mismas, que aún no está perfectamente adaptada a la versión DK2 de las gafas.
 
-Esto se ha ido solucionando calibrando el movimiento de los servo motores mediante pruebas experimentales.
+Esto se ha ido solucionando calibrando el movimiento de los servomotores mediante pruebas experimentales.
 
 Una vez que se terminó de construir el robot e implementar el sowftware, se realizaron pruebas con diferentes usuarios para valorar su usabilidad.
 Los resultados de las primeras pruebas no fueron muy positivos ya que el sistema de control que se había implementado era poco intuitivo y al usuario le costaba mucho manejar el robot.
@@ -226,17 +226,16 @@ Al utilizar las Oculus Rift dejamos abierta la posibilidad de ver, no solo el en
 
 \section{Motivación del proyecto}
 
-Este proyecto busca explorar las posibilidades que nos ofrece combinar la robótica con la realidad virtual con el objetivo de incrementar la autonomía e independencia de personas con discapacidad motora.
+Este proyecto busca explorar las posibilidades que nos ofrece combinar la robótica con la realidad virtual. En concreto pretende estudiar la capacidad que la fusión de estas tecnologías tiene para incrementar la autonomía e independencia de personas con discapacidad motora.
 
-Existen muchos proyectos anteriores a este en los que se combinan estas dos técnicas con éxito, como ya se explicará en el estado del arte.
+Se ha investigado qué proyectos anteriores combinan robótica y realidad virtual y se han encontrado un gran número de ellos, muchos con resultados exitosos, como ya se explicará en el estado del arte. A pesar de que algún proyecto anterior ya estaba enfocado al tema de la discapacidad, la gran mayoría se centran en intentar estimular a estas personas y no en tratar de hacer que su entorno sea más accesible.
 
+Una de las ventajas de hacer un proyecto basado en robótica y realidad virtual es que ambas tecnologías tienen un gran potencial.
 El campo de la \textbf{robótica} lleva muchos años en desarrollo y mejora exponencialmente a lo largo del tiempo. Está inmerso en nuestro día a día y no paramos de sorprendernos con nuevos avances como las impresoras 3D, los drones o los brazos mecánicos.
-
 Por otra parte puede parecer que la \textbf{realidad virtual} es una tecnología muy reciente pero lo cierto es que  lleva mucho tiempo estudiándose. En 1968 Ivan Sutherlan creó el primer casco de realidad virtual pero, como se explicará más adelante, aún no tenían las herramientas necesarias para desarrollar proyectos de realidad virtual de calidad.
 
 Ahora nos encontramos en un momento en el que ya podemos empezar a disfrutar de la realidad virtual. Tenemos las CardBoard, las Oculus Rift, etc, a nuestro alcance.
 El uso más generalizado que se está dando a estas herramientas es en el mundo de los videojuegos.
-
 Viendo el potencial que tiene unir ambas tecnologías, resulta muy interesante explorar nuevas aplicaciones, en esta ocasión orientadas a mejorar la calidad de vida de un amplio sector de la sociedad.
 
 
@@ -245,43 +244,38 @@ Además puede resultar muy interesante utilizar esta tecnología para \textbf{re
 
 El primer paso para conseguir esto es introducir imágenes del entorno en tiempo real dentro del mundo virtual. Para ello debemos disponer de un mecanismo móvil(p.ejemplo: un robot) que sea capaz de capturar fotogramas y mandárselas al usuario.  
 Para que el usuario pueda ver dichas imágenes se utilizarán las Oculus Rift, unas potentes gafas de realidad virtual que son capaces de crear una \textbf{sensación de inmersión} total en cualquier entorno.
-
 Ya que este trabajo está orientado a personas con movilidad reducida sería ideal que se pudiera controlar el movimiento del robot y de la cámara solo con el movimiento de la cabeza. En un futuro, no sería difícil adaptar este control a través de mandos.
 
 ¿Porqué utilizar las Oculus Rift?  Al ser las Oculus gafas de realidad virtual,si consiguiéramos una correcta conexión entre las gafas y el robot, se nos abrirían muchísimas posibilidades. Se podría modificar el entorno según las necesidades del usuario, integrar realidad aumentada para controlar una casa domotizada, incluir en el mundo virtual más entornos, a parte del real, donde el usuario pueda interactuar, realizar actividades de ocio, etc.
 De esta forma daríamos al usuario más independencia y le abriríamos un mundo al que hasta ahora, tiene difícil acceso.
 
-\section{Objetivos}
+\section{Objetivos}\label{Objetivos}
 El objetivo de este proyecto consiste en diseñar un dispositivo que actúe como extensión de la vista del usuario a través de una webcam implantada en el robot. El usuario deberá ser capaz de controlar la cámara con tan solo el movimiento de la cabeza, ya que el proyecto está orientado a personas con movilidad reducida.
+Las imágenes se reproducirán a través de unas gafas de realidad virtual: las Oculus Rift. Esto nos permitiría, en un proyecto futuro, añadir realidad virtual o aumentada a las imágenes que captura la cámara.
 
-Además, las imágenes se reproducirán a través de unas gafas de realidad virtual: las Oculus Rift. Esto nos permitiría, en un proyecto futuro, añadir realidad virtual o aumentada a las imágenes que captura la cámara.
-
-Para ello definimos pequeños objetivos que debemos ir implementando para conseguir la meta final.
+Para ello definimos pequeños objetivos que debemos ir implementando para conseguir la meta final: streaming, movimiento de la cámara y visualización del entorno.
 
 \subsection{Streaming}
 Como se ha explicado anteriormente, debemos ser capaces de ver en las Oculus Rift a tiempo real todo lo que capta la cámara.
 
 Dado que la comunicación con las Oculus Rift debe ser a través del PC al que estén conectadas , el streaming deberá \textbf{transmitirse desde la cámara hasta el PC}.
 
-Por lo tanto uno de los primeros objetivos es implementar un método de comunicación a través del cual se puedan conectar  la cámara y el PC. Además se deberá implementar un software que capture la salida de la webcam y transmita el vídeo a tiempo real. Por último se necesita un software que recoja el video en el PC.
+Por lo tanto uno de los primeros objetivos es implementar un método de comunicación a través del cual se puedan conectar  la cámara y el PC. Además se deberá implementar un software que capture la salida de la webcam y transmita el vídeo a tiempo real, es decir, que el usuario pueda saber con la mayor exactidud posible, el entorno que rodea al robot en todo momento. Por último se necesita un software que recoja el video en el PC.
 
 \subsection{Movimiento de la cámara}
-Otro de los objetivos básicos es que el usuario sea capaz de controlar la dirección y posición de la cámara con el movimiento de la cabeza.
+Otro de los objetivos básicos es que el usuario sea capaz de controlar la dirección y posición de la cámara con el movimiento de la cabeza. Para ello dotaremos a la cámara de un soporte móvil, un robot, que se explicará en el capítulo de Análisis.
 
-Con este objetivo de van a definir dos fases del movimiento:
+Para controlar la cámara definimos dos fases del movimiento:
 \begin{itemize}
 	\item \textbf{Fase de exploración:}
-	
 	Durante la exploración la cámara no se mueve de sitio, tan solo explora el entorno.
-	
-	Los movimientos que se deberán implementar para esta fase serán:
+	Los movimientos que se han decidido implementar para esta fase serán:
 	\begin{itemize}
 		\item Movimiento vertical : El usuario podrá mirar hacia arriba y hacia abajo.
 		\item Movimiento horizontal : La cámara deberá ser capaz de rotar sobre si misma permitiendo al usuario mirar hacia ambos lados.
 	\end{itemize}
 	\item \textbf{Fase de transporte:}
-	
-	El usuario podrá llevar la cámara a cualquier punto de la habitación moviendo la cabeza.
+	El usuario, enviando los comandos pertinentes al robot, podrá llevar la cámara a cualquier punto de la habitación.
 	
 \end{itemize}
 
@@ -289,9 +283,7 @@ Para este objetivo, el diseño tendrá un papel esencial ya que el control del r
 
 \subsection{Visualización del entorno}
 El último de los objetivos que es necesario desarrollar para el proyecto es conseguir visualizar en las Oculus Rift, el entorno en el que se encuentra la cámara.
-
 Para ello necesitaremos un software que, en tiempo real, recoja el vídeo del PC y lo reproduzca en las gafas. 
-
 
 A continuación se añade un esquema a modo de resumen de los objetivos ya explicados.
 
@@ -345,15 +337,13 @@ Para finalizar expondremos brevemente las conclusiones y el trabajo futuro que s
 
 
 En este capítulo se contará brevemente la historia de la realidad virtual.
-También se presentarán diferentes proyectos que ha utilizado realidad virtual y robótica y cuales fueron sus resultados.
+También se presentarán diferentes proyectos que han utilizado la combinación de realidad virtual y robótica y cuales fueron sus resultados.
 
-A pesar cara más visible de esta tecnología es el uso que se le da en los videojuegos, no es su única aplicación.
-
-Los proyectos que se van a explicar utilizan la realidad virtual en el campo de la salud, sobre todo aplicada a rehabilitaciones. Esto es muy interesante para este trabajo ya que muestra cómo usuarios con alguna dificultad motora responden bien a entornos virtuales.
-
+La cara más visible de esta tecnología es el uso que se le da en los videojuegos, no es su única aplicación. Los proyectos que aquí se exponen están más orientados a la salud o al control de dispositivos, ya que son más afines con este trabajo fin de grado.
+Los proyectos relativos al campo de la salud, se aplican mayoritariamente a rehabilitaciones. Esto es muy interesante para este trabajo ya que muestra cómo usuarios con alguna dificultad motora responden bien a entornos virtuales.
 También se hablará de cómo se están integrando actualmente  las dos tecnologías que utilizaremos en este trabajo: la robótica y la realidad virtual.
 
-De esta forma se dará una fotografía general del estado y las aplicaciones actuales de ambas tecnologías, dando especial importancia a aquellos proyectos con un enfoque similar al de nuestro trabajo.
+La explicación de estos proyectos en este capítulo pretende dar una fotografía general del estado y las aplicaciones actuales de ambas tecnologías, dando especial importancia a aquellos proyectos con un enfoque similar al de nuestro trabajo.
 
 \section{Evolución histórica de la realidad virtual}
 La realidad virtual comenzó siendo ciencia ficción y poco a poco está ganando terreno en la vida cotidiana, ya sea en el mundo de los videojuegos, la medicina o la aviación, entre otros campos.
@@ -481,12 +471,10 @@ Lo que nos muestran los resultados de estos proyectos es que los usuarios son ca
 
 \chapter{Análisis}
 \label{chap:sistemadesarrollado}
-Ahora se explicarán las fases que se han llevado a cabo para desarrollar el proyecto.
+Una vez conocido el estado actual de la robótica y la realidad virtual, el siguiente paso es analizar a fondo el proyecto que se quiere desarrollar.
+Para ello se deben definir los requisitos que debe cumplir el trabajo, basando estos requisitos en los objetivos propuestos en la sección de \textit{Objetivos} \ref{Objetivos}. De esta forma el trabajo queda dividido en pequeñas tareas y facilita su implementación.
 
-La primera fase es la de análisis. Se estudia el objetivo y los requisitos que debe cumplir. De esta forma el trabajo queda dividido en pequeñas tareas y facilita su implementación.
-
-En el capítulo de \textit{Objetivos} se explica que la meta final del proyecto es conseguir que el usuario pueda controlar una cámara con el movimiento de cabeza y ver todo lo que la cámara vea.
-
+En el capítulo de \textit{Objetivos} \ref{Objetivos} se explica que la meta final del proyecto es conseguir que el usuario pueda controlar una cámara con el movimiento de cabeza y ver todo lo que la cámara vea.
 La forma más eficiente de hacer que la cámara sea móvil es construir un robot con ruedas que lleve la cámara integrada. 
 
 De esta forma cuando el usuario mueva la cabeza, se le enviarán las instrucciones necesarias al robot para que se mueva. A su vez el robot le estará mandando video a tiempo real al usuario, que lo verá a través de las Oculus Rift.
@@ -507,7 +495,6 @@ Vamos a desarrollar cada uno de ellos, identificando qué funcionalidades básic
 
 
 El robot debe ser un dispositivo fácil de controlar , que a su vez actúe como una extensión de los ojos del usuario, dándole a éste la sensación de inmersión un espacio real.
-
 Por tanto los requisitos que debe cumplir el robot son los siguientes:
 
 
@@ -527,7 +514,7 @@ Por tanto los requisitos que debe cumplir el robot son los siguientes:
 	Ya que un objetivo del proyecto es dar independecia al usuario el robot debe poder moverse por el espacio sin importar donde se encuentre el usuario. Esto se consigue diseñando un software de control que envíe los comandos de forma inalámbrica.
 	
 	
-	\item\textbf{RF-CR4: La cámara debe apuntar en la misma dirección que la cabeza del usuario.} 
+	\item\textbf{RF-CR4: La cámara debe apuntar en la misma dirección que la cabeza del usuario.} \label{RF-CR4} 
 	
 	La cámara del robot hará las funciones de los ojos del usuario, por lo tanto debe tener la misma orientación respecto al cuerpo del robot que la orientación de la cabeza respecto al cuerpo del usuario.
 \end{itemize}
@@ -536,7 +523,6 @@ Por tanto los requisitos que debe cumplir el robot son los siguientes:
 
 \subsection{Streaming}
 Se quiere conseguir la máxima sensación de inmersión para la persona que controla el robot.
-
 Para ello los requisitos principales que debe cumplir son:
 
 \begin{itemize}
@@ -560,8 +546,7 @@ Para ello los requisitos principales que debe cumplir son:
 
 \subsection{Control del Robot}
 
-Como hemos dicho anteriormente, el robot pretende ser una extensión de los ojos de usuario, por lo que es lógico que se controle con el movimiento de cabeza de la persona que esté recibiendo el video.
-
+Como hemos dicho anteriormente, se pretende que la cámara, soportada por el robot, sea una extensión de los ojos de usuario.Por esto es lógico que se controle con el movimiento de cabeza de la persona que esté recibiendo el video.
 Dentro del control del robot vamos a diferenciar entre control del movimiento del robot y control de la dirección de la cámara:
 
 \begin{itemize}
@@ -575,7 +560,6 @@ Dentro del control del robot vamos a diferenciar entre control del movimiento de
 	\textbf{RF-CTRL2: La cámara debe moverse acorde con el movimiento de la cabeza del usuario.}
 	
 	Este requisito es necesario tanto para el control del robot como para la sensación de inmersión.
-	
 	\textit{Por ejemplo:} Es importante que si el usuario hace el movimiento de mirar hacia arriba, la imagen que le llegue sea acorde con el movimiento.
 	
 	
@@ -596,22 +580,28 @@ Dentro del control del robot vamos a diferenciar entre control del movimiento de
 	\item \textbf{RNF2 - Accesibilidad}
 	
 	Dado que el trabajo está orientado a personas con discapacidad motora, el control del robot debe ser accesible para las mismas, de forma que no requiera de movimientos bruscos o exagerados. 
+	
+	\item \textbf{RNF3 - Sistema configurable}
+	
+	El sistema de movimiento y control del robot no debe ser cerradp, por el contrario debe contar con parámetros de configuración para poder adactar el sistema a las capacidades motoras de cada usuario.
 \end{itemize}
 
 \newpage
 \chapter{Diseño}
 
-Tras analizar las diferentes funcionalidades del trabajo vamos a ver cómo está diseñado cada componente.
+Tras analizar los requisitos que debe cumplir el trabajo vamos a ver cómo se diseñará cada componente y como estarán integrados entre ellos.
+
+Los componentes que forman el proyecto son: las gafas de realidad virtual Oculus Ridt DK2, un router(Xavi7968.), un ordenador \textcolor{red}{(ordenador)} y un dispositivo móvil con cámara integrada (robot).
+El diseño de los componentes, el control del robot y las conexiones se realizaran en base a los recursos y herramientas disponibles, que también se presentarán en este capítulo.
 
 Recordemos que el objetivo es construir un dispositivo que se comunique de forma inalámbrica con el usuario. El robot debe transmir imágenes a tiempo real del entorno y recibir comandos de movimiento para que el usuario pueda explorar el espacio.
-
-Por lo tanto los principales dispositivos que componen el proyecto son 
+Por lo tanto en términos generales, las tareas que desempeñarán los componentes son las siguientes:
 \begin{itemize}
 	\item \textbf{Robot} 
 	
 		Debe ser un dispositivo móvil, con una webcam integrada para poder transmitir imágenes.
 		
-		Además de la cámara deberá tener integrado algún mecanismo de envío y recepción de datos.
+		Además de la cámara el robot deberá tener integrado algún mecanismo de envío y recepción de datos.
 	\item \textbf{Router}
 	
 		Se utilizará un router para crear un ared local a través de la cual se envíen tanto las imágenes como los comandos de control del robot.
@@ -621,45 +611,40 @@ Por lo tanto los principales dispositivos que componen el proyecto son
 		
 \end{itemize}
 
-También se tratará el \textbf{diseño de conexiones} entre los 3 componentes.
 
 \section{Diseño del robot}
 
 El robot que se utiliza en este proyecto está basado en un diseño anterior hecho por (Nombre del alumno que diseñó en robot). De este diseño hemos reutilizado (estructura???)
 
 En un principio también se pretendía utilizar la misma placa: \textbf{Arduino Yun}.
-
 Esta placa tiene la capacidad de conectarse a \textbf{internet a través de Wifi}, además tiene dos procesadores, el Atmega y el Atheros AR9331, lo que le permite de \textbf{combinar Arduino con Linux}. Esto era muy útil ya que el control de servomotores es muy sencillo con Arduino y tener un sistema operativo Linux en la placa nos permitía instalar programas de manejo de vídeo.
-
-Tras muchas pruebas se decidió no utilizar esta placa ya que el módulo Wifi daba muchos problemas.
+Tras muchas pruebas se decidió no utilizar esta placa ya que el módulo Wifi daba muchos problemas y se optó por utilizar la Raspberry Pi 3, de la que se hablará más adelante.
 
 Finalmente el robot consta de:
 \begin{itemize}
-	\item Una placa base $\rightarrow$ Raspberry Pi 3
+	\item Una placa base $\rightarrow$ Raspberry Pi 3.
 	\item Dos ruedas conectadas con dos servos que permiten al robot desplazarse.
-	\item Una cámara Logitech, conectada a la placa por USB
-	\item Un servo unido a la cámara 
+	\item Una cámara Logitech, conectada a la placa por USB.
+	\item Un servo unido a la cámara.
+	\item Una estructura de plástico impresa con la impresora 3D del Club de Robótica de la EPS.
 \end{itemize}
 
 
-
+A continuación se explicarán en detalle cada uno de los componentes del robot.
 
 \subsection{Raspberry Pi 3 model B}
 La Raspberry Pi 3 model B es un ordenador de placa reducida que lleva un sistema operativo Linux.
-
 Su procesador es un ARM Cortex A53 de cuatro núcleos a 1.2GHz de 64 bits.
-
 Tiene 1 GB de memoria RAM , 4 puerto USB, 40 pins GPIO, puerto HDMI , Ethernet y entrada para MicroSD.
-
 Además tiene Wifi 802.11n integrado y bluetooth 4.1.
 
 Tras rechazar el Arduino Yun como placa para el proyecto, la Raspberry Pi 3 quedó como mejor candidata ya que cumplía todos los requisitos necesarios. A saber:
 
 \begin{itemize}
-	\item \textbf{Módulo Wifi}: Imprescindible para la transmisión.
-	\item \textbf{S.O Linux}: Nos permite instalar programas de manejo y transmisión de video.
+	\item \textbf{Módulo Wifi (802.11n Wireless LAN)}: Imprescindible para la transmisión.
+	\item \textbf{S.O Linux}: Nos permite instalar programas de manejo y transmisión de video, como la librería mjpeg-streamer que se usará en este proyecto.
 	\item \textbf{Puerto USB}: Para conectar la cámara y la fuente de alimentación.
-	\item \textbf{GPIO}: Necesario para conectar los servo motores.
+	\item \textbf{GPIO}: Necesario para conectar los servomotores.
 \end{itemize}
 
 
@@ -672,10 +657,12 @@ Tras rechazar el Arduino Yun como placa para el proyecto, la Raspberry Pi 3 qued
 \end{figure}
 
 \subsection{Servo motores}
-Para el movimiento del robot y de la cámara utilizamos servo motores
+El robot debe tener la capacidad de desplazarse, por lo que se diseñó con dos ruedas laterales que son controladas a través de dos servomotores de rotación continua. Otro requisito era que la cámara debía estar en todo momento orientada respecto al robot hacia la misma dirección que la cabeza del usuario está orientada respecto a su cuerpo \ref{RF-CR4}. Para poder cumplir este requisito se añadirá un servomotor al robot que esté unido a la cámara y pueda rotarla respecto al eje horizontal.
 
+Antes de mostrar cómo se van a conectar los servomotores con las ruedas y la cámara y cómo reciben los comandos se va a explicar brevemente qué es un servomotor y cómo funciona:
 
-Un servo motor es un motor eléctrico que se puede controlar su velocidad y su posición (dentro del rango de posición permitido).
+Un servomotor es un dispositivo similar a un motor de corriente continua que tiene la capacidad de ubicarse en cualquier posición dentro de su rango de operación, y mantenerse estable en dicha posición. Una de las caráterísticas más importantes de estos dispositivos es que puede controlarse tanto en posición como en velocidad.
+
 
 Los servos constan de:
 \begin{itemize}
@@ -684,87 +671,85 @@ Los servos constan de:
 	\item Un circuito de control
 \end{itemize}
 
-El sistema que utilizamos para controlar la velocidad y la posición de los servos es la modulación por anchura de pulso (PWM).
+El sistema que utilizan los servomoters para controlar la velocidad y la posición de los motores de corriente continua es la modulación por anchura de pulso (PWM).
 
 \paragraph{PWM}
 
-Este sistema consiste en generar una onda cuadrada en la que se varía el tiempo que el pulso está a nivel alto, manteniendo el mismo período (normalmente), con el objetivo de modificar la posición del servo según se desee.
+Este sistema consiste en generar una onda cuadrada en la que se varía el tiempo que el pulso está a nivel alto, manteniendo el mismo período (normalmente), con el objetivo de modificar la posición según se desee.
 
 \begin{figure}[h]
 	\centerline{
 		\mbox{\includegraphics[width=.80\textwidth]{images/ondaServo.png}}
 	}
-	
+	\caption{Onda cuadrada que representa los pulsos que se envían a los servomotores}
 \end{figure}
 
 
-
-Para que un servo se mantenga en la misma posición durante un cierto tiempo, es necesario enviarle continuamente el pulso correspondiente.
-
-
-La otra función del PWM es el control de velocidad.
-
-Esto lo hace alimentando el motor con una señal de pulsos con la frecuencia suficiente para que el motor no note las variaciones y haga un giro constante, ya que variando el porcentaje de tiempo de la señal rectangular en alta, y en baja, variamos la potencia que le entregamos al motor, con lo que podemos controlar la velocidad de giro.
+Como hemos dicho, el control de la posición y la velocidad es un atributo característico de este tipo de motores y por tanto se va a explicar brevemente cómo funciona.\\
+Para que un servo se mantenga en la misma posición durante un cierto tiempo, es necesario enviarle continuamente el pulso correspondiente.\\
+El control de la velocidad se consigue alimentando el motor con una señal de pulsos con la frecuencia suficiente para que el motor no note las variaciones y haga un giro constante, ya que variando el porcentaje de tiempo de la señal rectangular en alta, y en baja, variamos la potencia que le entregamos al motor, con lo que podemos controlar la velocidad de giro.
 
 En el robot utilizamos 3 servomotores.
 Dos de ellos se utilizan para el movimiento de las ruedas y el tercero moverá la cámara permitiendo al usuario mirar hacia arriba y hacia abajo.
-
 Los tres servos están controlados por el movimiento de la cabeza del usuario, que obtenemos gracias a las Oculus Rift.
 
 \subsection{Cámara}
 
-La cámara utilizada es una webcam USB. El proyecto también se podría haber hecho con una RaspiCam.
+La cámara utilizada es una webcam USB. El proyecto también se podría haber hecho con una RaspiCam o con una cámara Wifi. Se optó por la cámara logitec ya que era la que tenía disponible por lo que hacía el proyecto más económico y la placa ya contaba con tarjeta de red, por lo que no era necesario que la cámara también contara con módulo wifi.
 
-A continuación se muestra un esquema de la conexión entre los componentes que acabamos de explicar.
+A continuación se muestra un esquema \ref{Figura conexiones robot} de la conexión entre los componentes que acabamos de explicar.\\
+La placa gris que aparece en el esquema sirve para unificar las entradas y salidas de los servomotores, de esta forma un solo pin de la raspberry controlará los pulsos que se envían a los dos servomotores de las ruedas del robot.\\
+En el robot estas conexiones se han hecho soldando los cables a una placa mucho más reducida que la que aparece en el dibujo.
 
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centerline{
 		\mbox{\includegraphics[width=.95\textwidth]{images/EsquemaServos.png}}
 	}
 	\caption{Esquema conexiones servos , cámara, Raspberry Pi 3}
-\end{figure}
+\end{figure}\label{Figura conexiones robot}
 
 
 \section{Router}
 Para la comunicación entre el robot y el ordenador se necesita una red local,  para este trabajo la hemos creado haciendo uso de un router inalámbrico Xavi7968.
-
 El router crea una red Wifi con el nombre de WifiRaspi3 y sin acceso a internet.
 
-Para una mayor facilidad de conexión se ha configurado la tabla DHCP del router para asignar siempre la misma IP a la Raspberry y al equipo que utilizamos para conectarnos.
+Cuando un dispositivo se conecta a una red, el router le asigna de forma automática una dirección IP que le identificará respecto a los otros dispositivos conectados a la misma red.\\
+En este trabajo es necesario conocer la dirección IP de la Raspberry Pi 3 y del ordenador, y además necesitamos que siempre sea la misma, de esta forma será sencillo automatizar la conexión entre ambos.\\
+Las direcciones IP las genera de forma automática un servidor DHPC(Dynamic Host Configuration Protocol), pero el router nos permite configurar dicho servidor y asignar a una dirección MAC una dirección IP. En términos más sencillos, podemos "reservar" una o varias direcciones IP de la red local y emparejar estas IPs a los dispositivos pertinentes.\\
+Como podemos ver en la imagen \ref{Tabla DHPC} se ha configurado la tabla DHCP del router para asignar siempre la misma IP a la Raspberry y al equipo que utilizamos para conectarnos.
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centerline{
 		\mbox{\includegraphics[width=.95\textwidth]{images/TablaDHCP2.png}}
 	}
 	\caption{Tabla DHCP del router con las parejas MAC-IP fijas}
-\end{figure}
+\end{figure}\label{Tabla DHPC}
 
-La Raspberry Pi 3 está configurada para conectarse automáticamente al router. Para ello se ha modificado el archivo \texttt{/etc/wpa\_supplicant/wpa\_supplicant.conf} donde se especifica el nombre y la clave de la red local.
+Una vez configurada la tabla DHPC, configuramos la Raspberry Pi 3 para conectarse automáticamente al router.\\
+Esto se hace modificando el archivo \texttt{/etc/wpa\_supplicant/wpa\_supplicant.conf}, donde se ha añadido el nombre y la clave de la red creada por el router \ref{confwpa}. 
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centerline{
 		\mbox{\includegraphics[width=.95\textwidth]{images/confRaspiWifi.png}}
 	}
 	\caption{Archivo de configuración de red Raspberry Pi 3}
-\end{figure}
+\end{figure}\label{confwpa}
  
 \newpage
 \section{Oculus Rift}
 
 Las Oculus Rift son unas gafas de realidad virtual creadas por Palmer Luckey.
+Ha habido varias versiones de estas gafas.
+La primera fue la DK1 (Develoment Kit 1), enfocada para programadores , que salió en abril de 2013. Esta versión se retiró del mercado poco antes de la presentación del segundo kit de desarrollo (DK2) en marzo de 2014.
+Finalmente, en 2016 salió la versión para consumidor.\\
+Para este proyecto se utiliza la versión \textbf{DK2}, ya que eran las gafas que teníamos disponibles.
 
-La primera versión de las Oculus fue la DK1 (Develoment Kit 1), enfocada para programadores , que salió en abril de 2013. Esta versión se retiró del mercado poco antes de la presentación del segundo kit de desarrollo (DK2) en marzo de 2014.
-
-Finalmente, en 2016 salió la versión para consumidor.
-
-Para este proyecto se utilizan las Oculus Rift DK2.
-
-
-De las gafas nos interesan especialmente:
+Las gafas son un componente especialmente importante en este trabajo, ya que son el dispositivo que conecta al usuario con el entorno y el que transmite la información del robot al usuario y del usuario al robot.\\
+Por ello las funciones clave de las Oculus Rift para el proyecto son:
 \begin{itemize}
-	\item Detección de la orientación de las Oculus
-	\item Sensación de inmersión (3D)
+	\item Detección de la orientación: Las gafas llevan integradas sensores que permiten al ordenador conocer su orientación y transmitirla al robot.
+	\item Sensación de inmersión (3D): dada la tecnología de las lentes de las Oculus Rift, es posible crear en el usuario una sensación de inmersión en el espacio en el que se encuentra el robot.
 \end{itemize}
 
 \subsection{Detección de la orientación}
@@ -772,24 +757,30 @@ De las gafas nos interesan especialmente:
 
 Las Oculus Rift son capaces de detectar la \textbf{posición y orientación de la cabeza} del usuario.
 
-Para la \textbf{posición} , las gafas llevan un conjunto de emisores infrarrojos en su superficie. La información enviada por dichos emisores es recogida por un sensor de infrarrojos que se asemeja a una cámara.
+Para la \textbf{posición} , las gafas llevan un conjunto de emisores infrarrojos en su superficie. La información enviada por dichos emisores es recogida por un sensor de infrarrojos que se asemeja a una cámara.\\
+Para nuestro trabajo la posición no es relevante ya que, al estar orientado para personas con discapacidad motora,  se espera que el usuario se encuentre más o menos en la misma posición durante el uso del dispositivo.Por otra parte el usuario puede estar algo inclinado o incluso tumbado ya que, al no leer los sensores infrarrojos, el movimiento del robot no depende de la posición del usuario.
 
-Para nuestro trabajo la posición no es del todo relevante ya que, al estar orientado para personas con discapacidad motora,  se espera que el usuario se encuentre más o menos en la misma posición durante el uso del dispositivo.
 
-Por el contrario, conocer la \textbf{orientación} de la cabeza es esencial en este proyecto ya que el usuario enviará comandos al robot rotando la cabeza en el sentido que convenga en cada momento.
-
-Cualquier objeto en un entorno tridimensional puede rotar respecto a  tres ejes: x, y , z.
+Por el contrario, conocer la \textbf{orientación} de la cabeza es esencial en este proyecto ya que el usuario enviará comandos al robot rotando la cabeza en el sentido que convenga en cada momento.\\Esta orientación se lee respecto a los ejes $X$, $Y$, y $Z$, como se puede ver en la figura \ref{Orientacion}  y se detecta gracias a los tres sensores que las Oculus Rift llevan integrados (giroscopio, acelerómetro y magnetómetro).
 
 \begin{figure}[H]
 	\centerline{
-		\mbox{\includegraphics[width=5.00in]{images/headTrack.png}}
+		\mbox{\includegraphics[width=3.55in]{images/headTrack.png}}
 	}
 	\caption{Ejes de giro}
-\end{figure}
+\end{figure}\label{Orientacion}
 
-Para detectar la orientación, la Oculus tienen integrados tes sensores: un giroscopio, un acelerómetro y un magnetómetro.
+Con el giroscopio y el acelerómetro se calcula la orientación respecto a los ejes $X$ y $Z$, mientras que el magnetómetro manda información del eje $Y$.\\Combinando la información de estos sensores a través de un proceso conocido como fusión de sensores se determina la orientación de la cabeza del usuario en el mundo real , y se sincroniza con la perspectiva virtual del usuario en tiempo real.\\
+En este trabajo los giros de la cámara serán respecto a los ejes $X$ e $Y$ por lo que tampoco se recogerá información de la orientación de la cabeza respecto al eje $Z$
+ 
+Se ha implementado un programa en phyton que recoge esa información y la traduce en comandos sencillos para mandarselos a la Raspberry. Para obtener esa información hacemos uso de la API de python (ovr \ref{subsec::OVR}) que se comunica con la librería de Oculus (LibOvr).
 
-Con el giroscopio y el acelerómetro se calcula la orientación respecto a los ejes  X y Z , mientras que el magnetómetro manda información del eje Y.
+
+
+
+
+
+
 
 
 
@@ -878,7 +869,7 @@ Una de las características más importantes de las Oculus Rift es su capacidad 
 
 Esto lo hace usando un par de pantallas (una para cada ojo) que dividen la imagen en dos (Side by side - SBS). En cada pantalla hay un conjunto de lentes que modifican la imagen para crear el fenómeno de la estereopsis por el cual, a partir de dos imágenes ligeramente diferentes proyectadas en la retina de cada ojo, el cerebro es capaz de recomponer una tridimensional.
 
-\subsection{OVR}
+\subsection{OVR}\label{subsec::OVR}
 
 Para desarrollar una aplicación integrada con las Oculus Rift utilizaremos la API OVR de python, que se encuentra en \url{https://github.com/cmbruns/pyovr}. Esta API está basada en otra API escrita en C que nos permite utilizar la librería LibOVR. Esta librería es la parte fundamental del SDK de Oculus.
 
@@ -906,30 +897,24 @@ Para obtener la orientación es necesario recoger la información de los sensore
 
 Cuando finaliza la aplicación se deberá llamar a las funciones \texttt{ovr.destroy(session)} y \texttt{ovr.shutdown()}. Con estas funciones liberamos los recursos utilizados en la aplicación y apagamos la API.
 
-\newpage
-\section{Diseño de conexiones}
+\section{Diseño de conexiones entre módulos}
 
-La arquitectura del proyecto es muy sencilla, como podemos observar en la siguiente imagen:
+La arquitectura del proyecto es muy sencilla, como podemos observar en la siguiente imagen \ref{Fig::EsquemaConexiones}:
 
 \begin{figure}[h]
 	\centerline{
 		\mbox{\includegraphics[width=.80\textwidth]{images/EsquemaConexiones.png}}
 	}
 	\caption{Esquema conexiones}
-\end{figure}
+\end{figure}\label{Fig::EsquemaConexiones}
 
 
-Como podemos ver en el esquema, las Oculus Rift están conectadas al ordenador, el ordenador y la Raspberry se mandan información a través de un router que crea una red local.
+Todo el sistema, excepto las Oculus, se conecta a través de la red local creada por el router.\\
+Para hablar de la conexión de las Oculus hay que especificar que nos referimos a la conexión de las gafas y la conexión de la cámara receptora de infrarrojos.\\
+La cámara receptora de infrarrojos se conecta con el ordenador a través de un puerto USB y las gafas se conectan con la tarjeta gráfica a través de HDMI.
 
-La raspberry recibe en streaming de la cámara y lo va mandando a una IP disponible dentro de la red local, la (192.168.1.35). A su vez el ordenador accede a esa IP, recoge el streaming utiliza VLC para dividir la imagen (SBS) y reproducir el video y con la herramienta Virtual Desktop podemos ver el video desde las Oculus.
+El resto de dispositivos, es decir, el ordenador y el robot, se encuentra dentro de la red local WifiRaspi3.De esta forma las el ordenador envía comandos de movimiento al router y el router al robot. Por otra parte la cámara (conectada por USB a las Raspberry Pi 3) transmite el video al robot y este lo manda en tiempo real al router, el router lo envía al ordenador de forma que el usuario podrá visualizarlo con las gafas de realidad virtual.
 
-Por otra parte las Oculus tienen integrado un giroscopio , un acelerómetro y un magnetómetro.
-
-Combinando la información de estos sensores a través de un proceso conocido como fusión de sensores se determina la orientación de la cabeza del usuario en el mundo real , y se sincroniza con la perspectiva virtual del usuario en tiempo real. 
-
-Se ha implementado un programa en phyton que recoge esa información y la traduce en comandos sencillos para mandarselos a la Raspberry. Para obtener esa información hacemos uso de la API de python (ovr) que se comunica con la librería de Oculus (LibOvr).
-
-La Raspberry lee los comandos del ordenador y mueve los servos según lo recibido, de esta forma controlamos el movimiento del robot y de a cámara.
 
 \newpage
 \section{Esquema funcional}
@@ -957,16 +942,13 @@ Para que el video llegue al visor de las Oculus Rift se utiliza Virtual Desktop,
 \newpage
 \chapter{Desarrollo e implementación}
 
-
-En esta sección se explicará cómo hemos desarrollado e integrado las distintas funcionalidades para conseguir el proyecto final.
-Para ello vamos a diferenciar entre:
-
+Una vez definidos los objetivos y requisitos que debe cumplir el trabajo y haber diseñado el sistema y las conexiones se ha desarrollado el sistema basado en todo lo anterior.\\
+En esta sección se explicará cómo hemos desarrollado e integrado las distintas funcionalidades para conseguir el proyecto final.Ya que el proyecto es tan amplio e integra tantas tecnologías,para clarificar la explicación se ha dividio el desarrollo en tres bloques:
 \begin{itemize}
 	\item Construcción del Robot
 	\item Streaming 
 	\item Control del Robot
 \end{itemize}
-
 Para conseguir \textbf{transmitir a las Oculus el video en tiempo real} es necesario que:
 \begin{enumerate}
 	\item La Raspberry recoja el video de la cámara y lo transmita al ordenador.
@@ -986,7 +968,7 @@ Para el \textbf{control del robot} se deberán implementar las siguientes tareas
 	
 	\item Transmitir la información obtenida al robot.
 	
-	\item Traducir dicha información en comandos para mover los servo motores.
+	\item Traducir dicha información en comandos para mover los servomotores.
 \end{enumerate} 
 \section{Construcción del Robot}
 Como se ha dicho en la sección de diseño, el robot está construido basándose en el diseño de un robot de un trabajo anterior.
@@ -1003,9 +985,9 @@ Para este proyecto se han añadido alguno componentes:
 Para integrar la cámara en el robot han sido necesarias dos piezas:
 
 \begin{itemize}
-	\item Soporte vertical $\rightarrow$ En esta pieza se coloca el servo motor que controla el movimiento de la cámara.
+	\item Soporte vertical $\rightarrow$ En esta pieza se coloca el servomotor que controla el movimiento de la cámara.
 	
-	\item Pinza de agarre $\rightarrow$ Se utiliza para unir la cámara con el servo motor que a mueve.
+	\item Pinza de agarre $\rightarrow$ Se utiliza para unir la cámara con el servomotor que a mueve.
 \end{itemize}
 
 Ambas piezas han sido impresas con la impresora 3D del Club de Robótica de la Universidad Autónoma de Madrid.
@@ -1127,7 +1109,7 @@ Por lo tanto el control del robot se divide en tres acciones:
 	
 	\item Envío de la información procesada a la Raspberry Pi 3 $\rightarrow$ Para ello el ordenador abrirá dos sockets a través de los cuales mandará los datos al robot
 	
-	\item Movimiento de los servo motores
+	\item Movimiento de los servomotores
 \end{itemize}
 \subsection{Recogida y procesamiento de la información que mandan las Oculus al ordenador}
 
@@ -1206,7 +1188,7 @@ Y se ponen a escuchar hasta que les llegan los datos.
 Una vez que tiene los datos los transforma en comandos válidos para los servomotores,tal y como se explica en el siguiente apartado, les manda la instrucción y vuelve a escuchar.
 
 
-\subsection{Movimiento de los servo motores}
+\subsection{Movimiento de los servomotores}
 
 
 Como ya se indicó en la sección (seccion de los servos,PWM, etc..) el movimiento de los servos se controla con una señal PWM (Pulse Width Modulation).
@@ -1222,7 +1204,7 @@ Hay dos parámetros principales para determinar el pulso que se envía al motor:
 	
 \end{itemize}
 
-Para controlar los servo motores del robot se fija una frecuencia de 50 Hz, es decir, $T = \frac{1}{50} = 20 ms$.
+Para controlar los servomotores del robot se fija una frecuencia de 50 Hz, es decir, $T = \frac{1}{50} = 20 ms$.
 En las especificaciones de los servos se indica que el rango de $PW$ es $0.5 \text{ ms } \sim 2.5\text{ ms }$ y con esto ya podemos calcular el Duty Cycle adecuado para cada acción.
 
 En la siguiente imagen se muestra cómo varía la posición de los motores según el pulso que se le envíe.
@@ -1231,12 +1213,12 @@ En la siguiente imagen se muestra cómo varía la posición de los motores segú
 	\centerline{
 		\mbox{\includegraphics[width=.80\textwidth]{images/PWMServos.png}}
 	}
-	\caption{Relación entre el PW y la posición de los servo motores}
+	\caption{Relación entre el PW y la posición de los servomotores}
 	\label{figPWM}
 \end{figure}
 %Por lo tanto, si mandamos un pulso cercano a $0.5$ ms, el servo girará a gran velocidad hacia la izquierda, mientras que si el pulso es cercano a $2.5$ ms girará hacia la derecha. A medida que el pulso se va acercando a $1.5$, el motor perderá velocidad. 
 
-Recordemos que estos valores son orientativos, pudiendo variar ligeramente según el servo motor.
+Recordemos que estos valores son orientativos, pudiendo variar ligeramente según el servomotor.
 
 %Veamos un ejemplo para clarificar esto:
 %
@@ -1268,9 +1250,9 @@ Esto es porque los servos de las ruedas son de rotación continua, a diferencia 
 
 \subsubsection{\textbf{Control de los motores de las ruedas del robot}}
 
-Los motores que mueven las ruedas del robot son dos servo motores de rotación continua. El funcionamiento de los servo motores de rotación continua ya se ha explicado en la sección de análisis.
+Los motores que mueven las ruedas del robot son dos servomotores de rotación continua. El funcionamiento de los servomotores de rotación continua ya se ha explicado en la sección de análisis.
 
-Recordamos muy brevemente que en los servo motores de rotación continua, la pulsación que le mandas al motor no indica la posición en la que debe colocarse si no la dirección y velocidad a la que debe rotar.
+Recordamos muy brevemente que en los servomotores de rotación continua, la pulsación que le mandas al motor no indica la posición en la que debe colocarse si no la dirección y velocidad a la que debe rotar.
 
 Por lo tanto si se envía un pulso cercano a $1.5$ ms, el motor girará muy despacio. Por el contrario, si el pulso es cercano a $0.5$ o $2.5$ ms, el motor se moverá a mayor velocidad.
 
@@ -1298,7 +1280,7 @@ Para girar el robot hacia la derecha el usuario enviará la señal de "rotar hac
 
 \subsubsection{\textbf{Control del motor de la cámara del robot}}
 
-La cámara se mueve gracias a un servo motor cuyo rango de movimiento va de -90 a 90 grados.
+La cámara se mueve gracias a un servomotor cuyo rango de movimiento va de -90 a 90 grados.
 
 Este motor se mueve por pulsos, tal y como se explica en la sección de Análisis.
 
@@ -1563,7 +1545,7 @@ Respecto a la valoración de los usuarios es muy interesante ver cómo varía la
 %
 %Para probar el sistema primero hemos hecho pruebas del funcionamiento de la red local, ya que en este trabajo es esencial tener poca latencia.
 %
-%Para ello se ha probado el alcance de la red inalámbrica, mandando comandos a los servo motores desde el ordeador.
+%Para ello se ha probado el alcance de la red inalámbrica, mandando comandos a los servomotores desde el ordeador.
 %
 %A continuación se ven los resultados obtenidos tras mandar comandos a una distancia de 7,5 metros y mandar comando estando el robot y el ordenador en habitaciones separadas
 %
@@ -1603,7 +1585,7 @@ En este apartado analizaremos los resultados obtenidos, hablaremos de posibles m
 
 Tras las pruebas se ve que el mayor defecto del proyecto es la \textbf{velocidad de giro} de los motores de las ruedas.
 
-La calibración de servo motores es una tarea que se resuelve de forma experimental. La dificultad que nos encontramos es que la velocidad de giro cambia según en la superficie en la que se encuentre el robot por lo que habría que realizar las pruebas en diferentes entornos y hacer una calibración media.
+La calibración de servomotores es una tarea que se resuelve de forma experimental. La dificultad que nos encontramos es que la velocidad de giro cambia según en la superficie en la que se encuentre el robot por lo que habría que realizar las pruebas en diferentes entornos y hacer una calibración media.
 
 Los usuarios han estado cada uno menos de 7 minutos con el robot y \textbf{todos menos uno lograron alcanzar su objetivo} en menos de un minuto, por lo que es una \textbf{aplicación fácil de manejar y de aprender}, como se ha visto en las valoraciones.
 
