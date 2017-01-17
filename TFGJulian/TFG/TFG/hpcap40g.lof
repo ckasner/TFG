@@ -26,20 +26,20 @@
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Dise\IeC {\~n}o 3D de la pinza de agarre en Blender\relax }}{28}{figure.caption.25}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Imagen de la configuraci\IeC {\'o}n del Cura para enviar la Pieza de agarre a la impresora 3D\relax }}{29}{figure.caption.26}
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Uso de CPU del programa Mjpeg-Streamer por el que se hae el streaming de video\relax }}{30}{figure.caption.27}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Ejecuci\IeC {\'o}n del comando para iniciar el streaming\relax }}{30}{figure.caption.28}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces P\IeC {\'a}gina html donde se recibe el streaming a tiempo real desde la Raspberry \relax }}{30}{figure.caption.29}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Configuraci\IeC {\'o}n y resultado de la reproducci\IeC {\'o}n de video en VLC\relax }}{31}{figure.caption.30}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Medio de reproducci\IeC {\'o}n-Ubicaci\IeC {\'o}n de red}}}{31}{figure.caption.30}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Divisi\IeC {\'o}n de im\IeC {\'a}genes}}}{31}{figure.caption.30}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Reproducci\IeC {\'o}n SBS}}}{31}{figure.caption.30}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Posici\IeC {\'o}n de las Oculus respecto al eje X\relax }}{32}{figure.caption.31}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Relaci\IeC {\'o}n entre el PW y la posici\IeC {\'o}n de los servomotores\relax }}{34}{figure.caption.34}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Posibles movimientos del robot seg\IeC {\'u}n el movimiento de las Oculus Rift\relax }}{36}{figure.caption.39}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Ejecuci\IeC {\'o}n del comando para iniciar el streaming\relax }}{31}{figure.caption.28}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces P\IeC {\'a}gina html donde se recibe el streaming a tiempo real desde la Raspberry \relax }}{31}{figure.caption.29}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Configuraci\IeC {\'o}n y resultado de la reproducci\IeC {\'o}n de video en VLC\relax }}{32}{figure.caption.30}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Posici\IeC {\'o}n de las Oculus respecto al eje X\relax }}{33}{figure.caption.31}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Medio de reproducci\IeC {\'o}n-Ubicaci\IeC {\'o}n de red}}}{33}{figure.caption.31}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Divisi\IeC {\'o}n de im\IeC {\'a}genes}}}{33}{figure.caption.31}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Reproducci\IeC {\'o}n SBS}}}{33}{figure.caption.31}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Relaci\IeC {\'o}n entre el PW y la posici\IeC {\'o}n de los servomotores\relax }}{35}{figure.caption.34}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Posibles movimientos del robot seg\IeC {\'u}n el movimiento de las Oculus Rift\relax }}{37}{figure.caption.39}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Fases del ciclo cerrado de pruebas que se han realizado para valorar la funcionalidad del dispositivo.\relax }}{37}{figure.caption.40}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Rotaci\IeC {\'o}n sobre s\IeC {\'\i } mismo}}}{37}{figure.caption.40}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {La c\IeC {\'a}mara gira respecto del eje X}}}{37}{figure.caption.40}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Movimiento hacia delante si el ususario baja la cabeza}}}{37}{figure.caption.40}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Promedio del tiempo que tardan los usuarios en realizar el circuito.\relax }}{40}{figure.caption.45}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Variaci\IeC {\'o}n de la sensaci\IeC {\'o}n de control de los usuarios antes y despu\IeC {\'e}s de realizar el circuito.\relax }}{41}{figure.caption.47}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Fases del ciclo cerrado de pruebas que se han realizado para valorar la funcionalidad del dispositivo.\relax }}{39}{figure.caption.40}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Rotaci\IeC {\'o}n sobre s\IeC {\'\i } mismo}}}{39}{figure.caption.40}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {La c\IeC {\'a}mara gira respecto del eje X}}}{39}{figure.caption.40}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Movimiento hacia delante si el ususario baja la cabeza}}}{39}{figure.caption.40}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Promedio del tiempo que tardan los usuarios en realizar el circuito.\relax }}{42}{figure.caption.45}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Variaci\IeC {\'o}n de la sensaci\IeC {\'o}n de control de los usuarios antes y despu\IeC {\'e}s de realizar el circuito.\relax }}{43}{figure.caption.47}
 \addvspace {10pt}

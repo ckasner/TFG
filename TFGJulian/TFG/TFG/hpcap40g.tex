@@ -949,40 +949,30 @@ En esta sección se explicará cómo hemos desarrollado e integrado las distinta
 	\item Streaming 
 	\item Control del Robot
 \end{itemize}
-Para conseguir \textbf{transmitir a las Oculus el video en tiempo real} es necesario que:
-\begin{enumerate}
-	\item La Raspberry recoja el video de la cámara y lo transmita al ordenador.
+Cada bloque se desarrollará a lo largo del capítulo pero, para tener una idea global,primero se van a resumir brevemente.
+
+La \textbf{construcción del robot} se ha hecho acorde con el diseño y los requisitos del mismo, es decir, con dos ruedas que le permitan transportarse, un soporte para la Raspberry Pi 3 y un soporte para la cámara.\\
+Este diseño se basa en un diseño de otro trabajo fin de grado de un alumno de la UAM, añadiendo para este proyecto los accesorios necesarios.
+
+Para conseguir \textbf{transmitir a las Oculus el video en tiempo real} es necesario que la Raspberry recoja el video de la cámara y lo transmita al ordenador.A su vez el ordenador recojerá el video, lo transformará a formato SBS y lo reproducirá en las Oculus Rift. 
+
+El último bloque es el \textbf{control del robot}. El primer paso para poder enviar comandos de control es leer la señal de los sensores de las Oculus Rift (giroscopio, acelerómetro y magnetómetro) para saber la orientación de la cabeza del usuario.\\
+Una vez que obtenemos dicha información se procesa y transforma en datos útiles para el robot se transmite a las Raspberry Pi con la mínima latencia posible.\\
+Cuando el robot recibe los datos los convierte en instrucciones para mover los servomotores, es decir, en pulsos que le indican un cambio de posición.
 	
-	\item El ordenador recoja el video, lo transforme a formato SBS y lo envíe a las Oculus Rift. 
-	
-\end{enumerate}
 
-
-
-
-
-Para el \textbf{control del robot} se deberán implementar las siguientes tareas:
-
-\begin{enumerate}
-	\item Leer la señal de los sensores de las Oculus Rift (giroscopio, acelerómetro y magnetómetro) para saber la orientación de la cabeza del usuario.
-	
-	\item Transmitir la información obtenida al robot.
-	
-	\item Traducir dicha información en comandos para mover los servomotores.
-\end{enumerate} 
 \section{Construcción del Robot}
-Como se ha dicho en la sección de diseño, el robot está construido basándose en el diseño de un robot de un trabajo anterior.
-
-Para este proyecto se han añadido alguno componentes:
+Como se ha dicho en la sección de diseño, el robot está construido basándose en el diseño de un robot de un trabajo anterior.\\
+Para este proyecto se han añadido dos componentes adicionales:
 
 \begin{itemize}
-	\item Soporte de la cámara
-	\item Batería portátil
+	\item \textbf{Soporte de la cámara:} este soporte debe servir como pinza de agarre de la cámara y a su vez debe estar unida al servomotor que mueve la cámara.
+	\item \textbf{Batería portátil:} Ya que el robot debe ser inalámbrico, de acuerdo con los requisitos del proyecto, en su estructura hay cabida para una batería portatil que alimenta la Raspberry Pi 3 y a través de ésta, la cámara y los tres servomotores.
 \end{itemize}
 
 \subsection{Soporte de la cámara}
-
-Para integrar la cámara en el robot han sido necesarias dos piezas:
+El soporte de la cámara se ha construido en base a que la cámara debía encontrarse a una altura algo elevada sobre la base del robot para poder rotar sin encontrarse con obstáculos y para lograr un mayor ángulo de visión. Otro requisito que tiene que cumplir el soporte es el de dar lugar a que se coloque el servomotor que controla el movimiento de la cámara.\\
+En base a estas dos condiciones se ha ideado un soporte con dos piezas: Un soporte vertical y una pinza de agarre. 
 
 \begin{itemize}
 	\item Soporte vertical $\rightarrow$ En esta pieza se coloca el servomotor que controla el movimiento de la cámara.
@@ -990,46 +980,39 @@ Para integrar la cámara en el robot han sido necesarias dos piezas:
 	\item Pinza de agarre $\rightarrow$ Se utiliza para unir la cámara con el servomotor que a mueve.
 \end{itemize}
 
-Ambas piezas han sido impresas con la impresora 3D del Club de Robótica de la Universidad Autónoma de Madrid.
-
-Para realizar el diseño 3D de la pinza de agarre se ha utilizado el programa de diseño 3D Blender.
-
-
-\begin{figure}[h]
+Ambas piezas han sido impresas en plástico con la impresora 3D del Club de Robótica de la Universidad Autónoma de Madrid.\\
+Para realizar el diseño 3D de la pinza de agarre se ha utilizado el programa de diseño 3D Blender.\\
+En este programa se diseña gráficamente la pieza y genera una archivo \texttt{.stl}, tal y como se muestra en la imagen \ref{fig::blender}. 
+\begin{figure}[H]
 	\centerline{
 		\mbox{\includegraphics[width=.80\textwidth]{images/cameraBlender.png}}
 	}
 	\caption{ Diseño 3D de la pinza de agarre en Blender}
-\end{figure}
+\end{figure}\label{fig::blender}
 
-Una vez diseñadas las piezas se ha utilizado Cura, un programa que genera archivos \texttt{.gcode} a partir de diseños 3D. Este tipo de archivos son los que se le envían a la impresora 3D.
+Una vez creado el fichero \texttt{.stl} utiliza un Cura, un programa que nos permite seleccionar los parámetros de configuración deseados para la impresión de la pieza, como por ejemplo la densidad o el tamaño. Una vez elegida la configuración, Cura genera el archivo \texttt{.gcode}. Este tipo de archivos son los que lee la impresora 3D y consiste en una serie de instrucciones de movimiento para los servomotores que controlar el estrusor y el ventilador de la impresora.\\
+En la imagen \ref{Cura} podemos ver la interfaz de Cura, la base azul del centro representa la base de impresión de la impresora. A la izquierda se pueden ver algunos de los parámetros de configuración.
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centerline{
 		\mbox{\includegraphics[width=.75\textwidth]{images/Cura2.png}}
 	}
 	\caption{Imagen de la configuración del Cura para enviar la Pieza de agarre a la impresora 3D}
-\end{figure}
+\end{figure}\label{Cura}
  
-\newpage
 \section{Streaming}
-A continuación se explicará cómo se ha implementado la captura, transmisión y reproducción de video del entorno en tiempo real.
+El segundo bloque es el streaming, es decir, la transmisión del video que captura la cámara al ordenador y su posterior reproducción en las Oculus Rift.\\
+La Raspberry Pi3 se encargará de recoger el video de la cámara y transformarlo en paquetes de datos IP para poder transmitirlos a una dirección de la red local.\\El ordenador va recogiendo el streaming de la dirección donde lo envía la Raspberry Pi 3 y lo reproduce en las Oculus.
 
-Para esto son necesarios dos elementos:
-\begin{itemize}
-	\item Raspberry Pi3 $\rightarrow$ Se encarga de la captura y transmisión de video.
-	\item PC $\rightarrow$ Se encarga de la recepción de video y de reproducirlo en las Oculus Rift.
-\end{itemize}
 \subsection{Raspberry Pi3}
-El primer elemento en el streaming de video es la Raspberry Pi, que tiene conectada por usb una cámara.
+La Raspberry Pi, tiene conectada por usb la cámara que se utiliza para capturar el video.\\
+Para recoger el video y mandarlo en tiempo real utilizamos la aplicación de software libre mjpeg-streamer, disponible en github. \url{https://github.com/jacksonliam/mjpg-streamer}
 
-Para recoger el video y mandarlo en tiempo real utilizamos la librería de software libre mjpeg-streamer, disponible en github. \url{https://github.com/jacksonliam/mjpg-streamer}
+\textbf{Mjpeg-streamer} es una aplicación en linea de comandos que permite crear un servidor, para obtener frames JPG desde una cámara compatible con la aplicación y transmitirlos como M-JPEG mediante protocolo HTTP. Está diseñada para dispositivos con recursos limitados, en téminos de CPU y RAM.\\
+Soporta la compresión por hardware (GPU) de la cámara, en nuestro caso H.264 Advanced Video Coding (AVC) Standard, que es la compresión utilizada por la Webcam Logitech, lo cual permite reducir drásticamente el uso de la CPU de este servidor, haciendo está aplicación un servicio ligero.\\
+Esta característica hace de esta aplicación una buena candidata para el objetivo que perseguimos en este trabajo, ya que la compresión y transmisión del streaming se hace a tiempo real.
 
-Mjpeg-streamer es una aplicación en linea de comandos que permite crear un servidor, para retransmitir imágenes JPG sobre una red basada en IP, desde la cámara hasta un navegador convencional.
-
-Soporta la compresión por hardware (GPU) de la cámara, en nuestro caso H.264 Advanced Video Coding (AVC) Standard, que es la compresión utilizada por la Webcam Logitech.
-
-Esto permite reducir drásticamente el uso de la CPU de este servidor, haciendo está aplicación un servicio ligero.
+En la imagen \ref{fig::mjeg} se muestra el uso de recursos de la aplicación mjpeg-streamer.
 
 
 \begin{figure}[h!]
@@ -1037,50 +1020,60 @@ Esto permite reducir drásticamente el uso de la CPU de este servidor, haciendo 
 		\mbox{\includegraphics[width=.80\textwidth]{images/UsoCPUMjpeg.png}}
 	}
 	\caption{Uso de CPU del programa Mjpeg-Streamer por el que se hae el streaming de video}
-\end{figure}
+\end{figure}\label{mjpeg}
 
+La aplicación arranca en la Raspberry Pi cuando ejecutamos el siguente comando: \texttt{./mjpg\_streamer -i "./input\_uvc.so -d /dev/video0" -o "./output\_http.so -w ./www"}.\\Para entender este comando hay que explicar primero el funcionamiento de mjpeg-streamer. La aplicación se basa en unos plugins de entrada y salida. Es decir, un plugin (de entrada) copia las imágenes JPEG a un directorio de acceso global, mientras que otro plugin (de salida) procesa las imágenes y las emite de acuerdo a los estándares MPG existentes.\\ En el comando que arranca la aplicación estamos especificando:
+\begin{itemize}
+	\item \textbf{ -i "./input\_uvc.so}: Este es el plugin de entrada, que captura los frames JPG de la cámara conectada.
+	\item \textbf{-o "./output\_http.so -w ./www"}: El plugin de salida (\texttt{./output\_http.so}), es un servidor web HTTP 1.0, que emite el video en los estándares M-JPEG. El directorio de la aplicación web de mjpeg-streamer se especifica con la opción \texttt{-w ./www}
+	\item \textbf{mjpg\_streamer}: instrucción que transmite los frames desde el plugin de entrada al de salida.
+	\item \textbf{-d /dev/video0}: especifica la cámara que se va a utilizar ya que la Raspberry Pi 3 tiene dos puertos usb.
+\end{itemize}
 
-Para iniciar el streaming debemos ejecutar un script \texttt{Streaming} que manda el siguiente comando: \texttt{./mjpg\_streamer -i "./input\_uvc.so -d /dev/video0" -o "./output\_http.so -w ./www"}.
+En el momento en que se ejecuta el comando la Raspberry empezará a coger el video de la cámara y transmitirlo en tiempo real a la siguiente url: \texttt{http://192.168.1.33:8080/stream.html} y muestra información sobre el streaming por terminal.\\
+En la imagen \ref{fig::outmjpeg} vemos un ejemplo de dicha información y en la imagen \ref{fig::stream} vemos la dirección de la red local donde la Raspberry Pi está transmitiendo el video.
 
-
-
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centerline{
 		\mbox{\includegraphics[width=.80\textwidth]{images/Streamingcomando.png}}
 	}
 	\caption{Ejecución del comando para iniciar el streaming}
-\end{figure}
+\end{figure}\label{fig::outmjpeg}
 
-En este momento la Raspberry empezará a coger el video de la cámara y transmitirlo en tiempo real a la siguiente url: \texttt{http://192.168.1.33:8080/stream.html}
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centerline{
 		\mbox{\includegraphics[width=.80\textwidth]{images/pagStream.png}}
 	}
 	\caption{Página html donde se recibe el streaming a tiempo real desde la Raspberry }
-\end{figure}
+\end{figure}\label{fig::stream}
 
 
-
-\newpage
 \subsection{Ordenador}
-El ordenador , conectado a la red local a través del router,accede a la IP donde mjpeg-streamer está retransmitiendo el video y lo recoge a través del reproductor de video VLC.
+Una vez el robot es capaz de transmitir video a tiempo real a una dirección de la red local, solo falta desarrollar las funciones del ordenador.\\
+El PC debe capturar el video de la red local y reproducirlo en las Oculus Rift.\\
+El ordenador , conectado a la red local a través del router,accede a la IP donde mjpeg-streamer está retransmitiendo el video y lo recoge a través del reproductor de video  \href{http://www.videolan.org/vlc/}{\textcolor{blue}{VLC}}.
 
-Para ello especificamos en VLC que el medio de reproducción será una ubicación de red.
+\textbf{VLC media player} es un reproductor multimedia libre y de código abierto. Tiene dos características que lo hacen idóneo para este proyecto: Es capaz de capturar y reproducir video de una dirección de red y puede dividir la imagen del video en dos pantallas.
 
-Posteriormente dividimos el video en dos pantallas exactamente iguales para poder verlo desde las Oculus en modo SBS (Side by Side).
+Por lo tanto se configura VLC para que el medio de reproducción sea la ubicación de red donde se está transmitiendo el video del robot \texttt{http://192.168.1.33:8080/?action=stream}.\\
+Posteriormente dividimos el video en dos pantallas exactamente iguales para poder verlo desde las Oculus en modo SBS (Side by Side).\\Ambas configuraciones y el resultado pueden verse en la figura \ref{figstream}
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
 	\subfigure[Medio de reproducción-Ubicación de red]{\includegraphics[width=60mm]{images/confVLC.png}}
 	\subfigure[División de imágenes]{\includegraphics[width=60mm]{images/confSBS.png}}\\
-	\subfigure[Reproducción SBS]{\includegraphics[width=120mm]{images/sbsVLC2.png}} %
+	\subfigure[Reproducción SBS]{\includegraphics[width=120mm]{images/sbsVLC2.png}}
 		\caption{Configuración y resultado de la reproducción de video en VLC} \label{figstream}
 \end{figure}
 
-Para visualizar el video en la Oculus Rift hemos instalado en el PC el  Virtual Desktop. Virtual Desktop es una aplicación desarrollada por Oculus Rift y  HTC Vive para utilizar las Oculus Rift en Windows.
+Una vez capturado el video en el ordenador solo queda visualizarlo en las Oculus Rift.\\
+Para ello hemos instalado en el PC el \href{http://store.steampowered.com/app/382110/}{\textcolor{blue}{Virtual Desktop}}. 
 
-Permite ver el escritorio desde las Oculus, pudiendo configurar efectos como ver las imagénes SBS o cambiar el entorno en el que te encuentras (el espacio, una sala de cine...)
+\textbf{Virtual Desktop} es una aplicación desarrollada por Oculus Rift y  HTC Vive para utilizar las Oculus Rift en Windows.\\
+Permite ver el escritorio desde las Oculus, pudiendo configurar efectos como ver las imagénes SBS o cambiar el entorno en el que te encuentras (el espacio, una sala de cine...)\\También te permite ver videos descargados en el ordenador y reproducir videos 360.\\
+La funcionalidad que es interesante para este trabajo es la de ver la pantalla del ordenador desde las Oculus con SBS, para visualizar el video que se está reproduciendo en VLC a tiempo real.\\
+De esta forma, si ponemos en video en pantalla completa en el PC y configuramos Virtual Desktop correctamente, el video se reproducirá en la Oculus Rift a tiempo real.
 
 
 %\begin{figure}[h]
@@ -1090,19 +1083,11 @@ Permite ver el escritorio desde las Oculus, pudiendo configurar efectos como ver
 %	\caption{Virtual Desktop}
 %\end{figure}
 
-También te permite ver videos descargados en el ordenador y reproducir videos 360.
 
-Nosotros utilizamos la funcionalidad de ver la pantalla del ordenador desde las Oculus con SBS, para visualizar el video que se está reproduciendo en VLC a tiempo real.
-
-
-
-\newpage
 
 \section{Control del Robot}
-El control del robot es el control del movimiento de los tres servos que lo componen. 
-
-Este movimiento se basará en el movimiento de las Oculus, que llevará puestas el usuario.
-
+El último bloque de desarrollo que queda por implementar es el control del robot. Por control del robot se entiende el control del movimiento de los tres servos que lo componen. Dos para las ruedas laterales que permiten que el robot se transporte y uno para la cámara, que permite que esta rote respecto al eje horizontal.\\
+Estos movimientos se basarán en el movimiento de las Oculus, que llevará puestas el usuario.\\
 Por lo tanto el control del robot se divide en tres acciones:
 \begin{itemize}
 	\item Recogida y procesamiento de la información que mandan las Oculus al ordenador $\rightarrow$ Esto se hará mediante la utilización de la API de Python \texttt{OVR}.
@@ -1113,15 +1098,10 @@ Por lo tanto el control del robot se divide en tres acciones:
 \end{itemize}
 \subsection{Recogida y procesamiento de la información que mandan las Oculus al ordenador}
 
-
-Para recoger desde el ordenador la información que mandan las Oculus utilizamos la API de Oculus (\texttt{OVR}), explicada en el capítulo de Diseño.
-
-Con las funciones proporcionadas por OVR se puede conocer la orientación de la cabeza del usuario respecto a los ejes $x$ e $y$.
-
-La información obtenida sobre la orientación respecto al eje $y$ servirá para mover los servos que hay en las ruedas del robot, mientras que la información de $x$ servirá para mover la cámara.
-
-Los datos referentes a la posición de las Oculus se convierten grados, lo que facilita el control posterior de la posición de los servomotores.
-
+Para recoger desde el ordenador la información que mandan las Oculus utilizamos la API de Oculus (\texttt{OVR}), explicada en el capítulo de Diseño \ref{subsec::OVR}.\\
+Con las funciones proporcionadas por OVR se puede conocer la orientación de la cabeza del usuario respecto a los ejes $x$ e $y$.\\
+La información obtenida sobre la orientación respecto al eje $y$ servirá para mover los servos que hay en las ruedas del robot, mientras que la información de $x$ servirá para mover la cámara.\\
+Los datos referentes a la posición de las Oculus se convierten grados, lo que facilita el control posterior de la posición de los servomotores.\\
 El ordenador crea un servidor y abre dos sockets distintos, uno para la información de $x$ y otro para la de $y$.
 
 
