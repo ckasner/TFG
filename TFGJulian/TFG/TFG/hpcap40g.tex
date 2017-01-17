@@ -1298,13 +1298,61 @@ Diferenciamos dos estados de movimiento del robot:
 Finalmente se ha implementado de la siguiente forma:
 
 
-\begin{figure}[H]
-	\centering
-	\subfigure[Rotación sobre sí mismo]{\includegraphics[width=60mm]{images/Robotrota.png}}
-	\subfigure[La cámara gira respecto del eje X]{\includegraphics[width=60mm]{images/Robotexp.png}}\\
-	\subfigure[Movimiento hacia delante si el ususario baja la cabeza]{\includegraphics[width=120mm]{images/RobotAv.png}} %
-	\caption{Posibles movimientos del robot según el movimiento de las Oculus Rift} \label{movRobot}
-\end{figure}
+
+\begin{table}[H]
+	\begin{tabular}{p{7.0cm}  p{7.0cm}}
+		\textbf{Fase de exploración:} Si el usuario gira la cabeza hacia la \textbf{derecha} el robot girará sobre si mismo hacia la \textbf{derecha}, sin avanzar ni retroceder hasta que el usuario vuelva a mirar hacia el centro & \textbf{Fase de exploración:} Si el usuario gira la cabeza hacia la \textbf{izquierda} el robot girará sobre si mismo hacia la \textbf{izquierda}, sin avanzar ni retroceder hasta que el usuario vuelva a mirar hacia el centro \\ 
+		\centering\includegraphics[height=2in]{images/movder.png} & \centering\includegraphics[height=2in]{images/movderbuena.png} \\
+
+
+		 
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\begin{tabular}{p{7.0cm}  p{7.0cm}}
+		\textbf{Fase de exploración:} Si el usuario gira la cabeza hacia \textbf{arriba} sobre el eje horizontal la cámara rotará hacia arriba sin avanzar ni retroceder & \textbf{Fase de transporte:} Si el usuario gira la cabeza hacia \textbf{abajo} con un ángulo mayor de $50$ tal y como se indica en la figura, el robot avanzará hacia delante en linea recta hasta que el usuario vuelva a subir la cabeza. \\
+		\centering\includegraphics[height=2in]{images/movupbuena.png} & \centering\includegraphics[height=2in]{images/movdownbuena.png}\\
+	\end{tabular}
+\end{table}
+%\begin{table}[h]
+%	\begin{tabular}{p{7.0cm} | p{7.0cm}}
+%		\textbf{Fase de exploración:} Si el usuario gira la cabeza hacia la \textbf{derecha} el robot girará sobre si mismo hacia la \textbf{derecha}, sin avanzar ni retroceder hasta que el usuario vuelva a mirar hacia el centro & \textbf{Fase de exploración:} Si el usuario gira la cabeza hacia la \textbf{izquierda} el robot girará sobre si mismo hacia la \textbf{izquierda}, sin avanzar ni retroceder hasta que el usuario vuelva a mirar hacia el centro\\ \hline
+%		\centering\includegraphics[height=2in]{images/movder.png} & \centering\includegraphics[height=2in]{images/movderbuena.png}\\ 
+%		\hline \textbf{Fase de exploración:} Si el usuario gira la cabeza hacia \textbf{arriba} sobre el eje horizontal la cámara rotará hacia arriba sin avanzar ni retroceder & \textbf{Fase de transporte:} Si el usuario gira la cabeza hacia \textbf{abajo} con un ángulo mayor de $50$ tal y como se indica en la figura, el robot avanzará hacia delante en linea recta hasta que el usuario vuelva a subir la cabeza. \\ \hline \centering\includegraphics[height=2in]{images/movupbuena.png} & \centering\includegraphics[height=2in]{images/movdownbuena.png}
+%	\end{tabular}
+%\end{table}
+
+
+%\begin{table}
+%	\begin{tabular}{c |p{10.0cm}}
+%		\begin{figure}
+%			\mbox{\includegraphics[width=.20\textwidth]{images/movder.png}}
+%			\caption{\textbf{Fase de exploración:} Si el usuario gira la cabeza hacia la derecha el robot girará sobre si mismo hacia la derecha, sin avanzar ni retroceder}
+%		\end{figure} &
+%	 \includegraphics[width=.20\textwidth]{images/movder.png} \\
+%		\hline	
+% \hline
+%
+%	\end{tabular}
+%\end{table}
+
+%\begin{figure}[H]
+%	\centering
+%	\subfigure[Rotación del robot sobre sí mismo hacia la derecha]{\includegraphics[width=40mm]{images/movder.png}}
+%	\subfigure[Rotación del robot sobre sí mismo hacia la izquierda]{\includegraphics[width=40mm]{images/movizq.png}}\\
+%	\subfigure[Movimiento del robot hacia delante si el ususario baja la cabeza al menos $50º$ respecto al eje horizontal]{\includegraphics[width=40mm]{images/movdownbuena.png}}
+%	\subfigure[Rotación de la cámara hacia arriba si el usuario sube la cabeza sobre el eje horizontal  ]{\includegraphics[width=40mm]{images/movupbuena.png}}
+%	\caption{Comandos de control del robot} \label{movRobot}
+%\end{figure}
+
+%\begin{figure}[H]
+%	\centering
+%	\subfigure[Rotación sobre sí mismo]{\includegraphics[width=60mm]{images/Robotrota.png}}
+%	\subfigure[La cámara gira respecto del eje X]{\includegraphics[width=60mm]{images/Robotexp.png}}\\
+%	\subfigure[Movimiento hacia delante si el ususario baja la cabeza]{\includegraphics[width=120mm]{images/RobotAv.png}} %
+%	\caption{Posibles movimientos del robot según el movimiento de las Oculus Rift} \label{movRobot}
+%\end{figure}
 
 Como viene explicado en la imagen \ref{movRobot}, si el usuario mira hacia los lados el robot rotará sobre sí mismo sin moverse del sitio, hacia la dirección que señalen las Oculus Rift.(\textbf{exploración})
 
