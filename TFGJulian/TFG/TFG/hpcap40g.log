@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.14)  19 JAN 2017 16:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.14)  19 JAN 2017 21:29
 entering extended mode
 **./hpcap40g.tex
 (hpcap40g.tex
@@ -2003,13 +2003,13 @@ Package caption Info: End \AtBeginDocument code.
 LaTeX Info: Redefining \. on input line 201.
 LaTeX Info: Redefining \% on input line 201.
 
-<img/logo_eps.png, id=258, 1927.2pt x 1683.28876pt>
+<img/logo_eps.png, id=266, 1927.2pt x 1683.28876pt>
 File: img/logo_eps.png Graphic file (type png)
  <use img/logo_eps.png>
 Package pdftex.def Info: img/logo_eps.png used on input line 205.
 (pdftex.def)             Requested size: 113.81102pt x 99.4005pt.
 
-<img/logo_uam.png, id=260, 360.1455pt x 187.902pt>
+<img/logo_uam.png, id=268, 360.1455pt x 187.902pt>
 File: img/logo_uam.png Graphic file (type png)
  <use img/logo_uam.png>
 Package pdftex.def Info: img/logo_uam.png used on input line 205.
@@ -2069,8 +2069,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.I}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2 ...l robot se moviera un poco mÃ¡s lento. \par
-                                                   Una vez terminados todos ...
+l.2 ...o le costaba mucho manejar el robot. \par E
+                                                  n base a las primeras prue...
 [1
 
 ]) [2] (hpcap40g.abstract-contents-eng
@@ -2102,13 +2102,13 @@ LaTeX Info: Redefining \% on input line 3.
 LaTeX Info: Redefining \. on input line 5.
 LaTeX Info: Redefining \% on input line 5.
 
-Underfull \hbox (badness 3189) in paragraph at lines 15--15
+Underfull \hbox (badness 3189) in paragraph at lines 18--18
  [][] [][][]\T1/ppl/m/n/10.95 Resultado de los test de usabilidad realizados po
 r los usuarios que 
  []
 
 
-Underfull \hbox (badness 3189) in paragraph at lines 16--16
+Underfull \hbox (badness 3189) in paragraph at lines 19--19
  [][] [][][]\T1/ppl/m/n/10.95 Resultado de los test de usabilidad realizados po
 r los usuarios que 
  []
@@ -2123,6 +2123,8 @@ LaTeX Info: Redefining \% on input line 3.
 LaTeX Info: Redefining \. on input line 5.
 LaTeX Info: Redefining \% on input line 5.
 ) [8
+
+] [9] [10
 
 ]
 
@@ -2142,7 +2144,6 @@ un mecanismo
  []
 
 [1
-
 
 
 ]
@@ -2171,7 +2172,7 @@ File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 LaTeX Info: Redefining \. on input line 274.
 LaTeX Info: Redefining \% on input line 274.
  [2]
-<images/objetivos.png, id=458, 571.38469pt x 272.51813pt>
+<images/objetivos.png, id=482, 571.38469pt x 272.51813pt>
 File: images/objetivos.png Graphic file (type png)
 
 <use images/objetivos.png>
@@ -2182,7 +2183,7 @@ LaTeX Font Info:    Font shape `T1/fla/bx/n' in size <10> not available
 LaTeX Info: Redefining \. on input line 299.
 LaTeX Info: Redefining \% on input line 299.
  [3 <./images/objetivos.png>]
-<images/Plan.png, id=463, 217.81375pt x 286.06876pt>
+<images/Plan.png, id=487, 217.81375pt x 286.06876pt>
 File: images/Plan.png Graphic file (type png)
  <use images/Plan.png>
 Package pdftex.def Info: images/Plan.png used on input line 318.
@@ -2205,7 +2206,7 @@ LaTeX Info: Redefining \% on input line 338.
 ni-32.def"
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 ) [7]
-<images/SwordOfDamocles.jpg, id=487, 868.24374pt x 488.82625pt>
+<images/SwordOfDamocles.jpg, id=515, 868.24374pt x 488.82625pt>
 File: images/SwordOfDamocles.jpg Graphic file (type jpg)
 
 <use images/SwordOfDamocles.jpg>
@@ -2219,7 +2220,7 @@ Underfull \hbox (badness 3557) in paragraph at lines 399--402
 n programas de
  []
 
-<images/waterfriendly.png, id=503, 289.08pt x 216.81pt>
+<images/waterfriendly.png, id=532, 289.08pt x 216.81pt>
 File: images/waterfriendly.png Graphic file (type png)
 
 <use images/waterfriendly.png>
@@ -2228,7 +2229,7 @@ Package pdftex.def Info: images/waterfriendly.png used on input line 412.
 LaTeX Info: Redefining \. on input line 420.
 LaTeX Info: Redefining \% on input line 420.
  [9 <./images/waterfriendly.png>]
-<images/Laproscopic_Surgery_Robot.jpg, id=518, 894.34125pt x 1300.86pt>
+<images/Laproscopic_Surgery_Robot.jpg, id=549, 894.34125pt x 1300.86pt>
 File: images/Laproscopic_Surgery_Robot.jpg Graphic file (type jpg)
 
 <use images/Laproscopic_Surgery_Robot.jpg>
@@ -2236,7 +2237,7 @@ Package pdftex.def Info: images/Laproscopic_Surgery_Robot.jpg used on input lin
 e 450.
 (pdftex.def)             Requested size: 145.10905pt x 211.05972pt.
 
-<images/cirujano.jpg, id=519, 268.90463pt x 308.352pt>
+<images/cirujano.jpg, id=550, 268.90463pt x 308.352pt>
 File: images/cirujano.jpg Graphic file (type jpg)
 
 <use images/cirujano.jpg>
@@ -2245,20 +2246,20 @@ Package pdftex.def Info: images/cirujano.jpg used on input line 451.
 LaTeX Info: Redefining \. on input line 455.
 LaTeX Info: Redefining \% on input line 455.
  [10]
-LaTeX Info: Redefining \. on input line 466.
-LaTeX Info: Redefining \% on input line 466.
+LaTeX Info: Redefining \. on input line 468.
+LaTeX Info: Redefining \% on input line 468.
  [11 <./images/Laproscopic_Surgery_Robot.jpg> <./images/cirujano.jpg>] [12
 
 ] [13]
-LaTeX Info: Redefining \. on input line 556.
-LaTeX Info: Redefining \% on input line 556.
+LaTeX Info: Redefining \. on input line 551.
+LaTeX Info: Redefining \% on input line 551.
  [14]
 LaTeX Info: Redefining \. on input line 584.
 LaTeX Info: Redefining \% on input line 584.
  [15] [16
 
 ] [17]
-<images/raspi3.jpg, id=564, 697.9217pt x 516.21428pt>
+<images/raspi3.jpg, id=601, 697.9217pt x 516.21428pt>
 File: images/raspi3.jpg Graphic file (type jpg)
  <use images/raspi3.jpg>
 Package pdftex.def Info: images/raspi3.jpg used on input line 648.
@@ -2266,7 +2267,7 @@ Package pdftex.def Info: images/raspi3.jpg used on input line 648.
 LaTeX Info: Redefining \. on input line 653.
 LaTeX Info: Redefining \% on input line 653.
 
-[18] <images/ondaServo.png, id=570, 366.36874pt x 127.47626pt>
+[18] <images/ondaServo.png, id=606, 366.36874pt x 127.47626pt>
 File: images/ondaServo.png Graphic file (type png)
 
 <use images/ondaServo.png>
@@ -2285,7 +2286,7 @@ es un atributo
 LaTeX Info: Redefining \. on input line 687.
 LaTeX Info: Redefining \% on input line 687.
 [19 <./images/raspi3.jpg>]
-<images/EsquemaServos.png, id=578, 691.383pt x 588.599pt>
+<images/EsquemaServos.png, id=613, 691.383pt x 588.599pt>
 File: images/EsquemaServos.png Graphic file (type png)
 
 <use images/EsquemaServos.png>
@@ -2294,329 +2295,377 @@ Package pdftex.def Info: images/EsquemaServos.png used on input line 704.
 LaTeX Info: Redefining \. on input line 708.
 LaTeX Info: Redefining \% on input line 708.
  [20 <./images/ondaServo.png>]
-<images/TablaDHCP2.png, id=585, 1355.0625pt x 690.58pt>
-File: images/TablaDHCP2.png Graphic file (type png)
-
-<use images/TablaDHCP2.png>
-Package pdftex.def Info: images/TablaDHCP2.png used on input line 722.
-(pdftex.def)             Requested size: 405.45047pt x 206.62766pt.
-LaTeX Info: Redefining \. on input line 726.
-LaTeX Info: Redefining \% on input line 726.
- [21 <./images/EsquemaServos.png>]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 728.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 720.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Underfull \hbox (badness 1546) in paragraph at lines 727--729
+Underfull \hbox (badness 1546) in paragraph at lines 719--721
 \T1/ppl/m/n/10.95 Esto se hace modificando el archivo \T1/lmtt/m/n/10.95 /etc/w
 pa_supplicant/wpa_supplicant.conf\T1/ppl/m/n/10.95 ,
  []
 
-<images/confRaspiWifi.png, id=592, 718.685pt x 293.095pt>
-File: images/confRaspiWifi.png Graphic file (type png)
-
-<use images/confRaspiWifi.png>
-Package pdftex.def Info: images/confRaspiWifi.png used on input line 733.
-(pdftex.def)             Requested size: 405.45047pt x 165.35747pt.
-LaTeX Info: Redefining \. on input line 738.
-LaTeX Info: Redefining \% on input line 738.
- [22 <./images/TablaDHCP2.png> <./images/confRaspiWifi.png>] <images/headTrack.
-png, id=603, 944.52875pt x 520.94624pt>
+LaTeX Info: Redefining \. on input line 722.
+LaTeX Info: Redefining \% on input line 722.
+[21 <./images/EsquemaServos.png>]
+<images/headTrack.png, id=629, 944.52875pt x 520.94624pt>
 File: images/headTrack.png Graphic file (type png)
 
 <use images/headTrack.png>
-Package pdftex.def Info: images/headTrack.png used on input line 778.
+Package pdftex.def Info: images/headTrack.png used on input line 761.
 (pdftex.def)             Requested size: 230.46732pt x 127.11229pt.
 
-<images/OculusDK2.jpg, id=604, 211.44138pt x 134.4222pt>
+<images/OculusDK2.jpg, id=630, 211.44138pt x 134.4222pt>
 File: images/OculusDK2.jpg Graphic file (type jpg)
 
 <use images/OculusDK2.jpg>
-Package pdftex.def Info: images/OculusDK2.jpg used on input line 779.
+Package pdftex.def Info: images/OculusDK2.jpg used on input line 762.
 (pdftex.def)             Requested size: 184.9429pt x 117.57605pt.
-LaTeX Info: Redefining \. on input line 784.
-LaTeX Info: Redefining \% on input line 784.
- [23]
-LaTeX Info: Redefining \. on input line 912.
-LaTeX Info: Redefining \% on input line 912.
- [24 <./images/headTrack.png> <./images/OculusDK2.jpg>] <images/EsquemaConexion
-es.png, id=620, 521.95pt x 425.59pt>
+LaTeX Info: Redefining \. on input line 767.
+LaTeX Info: Redefining \% on input line 767.
+ [22]
+LaTeX Info: Redefining \. on input line 895.
+LaTeX Info: Redefining \% on input line 895.
+ [23 <./images/headTrack.png> <./images/OculusDK2.jpg>] <images/EsquemaConexion
+es.png, id=647, 521.95pt x 425.59pt>
 File: images/EsquemaConexiones.png Graphic file (type png)
 
 <use images/EsquemaConexiones.png>
-Package pdftex.def Info: images/EsquemaConexiones.png used on input line 925.
+Package pdftex.def Info: images/EsquemaConexiones.png used on input line 908.
 (pdftex.def)             Requested size: 341.43437pt x 278.40306pt.
-LaTeX Info: Redefining \. on input line 939.
-LaTeX Info: Redefining \% on input line 939.
- [25 <./images/EsquemaConexiones.png>]
-<images/EsquemaFuncional.png, id=627, 743.77875pt x 311.1625pt>
+LaTeX Info: Redefining \. on input line 922.
+LaTeX Info: Redefining \% on input line 922.
+ [24 <./images/EsquemaConexiones.png>]
+<images/EsquemaFuncional.png, id=653, 743.77875pt x 311.1625pt>
 File: images/EsquemaFuncional.png Graphic file (type png)
 
 <use images/EsquemaFuncional.png>
-Package pdftex.def Info: images/EsquemaFuncional.png used on input line 947.
+Package pdftex.def Info: images/EsquemaFuncional.png used on input line 930.
 (pdftex.def)             Requested size: 426.79135pt x 178.55145pt.
-LaTeX Info: Redefining \. on input line 963.
-LaTeX Info: Redefining \% on input line 963.
- [26 <./images/EsquemaFuncional.png>]
-Underfull \hbox (badness 2042) in paragraph at lines 965--968
+LaTeX Info: Redefining \. on input line 946.
+LaTeX Info: Redefining \% on input line 946.
+ [25 <./images/EsquemaFuncional.png>] [26
+
+]
+Underfull \hbox (badness 2042) in paragraph at lines 948--951
 \T1/ppl/m/n/10.95 En esta sección se explicará cómo hemos desarrollado e integr
 ado las distintas
  []
 
 
-Underfull \hbox (badness 2237) in paragraph at lines 972--973
+Underfull \hbox (badness 2237) in paragraph at lines 955--956
 \T1/ppl/m/n/10.95 Cada bloque se desarrollará a lo largo del capítulo pero, par
 a tener una idea
  []
 
 
-Underfull \hbox (badness 1708) in paragraph at lines 979--982
+Underfull \hbox (badness 1708) in paragraph at lines 962--965
 \T1/ppl/m/n/10.95 Cuando el robot recibe los datos los convierte en instruccion
 es para mover los
  []
 
-[27
-
-] <images/cameraBlender.png, id=638, 857.45343pt x 530.73282pt>
+[27] <images/cameraBlender.png, id=670, 857.45343pt x 530.73282pt>
 File: images/cameraBlender.png Graphic file (type png)
 
 <use images/cameraBlender.png>
-Package pdftex.def Info: images/cameraBlender.png used on input line 1009.
+Package pdftex.def Info: images/cameraBlender.png used on input line 992.
 (pdftex.def)             Requested size: 341.43437pt x 211.33376pt.
-LaTeX Info: Redefining \. on input line 1016.
-LaTeX Info: Redefining \% on input line 1016.
+LaTeX Info: Redefining \. on input line 999.
+LaTeX Info: Redefining \% on input line 999.
  [28 <./images/cameraBlender.png>]
-<images/Cura2.png, id=644, 675.52374pt x 467.7475pt>
+<images/Cura2.png, id=677, 675.52374pt x 467.7475pt>
 File: images/Cura2.png Graphic file (type png)
  <use images/Cura2.png>
-Package pdftex.def Info: images/Cura2.png used on input line 1020.
+Package pdftex.def Info: images/Cura2.png used on input line 1003.
 (pdftex.def)             Requested size: 320.0935pt x 221.63992pt.
 
-Underfull \hbox (badness 7814) in paragraph at lines 1030--1032
+Underfull \hbox (badness 7814) in paragraph at lines 1013--1015
 \T1/ppl/m/n/10.95 Para recoger el video y mandarlo en tiempo real utilizamos la
  aplicación
  []
 
 
-Underfull \hbox (badness 7012) in paragraph at lines 1030--1032
+Underfull \hbox (badness 7012) in paragraph at lines 1013--1015
 \T1/ppl/m/n/10.95 de software libre mjpeg-streamer, disponible en github. [][]$
 \T1/lmtt/m/n/10.95 https : / / github . com /$
  []
 
-LaTeX Info: Redefining \. on input line 1036.
-LaTeX Info: Redefining \% on input line 1036.
+LaTeX Info: Redefining \. on input line 1019.
+LaTeX Info: Redefining \% on input line 1019.
 [29 <./images/Cura2.png>]
-<images/UsoCPUMjpeg.png, id=653, 512.66531pt x 371.13657pt>
+<images/UsoCPUMjpeg.png, id=688, 512.66531pt x 371.13657pt>
 File: images/UsoCPUMjpeg.png Graphic file (type png)
 
 <use images/UsoCPUMjpeg.png>
-Package pdftex.def Info: images/UsoCPUMjpeg.png used on input line 1043.
+Package pdftex.def Info: images/UsoCPUMjpeg.png used on input line 1026.
 (pdftex.def)             Requested size: 341.43437pt x 247.17647pt.
 
-Underfull \hbox (badness 4621) in paragraph at lines 1056--1058
+Underfull \hbox (badness 4621) in paragraph at lines 1039--1041
 []\T1/ppl/m/n/10.95 En el momento en que se ejecuta el comando la Raspberry emp
 ezará a
  []
 
 
-Underfull \hbox (badness 2556) in paragraph at lines 1056--1058
+Underfull \hbox (badness 2556) in paragraph at lines 1039--1041
 \T1/ppl/m/n/10.95 coger el video de la cámara y transmitirlo en tiempo real a l
 a siguiente url:
  []
 
-LaTeX Info: Redefining \. on input line 1058.
-LaTeX Info: Redefining \% on input line 1058.
+LaTeX Info: Redefining \. on input line 1041.
+LaTeX Info: Redefining \% on input line 1041.
 [30 <./images/UsoCPUMjpeg.png>]
-<images/Streamingcomando.png, id=660, 1329.96875pt x 202.7575pt>
+<images/Streamingcomando.png, id=695, 1329.96875pt x 202.7575pt>
 File: images/Streamingcomando.png Graphic file (type png)
 
 <use images/Streamingcomando.png>
-Package pdftex.def Info: images/Streamingcomando.png used on input line 1062.
+Package pdftex.def Info: images/Streamingcomando.png used on input line 1045.
 (pdftex.def)             Requested size: 341.43437pt x 52.05362pt.
 
-<images/pagStream.png, id=661, 1370.11874pt x 683.55376pt>
+<images/pagStream.png, id=696, 1370.11874pt x 683.55376pt>
 File: images/pagStream.png Graphic file (type png)
 
 <use images/pagStream.png>
-Package pdftex.def Info: images/pagStream.png used on input line 1071.
+Package pdftex.def Info: images/pagStream.png used on input line 1054.
 (pdftex.def)             Requested size: 341.43437pt x 170.33522pt.
 
-Overfull \hbox (39.56567pt too wide) in paragraph at lines 1084--1086
+Overfull \hbox (39.56567pt too wide) in paragraph at lines 1067--1069
 \T1/ppl/m/n/10.95 red don-de se es-tá trans-mi-tien-do el vi-deo del ro-bot \T1
 /lmtt/m/n/10.95 http://192.168.1.33:8080/?action=stream\T1/ppl/m/n/10.95 . 
  []
 
-<images/confVLC.png, id=664, 564.1075pt x 709.65125pt>
+<images/confVLC.png, id=699, 564.1075pt x 709.65125pt>
 File: images/confVLC.png Graphic file (type png)
 
 <use images/confVLC.png>
-Package pdftex.def Info: images/confVLC.png used on input line 1089.
+Package pdftex.def Info: images/confVLC.png used on input line 1072.
 (pdftex.def)             Requested size: 170.71652pt x 214.75949pt.
 
-<images/confSBS.png, id=665, 1001.7425pt x 631.35875pt>
+<images/confSBS.png, id=700, 1001.7425pt x 631.35875pt>
 File: images/confSBS.png Graphic file (type png)
 
 <use images/confSBS.png>
-Package pdftex.def Info: images/confSBS.png used on input line 1090.
+Package pdftex.def Info: images/confSBS.png used on input line 1073.
 (pdftex.def)             Requested size: 170.71652pt x 107.58968pt.
 
-<images/sbsVLC2.png, id=666, 1370.11874pt x 712.6625pt>
+<images/sbsVLC2.png, id=701, 1370.11874pt x 712.6625pt>
 File: images/sbsVLC2.png Graphic file (type png)
 
 <use images/sbsVLC2.png>
-Package pdftex.def Info: images/sbsVLC2.png used on input line 1091.
+Package pdftex.def Info: images/sbsVLC2.png used on input line 1074.
 (pdftex.def)             Requested size: 341.43306pt x 177.58884pt.
-LaTeX Info: Redefining \. on input line 1095.
-LaTeX Info: Redefining \% on input line 1095.
+LaTeX Info: Redefining \. on input line 1078.
+LaTeX Info: Redefining \% on input line 1078.
  [31 <./images/Streamingcomando.png> <./images/pagStream.png>]
-LaTeX Info: Redefining \. on input line 1119.
-LaTeX Info: Redefining \% on input line 1119.
+LaTeX Info: Redefining \. on input line 1102.
+LaTeX Info: Redefining \% on input line 1102.
  [32 <./images/confVLC.png> <./images/confSBS.png> <./images/sbsVLC2.png>]
-Underfull \hbox (badness 1796) in paragraph at lines 1146--1146
+Underfull \hbox (badness 1796) in paragraph at lines 1129--1129
 \T1/ppl/m/n/10.95 sobre si mismo hacia la \T1/ppl/b/n/10.95 derecha\T1/ppl/m/n/
 10.95 , sin
  []
 
-<images/movder.png, id=685, 747.79375pt x 1056.94875pt>
+<images/movder.png, id=719, 747.79375pt x 1056.94875pt>
 File: images/movder.png Graphic file (type png)
 
 <use images/movder.png>
-Package pdftex.def Info: images/movder.png used on input line 1147.
+Package pdftex.def Info: images/movder.png used on input line 1130.
 (pdftex.def)             Requested size: 76.68929pt x 108.405pt.
 
-<images/movderbuena.png, id=686, 747.79375pt x 1056.94875pt>
+<images/movderbuena.png, id=720, 747.79375pt x 1056.94875pt>
 File: images/movderbuena.png Graphic file (type png)
 
 <use images/movderbuena.png>
-Package pdftex.def Info: images/movderbuena.png used on input line 1147.
+Package pdftex.def Info: images/movderbuena.png used on input line 1130.
 (pdftex.def)             Requested size: 76.68929pt x 108.405pt.
 
-<images/movupbuena.png, id=687, 747.79375pt x 1056.94875pt>
+<images/movupbuena.png, id=721, 747.79375pt x 1056.94875pt>
 File: images/movupbuena.png Graphic file (type png)
 
 <use images/movupbuena.png>
-Package pdftex.def Info: images/movupbuena.png used on input line 1157.
+Package pdftex.def Info: images/movupbuena.png used on input line 1140.
 (pdftex.def)             Requested size: 76.68929pt x 108.405pt.
 
-<images/movdownbuena.png, id=688, 747.79375pt x 1056.94875pt>
+<images/movdownbuena.png, id=722, 747.79375pt x 1056.94875pt>
 File: images/movdownbuena.png Graphic file (type png)
 
 <use images/movdownbuena.png>
-Package pdftex.def Info: images/movdownbuena.png used on input line 1157.
+Package pdftex.def Info: images/movdownbuena.png used on input line 1140.
 (pdftex.def)             Requested size: 76.68929pt x 108.405pt.
-LaTeX Info: Redefining \. on input line 1169.
-LaTeX Info: Redefining \% on input line 1169.
+LaTeX Info: Redefining \. on input line 1152.
+LaTeX Info: Redefining \% on input line 1152.
  [33 <./images/movder.png> <./images/movderbuena.png>]
-Underfull \hbox (badness 1132) in paragraph at lines 1212--1213
+Underfull \hbox (badness 1132) in paragraph at lines 1195--1196
 \T1/ppl/m/n/10.95 un cuaternión que representa la orientación de las Oculus Rif
 t en un el espacio
  []
 
-LaTeX Info: Redefining \. on input line 1232.
-LaTeX Info: Redefining \% on input line 1232.
+LaTeX Info: Redefining \. on input line 1218.
+LaTeX Info: Redefining \% on input line 1218.
 [34 <./images/movupbuena.png> <./images/movdownbuena.png>]
 ("C:\Users\Cristian Fernandez\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listi
 ngs\lstlang1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-Underfull \hbox (badness 2582) in paragraph at lines 1279--1280
+Underfull \hbox (badness 2582) in paragraph at lines 1265--1266
 []\T1/ppl/m/n/10.95 Una vez que tiene los datos los transforma en comandos váli
 dos para los
  []
 
-LaTeX Info: Redefining \. on input line 1291.
-LaTeX Info: Redefining \% on input line 1291.
-[35] <images/PWMServos.png, id=733, 575.14874pt x 406.51875pt>
+LaTeX Info: Redefining \. on input line 1277.
+LaTeX Info: Redefining \% on input line 1277.
+[35] <images/PWMServos.png, id=768, 575.14874pt x 406.51875pt>
 File: images/PWMServos.png Graphic file (type png)
 
 <use images/PWMServos.png>
-Package pdftex.def Info: images/PWMServos.png used on input line 1302.
+Package pdftex.def Info: images/PWMServos.png used on input line 1289.
 (pdftex.def)             Requested size: 341.43437pt x 241.33269pt.
-LaTeX Info: Redefining \. on input line 1337.
-LaTeX Info: Redefining \% on input line 1337.
+LaTeX Info: Redefining \. on input line 1324.
+LaTeX Info: Redefining \% on input line 1324.
  [36 <./images/PWMServos.png>]
-LaTeX Info: Redefining \. on input line 1374.
-LaTeX Info: Redefining \% on input line 1374.
+LaTeX Info: Redefining \. on input line 1361.
+LaTeX Info: Redefining \% on input line 1361.
  [37] [38
 
 ]
-<images/CicloPruebas.png, id=753, 385.44pt x 347.04657pt>
+<images/CicloPruebas.png, id=787, 385.44pt x 347.04657pt>
 File: images/CicloPruebas.png Graphic file (type png)
 
 <use images/CicloPruebas.png>
-Package pdftex.def Info: images/CicloPruebas.png used on input line 1385.
+Package pdftex.def Info: images/CicloPruebas.png used on input line 1372.
 (pdftex.def)             Requested size: 256.07741pt x 230.56595pt.
  [39 <./images/CicloPruebas.png>]
-Underfull \hbox (badness 1127) in paragraph at lines 1403--1404
+Underfull \hbox (badness 1127) in paragraph at lines 1396--1397
 []\T1/ppl/m/n/10.95 Tras este primer ciclo se realizaron dos ciclos más hasta q
 ue se consiguieron
  []
 
-LaTeX Info: Redefining \. on input line 1431.
-LaTeX Info: Redefining \% on input line 1431.
+LaTeX Info: Redefining \. on input line 1417.
+LaTeX Info: Redefining \% on input line 1417.
 [40]
-Overfull \hbox (60.98436pt too wide) in paragraph at lines 1453--1470
-[][] 
- []
+LaTeX Info: Redefining \. on input line 1456.
+LaTeX Info: Redefining \% on input line 1456.
+ [41] <images/excel.png, id=807, 518.738pt x 834.317pt>
+File: images/excel.png Graphic file (type png)
 
-LaTeX Info: Redefining \. on input line 1493.
-LaTeX Info: Redefining \% on input line 1493.
-[41] <images/ResultadosTiempos.png, id=768, 612.03656pt x 288.3272pt>
-File: images/ResultadosTiempos.png Graphic file (type png)
-
-<use images/ResultadosTiempos.png>
-Package pdftex.def Info: images/ResultadosTiempos.png used on input line 1537.
-(pdftex.def)             Requested size: 405.45047pt x 191.00485pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-LaTeX Info: Redefining \. on input line 1572.
-LaTeX Info: Redefining \% on input line 1572.
-[42 <./images/ResultadosTiempos.png>]
-<images/SensacionControl.png, id=773, 363.60844pt x 216.05719pt>
+<use images/excel.png>
+Package pdftex.def Info: images/excel.png used on input line 1476.
+(pdftex.def)             Requested size: 298.75264pt x 480.51785pt.
+LaTeX Info: Redefining \. on input line 1482.
+LaTeX Info: Redefining \% on input line 1482.
+ [42 <./images/excel.png>]
+<images/SensacionControl.png, id=814, 363.60844pt x 216.05719pt>
 File: images/SensacionControl.png Graphic file (type png)
 
 <use images/SensacionControl.png>
-Package pdftex.def Info: images/SensacionControl.png used on input line 1578.
+Package pdftex.def Info: images/SensacionControl.png used on input line 1487.
 (pdftex.def)             Requested size: 362.77525pt x 215.56871pt.
-LaTeX Info: Redefining \. on input line 1619.
-LaTeX Info: Redefining \% on input line 1619.
+LaTeX Info: Redefining \. on input line 1528.
+LaTeX Info: Redefining \% on input line 1528.
  [43 <./images/SensacionControl.png>] [44
 
 ]
 [45]
-Underfull \hbox (badness 1430) in paragraph at lines 1654--1655
+Underfull \hbox (badness 1430) in paragraph at lines 1567--1569
 []\T1/ppl/m/n/10.95 También ha sido una sorpresa descubrir la gran variedad de 
 posibilidades a
  []
 
 
-Underfull \hbox (badness 1389) in paragraph at lines 1663--1664
+Underfull \hbox (badness 1389) in paragraph at lines 1575--1576
 []\T1/ppl/m/n/10.95 En conclusión este trabajo ha sido muy instructivo y ha amp
 liado de forma
  []
 
-LaTeX Info: Redefining \. on input line 1677.
-LaTeX Info: Redefining \% on input line 1677.
+LaTeX Info: Redefining \. on input line 1582.
+LaTeX Info: Redefining \% on input line 1582.
 [46] (hpcap40g.bbl
-Underfull \hbox (badness 1609) in paragraph at lines 21--26
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [47] [48
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 31--36
+[]\T1/ppl/m/n/10.95 Xataka.  Los me-jo-res jue-gos de reali-dad vir-tual pa-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--36
+\T1/ppl/m/n/10.95 ra 2016.  [][]$\T1/lmtt/m/n/10.95 https : / / www . xataka . 
+com / videojuegos /$
+ []
+
+
+Overfull \hbox (24.82127pt too wide) in paragraph at lines 31--36
+$\T1/lmtt/m/n/10.95 los-[]mejores-[]juegos-[]de-[]realidad-[]virtual-[]para-[]2
+016-[]se-[]estan-[]cocinando-[]ahora$[][]\T1/ppl/m/n/10.95 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--54
+[]\T1/ppl/m/n/10.95 D.F. Ko-cian, AE-ROS-PA-CE ME-DI-CAL RE-SEARCH LAB WRIGHT-
+ []
+
+[49]
+Underfull \hbox (badness 8038) in paragraph at lines 77--83
+[]\T1/ppl/m/n/10.95 Roberto Lloréns, Enrique Noé, Carolina Colomer, and Mariano
+ Alcañiz.
+ []
+
+
+Underfull \hbox (badness 1609) in paragraph at lines 106--111
 []\T1/ppl/m/n/10.95 G. Hubens, H. Coveliers, L. Balliu, M. Ruppert, and W. Vane
 erdeweg.  A
  []
 
-) [47
+)
+LaTeX Info: Redefining \. on input line 1595.
+LaTeX Info: Redefining \% on input line 1595.
+ [50] <images/TablaDHCP2.png, id=855, 1355.0625pt x 690.58pt>
+File: images/TablaDHCP2.png Graphic file (type png)
+
+<use images/TablaDHCP2.png>
+Package pdftex.def Info: images/TablaDHCP2.png used on input line 1600.
+(pdftex.def)             Requested size: 405.45047pt x 206.62766pt.
+
+<images/confRaspiWifi.png, id=856, 718.685pt x 293.095pt>
+File: images/confRaspiWifi.png Graphic file (type png)
+
+<use images/confRaspiWifi.png>
+Package pdftex.def Info: images/confRaspiWifi.png used on input line 1608.
+(pdftex.def)             Requested size: 405.45047pt x 165.35747pt.
+ [51
+
+ <./images/TablaDHCP2.png> <./images/confRaspiWifi.png>] [52
+
+] <images/Circuito.jpg, id=867, 963.6pt x 1284.8pt>
+File: images/Circuito.jpg Graphic file (type jpg)
+
+<use images/Circuito.jpg>
+Package pdftex.def Info: images/Circuito.jpg used on input line 1618.
+(pdftex.def)             Requested size: 213.39568pt x 284.5193pt.
+
+Overfull \hbox (60.98436pt too wide) in paragraph at lines 1633--1650
+[][] 
+ []
 
 
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-] [48
 
-]
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[53 <./images/Circuito.jpg>]
+LaTeX Info: Redefining \. on input line 1717.
+LaTeX Info: Redefining \% on input line 1717.
+ [54]
 runsystem(makeindex hpcap40g.idx)...executed (allowed).
 
- (hpcap40g.ind) 
+ (hpcap40g.ind)
+
 AED: lastpage setting LastPage
 \tf@toc=\write10
 \openout10 = `hpcap40g.toc'.
@@ -2627,8 +2676,8 @@ AED: lastpage setting LastPage
 \tf@lof=\write12
 \openout12 = `hpcap40g.lof'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1688.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1688.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1720.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1720.
 (hpcap40g.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
@@ -2637,23 +2686,23 @@ LaTeX Info: Redefining \% on input line 33.
 LaTeX Info: Redefining \. on input line 42.
 LaTeX Info: Redefining \% on input line 42.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1688.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1688.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1720.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1720.
 
 Package rerunfilecheck Info: File `hpcap40g.out' has not changed.
-(rerunfilecheck)             Checksum: 038463B9434B702A9A621172C0380FD0;4332.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1688.
+(rerunfilecheck)             Checksum: 5FA18A1F4AA13181D275A727E57BBE4C;4522.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1720.
  ) 
 Here is how much of TeX's memory you used:
- 45767 strings out of 493357
- 801324 string characters out of 3136821
- 1078804 words of memory out of 3000000
- 48317 multiletter control sequences out of 15000+200000
+ 45820 strings out of 493357
+ 802197 string characters out of 3136821
+ 1080154 words of memory out of 3000000
+ 48350 multiletter control sequences out of 15000+200000
  100370 words of font info for 106 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,15n,94p,10428b,2294s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/Cri
-stian Fernandez/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lato/lato-02.
+{C:/Users/Cristian Fernandez/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvip
+s/lato/lato-02.enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.
 enc}{C:/Users/Cristian Fernandez/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dv
 ips/lato/lato-01.enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontnam
 e/8r.enc}<C:/Users/Cristian Fernandez/AppData/Local/Programs/MiKTeX 2.9/fonts/t
@@ -2669,9 +2718,9 @@ es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files
 X 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
 nts/type1/urw/palatino/uplr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
 1/urw/palatino/uplri8a.pfb>
-Output written on hpcap40g.pdf (60 pages, 5315193 bytes).
+Output written on hpcap40g.pdf (68 pages, 5507896 bytes).
 PDF statistics:
- 888 PDF objects out of 1000 (max. 8388607)
- 198 named destinations out of 1000 (max. 500000)
- 730 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 971 PDF objects out of 1000 (max. 8388607)
+ 217 named destinations out of 1000 (max. 500000)
+ 751 words of extra memory for PDF output out of 10000 (max. 10000000)
 

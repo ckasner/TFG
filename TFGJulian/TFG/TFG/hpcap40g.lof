@@ -17,26 +17,29 @@
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{20}{figure.caption.15}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{20}{figure.caption.15}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Esquema conexiones servos , c\IeC {\'a}mara, Raspberry Pi 3\relax }}{21}{figure.caption.16}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Tabla DHCP del router con las parejas MAC-IP fijas\relax }}{22}{figure.caption.17}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Archivo de configuraci\IeC {\'o}n de red Raspberry Pi 3\relax }}{22}{figure.caption.18}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces \relax }}{24}{figure.caption.19}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Esquema conexiones\relax }}{25}{figure.caption.23}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Ejes de giro}}}{25}{figure.caption.23}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Oculus Rift DK2. Gafas de realidad virtual que se utilizan para este trabajo}}}{25}{figure.caption.23}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Esquema funcional\relax }}{26}{figure.caption.24}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces \relax }}{23}{figure.caption.17}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Esquema conexiones\relax }}{24}{figure.caption.21}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Ejes de giro}}}{24}{figure.caption.21}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Oculus Rift DK2. Gafas de realidad virtual que se utilizan para este trabajo}}}{24}{figure.caption.21}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Esquema funcional\relax }}{25}{figure.caption.22}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Dise\IeC {\~n}o 3D de la pinza de agarre en Blender\relax }}{28}{figure.caption.25}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Imagen de la configuraci\IeC {\'o}n del Cura para enviar la Pieza de agarre a la impresora 3D\relax }}{29}{figure.caption.26}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Uso de CPU del programa Mjpeg-Streamer por el que se hae el streaming de video\relax }}{30}{figure.caption.27}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Ejecuci\IeC {\'o}n del comando para iniciar el streaming\relax }}{31}{figure.caption.28}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces P\IeC {\'a}gina html donde se recibe el streaming a tiempo real desde la Raspberry \relax }}{31}{figure.caption.29}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Configuraci\IeC {\'o}n y resultado de la reproducci\IeC {\'o}n de video en VLC\relax }}{32}{figure.caption.30}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Relaci\IeC {\'o}n entre el PW y la posici\IeC {\'o}n de los servomotores\relax }}{36}{figure.caption.35}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Medio de reproducci\IeC {\'o}n-Ubicaci\IeC {\'o}n de red}}}{36}{figure.caption.35}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Divisi\IeC {\'o}n de im\IeC {\'a}genes}}}{36}{figure.caption.35}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Reproducci\IeC {\'o}n SBS}}}{36}{figure.caption.35}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Dise\IeC {\~n}o 3D de la pinza de agarre en Blender\relax }}{28}{figure.caption.23}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Imagen de la configuraci\IeC {\'o}n del Cura para enviar la Pieza de agarre a la impresora 3D\relax }}{29}{figure.caption.24}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Uso de CPU del programa Mjpeg-Streamer por el que se hae el streaming de video\relax }}{30}{figure.caption.25}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Ejecuci\IeC {\'o}n del comando para iniciar el streaming\relax }}{31}{figure.caption.26}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces P\IeC {\'a}gina html donde se recibe el streaming a tiempo real desde la Raspberry \relax }}{31}{figure.caption.27}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Configuraci\IeC {\'o}n y resultado de la reproducci\IeC {\'o}n de video en VLC\relax }}{32}{figure.caption.28}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Relaci\IeC {\'o}n entre el PW y la posici\IeC {\'o}n de los servomotores\relax }}{36}{figure.caption.33}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Medio de reproducci\IeC {\'o}n-Ubicaci\IeC {\'o}n de red}}}{36}{figure.caption.33}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Divisi\IeC {\'o}n de im\IeC {\'a}genes}}}{36}{figure.caption.33}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Reproducci\IeC {\'o}n SBS}}}{36}{figure.caption.33}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Fases del ciclo cerrado de pruebas que se han realizado para valorar la funcionalidad del dispositivo.\relax }}{39}{figure.caption.38}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Promedio del tiempo que tardan los usuarios en realizar el circuito.\relax }}{42}{figure.caption.43}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Variaci\IeC {\'o}n de la sensaci\IeC {\'o}n de control de los usuarios antes y despu\IeC {\'e}s de realizar el circuito.\relax }}{43}{figure.caption.45}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Fases del ciclo cerrado de pruebas que se han realizado para valorar la funcionalidad del dispositivo.\relax }}{39}{figure.caption.36}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Promedio del tiempo que tardan los usuarios en realizar el circuito.\relax }}{42}{figure.caption.39}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Variaci\IeC {\'o}n de la sensaci\IeC {\'o}n de control de los usuarios antes y despu\IeC {\'e}s de realizar el circuito.\relax }}{43}{figure.caption.40}
 \addvspace {10pt}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Tabla DHCP del router con las parejas MAC-IP fijas\relax }}{51}{figure.caption.44}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Archivo de configuraci\IeC {\'o}n de red Raspberry Pi 3\relax }}{51}{figure.caption.45}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Circuito que deben seguir los usuarios en las pruebas.\relax }}{53}{figure.caption.46}

@@ -1,21 +1,106 @@
 \begin{thebibliography}{10}
 
-\bibitem{hedgley1982general}
-D.~R. Hedgley.
-\newblock {\em A general solution to the hidden-line problem}, volume 1085.
-\newblock Citeseer, 1982.
+\bibitem{vreyes}
+Changyin Zhou.
+\newblock {How bad are Virtual Reality headsets for your eyes}.
+\newblock
+  \url{https://www.quora.com/How-bad-are-Virtual-Reality-headsets-for-your-eyes#},
+  2015.
+
+\bibitem{Sutherland}
+Ivan~E. Sutherland.
+\newblock A head-mounted three dimensional display.
+\newblock In {\em Proceedings of the December 9-11, 1968, Fall Joint Computer
+  Conference, Part I}, AFIPS '68 (Fall, part I), pages 757--764, New York, NY,
+  USA, 1968. ACM.
 
 \bibitem{JCLP:JCLP10244}
-H.~G. Hoffman, D.~R. Patterson, J.~Magula, G.~J. Carrougher, K.~Zeltzer,
-  S.~Dagadakis, and S.~R. Sharar.
+Hunter~G. Hoffman, David~R. Patterson, Jeff Magula, Gretchen~J. Carrougher,
+  Karen Zeltzer, Stephen Dagadakis, and Sam~R. Sharar.
 \newblock Water-friendly virtual reality pain control during wound care.
 \newblock {\em Journal of Clinical Psychology}, 60(2):189--195, 2004.
 
+\bibitem{tahriri2015optimizing}
+F~Tahriri, M~Mousavi, HJ~Yap, MD~Siti~Zawiah, and Z~Taha.
+\newblock Optimizing the robot arm movement time using virtual reality robotic
+  teaching system.
+\newblock {\em International Journal of Simulation Modelling}, 14(1):28--38,
+  2015.
+
+\bibitem{vrandvg}
+Xataka.
+\newblock {Los mejores juegos de realidad virtual para 2016}.
+\newblock
+  \url{https://www.xataka.com/videojuegos/los-mejores-juegos-de-realidad-virtual-para-2016-se-estan-cocinando-ahora},
+  2015.
+
+\bibitem{leeb2012tetraplegic}
+Robert Leeb, Doron Friedman, Mel Slater, and Gert Pfurtscheller.
+\newblock A tetraplegic patient controls a wheelchair in virtual reality.
+\newblock In {\em BRAINPLAY 07 Brain-Computer Interfaces and Games Workshop at
+  ACE (Advances in Computer Entertainment) 2007}, page~37, 2012.
+
+\bibitem{hedgley1982general}
+David~R Hedgley.
+\newblock {\em A general solution to the hidden-line problem}, volume 1085.
+\newblock Citeseer, 1982.
+
+\bibitem{kocian1977visually}
+D.F. Kocian, AEROSPACE MEDICAL RESEARCH LAB WRIGHT-PATTERSON~AFB OHIO., and Air
+  Force Aerospace Medical Research~Laboratory (U.S.).
+\newblock {\em A Visually-Coupled Airborne Systems Simulator (VCASS): An
+  Approach to Visual Simulation}.
+\newblock Aerospace Medical Research Laboratories, 1977.
+
+\bibitem{LamargueHamel201594}
+Delphine Lamargue-Hamel, Mathilde Deloire, Aurore Saubusse, Aurélie Ruet,
+  Jacques Taillard, Pierre Philip, and Bruno Brochet.
+\newblock Cognitive evaluation by tasks in a virtual reality environment in
+  multiple sclerosis.
+\newblock {\em Journal of the Neurological Sciences}, 359(1–2):94 -- 99,
+  2015.
+
 \bibitem{hu2016virtual}
-F.~Hu.
+Fei Hu.
 \newblock {\em Virtual Reality Enhanced Robotic Systems for Disability
   Rehabilitation}.
 \newblock IGI Global, 2016.
+
+\bibitem{kaliki2013evaluation}
+Rahul~R Kaliki, Rahman Davoodi, and Gerald~E Loeb.
+\newblock Evaluation of a noninvasive command scheme for upper-limb prostheses
+  in a virtual reality reach and grasp task.
+\newblock {\em IEEE Transactions on Biomedical Engineering}, 60(3):792--802,
+  2013.
+
+\bibitem{Llorens2015418}
+Roberto Lloréns, Enrique Noé, Carolina Colomer, and Mariano Alcañiz.
+\newblock Effectiveness, usability, and cost-benefit of a virtual
+  reality–based telerehabilitation program for balance recovery after stroke:
+  A randomized controlled trial.
+\newblock {\em Archives of Physical Medicine and Rehabilitation}, 96(3):418 --
+  425.e2, 2015.
+
+\bibitem{patton2006robotics}
+James Patton, Greg Dawe, Chris Scharver, Ferdinando Mussa-Ivaldi, and Robert
+  Kenyon.
+\newblock Robotics and virtual reality: a perfect marriage for motor control
+  research and rehabilitation.
+\newblock {\em Assistive Technology}, 18(2):181--195, 2006.
+
+\bibitem{Nguyen2001}
+Laurent~A. Nguyen, Maria Bualat, Laurence~J. Edwards, Lorenzo Flueckiger,
+  Charles Neveu, Kurt Schwehr, Michael~D. Wagner, and Eric Zbinden.
+\newblock Virtual reality interfaces for visualization and control of remote
+  vehicles.
+\newblock {\em Autonomous Robots}, 11(1):59--68, 2001.
+
+\bibitem{connolly2014validation}
+Michael Connolly, Johnathan Seligman, Andrew Kastenmeier, Matthew Goldblatt,
+  and Jon~C Gould.
+\newblock Validation of a virtual reality-based robotic surgical skills
+  curriculum.
+\newblock {\em Surgical endoscopy}, 28(5):1691--1694, 2014.
 
 \bibitem{Hubens2003}
 G.~Hubens, H.~Coveliers, L.~Balliu, M.~Ruppert, and W.~Vaneerdeweg.
@@ -24,46 +109,14 @@ G.~Hubens, H.~Coveliers, L.~Balliu, M.~Ruppert, and W.~Vaneerdeweg.
 \newblock {\em Surgical Endoscopy And Other Interventional Techniques},
   17(10):1595--1599, 2003.
 
-\bibitem{kocian1977visually}
-D.~Kocian, A.~M. R. L. W.-P.~A. OHIO., and A.~F. A. M. R.~L. (U.S.).
-\newblock {\em A Visually-Coupled Airborne Systems Simulator (VCASS): An
-  Approach to Visual Simulation}.
-\newblock Aerospace Medical Research Laboratories, 1977.
+\bibitem{DORA}
+{Dexterous Observational Roving Automaton}.
+\newblock \url{http://doraplatform.com/}.
 
-\bibitem{LamargueHamel201594}
-D.~Lamargue-Hamel, M.~Deloire, A.~Saubusse, A.~Ruet, J.~Taillard, P.~Philip,
-  and B.~Brochet.
-\newblock Cognitive evaluation by tasks in a virtual reality environment in
-  multiple sclerosis.
-\newblock {\em Journal of the Neurological Sciences}, 359(1–2):94 -- 99,
-  2015.
-
-\bibitem{Llorens2015418}
-R.~Lloréns, E.~Noé, C.~Colomer, and M.~Alcañiz.
-\newblock Effectiveness, usability, and cost-benefit of a virtual
-  reality–based telerehabilitation program for balance recovery after stroke:
-  A randomized controlled trial.
-\newblock {\em Archives of Physical Medicine and Rehabilitation}, 96(3):418 --
-  425.e2, 2015.
-
-\bibitem{Nguyen2001}
-L.~A. Nguyen, M.~Bualat, L.~J. Edwards, L.~Flueckiger, C.~Neveu, K.~Schwehr,
-  M.~D. Wagner, and E.~Zbinden.
-\newblock Virtual reality interfaces for visualization and control of remote
-  vehicles.
-\newblock {\em Autonomous Robots}, 11(1):59--68, 2001.
-
-\bibitem{patton2006robotics}
-J.~Patton, G.~Dawe, C.~Scharver, F.~Mussa-Ivaldi, and R.~Kenyon.
-\newblock Robotics and virtual reality: a perfect marriage for motor control
-  research and rehabilitation.
-\newblock {\em Assistive Technology}, 18(2):181--195, 2006.
-
-\bibitem{Sutherland}
-I.~E. Sutherland.
-\newblock A head-mounted three dimensional display.
-\newblock In {\em Proceedings of the December 9-11, 1968, Fall Joint Computer
-  Conference, Part I}, AFIPS '68 (Fall, part I), pages 757--764, New York, NY,
-  USA, 1968. ACM.
+\bibitem{garcia2012low}
+Carlos Garc{\'\i}a-Saura and Juan Gonz{\'a}lez-G{\'o}mez.
+\newblock Low cost educational platform for robotics, using open-source 3d
+  printers and open-source hardware.
+\newblock In {\em ICERI2012 Proceedings}, pages 2699--2706. IATED, 2012.
 
 \end{thebibliography}

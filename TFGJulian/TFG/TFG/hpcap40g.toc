@@ -26,7 +26,7 @@
 \contentsline {section}{\numberline {3.1}Requisitos Funcionales}{13}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Construcci\IeC {\'o}n del Robot}{13}{subsection.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}Streaming}{14}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Control del Robot}{14}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.3}Control del Robot}{15}{subsection.3.1.3}
 \contentsline {section}{\numberline {3.2}Requisitos no funcionales}{15}{section.3.2}
 \contentsline {chapter}{\chapternumberline {4}Dise\IeC {\~n}o}{17}{chapter.4}
 \contentsline {section}{\numberline {4.1}Dise\IeC {\~n}o del robot}{17}{section.4.1}
@@ -35,41 +35,42 @@
 \contentsline {paragraph}{PWM}{19}{section*.14}
 \contentsline {subsection}{\numberline {4.1.3}C\IeC {\'a}mara}{20}{subsection.4.1.3}
 \contentsline {section}{\numberline {4.2}Router}{21}{section.4.2}
-\contentsline {section}{\numberline {4.3}Oculus Rift}{23}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Detecci\IeC {\'o}n de la orientaci\IeC {\'o}n}{23}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Sensaci\IeC {\'o}n de inmersi\IeC {\'o}n \_ 3D}{24}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}OVR}{24}{subsection.4.3.3}
-\contentsline {subsubsection}{Inicializaci\IeC {\'o}n}{24}{section*.20}
-\contentsline {subsubsection}{Bucle principal}{25}{section*.21}
-\contentsline {subsubsection}{Liberaci\IeC {\'o}n de recursos y fin de proceso.}{25}{section*.22}
-\contentsline {section}{\numberline {4.4}Dise\IeC {\~n}o de conexiones entre m\IeC {\'o}dulos}{25}{section.4.4}
-\contentsline {section}{\numberline {4.5}Esquema funcional}{26}{section.4.5}
+\contentsline {section}{\numberline {4.3}Oculus Rift}{22}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Detecci\IeC {\'o}n de la orientaci\IeC {\'o}n}{22}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Sensaci\IeC {\'o}n de inmersi\IeC {\'o}n 3D}{23}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}OVR}{23}{subsection.4.3.3}
+\contentsline {subsubsection}{Inicializaci\IeC {\'o}n}{23}{section*.18}
+\contentsline {subsubsection}{Bucle principal}{24}{section*.19}
+\contentsline {subsubsection}{Liberaci\IeC {\'o}n de recursos y fin de proceso.}{24}{section*.20}
+\contentsline {section}{\numberline {4.4}Dise\IeC {\~n}o de conexiones entre m\IeC {\'o}dulos}{24}{section.4.4}
+\contentsline {section}{\numberline {4.5}Esquema funcional}{25}{section.4.5}
 \contentsline {chapter}{\chapternumberline {5}Desarrollo e implementaci\IeC {\'o}n}{27}{chapter.5}
 \contentsline {section}{\numberline {5.1}Construcci\IeC {\'o}n del Robot}{28}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}Soporte de la c\IeC {\'a}mara}{28}{subsection.5.1.1}
 \contentsline {section}{\numberline {5.2}Streaming}{29}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Raspberry Pi3}{29}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Ordenador}{31}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.1}Raspberry Pi3 - Transmisi\IeC {\'o}n de video}{29}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Ordenador - Recepci\IeC {\'o}n de video}{31}{subsection.5.2.2}
 \contentsline {section}{\numberline {5.3}Control del Robot}{33}{section.5.3}
 \contentsline {subsection}{\numberline {5.3.1}Control del Robot por parte del usuario}{33}{subsection.5.3.1}
 \contentsline {subsection}{\numberline {5.3.2}Recogida y procesamiento de la informaci\IeC {\'o}n que mandan las Oculus al ordenador}{34}{subsection.5.3.2}
-\contentsline {paragraph}{Env\IeC {\'\i }o de la informaci\IeC {\'o}n procesada a la Raspberry Pi 3}{35}{section*.33}
-\contentsline {subparagraph}{Recepci\IeC {\'o}n de los datos en el robot}{35}{section*.34}
+\contentsline {paragraph}{Env\IeC {\'\i }o de la informaci\IeC {\'o}n procesada a la Raspberry Pi 3}{35}{section*.31}
+\contentsline {paragraph}{Recepci\IeC {\'o}n de los datos en el robot}{35}{section*.32}
 \contentsline {subsection}{\numberline {5.3.3}Movimiento de los servomotores}{35}{subsection.5.3.3}
-\contentsline {paragraph}{Control de los motores de las ruedas del robot}{36}{section*.36}
-\contentsline {paragraph}{Control del motor de la c\IeC {\'a}mara del robot}{37}{section*.37}
+\contentsline {paragraph}{Control de los motores de las ruedas del robot}{36}{section*.34}
+\contentsline {paragraph}{Control del motor de la c\IeC {\'a}mara del robot}{37}{section*.35}
 \contentsline {chapter}{\chapternumberline {6}Pruebas y Resultados}{39}{chapter.6}
 \contentsline {section}{\numberline {6.1}Fases del ciclo cerrado}{39}{section.6.1}
 \contentsline {section}{\numberline {6.2}Desarrollo de las pruebas}{40}{section.6.2}
 \contentsline {subsection}{\numberline {6.2.1}Primer ciclo}{40}{subsection.6.2.1}
-\contentsline {paragraph}{Valoraci\IeC {\'o}n del usuario}{40}{section*.39}
+\contentsline {paragraph}{Valoraci\IeC {\'o}n del usuario}{41}{section*.37}
 \contentsline {subsection}{\numberline {6.2.2}Segundo ciclo}{41}{subsection.6.2.2}
-\contentsline {paragraph}{Comentarios tras las pruebas}{41}{section*.41}
-\contentsline {subsection}{\numberline {6.2.3}Tercer ciclo}{41}{subsection.6.2.3}
+\contentsline {paragraph}{Comentarios tras las pruebas}{41}{section*.38}
+\contentsline {subsection}{\numberline {6.2.3}Tercer ciclo}{42}{subsection.6.2.3}
 \contentsline {chapter}{\chapternumberline {7}Conclusiones y trabajo futuro}{45}{chapter.7}
 \contentsline {section}{\numberline {7.1}Conclusiones}{45}{section.7.1}
-\contentsline {paragraph}{Puntos positivos y a mejorar}{45}{section*.46}
+\contentsline {paragraph}{Puntos positivos y a mejorar}{45}{section*.41}
 \contentsline {subsection}{\numberline {7.1.1}Tecnolog\IeC {\'\i }as aprendidas}{46}{subsection.7.1.1}
-\contentsline {section}{\numberline {7.2}Trabajo futuro}{46}{section.7.2}
- \vspace {10pt} \cftbeforechapterskip \extratocentriesskip \relax 
-\contentsline {chapter}{Bibliograf\'{\i }a}{47}{section*.48}
+\contentsline {section}{\numberline {7.2}Trabajo futuro}{47}{section.7.2}
+\contentsline {chapter}{Bibliograf\'{\i }a}{49}{section*.43}
+\contentsline {appendix}{\chapternumberline {A}Configuraci\IeC {\'o}n de red local}{51}{appendix.A}
+\contentsline {appendix}{\chapternumberline {B}Pruebas}{53}{appendix.B}
