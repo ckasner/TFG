@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.14)  19 JAN 2017 15:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.14)  19 JAN 2017 16:19
 entering extended mode
 **./hpcap40g.tex
 (hpcap40g.tex
@@ -2408,10 +2408,7 @@ Underfull \hbox (badness 7012) in paragraph at lines 1030--1032
 LaTeX Info: Redefining \. on input line 1036.
 LaTeX Info: Redefining \% on input line 1036.
 [29 <./images/Cura2.png>]
-
-LaTeX Warning: Reference `fig::mjeg' on page 30 undefined on input line 1037.
-
-<images/UsoCPUMjpeg.png, id=652, 512.66531pt x 371.13657pt>
+<images/UsoCPUMjpeg.png, id=653, 512.66531pt x 371.13657pt>
 File: images/UsoCPUMjpeg.png Graphic file (type png)
 
 <use images/UsoCPUMjpeg.png>
@@ -2432,14 +2429,14 @@ a siguiente url:
 LaTeX Info: Redefining \. on input line 1058.
 LaTeX Info: Redefining \% on input line 1058.
 [30 <./images/UsoCPUMjpeg.png>]
-<images/Streamingcomando.png, id=659, 1329.96875pt x 202.7575pt>
+<images/Streamingcomando.png, id=660, 1329.96875pt x 202.7575pt>
 File: images/Streamingcomando.png Graphic file (type png)
 
 <use images/Streamingcomando.png>
 Package pdftex.def Info: images/Streamingcomando.png used on input line 1062.
 (pdftex.def)             Requested size: 341.43437pt x 52.05362pt.
 
-<images/pagStream.png, id=660, 1370.11874pt x 683.55376pt>
+<images/pagStream.png, id=661, 1370.11874pt x 683.55376pt>
 File: images/pagStream.png Graphic file (type png)
 
 <use images/pagStream.png>
@@ -2451,21 +2448,21 @@ Overfull \hbox (39.56567pt too wide) in paragraph at lines 1084--1086
 /lmtt/m/n/10.95 http://192.168.1.33:8080/?action=stream\T1/ppl/m/n/10.95 . 
  []
 
-<images/confVLC.png, id=663, 564.1075pt x 709.65125pt>
+<images/confVLC.png, id=664, 564.1075pt x 709.65125pt>
 File: images/confVLC.png Graphic file (type png)
 
 <use images/confVLC.png>
 Package pdftex.def Info: images/confVLC.png used on input line 1089.
 (pdftex.def)             Requested size: 170.71652pt x 214.75949pt.
 
-<images/confSBS.png, id=664, 1001.7425pt x 631.35875pt>
+<images/confSBS.png, id=665, 1001.7425pt x 631.35875pt>
 File: images/confSBS.png Graphic file (type png)
 
 <use images/confSBS.png>
 Package pdftex.def Info: images/confSBS.png used on input line 1090.
 (pdftex.def)             Requested size: 170.71652pt x 107.58968pt.
 
-<images/sbsVLC2.png, id=665, 1370.11874pt x 712.6625pt>
+<images/sbsVLC2.png, id=666, 1370.11874pt x 712.6625pt>
 File: images/sbsVLC2.png Graphic file (type png)
 
 <use images/sbsVLC2.png>
@@ -2482,28 +2479,28 @@ Underfull \hbox (badness 1796) in paragraph at lines 1146--1146
 10.95 , sin
  []
 
-<images/movder.png, id=684, 747.79375pt x 1056.94875pt>
+<images/movder.png, id=685, 747.79375pt x 1056.94875pt>
 File: images/movder.png Graphic file (type png)
 
 <use images/movder.png>
 Package pdftex.def Info: images/movder.png used on input line 1147.
 (pdftex.def)             Requested size: 76.68929pt x 108.405pt.
 
-<images/movderbuena.png, id=685, 747.79375pt x 1056.94875pt>
+<images/movderbuena.png, id=686, 747.79375pt x 1056.94875pt>
 File: images/movderbuena.png Graphic file (type png)
 
 <use images/movderbuena.png>
 Package pdftex.def Info: images/movderbuena.png used on input line 1147.
 (pdftex.def)             Requested size: 76.68929pt x 108.405pt.
 
-<images/movupbuena.png, id=686, 747.79375pt x 1056.94875pt>
+<images/movupbuena.png, id=687, 747.79375pt x 1056.94875pt>
 File: images/movupbuena.png Graphic file (type png)
 
 <use images/movupbuena.png>
 Package pdftex.def Info: images/movupbuena.png used on input line 1157.
 (pdftex.def)             Requested size: 76.68929pt x 108.405pt.
 
-<images/movdownbuena.png, id=687, 747.79375pt x 1056.94875pt>
+<images/movdownbuena.png, id=688, 747.79375pt x 1056.94875pt>
 File: images/movdownbuena.png Graphic file (type png)
 
 <use images/movdownbuena.png>
@@ -2531,7 +2528,7 @@ dos para los
 
 LaTeX Info: Redefining \. on input line 1291.
 LaTeX Info: Redefining \% on input line 1291.
-[35] <images/PWMServos.png, id=732, 575.14874pt x 406.51875pt>
+[35] <images/PWMServos.png, id=733, 575.14874pt x 406.51875pt>
 File: images/PWMServos.png Graphic file (type png)
 
 <use images/PWMServos.png>
@@ -2545,7 +2542,7 @@ LaTeX Info: Redefining \% on input line 1374.
  [37] [38
 
 ]
-<images/CicloPruebas.png, id=752, 385.44pt x 347.04657pt>
+<images/CicloPruebas.png, id=753, 385.44pt x 347.04657pt>
 File: images/CicloPruebas.png Graphic file (type png)
 
 <use images/CicloPruebas.png>
@@ -2566,7 +2563,7 @@ Overfull \hbox (60.98436pt too wide) in paragraph at lines 1453--1470
 
 LaTeX Info: Redefining \. on input line 1493.
 LaTeX Info: Redefining \% on input line 1493.
-[41] <images/ResultadosTiempos.png, id=767, 612.03656pt x 288.3272pt>
+[41] <images/ResultadosTiempos.png, id=768, 612.03656pt x 288.3272pt>
 File: images/ResultadosTiempos.png Graphic file (type png)
 
 <use images/ResultadosTiempos.png>
@@ -2579,7 +2576,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Info: Redefining \. on input line 1572.
 LaTeX Info: Redefining \% on input line 1572.
 [42 <./images/ResultadosTiempos.png>]
-<images/SensacionControl.png, id=772, 363.60844pt x 216.05719pt>
+<images/SensacionControl.png, id=773, 363.60844pt x 216.05719pt>
 File: images/SensacionControl.png Graphic file (type png)
 
 <use images/SensacionControl.png>
@@ -2645,17 +2642,13 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1688.
 
 Package rerunfilecheck Info: File `hpcap40g.out' has not changed.
 (rerunfilecheck)             Checksum: 038463B9434B702A9A621172C0380FD0;4332.
-
-
-LaTeX Warning: There were undefined references.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1688.
  ) 
 Here is how much of TeX's memory you used:
- 45768 strings out of 493357
- 801335 string characters out of 3136821
- 1078840 words of memory out of 3000000
- 48318 multiletter control sequences out of 15000+200000
+ 45767 strings out of 493357
+ 801324 string characters out of 3136821
+ 1078804 words of memory out of 3000000
+ 48317 multiletter control sequences out of 15000+200000
  100370 words of font info for 106 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,15n,94p,10428b,2294s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2676,9 +2669,9 @@ es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files
 X 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
 nts/type1/urw/palatino/uplr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
 1/urw/palatino/uplri8a.pfb>
-Output written on hpcap40g.pdf (60 pages, 5315367 bytes).
+Output written on hpcap40g.pdf (60 pages, 5315193 bytes).
 PDF statistics:
- 887 PDF objects out of 1000 (max. 8388607)
+ 888 PDF objects out of 1000 (max. 8388607)
  198 named destinations out of 1000 (max. 500000)
  730 words of extra memory for PDF output out of 10000 (max. 10000000)
 
