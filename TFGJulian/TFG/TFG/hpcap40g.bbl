@@ -1,10 +1,21 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{hedgley1982general}
+D.~R. Hedgley.
+\newblock {\em A general solution to the hidden-line problem}, volume 1085.
+\newblock Citeseer, 1982.
 
 \bibitem{JCLP:JCLP10244}
 H.~G. Hoffman, D.~R. Patterson, J.~Magula, G.~J. Carrougher, K.~Zeltzer,
   S.~Dagadakis, and S.~R. Sharar.
 \newblock Water-friendly virtual reality pain control during wound care.
 \newblock {\em Journal of Clinical Psychology}, 60(2):189--195, 2004.
+
+\bibitem{hu2016virtual}
+F.~Hu.
+\newblock {\em Virtual Reality Enhanced Robotic Systems for Disability
+  Rehabilitation}.
+\newblock IGI Global, 2016.
 
 \bibitem{Hubens2003}
 G.~Hubens, H.~Coveliers, L.~Balliu, M.~Ruppert, and W.~Vaneerdeweg.
@@ -41,6 +52,12 @@ L.~A. Nguyen, M.~Bualat, L.~J. Edwards, L.~Flueckiger, C.~Neveu, K.~Schwehr,
 \newblock Virtual reality interfaces for visualization and control of remote
   vehicles.
 \newblock {\em Autonomous Robots}, 11(1):59--68, 2001.
+
+\bibitem{patton2006robotics}
+J.~Patton, G.~Dawe, C.~Scharver, F.~Mussa-Ivaldi, and R.~Kenyon.
+\newblock Robotics and virtual reality: a perfect marriage for motor control
+  research and rehabilitation.
+\newblock {\em Assistive Technology}, 18(2):181--195, 2006.
 
 \bibitem{Sutherland}
 I.~E. Sutherland.

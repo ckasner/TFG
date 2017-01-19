@@ -8,19 +8,21 @@
 \contentsline {figure}{\numberline {1.2}{\ignorespaces En este grafo queda resumido el plan de trabajo. Se puede ver c\IeC {\'o}mo la fase de pruebas vuelve a la fase de dise\IeC {\~n}o y desarrollo, ya que el proyecto va mejorando en base a lo que demandan los usuarios.\relax }}{4}{figure.caption.9}
 \addvspace {10pt}
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Sword of Damocles. Imagen obtenida de \textit {A head-mounted three dimensional display} \cite {Sutherland}\relax }}{8}{figure.caption.10}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Rehabilitaci\IeC {\'o}n usando herramientas de realidad virtual. Imagen obtenida de \textit {Water-Friendly Virtual Reality Pain Control During Wound Care} \cite {JCLP:JCLP10244}\relax }}{10}{figure.caption.11}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Rehabilitaci\IeC {\'o}n usando herramientas de realidad virtual. Imagen obtenida de \textit {Water-Friendly Virtual Reality Pain Control During Wound Care} \cite {JCLP:JCLP10244}\relax }}{9}{figure.caption.11}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Da Vinci Surgical System\relax }}{11}{figure.caption.12}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{11}{figure.caption.12}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{11}{figure.caption.12}
 \addvspace {10pt}
 \addvspace {10pt}
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Raspberry Pi 3 model B\relax }}{19}{figure.caption.13}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Onda cuadrada que representa los pulsos que se env\IeC {\'\i }an a los servomotores\relax }}{20}{figure.caption.15}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{20}{figure.caption.15}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{20}{figure.caption.15}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Esquema conexiones servos , c\IeC {\'a}mara, Raspberry Pi 3\relax }}{21}{figure.caption.16}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Tabla DHCP del router con las parejas MAC-IP fijas\relax }}{22}{figure.caption.17}
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Archivo de configuraci\IeC {\'o}n de red Raspberry Pi 3\relax }}{22}{figure.caption.18}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Ejes de giro\relax }}{23}{figure.caption.19}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces \relax }}{24}{figure.caption.19}
 \contentsline {figure}{\numberline {4.7}{\ignorespaces Esquema conexiones\relax }}{25}{figure.caption.23}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Ejes de giro}}}{25}{figure.caption.23}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Oculus Rift DK2. Gafas de realidad virtual que se utilizan para este trabajo}}}{25}{figure.caption.23}
 \contentsline {figure}{\numberline {4.8}{\ignorespaces Esquema funcional\relax }}{26}{figure.caption.24}
 \addvspace {10pt}
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Dise\IeC {\~n}o 3D de la pinza de agarre en Blender\relax }}{28}{figure.caption.25}
@@ -29,13 +31,12 @@
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Ejecuci\IeC {\'o}n del comando para iniciar el streaming\relax }}{31}{figure.caption.28}
 \contentsline {figure}{\numberline {5.5}{\ignorespaces P\IeC {\'a}gina html donde se recibe el streaming a tiempo real desde la Raspberry \relax }}{31}{figure.caption.29}
 \contentsline {figure}{\numberline {5.6}{\ignorespaces Configuraci\IeC {\'o}n y resultado de la reproducci\IeC {\'o}n de video en VLC\relax }}{32}{figure.caption.30}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Posici\IeC {\'o}n de las Oculus respecto al eje X\relax }}{33}{figure.caption.31}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Medio de reproducci\IeC {\'o}n-Ubicaci\IeC {\'o}n de red}}}{33}{figure.caption.31}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Divisi\IeC {\'o}n de im\IeC {\'a}genes}}}{33}{figure.caption.31}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Reproducci\IeC {\'o}n SBS}}}{33}{figure.caption.31}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Relaci\IeC {\'o}n entre el PW y la posici\IeC {\'o}n de los servomotores\relax }}{35}{figure.caption.34}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Relaci\IeC {\'o}n entre el PW y la posici\IeC {\'o}n de los servomotores\relax }}{36}{figure.caption.35}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Medio de reproducci\IeC {\'o}n-Ubicaci\IeC {\'o}n de red}}}{36}{figure.caption.35}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Divisi\IeC {\'o}n de im\IeC {\'a}genes}}}{36}{figure.caption.35}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Reproducci\IeC {\'o}n SBS}}}{36}{figure.caption.35}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Fases del ciclo cerrado de pruebas que se han realizado para valorar la funcionalidad del dispositivo.\relax }}{39}{figure.caption.41}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Promedio del tiempo que tardan los usuarios en realizar el circuito.\relax }}{42}{figure.caption.46}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Variaci\IeC {\'o}n de la sensaci\IeC {\'o}n de control de los usuarios antes y despu\IeC {\'e}s de realizar el circuito.\relax }}{43}{figure.caption.48}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Fases del ciclo cerrado de pruebas que se han realizado para valorar la funcionalidad del dispositivo.\relax }}{39}{figure.caption.38}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Promedio del tiempo que tardan los usuarios en realizar el circuito.\relax }}{42}{figure.caption.43}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Variaci\IeC {\'o}n de la sensaci\IeC {\'o}n de control de los usuarios antes y despu\IeC {\'e}s de realizar el circuito.\relax }}{43}{figure.caption.45}
 \addvspace {10pt}
