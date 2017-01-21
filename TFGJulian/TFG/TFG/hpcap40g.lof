@@ -4,42 +4,52 @@
 \select@language {english}
 \select@language {spanish}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Resumen de los objetivos del proyecto\relax }}{3}{figure.caption.8}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces En este grafo queda resumido el plan de trabajo. Se puede ver c\IeC {\'o}mo la fase de pruebas vuelve a la fase de dise\IeC {\~n}o y desarrollo, ya que el proyecto va mejorando en base a lo que demandan los usuarios.\relax }}{4}{figure.caption.9}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Resumen de los objetivos del proyecto\relax }}{3}{figure.caption.11}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces En este grafo queda resumido el plan de trabajo. Se puede ver c\IeC {\'o}mo la fase de pruebas vuelve a la fase de dise\IeC {\~n}o y desarrollo, ya que el proyecto va mejorando en base a lo que demandan los usuarios.\relax }}{4}{figure.caption.12}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Sword of Damocles. Imagen obtenida de \textit {A head-mounted three dimensional display} \cite {Sutherland}\relax }}{8}{figure.caption.10}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Rehabilitaci\IeC {\'o}n usando herramientas de realidad virtual. Imagen obtenida de \textit {Water-Friendly Virtual Reality Pain Control During Wound Care} \cite {JCLP:JCLP10244}\relax }}{9}{figure.caption.11}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Da Vinci Surgical System\relax }}{11}{figure.caption.12}
-\addvspace {10pt}
-\addvspace {10pt}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Raspberry Pi 3 model B\relax }}{19}{figure.caption.13}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Onda cuadrada que representa los pulsos que se env\IeC {\'\i }an a los servomotores\relax }}{20}{figure.caption.15}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{20}{figure.caption.15}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{20}{figure.caption.15}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Esquema conexiones servos , c\IeC {\'a}mara, Raspberry Pi 3\relax }}{21}{figure.caption.16}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces \relax }}{23}{figure.caption.17}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Esquema conexiones\relax }}{24}{figure.caption.21}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Ejes de giro}}}{24}{figure.caption.21}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Oculus Rift DK2. Gafas de realidad virtual que se utilizan para este trabajo}}}{24}{figure.caption.21}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Esquema funcional\relax }}{25}{figure.caption.22}
-\addvspace {10pt}
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Dise\IeC {\~n}o 3D de la pinza de agarre en Blender\relax }}{28}{figure.caption.23}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Imagen de la configuraci\IeC {\'o}n del Cura para enviar la Pieza de agarre a la impresora 3D\relax }}{29}{figure.caption.24}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Uso de CPU del programa Mjpeg-Streamer por el que se hae el streaming de video\relax }}{30}{figure.caption.25}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Ejecuci\IeC {\'o}n del comando para iniciar el streaming\relax }}{31}{figure.caption.26}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces P\IeC {\'a}gina html donde se recibe el streaming a tiempo real desde la Raspberry \relax }}{31}{figure.caption.27}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Configuraci\IeC {\'o}n y resultado de la reproducci\IeC {\'o}n de video en VLC\relax }}{32}{figure.caption.28}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Relaci\IeC {\'o}n entre el PW y la posici\IeC {\'o}n de los servomotores\relax }}{36}{figure.caption.33}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Medio de reproducci\IeC {\'o}n-Ubicaci\IeC {\'o}n de red}}}{36}{figure.caption.33}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Divisi\IeC {\'o}n de im\IeC {\'a}genes}}}{36}{figure.caption.33}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Reproducci\IeC {\'o}n SBS}}}{36}{figure.caption.33}
-\addvspace {10pt}
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Fases del ciclo cerrado de pruebas que se han realizado para valorar la funcionalidad del dispositivo.\relax }}{39}{figure.caption.36}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Promedio del tiempo que tardan los usuarios en realizar el circuito.\relax }}{42}{figure.caption.39}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Variaci\IeC {\'o}n de la sensaci\IeC {\'o}n de control de los usuarios antes y despu\IeC {\'e}s de realizar el circuito.\relax }}{43}{figure.caption.40}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Sword of Damocles. Imagen obtenida de \textit {A head-mounted three dimensional display} \cite {Sutherland}\relax }}{6}{figure.caption.13}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Rehabilitaci\IeC {\'o}n usando herramientas de realidad virtual. Imagen obtenida de \textit {Water-Friendly Virtual Reality Pain Control During Wound Care} \cite {JCLP:JCLP10244}\relax }}{8}{figure.caption.14}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Da Vinci Surgical System\relax }}{9}{figure.caption.15}
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Tabla DHCP del router con las parejas MAC-IP fijas\relax }}{51}{figure.caption.44}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Archivo de configuraci\IeC {\'o}n de red Raspberry Pi 3\relax }}{51}{figure.caption.45}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Robot de este trabajo con la Raspberry Pi 3\relax }}{17}{figure.caption.16}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Onda cuadrada que representa los pulsos que se env\IeC {\'\i }an a los servomotores\relax }}{18}{figure.caption.18}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{18}{figure.caption.18}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{18}{figure.caption.18}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Esquema conexiones servos, c\IeC {\'a}mara, Raspberry Pi 3\relax }}{19}{figure.caption.19}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces \relax }}{21}{figure.caption.20}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Esquema conexiones\relax }}{22}{figure.caption.24}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Ejes de giro}}}{22}{figure.caption.24}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Oculus Rift DK2. Gafas de realidad virtual que se utilizan para este trabajo}}}{22}{figure.caption.24}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Esquema funcional\relax }}{23}{figure.caption.25}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Circuito que deben seguir los usuarios en las pruebas.\relax }}{53}{figure.caption.46}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Vista de la pinza de agarre en Blender y en Cura\relax }}{26}{figure.caption.26}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Im\IeC {\'a}genes del robot una vez montado\relax }}{27}{figure.caption.27}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Uso de CPU del programa Mjpeg-Streamer por el que se hae el streaming de v\IeC {\'\i }deo\relax }}{28}{figure.caption.28}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Dise\IeC {\~n}o 3D de la pinza de agarre en Blender}}}{28}{figure.caption.28}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Imagen de la configuraci\IeC {\'o}n del Cura para enviar la Pieza de agarre a la impresora 3D}}}{28}{figure.caption.28}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Vista trasera del robot}}}{28}{figure.caption.28}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Vista frontal del robot}}}{28}{figure.caption.28}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Ejecuci\IeC {\'o}n de mjpeg-streamer\relax }}{29}{figure.caption.29}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Relaci\IeC {\'o}n entre el PW y la posici\IeC {\'o}n de los servomotores\relax }}{33}{figure.caption.34}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Ejecuci\IeC {\'o}n del comando para iniciar el streaming}}}{33}{figure.caption.34}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {P\IeC {\'a}gina html donde se recibe el streaming a tiempo real desde la Raspberry}}}{33}{figure.caption.34}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Fases del ciclo cerrado de pruebas que se han realizado para valorar la funcionalidad del dispositivo.\relax }}{35}{figure.caption.37}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Promedio del tiempo que tardan los usuarios en realizar el circuito.\relax }}{38}{figure.caption.40}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Variaci\IeC {\'o}n de la sensaci\IeC {\'o}n de control de los usuarios antes y despu\IeC {\'e}s de realizar el circuito.\relax }}{38}{figure.caption.41}
+\addvspace {10pt}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Tabla DHCP del router con las parejas MAC-IP fijas\relax }}{45}{figure.caption.45}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Archivo de configuraci\IeC {\'o}n de red Raspberry Pi 3\relax }}{45}{figure.caption.46}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Configuraci\IeC {\'o}n y resultado de la reproducci\IeC {\'o}n de v\IeC {\'\i }deo en VLC\relax }}{47}{figure.caption.47}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Raspberry Pi 3 model B\relax }}{49}{figure.caption.48}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {D.1}{\ignorespaces Circuito que deben seguir los usuarios en las pruebas.\relax }}{51}{figure.caption.49}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {E.1}{\ignorespaces C\IeC {\'o}digo que se ejecuta en el lado del PC para leer la informaci\IeC {\'o}n de las Oculus Rift, procesarla y mandarla a la Raspberry Pi 3.\relax }}{53}{figure.caption.53}
+\contentsline {figure}{\numberline {E.2}{\ignorespaces Funci\IeC {\'o}n que se ejecuta en el PC para transformar la informaci\IeC {\'o}n de las Oculus Rift en \IeC {\'a}ngulos respeco a los ejes horizontal y vertical.\relax }}{54}{figure.caption.54}
+\contentsline {figure}{\numberline {E.3}{\ignorespaces C\IeC {\'o}digo que se ejecuta en la Raspberry Pi 3 para controlar las ruedas del robot.\relax }}{55}{figure.caption.55}
+\contentsline {figure}{\numberline {E.4}{\ignorespaces C\IeC {\'o}digo que se ejecuta en la Raspberry Pi 3 para controlar el servomotor unido a la c\IeC {\'a}mara.\relax }}{56}{figure.caption.56}

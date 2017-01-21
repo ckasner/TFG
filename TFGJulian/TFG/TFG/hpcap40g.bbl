@@ -113,6 +113,17 @@ G.~Hubens, H.~Coveliers, L.~Balliu, M.~Ruppert, and W.~Vaneerdeweg.
 {Dexterous Observational Roving Automaton}.
 \newblock \url{http://doraplatform.com/}.
 
+\bibitem{savage1998virbot}
+Jesus Savage-Carmona, Mark Billinghurst, and Alistair Holden.
+\newblock The virbot: a virtual reality robot driven with multimodal commands.
+\newblock {\em Expert Systems with Applications}, 15(3):413--419, 1998.
+
+\bibitem{monferrer2002cooperative}
+Alexandre Monferrer and David Bonyuet.
+\newblock Cooperative robot teleoperation through virtual reality interfaces.
+\newblock In {\em Information Visualisation, 2002. Proceedings. Sixth
+  International Conference on}, pages 243--248. IEEE, 2002.
+
 \bibitem{garcia2012low}
 Carlos Garc{\'\i}a-Saura and Juan Gonz{\'a}lez-G{\'o}mez.
 \newblock Low cost educational platform for robotics, using open-source 3d

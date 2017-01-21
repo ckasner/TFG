@@ -1,5 +1,6 @@
 \documentclass[twoside, 11pt]{epstfg}
 
+
 \usepackage{lipsum}
 \usepackage[numbers]{natbib}
 \usepackage{fancysprefs}
@@ -59,142 +60,59 @@
 	
 La fusión de la Realidad Virtual con la robótica supone una apertura a infinitas posibilidades. 
 
-Ambas tecnologías están en continuo desarrollo, de hecho la realidad virtual empezó a darse a conocer muy recientemente, a pesar de que su nacimiento data sobre la década de los 60.
+Ambas tecnologías están en continuo desarrollo, de hecho la realidad virtual ha vuelto a gozar de popularidad muy recientemente, a pesar de que su nacimiento data de la década de los 60.
 
 En los últimos años estamos presenciando cómo la Realidad Virtual va haciéndose un hueco en las tecnologías que usamos habitualmente. Quizá el uso más comercial que se le está dando es en lo referente al mundo de los videojuegos.
-Sin embargo se puede aplicar a muchos otros campos , en concreto al campo de la salud , donde se están obteniendo muy buenos resultados (en cirugía, rehabilitación, etc).
+Sin embargo se puede aplicar a muchos otros campos, en concreto al campo de la salud, donde se están obteniendo muy buenos resultados.
 
-Este trabajo pretende explorar el uso de la Realidad Virtual y la robótica como herramienta enfocada a personas con movilidad reducida , ayudarles a ser más independientes y dándoles la posibilidad de transportarse de forma virtual por entornos reales.
+Este trabajo pretende explorar el uso de la Realidad Virtual y la robótica como herramienta enfocada a personas con movilidad reducida, ayudarles a ser más independientes y dándoles la posibilidad de transportarse de forma virtual por entornos reales.
 
 Para conseguir este objetivo se ha construido un sistema que consta de un \textbf{robot} y las \textbf{Oculus Rift} (gafas de realidad virtual).
-El robot se controla desde las Oculus Rift, de forma que si el usuario lleva puestas las gafas, podrá controlar el robot con movimientos de cabeza.
-El usuario verá a través de las gafas todo lo que vea el robot, actuando éste último como extensión de la vista del usuario.
+El robot se controla de forma inalámbrica desde las Oculus Rift, así si el usuario lleva puestas las gafas, podrá controlar los movimientos del robot (de transporte y de exploración) con movimientos de cabeza y verá a través de las gafas todo lo que vea el robot, actuando éste último como extensión de la vista del usuario.
 
-Además hemos diseñado el proyecto de forma que la conexión entre el robot y las gafas sea a través de red inalámbrica, lo que le da al robot una libertad de movimiento fundamental para el objetivo que se persigue.
+Una vez que se terminó de construir el robot e implementar el sowftware, se realizaron pruebas con diferentes usuarios para valorar su usabilidad. En base a estas pruebas se rediseñó la forma de enviar comandos, se ajustaron los parámetros pertinentes y se volvió a probar con otros usuarios.
 
-A lo largo del desarrollo del trabajo han surgido varias complicaciones, la gran mayoría referentes a la utilización de los sensores de las Oculus y de la librería de las mismas, que aún no está perfectamente adaptada a la versión DK2 de las gafas.
-
-Esto se ha ido solucionando calibrando el movimiento de los servomotores mediante pruebas experimentales.
-
-Una vez que se terminó de construir el robot e implementar el sowftware, se realizaron pruebas con diferentes usuarios para valorar su usabilidad.
-Los resultados de las primeras pruebas no fueron muy positivos ya que el sistema de control que se había implementado era poco intuitivo y al usuario le costaba mucho manejar el robot.
-
-En base a las primeras pruebas se ideó una nueva interfaz de control que dió mucho mejores resultados. Se ve cómo al principio de estas segundas pruebas a los usuarios les resulta bastante complicado controlar con precisión los movimientos del robot, ya que no están acostumbrados a moverse en base a los movimientos de la cabeza.Por ello al final de estas pruebas se ajustó la velocidad de los servomotores para que el robot se moviera un poco más lento.
-
-Una vez terminados todos los cambios se realizaron unas últimas pruebas a otros usuarios distintos. Los resultados son muy satisfactorios ya que queda reflejado cómo en pocos minutos la sensación de control de los usuarios aumenta y les cuesta mucho menos alcanzar los objetivos propuestos.\\ Aún cuando el proyecto está orientado a personas con discapacidad motora, no se ha podido probar con ninguna persona en esta situación. Por ello es de gran utilidad que los parámetros de velocidad, rango de movimientos, sensibilidad, etc. sean parámetros ajustables en el sistema. De esta forma, cuando en un trabajo futuro se pruebe para los usuarios a los que está enfocado el proyecto, será muy sencillo calibrarlo y adaptarlo a las necesidades pertinentes.
+Una vez terminados todos los cambios se realizaron unas últimas pruebas a otros usuarios distintos. Los resultados son muy satisfactorios ya que en pocos minutos la sensación de control de los usuarios aumenta y les cuesta mucho menos alcanzar los objetivos propuestos.\\ Aún cuando el proyecto está orientado a personas con discapacidad motora, no se ha podido probar con ninguna persona en esta situación. Por ello es de gran utilidad que los parámetros de velocidad, rango de movimientos, sensibilidad, etc. sean parámetros ajustables en el sistema. De esta forma, cuando en un trabajo futuro se pruebe para los usuarios a los que está enfocado el proyecto, será sencillo calibrarlo y adaptarlo a las necesidades pertinentes.
 
 A pesar de las valoraciones positivas, no es recomendable utilizar las gafas durante mucho tiempo seguido si el usuario no está acostumbrado a ellas ya que en algunos casos puede causar mareos y en los últimos años se cuestiona el impacto que pueden tener las gafas de realidad virtual en la retina de los usuarios \cite{vreyes}.
 
-El resultado final del trabajo es un dispositivo inalámbrico que el usuario puede manejar sólo con la cabeza y que le permite visualizar su entorno a través de las Oculus Rift.
-Al utilizar las Oculus Rift dejamos abierta la posibilidad de ver, no solo el entorno en el que se mueve el robot, sino un entorno virtual creado por el propio usuario. Esta parte se deja como tema de estudio para trabajos futuros.
+El resultado final del trabajo es un dispositivo inalámbrico que el usuario puede controlar sólo con la cabeza y que le permite visualizar su entorno a través de las Oculus Rift.
+Al utilizar las Oculus Rift dejamos abierta la posibilidad de ver en un trabajo futuro, no solo el entorno en el que se mueve el robot, sino un entorno virtual creado por el propio usuario.
+\keywords[spa]{realidad virtual, Oculus Rift, discapacidad motora, robótica.}
+
 
 \end{abstract}
 
 \begin{abstract}[eng] 
-	The fusion of the virtual reality with Robotic involves an opening to infinite possibilities.
-	
-	Both technologies are in continuous development, indeed virtual reality began to be known very recently, while their birth dates (year).
-	
-	In the last years virtual reality is making a place for itself in the current technologies. Perhaps the more commercial use that is being given is in relation to video games. 
-	However it is possible to  apply to many others fields, in particular to the field of health, where virtual reality is getting really good results (in surgery, rehabilitation, etc). 
-	
-	This work aims to explore the use of virtual reality and  Robotic as a tool focused to people with motor disabilities, help them to be more independent and giving them the possibility of transport themselfs into real environments using virtual reality tools. 
-	
-	For this purpose a system that consists on a \textbf{robot} and the \textbf{Oculus Rift} (glasses of reality virtual) has been built .
-	The robot is controlled from the Oculus Rift, so while the user is wearing the glasses, the user can control the robot with head movements.
-	The user will see through the glasses everything that the robot is seeing, so the robot acts like an extension of the user's view.
-	
-	Also the robot and the glasses are connected via wireless network , so the robot is free for move everywhere the user wants. This is essential for the objective that this work pursues.
-	
-	Along the development of the work several complications have emerged , the great most relating to the use the Oculus's sensors and to the library which is used for take information from the Oculus's sensors.
-	
-	This problems have been solving by the calibration of the servo-motor by experimental tests.
-	
-	Once the robot was built and the sowftware was implemented, differente users did some test for rating the usability of the project.
-	The results of the first tests were not positive due to the control system which was implemented was not intuitive and it was very difficult for the user to control the robot.
-	
-	Based on the results of the first tests it was designed a new control system. This new system has shown much better results than the first tests . At the beginning of these second tests it was quite complicated for the users to control the movements of the robot, since they are not used to move based on the movements of the head. That is the reason why at the end of these tests ,servomotors speed was adjusted with the objective of making the robot slower.
-	
-	 After all the changes were completed, a few final tests were made to other users. The results were very satisfactory since them reflected how in a few minutes the feeling of control of the users increases. Also it was easier for the users achieve the proposed goals.
-	 
-	 Despite the latest ratings positive, it is not recommended to use the glasses during much time without stop because the user can suffer dizziness.
-	 
-	 The final result of the work is a wireless device that the user can control only with the head. The devices  allows  the user to view himself environment through the Oculus Rift. Use Oculus Rift give the chance to see, not only the environment where the robot is , but a virtual environment created by the user. This part is left as subject of study for future work.
+The fusion between Virtual Reality and robotics brings a world of infinite possibilities.
+
+Both technologies are under continuous development. In fact, Virtual Reality has regained popularity very recently even though it was born during the nineteen sixties.
+
+In recent years we have witnessed how Virtual Reality finds a spot amongst our most used technologies. The most widespread commercial use comes from home entertainment, games concretely.
+Nevertheless it can be applied to many other different fields, like health, in which outstanding results are being obtained (in surgery, rehabilitation, etc...).
+
+This project attempts to explore the use of Virtual Reality and robotics as a tool focused on individuals who are disadvantaged with reduced mobility, to help them be more independent and bringing them the possibility of virtual immersion and transportation in real environments.
+
+To achieve this goal a system composed of a \textbf{robot} and the \textbf{Oculus Rift} glasses (Virtual Reality) has been built. The robot is controlled by the Oculus Rift glasses. A user wearing them will be able to control the robot's movements (transportation and exploration) with head movements.
+The user will see in real time through the glasses what the robot is seeing, making the robot an extension to the user's vision.
+
+Furthermore, we have designed the connexion model between the robot and the glasses to be made wirelessly, which gives the robot a wide movement freedom, helping the goal we seek to achieve.
+
+Once the robot was completely built and the software fully implemented, different usability tests were performed with several users.
+The first round of trials results weren't very positive as the control system was not very intuitive and the user had difficulties controlling the robot.
+
+Those first results led to the idea of a new control interface which, after implemented, resulted in better usability. It is clear how during the first attempts at controlling the robot the users were struggling to control the robots movements with precision, as they were not used to controlling movement just with their head's position. After this round of trials the robot's speed was adjusted to make it slightly slower.
+
+Once all changes were done, the final round of tests was performed with new test users. These results were very positive as users would quickly get accustomed to the robots sensitivity and movements after a few minutes, enabling them to reach the proposed targets much easier.\\ Even though the project is focused on people suffering from motor disabilities, it couldn't be tested with anyone with that condition. That's why it is important to have speed, range of movement, sensitivity, etc... as adjustable parameters in the system. This way when, during future work, it is tested with the users this project is targeted for it will be easy to calibrate and customize for that case's needs.
+
+Despite the positive reviews, it is not recommended to spend a lot of time using the system without taking the glasses off, specially if the user is not accustomed to them. In some cases it may cause dizziness and it has been questioned whether Virtual Reality Glasses may be damaging the users' retinas \cite{vreyes}.
+
+This project's final result is a wireless device that the user can control just by using their heads and which enables them to see the device's environment through Ouclus Rift.
+By using Oculus Rift we keep the possibility of seeing, not only the environment inside which the robot is moving, but a virtual environment created by the user himself. These questions have been left as study material for future work.
+
+
+\keywords[eng]{virtual reality, Oculus Rift, motor disabilities, robotics}
 \end{abstract}
-
-%\keywords[spa]{}
-%\keywords[eng]{}
-
-\newglossaryentry{cpd}{
-	name = {CPD},
-	longplural = {Centros de Proceso de Datos},
-	description = {Centro de Proceso de Datos}
-}
-
-\newglossaryentry{nic}{
-	name = {NIC},
-	description = {Tarjeta de Interfaz de Red}
-}
-
-\newglossaryentry{irq}{
-	name = {IRQ},
-	description = {Petición de interrupción}
-}
-
-\newglossaryentry{api}{
-	name = {API},
-	description = {\textit{Application Programming Interface}}
-}
-
-\newglossaryentry{SPAN}{
-	name = {SPAN},
-	description = {\textit{Switched Port ANalyzer}}
-}
-
-\newglossaryentry{BPF}{
-	name = {BPF},
-	description = {\textit{Berkeley Packet Filter}, \cite{mccanne1993bsd}}
-}
-
-\newglossaryentry{NAPI}{
-	name = {NAPI},
-	description = {``New API'', una API de Linux desarrollada para mitigar interrupciones en \textit{drivers} de red y mejorar el rendimiento bajo condiciones de alta carga}}
-
-\newglossaryentry{driver}{
-	name = {Driver},
-	text ={\textit{driver}},
-	description = {Controlador de dispositivo: un programa que permite al sistema operativo interactuar con un periférico hardware}}
-
-\newglossaryentry{DMA}{
-	name = {DMA},
-	description = {\textit{Direct Memory Accesss}, un sistema que permite a los periféricos acceder directamente a la memoria del sistema}
-}
-
-\newglossaryentry{padding}{
-	name = {Padding},
-	text = {\textit{padding}},
-	description = {Datos ``de relleno'' que se añaden a una estructura de datos para alinearla a un tamaño concreto}
-}
-
-\newglossaryentry{RAID}{
-	name = {RAID},
-	description = {\textit{Redundant Array of Independent Disks}, una tecnología de virtualización de almacenamiento de datos que combina múltiples discos en una única unidad virtual, mejorando rendimiento y/o redundancia}
-}
-
-\newglossaryentry{RSS}{
-	name = {RSS},
-	description = {\textit{Receive Side Scaling}, una tecnología para \textit{drivers} de red que permite distribuir de forma eficiente los paquetes recibidos entre varias CPUs}
-}
-
-\newglossaryentry{RoCE}{
-	name = {RoCE},
-	description = {\textit{RDMA over Converged Ethernet}, tecnología de Mellanox para permitir acceso directo a memoria remota (RDMA) a través de redes Ethernet}
-}
-
-\newglossaryentry{NUMA}{
-	name = {NUMA},
-	description = {\textit{Non Uniform Memory Architecture}, diseño de sistemas multiprocesador con memoria local para cada procesador.}
-}
 
 \begin{document}
 
@@ -211,6 +129,25 @@ Al utilizar las Oculus Rift dejamos abierta la posibilidad de ver, no solo el en
 \makeabstract[spa]
 \makeabstract[eng]
 
+
+
+
+
+\chapter*{Agradecimientos}
+
+Este trabajo no hubiera sido posible sin todas las personas que me han acompañado y guiado a lo largo de estos meses y también durante toda la carrera.
+
+Quiero agradecer a todos los miembros del Club de Robótica el haberme abierto las puertas del club y haberme enseñado prácticamente todo lo que sé sobre robótica. Quiero agradecer en especial a Carlos, a Javi, a Pablo, a Jaime, a los Guilles y a los Victors por toda la paciencia que tuvieron cuando decidí empezar con todo esto.
+
+También quiero agradecer a todo mi curso del doble grado estos años de carrera, han sido unos compañeros estupendos y han hecho mucho más fácil esta etapa de estudios.
+
+Quiero agradecer a mi tutor, Francisco de Borja, la oportunidad de introducirme en el mundo de la realidad virtual y poder aprender a manejar las Oculus Rift. Quiero agradecerle la paciencia que ha tenido durante este trabajo, con los correos, las fechas... y en general el apoyo que me ha dado.
+
+Por último quiero agradecer a mi familia, que se sienten orgullosos con poquito que hago, que me apoyan en todo y me motivan a buscar aplicaciones más sociales a lo aprendido en la carrera.\\A todos ellos y a los que no he nombrado, gracias.
+\newpage
+
+
+
 \tableofcontents
 \clearpage
 \listoftables
@@ -219,7 +156,6 @@ Al utilizar las Oculus Rift dejamos abierta la posibilidad de ver, no solo el en
 \cleardoublepage
 
 \printnoidxglossaries
-
 \mainmatter
 \chapter{Introducción} 
 
@@ -250,17 +186,17 @@ Ya que este trabajo está orientado a personas con movilidad reducida sería ide
 De esta forma daríamos al usuario más independencia y le abriríamos un mundo al que hasta ahora, tiene difícil acceso.
 
 \section{Objetivos}\label{Objetivos}
-El objetivo de este proyecto consiste en diseñar un dispositivo que actúe como extensión de la vista del usuario a través de una webcam implantada en el robot. El usuario deberá ser capaz de controlar la cámara con tan solo el movimiento de la cabeza, ya que el proyecto está orientado a personas con movilidad reducida.
-Las imágenes se reproducirán a través de unas gafas de realidad virtual: las Oculus Rift. Esto nos permitiría, en un proyecto futuro, añadir realidad virtual o aumentada a las imágenes que captura la cámara.
+El objetivo de este proyecto consiste en combinar herramientas de robótica y de realidad virtual para diseñar un dispositivo que actúe como extensión de la vista del usuario, a través de una webcam implantada en el robot. El usuario deberá ser capaz de controlar la los movimientos de cámara con tan solo el movimiento de la cabeza, ya que el proyecto está orientado a personas con movilidad reducida.\\La cámara, gracias a estar implantada en el robot (dispositivo móvil), tendrá la capacidad de realizar movimientos de rotación respecto al eje vertical, rotación respecto al eje horizontal y movimientos de desplazamiento.\\
+Las imágenes del entorno del robot se reproducirán a través de unas gafas de realidad virtual: las Oculus Rift. Esto nos permitiría, en un proyecto futuro, añadir realidad virtual o aumentada a las imágenes que captura la cámara.
 
-Para ello definimos pequeños objetivos que debemos ir implementando para conseguir la meta final: streaming, movimiento de la cámara y visualización del entorno.
+Para ello definimos pequeños objetivos que debemos ir implementando para conseguir la meta final: streaming, movimiento de la cámara/robot (de rotación y de transporte) y visualización del entorno.
 
 \subsection{Streaming}
 Como se ha explicado anteriormente, debemos ser capaces de ver en las Oculus Rift a tiempo real todo lo que capta la cámara.
 
-Dado que la comunicación con las Oculus Rift debe ser a través del PC al que estén conectadas , el streaming deberá \textbf{transmitirse desde la cámara hasta el PC}.
+Dado que la comunicación con las Oculus Rift debe ser a través del PC al que estén conectadas, el streaming deberá \textbf{transmitirse desde la cámara hasta el PC}.
 
-Por lo tanto uno de los primeros objetivos es implementar un método de comunicación a través del cual se puedan conectar  la cámara y el PC. Además se deberá implementar un software que capture la salida de la webcam y transmita el vídeo a tiempo real, es decir, que el usuario pueda saber con la mayor exactidud posible, el entorno que rodea al robot en todo momento. Por último se necesita un software que recoja el video en el PC.
+Por lo tanto uno de los primeros objetivos es implementar un método de comunicación a través del cual se puedan conectar  la cámara y el PC. Además se deberá implementar un software que capture la salida de la webcam y transmita el vídeo a tiempo real, es decir, que el usuario pueda saber con la mayor exactidud posible, el entorno que rodea al robot en todo momento. Por último se necesita un software que recoja el vídeo en el PC.
 
 \subsection{Movimiento de la cámara}
 Otro de los objetivos básicos es que el usuario sea capaz de controlar la dirección y posición de la cámara con el movimiento de la cabeza. Para ello dotaremos a la cámara de un soporte móvil, un robot, que se explicará en el capítulo de Análisis.
@@ -289,7 +225,7 @@ A continuación se añade un esquema a modo de resumen de los objetivos ya expli
 
 \begin{figure}[h!]
 	\centerline{
-		\mbox{\includegraphics[width=7.00in]{images/objetivos.png}}
+		\mbox{\includegraphics[width=6.50in]{images/Objs.eps}}
 	}
 	\caption{Resumen de los objetivos del proyecto}
 	\label{objetivos}
@@ -314,26 +250,12 @@ El desarrollo de este proyecto de fin de grado se puede dividir en tres fases:
 
 \begin{figure}[H]
 	\centerline{
-		\mbox{\includegraphics[width=2.50in]{images/Plan.png}}
+		\mbox{\includegraphics[width=5.00in]{images/met.png}}
 	}
 	\caption{En este grafo queda resumido el plan de trabajo. Se puede ver cómo la fase de pruebas vuelve a la fase de diseño y desarrollo, ya que el proyecto va mejorando en base a lo que demandan los usuarios.}
 	\label{plan}
 \end{figure}
-\newpage
-\section{Estructura del documento}
 
-
-El objetivo de este documento es explicar el trabajo realizado y los resultados obtenidos.
-
-En el siguiente capítulo se explica el estado del arte, hablando brevemente de la realidad virtual y de algunos proyectos previos que utilizaban esta tecnología. Como se verá más adelante el capítulo se centra especialmente en proyectos relativos a salud y robótica.
-
-Luego se verá el análisis, diseño y desarrollo del proyecto.
-
-En el análisis se presentan los requisitos que debe cumplir nuestro sistema. Posteriormente se hace un estudio de diseño de los componentes del trabajo (robot, conexiones entre dispositivos...) y por último se explicará como se ha desarrollado el proyecto.
-
-Los resultados y las pruebas realizadas para ver si el proyecto cumplía con el objetivo se verán en el capítulo "Pruebas y resultados" de este documento.
-
-Para finalizar expondremos brevemente las conclusiones y el trabajo futuro que se puede realiza en base a este proyecto.
 
 \chapter{Estado del arte}
 
@@ -351,14 +273,14 @@ La explicación de estos proyectos en este capítulo pretende dar una fotografí
 La realidad virtual comenzó siendo ciencia ficción y poco a poco está ganando terreno en la vida cotidiana, ya sea en el mundo de los videojuegos, la medicina o la aviación, entre otros campos.
 
 A pesar de ser una tecnología de la que se ha empezado a hablar hace relativamente poco, los primeros proyectos que utilizaban realidad virtual datan de los años 60.\\
-Uno de los  acontecimientos más significativos del inicio de la realidad virtual es la creación de \textbf{“The Sword of Damocles”} , un casco de realidad virtual (HMD- head-mounted display)  creado por Ivan Sutherland en 1968 \cite{Sutherland}.\\
+Uno de los  acontecimientos más significativos del inicio de la realidad virtual es la creación de \textbf{“The Sword of Damocles”}, un casco de realidad virtual (HMD- head-mounted display)  creado por Ivan Sutherland en 1968 \cite{Sutherland}.\\
 The Sword of Damocles permitía ver las imágenes tridimensionales generadas por el
-ordenador superpuestas ópticamente, a través de un prisma, al entorno real que rodeaba al usuario. En este \href{https://www.youtube.com/watch?v=ISJWZpFIAlQ}{\textcolor{blue}{video}} se puede ver un ejemplo de ello.\\
+ordenador superpuestas ópticamente, a través de un prisma, al entorno real que rodeaba al usuario. \footnote {En este vídeo se  puede ver un ejemplo de The Sword of Damocles: \href{https://www.youtube.com/watch?v=ISJWZpFIAlQ}{\textcolor{blue}{https://www.youtube.com/watch?v=ISJWZpFIAlQ}}}\\
  El sistema estaba montado sobre un brazo mecánico suspendido del techo que también servía para detectar, mediante el uso de sensores, la posición y la orientación de la cabeza del usuario. De este modo, cuando el usuario se movía, los objetos creados por el ordenador daban la impresión de encontrarse en una posición estable dentro del entorno real.
 
 Es lógico preguntarse cómo ha tardado tanto en llegar al mercado la realidad virtual si ya en 1968 consiguieron sacar adelante este proyecto.\\
 La respuesta es que \textbf{la tecnología de los años 60 aún no estaba preparada} para desarrollar herramientas de realidad virtual.\\
-Para conseguir capturar la posición y el movimiento de la cabeza del usuario, se requería un brazo de \textbf{grandes dimensiones} , como se puede ver en la figura \ref{fig::SwordOfDamocles}.\\
+Para conseguir capturar la posición y el movimiento de la cabeza del usuario, se requería un brazo de \textbf{grandes dimensiones}, como se puede ver en la figura \ref{fig::SwordOfDamocles}.\\
 Además la realidad virtual necesita una \textbf{capacidad de cómputo muy potente}. Problemas tales como "hidden line" solo podía ser resueltos con un ordenador que tenía la NASA en Houston \cite{hedgley1982general}, como especifica Sutherland en su trabajo \textit{A head-mounted three dimensional display} \cite{Sutherland}. 
 
 \begin{figure}[H]
@@ -371,15 +293,15 @@ Además la realidad virtual necesita una \textbf{capacidad de cómputo muy poten
 
 
 Al mismo tiempo Thomas A. Furness empezó a introducir herramientas de \textbf{realidad virtual en entrenamientos de vuelo} \cite{kocian1977visually}, con el objetivo de que estos fueran mucho más seguros para los pilotos.
-A pesar de que fue una gran aportación en este campo, la escasez de recursos y capacidad de cómputo también retrasaron mucho el desarrollo de estas herramientas. En la actualidad se considera a \href{https://www.youtube.com/watch?v=zr89F88AuUI}{\textcolor{blue}{Thomas A. Furness}} uno de los padres de la realidad virtual y la realidad aumentada y tiene un papel muy importante en este campo. 
+A pesar de que fue una gran aportación en este campo, la escasez de recursos y capacidad de cómputo también retrasaron mucho el desarrollo de estas herramientas. En la actualidad se considera a Thomas A. Furness \footnote{Charla de Thomas A. Furness \href{https://www.youtube.com/watch?v=zr89F88AuUI}{\textcolor{blue}{https://www.youtube.com/watch?v=zr89F88AuUI}{\textcolor{blue}{Thomas A. Furness}}}} uno de los padres de la realidad virtual y la realidad aumentada y tiene un papel muy importante en este campo. 
  
 Hoy en día tenemos la capacidad necesaria para desarrollar estas herramientas por lo que se siguen utilizando y mejorando ya que, no solo es más segura, sino que además es más barata.\\
-Durante las últimas décadas del s.XX, se hicieron algunos proyectos de realidad virtual , pero no tuvieron mucho éxito debido a su alto coste.\\
+Durante las últimas décadas del s.XX, se hicieron algunos proyectos de realidad virtual, pero no tuvieron mucho éxito debido a su alto coste.\\
 Con el desarrollo exponencial que ha vivido la tecnología las últimas décadas, la realidad virtual ha ido haciéndose un hueco en la industria tecnológica.
 El empujón definitivo vino con la creación de las \textbf{Oculus Rift}, en el año 2010.
 
-\textbf{Palmer Luckey} es el fundador de Oculus VR (una compañía de realidad virtual) y el diseñador de la primera versión de las \href{https://www.oculus.com/}{\textcolor{blue}{Oculus Rift}}.\\
-Oculus Rift es un casco de realidad virtual (también nos podemos referir a ellas como gafas de realidad virtual) mucho más manejable que "The Sword of Damocles" , con mucha más calidad y con un coste asequible.
+\textbf{Palmer Luckey} es el fundador de Oculus VR (una compañía de realidad virtual) y el diseñador de la primera versión de las Oculus Rift \footnote{Página oficial de las Oculus Rift: \href{https://www.oculus.com/}{\textcolor{blue}{https://www.oculus.com/}}}.\\
+Oculus Rift es un casco de realidad virtual (también nos podemos referir a ellas como gafas de realidad virtual) mucho más manejable que "The Sword of Damocles", con mucha más calidad y con un coste asequible.
 Uno de los grandes logros de Luckey con las Oculus Rift es que consiguió un ángulo de visión de 90º, algo nunca visto hasta el momento.\\
 Tras el lanzamiento de las Oculus Rift, el mercado comenzó a interesarse por proyectos relacionados con la realidad virtual y a financiarlos.
 Gracias a esto la tecnología ha podido desarrollarse y hoy podemos disfrutar de una realidad virtual con mucha más calidad y \textbf{sensación casi total de inmersión} en entornos virtuales.
@@ -430,7 +352,7 @@ A continuación se presentan algunos proyectos de robótica que utilizan técnic
 
 Puesto que al final de este trabajo lo que se quiere conseguir es controlar un robot a través de una interfaz que utiliza realidad virtual, es interesante estudiar cómo ha resultado esto en proyectos parecidos.
 
-En 1997 , el IMG (Intelligent Mechanisms Group) de la NASA y el instituto de robótica de la Carnegie Mellon University desarrollaron las \textbf{interfaces de control} necesarias para teledirigir a Nomad, un robot diseñado para la exploración de planetas. \cite{Nguyen2001}\\
+En 1997, el IMG (Intelligent Mechanisms Group) de la NASA y el instituto de robótica de la Carnegie Mellon University desarrollaron las \textbf{interfaces de control} necesarias para teledirigir a Nomad, un robot diseñado para la exploración de planetas. \cite{Nguyen2001}\\
 Hasta el momento este control era altamente complicado, ya que requería del uso de muchos comandos poco intuitivos. Para mejorar y facilitar esto, crearon dos interfaces:\textit{ Virtual Dahsboard Interface} y \textit{Telepresence Interface}.
 
 \textit{Virtual Dashboard interface} consiste en un panel de control donde el operador podía ver de forma simple el estado actual de Nomad y controlarlo de forma intuitiva.\\
@@ -454,7 +376,9 @@ Este sistema hace posible que el cirujano realice \textbf{movimientos mucho más
 \end{figure}
 
 
-Un proyecto muy reciente y con gran parecido a este trabajo fin de grado es DORA \cite{DORA}, plataforma robótica de inmersión diseñada para la navegación y exploración de lugares remotos.
+Un proyecto muy reciente y con gran parecido a este trabajo fin de grado es DORA \cite{DORA}, plataforma robótica de inmersión diseñada para la navegación y exploración de lugares remotos. Es un proyecto desarrollado en, .... financiado por varias compañías como..... Como se puede ver es un proyecto con mejor hardware del que se dispone para este trabajo fin de grado. Esto le permite tener mayor grado de libertad y mejor precisión pero el funcionamiento es muy similiar al de este proyecto.
+
+Existen muchos más proyectos de y realidad virtual, como VirBot \cite{savage1998virbot}, este proyecto permite a los usuarios controlar un robot, pero a diferencia de nuestro trabajo, este robot se encuentra en un mundo virtual.\\También se han estudiado diferentes métodos de controlar un robot en remoto utilizando realidad virtual, un ejemplo de esto es la publicación \textit{Cooperative Robot Teleoperation through Virtual Reality Interfaces} \cite{monferrer2002cooperative}, que estudia la mejor forma de definir una interfaz virtual, que a su vez es un escritorio, para controlar un robot.
 
 Lo que nos muestran los resultados de estos proyectos es que los usuarios son capaces de manejar dispositivos que ven a través de realidad virtual de forma exitosa. Esto también es imprescindible en nuestro trabajo ya que el usuario debe controlar el robot tan solo con las gafas de realidad virtual.
 
@@ -470,10 +394,10 @@ Lo que nos muestran los resultados de estos proyectos es que los usuarios son ca
 Una vez conocido el estado actual de la robótica y la realidad virtual, el siguiente paso es analizar a fondo el proyecto que se quiere desarrollar.
 Para ello se deben definir los requisitos que debe cumplir el trabajo, basando estos requisitos en los objetivos propuestos en la sección de \textit{Objetivos} \ref{Objetivos}. De esta forma el trabajo queda dividido en pequeñas tareas y facilita su implementación.
 
-En el capítulo de \textit{Objetivos} \ref{Objetivos} se explica que la meta final del proyecto es conseguir que el usuario pueda controlar una cámara con el movimiento de cabeza y ver todo lo que la cámara vea.
+En la sección de \textit{Objetivos} \ref{Objetivos} se explica que la meta final del proyecto es conseguir que el usuario pueda controlar una cámara con el movimiento de cabeza y ver todo lo que la cámara vea.
 La forma más eficiente de hacer que la cámara sea móvil es construir un robot con ruedas que lleve la cámara integrada. 
 
-De esta forma cuando el usuario mueva la cabeza, se le enviarán las instrucciones necesarias al robot para que se mueva. A su vez el robot le estará mandando video a tiempo real al usuario, que lo verá a través de las Oculus Rift.
+De esta forma cuando el usuario mueva la cabeza, se le enviarán las instrucciones necesarias al robot para que se mueva. A su vez el robot le estará mandando vídeo a tiempo real al usuario, que lo verá a través de las Oculus Rift.
 
 
 El proyecto por lo tanto se divide en 3 problemas:
@@ -490,16 +414,16 @@ Vamos a desarrollar cada uno de ellos, identificando qué funcionalidades básic
 \subsection{Construcción del Robot}
 
 
-El robot debe ser un dispositivo fácil de controlar , que a su vez actúe como una extensión de los ojos del usuario, dándole a éste la sensación de inmersión un espacio real.
-Por tanto los requisitos que debe cumplir el robot son los siguientes:
+El robot debe ser un dispositivo fácil de controlar, que a su vez actúe como una extensión de los ojos del usuario, dándole a éste la sensación de inmersión un espacio real.
+Por tanto los principales requisitos que debe cumplir el robot son los siguientes:
 
 
 \begin{itemize}
-	\item \textbf{RF-CR1: Grabar video.}\\
+	\item \textbf{RF-CR1: Grabar vídeo.}\\
 	 Ya que el robot va a actuar como sentido de la vista del usuario, grabará de forma continua imágenes del entorno que le rodea.
 	
-	\item \textbf{RF-CR2: Transmitir video.}\\
-	El robot tendrá la capacidad de transmitir el video del entorno que capture la cámara. 
+	\item \textbf{RF-CR2: Transmitir vídeo.}\\
+	El robot tendrá la capacidad de transmitir el vídeo del entorno que capture la cámara. 
 
 	\item\textbf{RF-CR3: Mecanismo de transporte.} \\
 	Uno de los posibles usos del trabajo es utilizar el robot como dispositivo de exploración del entorno. Para ello es necesario que el robot pueda moverse en todas las direcciones, como si del propio usuario se tratara. Por ello su diseño incluye dos ruedas laterales que le permiten avanzar, retroceder y rotar sobre sí mismo.
@@ -529,13 +453,13 @@ Se quiere conseguir la máxima sensación de inmersión para la persona que cont
 Para ello los requisitos principales que debe cumplir son:
 
 \begin{itemize}
-	\item\textbf{RF-S1: La transmisión de video debe tener una latencia aceptable para el control del robot por parte del usuario.}\\
+	\item\textbf{RF-S1: La transmisión de vídeo debe tener una latencia aceptable para el control del robot por parte del usuario.}\\
 	Si las imágenes del entorno llegan al usuario con un desfase temporal importante respecto al movimiento de la cabeza, se reducirá la sensación de inmersión y será mucho más dificil controlar el robot.
 	
 	\item\textbf{RF-S2: Imagen desdoblada}\\
-	El usuario verá el video con las Oculus Rift, por lo que la imagen debe estar desdoblada (formato SBS, que se eplicará en la sección de desarrollo).
+	El usuario verá el vídeo con las Oculus Rift, por lo que la imagen debe estar desdoblada (formato SBS, que se eplicará en la sección de desarrollo).
 	
-	\item\textbf{RF-S3: Transmisión de video inalámbrica}\\
+	\item\textbf{RF-S3: Transmisión de vídeo inalámbrica}\\
 	Al igual que en el requisito \textbf{RF-CR5}, la transmisión del streaming también debe ser inalámbrica ya que, de otro modo, se perdería la libertad dde movimiento del robot.
 
 	
@@ -546,7 +470,7 @@ Para ello los requisitos principales que debe cumplir son:
 
 \subsection{Control del Robot}
 
-Como hemos dicho anteriormente, se pretende que la cámara, soportada por el robot, sea una extensión de los ojos de usuario.Por esto es lógico que se controle con el movimiento de cabeza de la persona que esté recibiendo el video.
+Como hemos dicho anteriormente, se pretende que la cámara, soportada por el robot, sea una extensión de los ojos de usuario.Por esto es lógico que se controle con el movimiento de cabeza de la persona que esté recibiendo el vídeo.
 Dentro del control del robot vamos a diferenciar entre control del movimiento del robot y control de la dirección de la cámara:
 
 \begin{itemize}
@@ -601,7 +525,7 @@ Por lo tanto en términos generales, las tareas que desempeñarán los component
 		Se utilizará un router para crear un ared local a través de la cual se envíen tanto las imágenes como los comandos de control del robot.
 	\item \textbf{Oculus Rift y PC}
 		
-		Las gafas de realidad virtual reproducirán las imágenes para el usuario. Deben estar conectadas a un PC que reciba el video y envíe los comandos al robot.
+		Las gafas de realidad virtual reproducirán las imágenes para el usuario. Deben estar conectadas a un PC que reciba el vídeo y envíe los comandos al robot.
 		
 \end{itemize}
 
@@ -627,27 +551,29 @@ Finalmente el robot consta de:
 A continuación se explicarán en detalle cada uno de los componentes del robot.
 
 \subsection{Raspberry Pi 3 model B}
-La Raspberry Pi 3 model B es un ordenador de placa reducida que lleva un sistema operativo Linux.
+La Raspberry Pi 3 model B  \ref{Raspberry} es un ordenador de placa reducida que lleva un sistema operativo Linux.
 Su procesador es un ARM Cortex A53 de cuatro núcleos a 1.2GHz de 64 bits.
-Tiene 1 GB de memoria RAM , 4 puerto USB, 40 pins GPIO, puerto HDMI , Ethernet y entrada para MicroSD.
+Tiene 1 GB de memoria RAM, 4 puerto USB, 40 pins GPIO, puerto HDMI, Ethernet y entrada para MicroSD.
 Además tiene Wifi 802.11n integrado y bluetooth 4.1.
 
 Tras rechazar el Arduino Yun como placa para el proyecto, la Raspberry Pi 3 quedó como mejor candidata ya que cumplía todos los requisitos necesarios. A saber:
 
 \begin{itemize}
 	\item \textbf{Módulo Wifi (802.11n Wireless LAN)}: Imprescindible para la transmisión.
-	\item \textbf{S.O Linux}: Nos permite instalar programas de manejo y transmisión de video, como la librería mjpeg-streamer que se usará en este proyecto.
+	\item \textbf{S.O Linux}: Nos permite instalar programas de manejo y transmisión de vídeo, como la librería mjpeg-streamer que se usará en este proyecto.
 	\item \textbf{Puerto USB}: Para conectar la cámara y la fuente de alimentación.
 	\item \textbf{GPIO}: Necesario para conectar los servomotores.
 \end{itemize}
 
 
+
+
 \begin{figure}[H]
 	\centerline{
-		\mbox{\includegraphics[width=.80\textwidth]{images/raspi3.jpg}}
+		\mbox{\includegraphics[width=.80\textwidth]{images/fotorobotlateral.jpg}}
 	}
-	\caption{Raspberry Pi 3 model B}
-	\label{Raspberry}
+	\caption{Robot de este trabajo con la Raspberry Pi 3}
+	\label{robotraspi}
 	
 \end{figure}
 
@@ -702,7 +628,7 @@ En el robot estas conexiones se han hecho soldando los cables a una placa mucho 
 	\centerline{
 		\mbox{\includegraphics[width=.95\textwidth]{images/EsquemaServos.png}}
 	}
-	\caption{Esquema conexiones servos , cámara, Raspberry Pi 3}
+	\caption{Esquema conexiones servos, cámara, Raspberry Pi 3}
 	\label{Figura conexiones robot}
 \end{figure}
 
@@ -723,9 +649,9 @@ Esto se hace modificando el archivo \texttt{/etc/wpa\_supplicant/wpa\_supplicant
 
 Las Oculus Rift son unas gafas de realidad virtual creadas por Palmer Luckey.
 Ha habido varias versiones de estas gafas.
-La primera fue la DK1 (Develoment Kit 1), enfocada para programadores , que salió en abril de 2013. Esta versión se retiró del mercado poco antes de la presentación del segundo kit de desarrollo (DK2) en marzo de 2014.
+La primera fue la DK1 (Develoment Kit 1), enfocada para programadores, que salió en abril de 2013. Esta versión se retiró del mercado poco antes de la presentación del segundo kit de desarrollo (DK2) en marzo de 2014.
 Finalmente, en 2016 salió la versión para consumidor.\\
-Para este proyecto se utiliza la versión \textbf{DK2}, que se muestran en la imagen \ref{OculusDk2} , ya que eran las gafas que teníamos disponibles.
+Para este proyecto se utiliza la versión \textbf{DK2}, que se muestran en la imagen \ref{OculusDk2}, ya que eran las gafas que teníamos disponibles.
 
 %\begin{figure}[H]
 %	\centerline{
@@ -746,14 +672,14 @@ Por ello las funciones clave de las Oculus Rift para el proyecto son:
 
 Las Oculus Rift son capaces de detectar la \textbf{posición y orientación de la cabeza} del usuario.
 
-Para la \textbf{posición} , las gafas llevan un conjunto de emisores infrarrojos en su superficie. La información enviada por dichos emisores es recogida por un sensor de infrarrojos que se asemeja a una cámara.\\
+Para la \textbf{posición}, las gafas llevan un conjunto de emisores infrarrojos en su superficie. La información enviada por dichos emisores es recogida por un sensor de infrarrojos que se asemeja a una cámara.\\
 Para nuestro trabajo la posición no es relevante ya que, al estar orientado para personas con discapacidad motora,  se espera que el usuario se encuentre más o menos en la misma posición durante el uso del dispositivo.Por otra parte el usuario puede estar algo inclinado o incluso tumbado ya que, al no leer los sensores infrarrojos, el movimiento del robot no depende de la posición del usuario.
 
 
 Por el contrario, conocer la \textbf{orientación} de la cabeza es esencial en este proyecto ya que el usuario enviará comandos al robot rotando la cabeza en el sentido que convenga en cada momento.\\Esta orientación se lee respecto a los ejes $X$, $Y$, y $Z$, como se puede ver en la figura \ref{OculusDk2}  y se detecta gracias a los tres sensores que las Oculus Rift llevan integrados (giroscopio, acelerómetro y magnetómetro).
 
 
-Con el giroscopio y el acelerómetro se calcula la orientación respecto a los ejes $X$ y $Z$, mientras que el magnetómetro manda información del eje $Y$.\\Combinando la información de estos sensores a través de un proceso conocido como fusión de sensores se determina la orientación de la cabeza del usuario en el mundo real , y se sincroniza con la perspectiva virtual del usuario en tiempo real.\\
+Con el giroscopio y el acelerómetro se calcula la orientación respecto a los ejes $X$ y $Z$, mientras que el magnetómetro manda información del eje $Y$.\\Combinando la información de estos sensores a través de un proceso conocido como fusión de sensores se determina la orientación de la cabeza del usuario en el mundo real, y se sincroniza con la perspectiva virtual del usuario en tiempo real.\\
 En este trabajo los giros de la cámara serán respecto a los ejes $X$ e $Y$ por lo que tampoco se recogerá información de la orientación de la cabeza respecto al eje $Z$.
 
 \begin{figure}[H]
@@ -904,7 +830,7 @@ La arquitectura del proyecto es muy sencilla, como podemos observar en la siguie
 
 \begin{figure}[h]
 	\centerline{
-		\mbox{\includegraphics[width=.80\textwidth]{images/EsquemaConexiones.png}}
+		\mbox{\includegraphics[width=.80\textwidth]{images/disConex2.eps}}
 	}
 	\caption{Esquema conexiones}
 	\label{Fig::EsquemaConexiones}
@@ -915,7 +841,7 @@ Todo el sistema, excepto las Oculus, se conecta a través de la red local creada
 Para hablar de la conexión de las Oculus hay que especificar que nos referimos a la conexión de las gafas y la conexión de la cámara receptora de infrarrojos.\\
 La cámara receptora de infrarrojos se conecta con el ordenador a través de un puerto USB y las gafas se conectan con la tarjeta gráfica a través de HDMI.
 
-El resto de dispositivos, es decir, el ordenador y el robot, se encuentra dentro de la red local WifiRaspi3.De esta forma las el ordenador envía comandos de movimiento al router y el router al robot. Por otra parte la cámara (conectada por USB a las Raspberry Pi 3) transmite el video al robot y este lo manda en tiempo real al router, el router lo envía al ordenador de forma que el usuario podrá visualizarlo con las gafas de realidad virtual.
+El resto de dispositivos, es decir, el ordenador y el robot, se encuentra dentro de la red local WifiRaspi3.De esta forma las el ordenador envía comandos de movimiento al router y el router al robot. Por otra parte la cámara (conectada por USB a las Raspberry Pi 3) transmite el vídeo al robot y este lo manda en tiempo real al router, el router lo envía al ordenador de forma que el usuario podrá visualizarlo con las gafas de realidad virtual.
 
 
 
@@ -936,9 +862,9 @@ Empezando el ciclo desde el \textbf{usuario}, vemos cómo el usuario le manda in
 
 El PC recoge los datos a través del SDK de Oculus. Estos datos son interpretados en un \textbf{software de control} utilizando la API OVR. Una vez interpretados los datos se envían los comandos convenientes a los motores del \textbf{robot}. Estos comandos llegarán a los motores de las ruedas o al motor de la cámara, dependiendo de la nueva orientación de la cabeza del usuario.
 
-A la vez que ocurre este proceso el robot está enviando un video del entorno en tiempo real al PC. Esta transmisión se hace a través de la librería mjpeg-streamer y es recogida en el PC por el reproductor de video \textbf{VLC}.
+A la vez que ocurre este proceso el robot está enviando un vídeo del entorno en tiempo real al PC. Esta transmisión se hace a través de la librería mjpeg-streamer y es recogida en el PC por el reproductor de vídeo \textbf{VLC}.
 
-Para que el video llegue al visor de las Oculus Rift se utiliza Virtual Desktop, como ya se dijo en la sección anterior. De esta forma el usuario podrá visualizar lo que ve el robot a través de la Oculus y mover el robot hacia donde desee.
+Para que el vídeo llegue al visor de las Oculus Rift se utiliza Virtual Desktop, como ya se dijo en la sección anterior. De esta forma el usuario podrá visualizar lo que ve el robot a través de la Oculus y mover el robot hacia donde desee.
 
 
 
@@ -957,7 +883,7 @@ Cada bloque se desarrollará a lo largo del capítulo pero, para tener una idea 
 La \textbf{construcción del robot} se ha hecho acorde con el diseño y los requisitos del mismo, es decir, con dos ruedas que le permitan transportarse, un soporte para la Raspberry Pi 3 y un soporte para la cámara.\\
 Este diseño se basa en un diseño de otro trabajo de un alumno de la UAM, Carlos García Saura \cite{garcia2012low}, añadiendo para este proyecto los accesorios necesarios.
 
-Para conseguir \textbf{transmitir a las Oculus el video en tiempo real} es necesario que la Raspberry recoja el video de la cámara y lo transmita al ordenador.A su vez el ordenador recojerá el video, lo transformará a formato SBS y lo reproducirá en las Oculus Rift. 
+Para conseguir \textbf{transmitir a las Oculus el vídeo en tiempo real} es necesario que la Raspberry recoja el vídeo de la cámara y lo transmita al ordenador.A su vez el ordenador recojerá el vídeo, lo transformará a formato SBS y lo reproducirá en las Oculus Rift. 
 
 El último bloque es el \textbf{control del robot}. El primer paso para poder enviar comandos de control es leer la señal de los sensores de las Oculus Rift (giroscopio, acelerómetro y magnetómetro) para saber la orientación de la cabeza del usuario.\\
 Una vez que obtenemos dicha información se procesa y transforma en datos útiles para el robot y se transmite a las Raspberry Pi con la mínima latencia posible.\\
@@ -985,33 +911,43 @@ En base a estas dos condiciones se ha ideado un soporte con dos piezas: Un sopor
 
 Ambas piezas han sido impresas en plástico con la impresora 3D del Club de Robótica de la Universidad Autónoma de Madrid.\\
 Para realizar el diseño 3D de la pinza de agarre se ha utilizado el programa de diseño 3D Blender.\\
-En este programa se diseña gráficamente la pieza y genera una archivo \texttt{.stl}, tal y como se muestra en la imagen \ref{fig::blender}. 
+En este programa se diseña gráficamente la pieza y genera una archivo \texttt{.stl}, tal y como se muestra en la imagen \ref{Cura:blender}(b). 
 \begin{figure}[H]
-	\centerline{
-		\mbox{\includegraphics[width=.80\textwidth]{images/cameraBlender.png}}
-	}
-	\caption{ Diseño 3D de la pinza de agarre en Blender}
-	\label{fig::blender}
+	\centering
+	
+	\subfigure[Diseño 3D de la pinza de agarre en Blender]{\includegraphics[width=65mm]{images/cameraBlender.png}}
+	\hspace{1.5cm}
+	\subfigure[Imagen de la configuración del Cura para enviar la Pieza de agarre a la impresora 3D]{\includegraphics[width=60mm]{images/Cura2.png}} \\
+	
+	\caption{Vista de la pinza de agarre en Blender y en Cura}
+	\label{Cura:blender} 
 \end{figure}
 
-Una vez creado el fichero \texttt{.stl} utiliza \href{https://ultimaker.com/en/products/cura-software}{\textcolor{blue}{Cura}}, un programa que nos permite seleccionar los parámetros de configuración deseados para la impresión de la pieza, como por ejemplo la densidad o el tamaño. Una vez elegida la configuración, Cura genera el archivo \texttt{.gcode}. Este tipo de archivos son los que lee la impresora 3D y consiste en una serie de instrucciones de movimiento para los servomotores que controlar el estrusor y el ventilador de la impresora.\\
-En la imagen \ref{Cura} podemos ver la interfaz de Cura, la base azul del centro representa la base de impresión de la impresora. A la izquierda se pueden ver algunos de los parámetros de configuración.
+Una vez creado el fichero \texttt{.stl} utiliza Cura \footnote{Página de descarga de Cura: \href{https://ultimaker.com/en/products/cura-software}{\textcolor{blue}{https://ultimaker.com/en/products/cura-software}}}, un programa que nos permite seleccionar los parámetros de configuración deseados para la impresión de la pieza, como por ejemplo la densidad o el tamaño. Una vez elegida la configuración, Cura genera el archivo \texttt{.gcode}. Este tipo de archivos son los que lee la impresora 3D y consiste en una serie de instrucciones de movimiento para los servomotores que controlar el estrusor y el ventilador de la impresora.\\
+En la imagen \ref{Cura:blender}(a) podemos ver la interfaz de Cura, la base azul del centro representa la base de impresión de la impresora. A la izquierda se pueden ver algunos de los parámetros de configuración.
+
+
+
+
+
+Una vez imprimidas las piezas ya se puede construir el robot. El resultado se muestra en la imagen \ref{fotoRobot}:
 
 \begin{figure}[H]
-	\centerline{
-		\mbox{\includegraphics[width=.75\textwidth]{images/Cura2.png}}
-	}
-	\caption{Imagen de la configuración del Cura para enviar la Pieza de agarre a la impresora 3D}
-	\label{Cura}
+	\centering
+	\subfigure[Vista trasera del robot]{\includegraphics[width=65mm]{images/artistica.jpg}}
+	\subfigure[Vista frontal del robot]{\includegraphics[width=65mm]{images/fotorobotfrontal.jpg}} \\
+	
+	\caption{Imágenes del robot una vez montado}
+	\label{fotoRobot} 
 \end{figure}
  
 \section{Streaming}
-El segundo bloque es el streaming, es decir, la transmisión del video que captura la cámara al ordenador y su posterior reproducción en las Oculus Rift.\\
-La Raspberry Pi3 se encargará de recoger el video de la cámara y transformarlo en paquetes de datos IP para poder transmitirlos a una dirección de la red local.\\El ordenador va recogiendo el streaming de la dirección donde lo envía la Raspberry Pi 3 y lo reproduce en las Oculus.
+El segundo bloque es el streaming, es decir, la transmisión del vídeo que captura la cámara al ordenador y su posterior reproducción en las Oculus Rift.\\
+La Raspberry Pi3 se encargará de recoger el vídeo de la cámara y transformarlo en paquetes de datos IP para poder transmitirlos a una dirección de la red local.\\El ordenador va recogiendo el streaming de la dirección donde lo envía la Raspberry Pi 3 y lo reproduce en las Oculus.
 
-\subsection{Raspberry Pi3 - Transmisión de video}
-La Raspberry Pi, tiene conectada por usb la cámara que se utiliza para capturar el video.\\
-Para recoger el video y mandarlo en tiempo real utilizamos la aplicación de software libre mjpeg-streamer, disponible en github. \url{https://github.com/jacksonliam/mjpg-streamer}
+\subsection{Raspberry Pi3 - Transmisión de vídeo}
+La Raspberry Pi, tiene conectada por usb la cámara que se utiliza para capturar el vídeo.\\
+Para recoger el vídeo y mandarlo en tiempo real utilizamos la aplicación de software libre mjpeg-streamer, disponible en github. \url{https://github.com/jacksonliam/mjpg-streamer}
 
 \textbf{Mjpeg-streamer} es una aplicación en linea de comandos que permite crear un servidor, para obtener frames JPG desde una cámara compatible con la aplicación y transmitirlos como M-JPEG mediante protocolo HTTP. Está diseñada para dispositivos con recursos limitados, en téminos de CPU y RAM.\\
 Soporta la compresión por hardware (GPU) de la cámara, en nuestro caso H.264 Advanced Video Coding (AVC) Standard, que es la compresión utilizada por la Webcam Logitech, lo cual permite reducir drásticamente el uso de la CPU de este servidor, haciendo está aplicación un servicio ligero.\\
@@ -1024,65 +960,51 @@ En la imagen \ref{mjpeg} se muestra el uso de recursos de la aplicación mjpeg-s
 	\centerline{
 		\mbox{\includegraphics[width=.80\textwidth]{images/UsoCPUMjpeg.png}}
 	}
-	\caption{Uso de CPU del programa Mjpeg-Streamer por el que se hae el streaming de video}
+	\caption{Uso de CPU del programa Mjpeg-Streamer por el que se hae el streaming de vídeo}
 	\label{mjpeg}
 \end{figure}
 
 La aplicación arranca en la Raspberry Pi cuando ejecutamos el siguente comando: \texttt{./mjpg\_streamer -i "./input\_uvc.so -d /dev/video0" -o "./output\_http.so -w ./www"}.\\Para entender este comando hay que explicar primero el funcionamiento de mjpeg-streamer. La aplicación se basa en unos plugins de entrada y salida. Es decir, un plugin (de entrada) copia las imágenes JPEG a un directorio de acceso global, mientras que otro plugin (de salida) procesa las imágenes y las emite de acuerdo a los estándares MPG existentes.\\ En el comando que arranca la aplicación estamos especificando:
 \begin{itemize}
 	\item \textbf{ -i "./input\_uvc.so}: Este es el plugin de entrada, que captura los frames JPG de la cámara conectada.
-	\item \textbf{-o "./output\_http.so -w ./www"}: El plugin de salida (\texttt{./output\_http.so}), es un servidor web HTTP 1.0, que emite el video en los estándares M-JPEG. El directorio de la aplicación web de mjpeg-streamer se especifica con la opción \texttt{-w ./www}
+	\item \textbf{-o "./output\_http.so -w ./www"}: El plugin de salida (\texttt{./output\_http.so}), es un servidor web HTTP 1.0, que emite el vídeo en los estándares M-JPEG. El directorio de la aplicación web de mjpeg-streamer se especifica con la opción \texttt{-w ./www}
 	\item \textbf{mjpg\_streamer}: instrucción que transmite los frames desde el plugin de entrada al de salida.
 	\item \textbf{-d /dev/video0}: especifica la cámara que se va a utilizar ya que la Raspberry Pi 3 tiene dos puertos usb.
 \end{itemize}
 
-En el momento en que se ejecuta el comando la Raspberry empezará a coger el video de la cámara y transmitirlo en tiempo real a la siguiente url: \texttt{http://192.168.1.33:8080/stream.html} y muestra información sobre el streaming por terminal.\\
-En la imagen \ref{fig::outmjpeg} vemos un ejemplo de dicha información y en la imagen \ref{fig::stream} vemos la dirección de la red local donde la Raspberry Pi está transmitiendo el video.
+En el momento en que se ejecuta el comando la Raspberry empezará a coger el vídeo de la cámara y transmitirlo en tiempo real a la siguiente url: \texttt{http://192.168.1.33:8080/stream.html} y muestra información sobre el streaming por terminal.\\
+En la imagen \ref{fig::stream} vemos un ejemplo de dicha información y la dirección de la red local donde la Raspberry Pi está transmitiendo el vídeo.
 
-\begin{figure}[H]
-	\centerline{
-		\mbox{\includegraphics[width=.80\textwidth]{images/Streamingcomando.png}}
-	}
-	\caption{Ejecución del comando para iniciar el streaming}
-	\label{fig::outmjpeg}
-\end{figure}
 
 
 \begin{figure}[H]
-	\centerline{
-		\mbox{\includegraphics[width=.80\textwidth]{images/pagStream.png}}
-	}
-	\caption{Página html donde se recibe el streaming a tiempo real desde la Raspberry }
+	\centering
+	\subfigure[Ejecución del comando para iniciar el streaming]{\includegraphics[width=60mm]{images/Streamingcomando.png}}
+	\hspace{2cm}
+	\subfigure[Página html donde se recibe el streaming a tiempo real desde la Raspberry]{\includegraphics[width=50mm]{images/pagStream.png}}\\
+	\caption{Ejecución de mjpeg-streamer}
 	\label{fig::stream}
 \end{figure}
 
 
-\subsection{Ordenador - Recepción de video}
-Una vez el robot es capaz de transmitir video a tiempo real a una dirección de la red local, solo falta desarrollar las funciones del ordenador.\\
-El PC debe capturar el video de la red local y reproducirlo en las Oculus Rift.\\
-El ordenador , conectado a la red local a través del router,accede a la IP donde mjpeg-streamer está retransmitiendo el video y lo recoge a través del reproductor de video  \href{http://www.videolan.org/vlc/}{\textcolor{blue}{VLC}}.
+\subsection{Ordenador - Recepción de vídeo}
+Una vez el robot es capaz de transmitir vídeo a tiempo real a una dirección de la red local, solo falta desarrollar las funciones del ordenador.\\
+El PC debe capturar el vídeo de la red local y reproducirlo en las Oculus Rift.\\
+El ordenador, conectado a la red local a través del router,accede a la IP donde mjpeg-streamer está retransmitiendo el vídeo y lo recoge a través del reproductor de vídeo VLC \footnote{Página oficial de VLC:  \href{http://www.videolan.org/vlc/}{\textcolor{blue}{http://www.videolan.org/vlc/}}}.
 
-\textbf{VLC media player} es un reproductor multimedia libre y de código abierto. Tiene dos características que lo hacen idóneo para este proyecto: Es capaz de capturar y reproducir video de una dirección de red y puede dividir la imagen del video en dos pantallas.
+\textbf{VLC media player} es un reproductor multimedia libre y de código abierto. Tiene dos características que lo hacen idóneo para este proyecto: Es capaz de capturar y reproducir vídeo de una dirección de red y puede dividir la imagen del vídeo en dos pantallas.
 
-Por lo tanto se configura VLC para que el medio de reproducción sea la ubicación de red donde se está transmitiendo el video del robot \texttt{http://192.168.1.33:8080/?action=stream}.\\
-Posteriormente dividimos el video en dos pantallas exactamente iguales para poder verlo desde las Oculus en modo SBS (Side by Side).\\Ambas configuraciones y el resultado pueden verse en la figura \ref{figstream}
+Por lo tanto se configura VLC para que el medio de reproducción sea la ubicación de red donde se está transmitiendo el vídeo del robot \texttt{http://192.168.1.33:8080/?action=stream}.\\
+Posteriormente dividimos el vídeo en dos pantallas exactamente iguales para poder verlo desde las Oculus en modo SBS (Side by Side).\\Ambas configuraciones y el resultado pueden verse en la figura \ref{figstream} del apéndice B.
 
-\begin{figure}[H]
-	\centering
-	\subfigure[Medio de reproducción-Ubicación de red]{\includegraphics[width=60mm]{images/confVLC.png}}
-	\subfigure[División de imágenes]{\includegraphics[width=60mm]{images/confSBS.png}}\\
-	\subfigure[Reproducción SBS]{\includegraphics[width=120mm]{images/sbsVLC2.png}}
-		\caption{Configuración y resultado de la reproducción de video en VLC} 
-		\label{figstream}
-\end{figure}
 
-Una vez capturado el video en el ordenador solo queda visualizarlo en las Oculus Rift.\\
-Para ello hemos instalado en el PC el \href{http://store.steampowered.com/app/382110/}{\textcolor{blue}{Virtual Desktop}}. 
+Una vez capturado el vídeo en el ordenador solo queda visualizarlo en las Oculus Rift.\\
+Para ello hemos instalado en el PC el Virtual Desktop \footnote{Página oficila de Virtual Desktop: \href{http://store.steampowered.com/app/382110/}{\textcolor{blue}{http://store.steampowered.com/app/382110/}}}. 
 
 \textbf{Virtual Desktop} es una aplicación desarrollada por Oculus Rift y  HTC Vive para utilizar las Oculus Rift en Windows.\\
-Permite ver el escritorio desde las Oculus, pudiendo configurar efectos como ver las imagénes SBS o cambiar el entorno en el que te encuentras (el espacio, una sala de cine...)\\También te permite ver videos descargados en el ordenador y reproducir videos 360.\\
-La funcionalidad que es interesante para este trabajo es la de ver la pantalla del ordenador desde las Oculus con SBS, para visualizar el video que se está reproduciendo en VLC a tiempo real.\\
-De esta forma, si ponemos en video en pantalla completa en el PC y configuramos Virtual Desktop correctamente, el video se reproducirá en la Oculus Rift a tiempo real.
+Permite ver el escritorio desde las Oculus, pudiendo configurar efectos como ver las imagénes SBS o cambiar el entorno en el que te encuentras (el espacio, una sala de cine...)\\También te permite ver vídeos descargados en el ordenador y reproducir vídeos 360.\\
+La funcionalidad que es interesante para este trabajo es la de ver la pantalla del ordenador desde las Oculus con SBS, para visualizar el vídeo que se está reproduciendo en VLC a tiempo real.\\
+De esta forma, si ponemos en vídeo en pantalla completa en el PC y configuramos Virtual Desktop correctamente, el vídeo se reproducirá en la Oculus Rift a tiempo real.
 
 
 %\begin{figure}[h]
@@ -1198,9 +1120,7 @@ La API \texttt{OVR} nos proporciona una función  ovr.getTrackingState() que nos
 $$  pitch = arctan(2 * (x*w + y*z), 1 - 2 * (z*z + w*w))$$
 $$  yaw = arcsin(2 * (x*z - w*y))$$
 
-Siendo $x$, $y$, $z$ , y $w$ las componentes del cuaternión , $pitch$ en ángulo en radianes respecto al eje horizontal y $yaw$ el ángulo en radianes respecto al eje vertical.Por último se convierten los radianes a grados.
-$$g = (radians*180) / \pi$$
-
+Siendo $x$, $y$, $z$, y $w$ las componentes del cuaternión, $pitch$ en ángulo respecto al eje horizontal y $yaw$ el ángulo respecto al eje vertical.
 
 
 El ordenador crea un servidor y abre dos sockets distintos, uno para la información que manda al servomotor de la cámara y otro para los servomotores de las ruedas.\\
@@ -1219,8 +1139,8 @@ De esta forma manejamos los dos movimientos de forma independiente.
 
 
 Para el control del movimiento del robot es necesario que el ordenador le mande los datos referentes a la posición de las Oculus de forma automática, inmediatamente después de procesarlos.\\
-Con este fin, desde el mismo programa donde se recibe y procesan los datos de las Oculus, el ordenador abre dos sockets, y se queda a la espera de que el robot se conecte.\\
-Recordemos que el ordenador y la Raspberry Pi 3 están dentro de la misma red local (WifiRaspi3), y que ambos tenían IP fija.
+Con este fin, desde el mismo programa donde se recibe y procesan los datos de las Oculus, el ordenador abre dos sockets, y se queda a la espera de que el robot se conecte.\\De esta forma se crea un sistema cliente-servidor en el cual el PC actúa como servidor y la Raspberry Pi como cliente.\\
+Recordemos que el ordenador y la Raspberry Pi 3 están dentro de la misma red local (WifiRaspi3), y que ambos tenían IP fija, lo que hace posible automatizar la conexión entre ambos dispositivos.
 
 La apertura de sockets por parte del ordenador se hace de la siguiente forma:
 
@@ -1348,7 +1268,7 @@ La cámara se mueve gracias a un servomotor paso a paso cuyo rango de movimiento
 
 Una vez entendida la relación práctica entre el ángulo de orientación y el ancho de pulso (PW), veamos cual es su relación matemática.
 
-Como vemos en la figura \ref{figPWM}, un $PW$ de $1.5$ ms equivale a la posición del motor que señala el ángulo 0, de la misma manera para que el motor esté orientado hacia el ángulo -90 deberemos mandar un $PW$ de $0.5$ ms y para orientarlo en el ángulo de 90 mandaríamos un $PW$ de $2.5$. Por lo tanto , un ms de diferencia implica 90 grados de diferencia.
+Como vemos en la figura \ref{figPWM}, un $PW$ de $1.5$ ms equivale a la posición del motor que señala el ángulo 0, de la misma manera para que el motor esté orientado hacia el ángulo -90 deberemos mandar un $PW$ de $0.5$ ms y para orientarlo en el ángulo de 90 mandaríamos un $PW$ de $2.5$. Por lo tanto, un ms de diferencia implica 90 grados de diferencia.
 
 Con estos datos es sencillo encontrar una fórmula de conversión de grados a $PW$:
 
@@ -1419,23 +1339,13 @@ La primera valoración no fue muy positiva. A continuación se muestran las difi
 	\subitem \textbf{Solución:} Modificar el estado por defecto del dispositivo, en la nueva interfaz el robot está parado por defecto y en caso que esté en movimiento basta con mirar al frente para detenerlo.
 \end{itemize}
 
-En base a estas dificultades se ideó la nueva interfaz de control, que se explica anteriormente en este documento \ref{intCont}.
+En base a estas dificultades se ideó la nueva interfaz de control, que se explica anteriormente en este documento, en la sección  \ref{intCont}.
 
 \subsection{Segundo ciclo}
 
 Durante el segundo ciclo de pruebas participaron 7 usuarios.
-La fase de aprendizaje durante este ciclo consistió en:
+La fase de aprendizaje durante este ciclo consistió en: girar a la derecha, girar a la izquierda, mirar hacia arriba, estar 30 segundos aproximadamente girando el robot sobre sí mismo hasta tener controlado el giro, andar hacia delante, parar, estar cerca de un minuto paseando para familiarizarse con los movimientos, fijar un objetivo y alcanzarlo.
 
-\begin{itemize}
-	\item Girar a la derecha
-	\item Girar a la izquierda
-	\item Mirar hacia arriba
-	\item Estar 30 segundos aproximadamente girando el robot sobre sí mismo hasta tener controlado el giro.
-	\item Andar hacia delante
-	\item Parar
-	\item Estar cerca de un minuto paseando para familiarizarse con los movimientos.
-	\item Fijar un objetivo y alcanzarlo.
-\end{itemize}
 
 La tabla \ref{tabla2ciclo} de los apéndices muestra la valoración de los usuarios tras realizar las pruebas.
 
@@ -1454,25 +1364,19 @@ A continuación se explicará el desarrollo del tercer y último ciclo de prueba
 	\begin{itemize}
 		\item Se disminuyó la velocidad de giro de los servomotores de las ruedas del robot.
 		\item Se disminuyó la velocidad de avance del robot.
-		\item Se disminuyó la sensibilidad de detección de movimiento vertical , reduciendo las posibles posiciones que puede tomar la cámara a 4.
-		\begin{itemize}
-			\item Abajo: 30º aproximadamente respecto a la posición frontal.
-			\item Posición frontal.
-			\item Arriba: 40º aproximadamente respecto a la posición frontal.
-			\item Arriba: 90º aproximadamente respecto a la posición frontal.
-		\end{itemize}
+		\item Se disminuyó la sensibilidad de detección de movimiento vertical, reduciendo las posibles posiciones que puede tomar la cámara.
 	\end{itemize}
 	\item \textbf{Fase de aprendizaje:} Se le explicó a cada usuario la forma de controlar el robot y se les dejó durante dos minutos moverse libremente.
 	\item \textbf{Puntuación: } En la tabla \ref{tabla3ciclo} de los apéndices se muestra la primera puntuación de los usuarios.
 	
 
-\item \textbf{Circuito:} Los usuarios realizan el mismo circuito 3 veces. En el circuito se marcan 4 puntos críticos y se cronometra el tiempo que tarda cada usuario en alcanzar dichos puntos. También se cronometra el tiempo total.
+\item \textbf{Circuito:} Los usuarios realizan el mismo circuito 3 veces, en la gráfica \ref{resultadosT} se denominan \textit{intentos}. En el circuito se marcan 4 puntos críticos y se cronometra el tiempo que tarda cada usuario en alcanzar dichos puntos. También se cronometra el tiempo total.
 
 A continuación se muestra un gráfico donde se muestran los promedios de tiempos entre todos los usuarios de cada intento de hacer el circuito.
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centerline{
-		\mbox{\includegraphics[width=.70\textwidth, angle=90]{images/excel.png}}
+		\mbox{\includegraphics[width=.50\textwidth, angle=90]{images/excel.png}}
 	}
 	\caption{Promedio del tiempo que tardan los usuarios en realizar el circuito.}
 	\label{resultadosT}
@@ -1483,7 +1387,7 @@ Respecto a la valoración de los usuarios es muy interesante ver cómo varía la
 
 \begin{figure}[H]
 	\centerline{
-		\mbox{\includegraphics[width=.85\textwidth]{images/SensacionControl.png}}
+		\mbox{\includegraphics[width=.65\textwidth]{images/SensacionControl.png}}
 	}
 	\caption{Variación de la sensación de control de los usuarios antes y después de realizar el circuito.}
 	\label{SensacionControl}
@@ -1533,12 +1437,12 @@ Respecto a la valoración de los usuarios es muy interesante ver cómo varía la
 A modo de conclusión se presentarán las metas alcanzadas en este trabajo con las cuales se logran los objetivos propuestos. Posteriormente se analizarán los resultados obtenidos y en base a dichos resultados se estudiarán posibles mejoras para un trabajo futuro.
 
 \begin{itemize}
-	\item Se ha diseñado y construido un \textbf{dispositivo móvil con cámara integrada} con capacidad para grabar video y transmitirlo con una latencia aceptable. A su vez este dispositivo tiene la capacidad de desplazarse en todas las direcciones del plano y puede orientar la cámara rotándola respecto al eje horizontal.
-	\item Se ha desarrollado un sistema de \textbf{transmisión y recepción de comandos} entre el usuario y el robot o dispositivo móvil.
-	\item Se ha desarrollado un sistema de \textbf{transmisión y recepción de video a tiempo real} entre las gafas de realidad virtual Oculs Rift DK2 y la cámara Logitech integrada en el robot.
+	\item Se ha diseñado y construido un \textbf{dispositivo móvil con cámara integrada} con capacidad para grabar vídeo y transmitirlo con una latencia aceptable. A su vez este dispositivo tiene la capacidad de desplazarse en todas las direcciones del plano y puede orientar la cámara rotándola respecto al eje horizontal.
+	\item Se ha desarrollado un sistema de \textbf{transmisión y recepción de comandos} entre el usuario y el robot o dispositivo móvil.\\Este sistema se basa en comunicaciones cliente-servidor entre el ordenador, que actúa como servidor y la Raspberry Pi 3, que actúa como cliente.
+	\item Se ha desarrollado un sistema de \textbf{transmisión y recepción de vídeo a tiempo real} entre las gafas de realidad virtual Oculs Rift DK2 y la cámara Logitech conectada a la Raspberry Pi 3.\\Este sistema se basa en comunicaciones cliente-servidor entre la Raspberry Pi 3, que actúa como servidor y el ordenador, que actúa como cliente y que una vez que recoge el streaming lo reproduce en las gafas de realidad virtual.
 	\item Se ha desarrollado un \textbf{software de recepción y procesamiento de información} de la orientación de las Oculus Rift.
 	\item Se ha ideado un \textbf{sistema intuitivo de movimientos de cabeza} que sirven como \textbf{comandos de control} del movimiento del robot.
-	\item Todo el sistema ha sido probado por usuarios que han valorado de forma positiva la experiencia y todos ellos han conseguido superar las pruebas propuestas.
+	\item Todo el sistema ha sido probado por usuarios que han valorado de forma positiva la experiencia y todos ellos han conseguido superar las pruebas propuestas.\\ Se han realizado 3 ciclos de pruebas ya que, en base a la puntuación de los usarios, se ha cambiado la interfaz de control y ajustado los parámetros pertinentes para hacer el sistema más fácil e intuitivo.
 \end{itemize}
 
 Tras repasar a grandes rasgos el trabajo realizado se exponen las posibles mejoras del proyecto en base a los resultados obtenidos en la fase de pruebas.
@@ -1552,7 +1456,7 @@ Otro problema es el \textbf{alcance de red de la Raspberry Pi 3}. Si el robot se
 
 A pesar de todos estos puntos a mejorar el resultado es muy bueno, teniendo en cuenta que es una primera aproximación a lo que que pretende ser un proyecto futuro.\\Los usuarios han estado cada uno menos de 7 minutos con el robot y \textbf{todos menos uno lograron alcanzar su objetivo} en el tiempo estipulado, por lo que es una \textbf{aplicación fácil de manejar y de aprender}, como se ha visto en las valoraciones.
 
-En el caso de personas con discapacidad motora no se han podido hacer las pruebas, pero se espera que parámetros como la velocidad o el rango de movimiento de la cabeza sean diferentes, por lo que el sistema está diseñado para poder ajustar estos parámetros según las necesidades del usuario.
+En el caso de personas con discapacidad motora no se han podido hacer las pruebas ya que esta primera toma de contacto resultaba más sencilla con personas sin discapacidad, pero se espera que parámetros como la velocidad o el rango de movimiento de la cabeza sean diferentes, por lo que el sistema está diseñado para poder ajustar estos parámetros según las necesidades del usuario. La idea es realizar estas pruebas en un posible trabajo fin de master, como continuación de este proyecto.
 
 Ha sido un proyecto con una \textbf{muy buena acogida}, a todos los usuarios les ha resultado ameno hacer las pruebas y ver cómo iban mejorando.\\
 También es fácil de desarrollar con las herramientas de las que disponemos y con \textbf{mucho potencial}, ya que incluye dos tecnologías que están en pleno desarrollo y que aún tienen mucho que avanzar.\\
@@ -1579,10 +1483,9 @@ En conclusión este trabajo ha sido muy instructivo y ha ampliado de forma signi
 \section{Trabajo futuro}
 Este trabajo es solo el inicio de lo que podría ser un proyecto muy interesante.
 
-El robot que hemos construido es una extensión del sentido de la vista, pero se podría construir un robot controlado por una persona y que fuera la extensión de todos sus sentidos,permitiendo así conocer y sentir el mundo sin necesidad de moverse de su casa.
+El robot que hemos construido es una extensión del sentido de la vista, pero se podría construir un robot controlado por una persona y que fuera la extensión de todos sus sentidos, permitiendo así conocer y sentir el mundo sin necesidad de moverse de su casa.
 
-Además la realidad virtual es una herramienta muy potente, que no solo te permite modificar tu mundo a placer sino que te permita crear entornos totalmente distintos. Se podría estudiar cómo interactuar con ese mundo virtual no solo a través de la vista , sino con todos los sentidos.\\Un objetivo básico para la continuación de éste trabajo es la capacidad de autocalibración, es decir, que el sistema pueda modificar los parámetros de movimiento y control del robot de forma automática, basándose en pruebas y medidas anteriores. Esto es necesario ya que cada persona con discapacidad motora tendrá unas capacidades motrices distintas y posiblemente dentro de unos rangos muy amplios,\\
-Otro objetivo con vistas a futuro es desarrollar una interfaz gráfica para toda la aplicación ya que por ahora todo arranca a través de líneas de comandos. Además es sencillo dotar a esta posible interfaz gráfica de la capacidad de cambiar los parámetros de calibración, por lo que cada usuario podrá crearse un "perfil" en el sistema.
+Además la realidad virtual es una herramienta muy potente, que no solo te permite modificar tu mundo a placer sino que te permita crear entornos totalmente distintos. Se podría estudiar cómo interactuar con ese mundo virtual no solo a través de la vista, sino con todos los sentidos.\\Un objetivo básico para la continuación de éste trabajo es la capacidad de autocalibración, es decir, que el sistema pueda modificar los parámetros de movimiento y control del robot de forma automática, basándose en pruebas y medidas anteriores. Esto es necesario ya que cada persona con discapacidad motora tendrá unas capacidades motrices distintas y posiblemente dentro de unos rangos muy amplios.\\Otro objetivo con vistas a futuro es desarrollar una interfaz gráfica para toda la aplicación ya que por ahora todo arranca a través de líneas de comandos. Además es sencillo dotar a esta posible interfaz gráfica de la capacidad de cambiar los parámetros de calibración, por lo que cada usuario podrá crearse un "perfil" en el sistema.
 
 Otro camino por el que se puede investigar es la unión de este proyecto con la domótica.
 Creo que en un futuro no muy lejano, las casas serán casas domotizadas, que igual que se podrán controlar desde el móvil podremos controlarlas con las gafas de realidad virtual.
@@ -1593,7 +1496,8 @@ Creo que en un futuro no muy lejano, las casas serán casas domotizadas, que igu
 
 \appendix
 \chapter{Configuración de red local}
-
+\vspace*{-4cm}
+En el apéndice A se encuentran las imágenes que muestran la configuración del router y de la Raspberry Pi para conectarse automáticamente a la red local.
 \begin{figure}[H]
 	\centerline{
 		\mbox{\includegraphics[width=.95\textwidth]{images/TablaDHCP2.png}}
@@ -1610,18 +1514,50 @@ Creo que en un futuro no muy lejano, las casas serán casas domotizadas, que igu
 	\label{confwpa}
 \end{figure}
 
-\chapter{Pruebas}
+\chapter{Configuración de VLC}
+\vspace*{-4cm}
+
+En la siguiente imagen se ve la forma de configurar el reproductor de vídeo VLC para poder dividir la imagen del streaming en dos.
+
+\begin{figure}[H]
+	\centering
+	\subfigure[Medio de reproducción-Ubicación de red]{\includegraphics[width=60mm]{images/confVLC.png}}
+	\subfigure[División de imágenes]{\includegraphics[width=60mm]{images/confSBS.png}}\\
+	\subfigure[Reproducción SBS]{\includegraphics[width=120mm]{images/sbsVLC2.png}}
+	\caption{Configuración y resultado de la reproducción de vídeo en VLC} 
+	\label{figstream}
+\end{figure}
+
+\chapter{Componentes}
 
 \begin{figure}[H]
 	\centerline{
-		\mbox{\includegraphics[width=.50\textwidth]{images/Circuito.jpg}}
+		\mbox{\includegraphics[width=.80\textwidth]{images/raspi3.jpg}}
+	}
+	\caption{Raspberry Pi 3 model B}
+	\label{Raspberry}
+	
+\end{figure}
+
+\chapter{Pruebas}
+\vspace*{-4cm}
+
+En el apéndice B se adjuntan las imágenes referentes a las pruebas realizadas para este trabajo.
+
+La imagen \ref{Circuito} muestra el circuito que tenian que realizar los usuarios durante el tercer ciclo de pruebas.\\
+Se puede ver cómo el circuito tiene 4 curvas, estas curvas son los puntos P1, P2, P3, P4 que se miden en la fase de pruebas \ref{resultadosT}. 
+
+
+\begin{figure}[H]
+	\centerline{
+		\mbox{\includegraphics[width=.50\textwidth]{images/circuitobueno.jpg}}
 	}
 	\caption{Circuito que deben seguir los usuarios en las pruebas.}
 	\label{Circuito}
 \end{figure}
 
 
-
+A continuación se añaden las tablas con la valoración que hicieron los usuarios que realizaron el segundo ciclo de pruebas y los usuarios qeu realizaron el tercer ciclo de pruebas tras completrar las mismas. 
 
 
 
@@ -1714,6 +1650,42 @@ Creo que en un futuro no muy lejano, las casas serán casas domotizadas, que igu
 	\end{table}
 \end{center}
 
+\chapter{Código de software de control del robot}
+\vspace*{-4cm}
+\begin{figure}[H]
+	\centerline{
+		\mbox{\includegraphics[width=.70\textwidth]{images/codigoOrdenador.png}}
+	}
+	\caption{Código que se ejecuta en el lado del PC para leer la información de las Oculus Rift, procesarla y mandarla a la Raspberry Pi 3.}
+	\label{CodOrdenador}
+\end{figure}
+
+En el siguiente código \ref{CodOrdenador} se ve cómo el PC recoge la información de la orientación de las Oculus Rift y llama a la función \texttt{get\_angles}, que le devuelve el valor del ángulo respecto al eje horizontal y el ángulo respecto al eje vertical. Según dichos ángulos el PC le manada la información pertinente a la Raspberry.
+
+A continuación se incluye el código de la función \texttt{get \_angles}.
+\begin{figure}[H]
+	\centerline{
+		\mbox{\includegraphics[width=.70\textwidth]{images/getAngles.png}}
+	}
+	\caption{Función que se ejecuta en el PC para transformar la información de las Oculus Rift en ángulos respeco a los ejes horizontal y vertical.}
+	\label{CodAngle}
+\end{figure}
+
+Una vez procesada la información en el PC se envía al robot. A continuación se incluyen los códigos que se ejecutan en la Raspberri Pi 3, tanto el códigop que controla las ruedas del robot \ref{CodSH} como el que controla el movimiento de la cámara \ref{CodSC}.
+\begin{figure}[H]
+	\centerline{
+		\mbox{\includegraphics[width=.70\textwidth]{images/CodigosocketH.png}}
+	}
+	\caption{Código que se ejecuta en la Raspberry Pi 3 para controlar las ruedas del robot.}
+	\label{CodSH}
+\end{figure}
+\begin{figure}[H]
+	\centerline{
+		\mbox{\includegraphics[width=.70\textwidth]{images/codigosocketClient.png}}
+	}
+	\caption{Código que se ejecuta en la Raspberry Pi 3 para controlar el servomotor unido a la cámara.}
+	\label{CodSC}
+\end{figure}
 \cleardoublepage
 \printindex
 
